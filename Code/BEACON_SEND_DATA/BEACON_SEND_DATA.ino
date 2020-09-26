@@ -12,8 +12,8 @@
 #define LED_ORANGE_UP 12
 #define LED_ORANGE_DOWN 14
 // Update these with values suitable for your network.
-const char *ssid = "";
-const char *password = "";
+const char *ssid = "RUBEN14";
+const char *password = "9472302440";
 const char *mqtt_server = "broker.mqttdashboard.com";
 #define mqtt_port 1883
 #define MQTT_USER "d"
@@ -21,8 +21,22 @@ const char *mqtt_server = "broker.mqttdashboard.com";
 #define MQTT_SERIAL_PUBLISH_CH "master_beacon"
 #define MQTT_SERIAL_RECEIVER_CH "master_beaconn"
 
-WiFiClient wifiClient;
+/*
+For no antenna these are the results:
+  0.5 metros -40
+  1 metro -50
+  2 metros -60
+  3 metros -68
+  4 metros -77
+  5 metros -85
+  6 metros -89
 
+  y = distance 
+  x = abs(rssi)
+  y = 0,0012x2 - 0,0395x + 0,1818
+
+*/
+WiFiClient wifiClient;
 PubSubClient client(wifiClient);
 
 int scanTime = 2; //In seconds
@@ -43,6 +57,8 @@ class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks
     }
     //Serial.printf(", rssi -> %i \n", rssi); advertisedDevice.getName()
     const char *macAdress = advertisedDevice.getAddress().toString().c_str();
+    //c4:64:e3:f9:35:b3 black
+    //e6:13:a7:0b:4f:b2 white
     char *knownAdress = "c4:64:e3:f9:35:b3";
     Serial.printf(" Adress: %s // RSSI: %d \n", macAdress, advertisedDevice.getRSSI());
     //Serial.printf("Searching for: %s \n", knownAdress);
@@ -53,7 +69,9 @@ class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks
     if (val > 8)
     {
       char snum[25];
-      itoa(advertisedDevice.getRSSI(), snum, 10);
+      //I calculate the aproximate distance:
+      double distance = 0.0012f * rssi * rssi - 0.0395f * (-rssi) + 0.1818;
+      itoa(rssi, snum, 10);
       client.publish("master_beacon", snum);
       match = true;
       timerMatch = millis();
