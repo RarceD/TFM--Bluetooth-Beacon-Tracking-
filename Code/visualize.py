@@ -1,25 +1,109 @@
 import pygame
 import random
-
-pygame.init()
-
-win_x = 700
-win_y = 500
-win = pygame.display.set_mode((win_x, win_y - 20))  # dimensions of it
-pygame.display.set_caption("Rolling tracker")  # title of this shit of game
-clock = pygame.time.Clock()  
-bg = pygame.image.load('road.jpg')
-font = pygame.font.SysFont('bitstreamverasans', 30, True, True)
+import paho.mqtt.client as mqtt
+import time
+import json
 
 
 class Beacon:
-    def __init__(self, x, y):
+    def __init__(self, x, y, uuid, distance):
         self.x = x
         self.y = y
+        self.uuid = uuid
+        self.distance = distance
+        self.color = (random.randint(10, 255), random.randint(
+            10, 255), random.randint(10, 255))
 
     def draw(self, win):
         pygame.draw.circle(win, (0, 0, 0), (self.x, self.y), 18)
-        pygame.draw.circle(win, (217, 26, 26), (self.x, self.y), 15)
+        pygame.draw.circle(win,  self.color, (self.x, self.y), 15)
+
+
+class Esp:
+    def __init__(self, uuid):
+        self.uuid = uuid
+        self.beacons = []
+
+    def add_beacon(self, beacon):
+        self.beacons.append(beacon)
+
+
+def connect_mqtt():
+    broker_address = "broker.mqttdashboard.com"
+    client = mqtt.Client("asdf1234asdf1234asdf")  # create new instance
+    client.on_message = on_message  # attach function to callback
+    print("connecting to broker")
+    client.connect(broker_address)  # connect to broker
+    print("Subscribing to topic", "master_beacon")
+    client.subscribe("master_beacon")
+    print("Publishing message to topic", "master_beacon_ack")
+    client.publish("master_beacon/ack", "ok")
+    client.loop_start()  # start the loop
+    return client
+
+
+def on_message(client, userdata, message):
+    # print("message topic=",message.topic)
+    # print("message qos=",message.qos)
+    # print("message retain flag=",message.retain)
+    msg = str(message.payload.decode("utf-8"))
+    # print("message received: ", msg)
+    parsed_json = (json.loads(msg))
+    global esp
+    for e in esp:
+        if (parsed_json['esp'] == e.uuid):
+            # print(parsed_json['esp'])
+            for index, b in enumerate(parsed_json['beacon']):
+                # Get the distance and the uuid of the beacon:
+                beacon_distance = float(
+                    parsed_json['beacon'][index]['distance'])
+                beacon_uuid = str(parsed_json['beacon'][index]['uuid'])
+                # Add the beacon to the master if it is not repeat:
+                # print(index)
+                if (len(e.beacons) == 0):
+                    e.add_beacon(Beacon(0, 0, beacon_uuid, beacon_distance))
+                    print('First beacon created: ', e.beacons[0].uuid)
+                else:
+                    size_of_beacons = len(e.beacons)
+                    i = 0
+                    while i < size_of_beacons:
+                        if (beacon_uuid != str(e.beacons[i].uuid)):
+                            e.add_beacon(
+                                Beacon(0, 0, beacon_uuid, beacon_distance))
+                            print('I create a beacon:', e.beacons[i].uuid)
+                            break
+                        i+=1
+        b = 0
+        while (b < len(e.beacons)):
+            print('Beacon nº', b, 'name:', e.beacons[b].uuid)
+            b += 1
+
+            # e.add_beacon(0,0,parsed_json['beacon'], 0)
+
+    # I parse the msg and received the info:
+    beacons.append(Beacon(300, 260, "E2:23:6A:54", 2.43))
+    beacons.append(Beacon(400, 260, "A3:57:98:2C", 2.43))
+
+    beacons[0].x = 500
+
+
+run = True  # The game loop running
+beacons = []
+esp = []
+
+esp.append(Esp("A1"))
+esp.append(Esp("A2"))
+esp.append(Esp("A3"))
+
+win_x = 700
+win_y = 500
+client = connect_mqtt()  # I connect to mqtt broker
+pygame.init()  # Inicialize pygame interface
+win = pygame.display.set_mode((win_x, win_y - 20))  # dimensions of it
+pygame.display.set_caption("Rolling tracker")  # title of this shit of game
+clock = pygame.time.Clock()
+bg = pygame.image.load('road.jpg')
+font = pygame.font.SysFont('bitstreamverasans', 30, True, True)
 
 
 def reddrawGameWindow():
@@ -38,18 +122,19 @@ def reddrawGameWindow():
             text_pos_y = img_pos + 120
         else:
             text_pos_y = img_pos - 40
-    beacon.draw(win)
+    for beacon in beacons:
+        beacon.draw(win)
     # pygame.draw.rect(win, (0, 0, 0), (550, 10, 120, 40))
     # pygame.draw.rect(win, (255, 0, 0), (555, 15, 110, 30))
     pygame.display.update()  # update the screen frames
 
 
-run = True  # The game loop running
-beacon = Beacon(300, 260)
 while(run):
     pygame.time.delay(50)  # 64x64 images
     for event in pygame.event.get():  # Check for events of close
         if event.type == pygame.QUIT:
             run = False
+            client.loop_stop()  # stop the loop
     reddrawGameWindow()  # For drawing all the canvas
+
 pygame.quit()
