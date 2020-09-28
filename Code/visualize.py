@@ -13,6 +13,7 @@ class Beacon:
         self.distance = distance
         self.color = (random.randint(10, 255), random.randint(
             10, 255), random.randint(10, 255))
+        self.esp_assigned = "nop"
 
     def draw(self, win):
         pygame.draw.circle(win, (0, 0, 0), (self.x, self.y), 18)
@@ -59,7 +60,6 @@ def on_message(client, userdata, message):
                     parsed_json['beacon'][index]['distance'])
                 beacon_uuid = str(parsed_json['beacon'][index]['uuid'])
                 # Add the beacon to the master if it is not repeat:
-                # print(index)
                 size_of_beacons = len(e.beacons)
                 if (size_of_beacons == 0):
                     e.beacons.append(
@@ -95,7 +95,7 @@ esp = []
 
 esp.append(Esp("A1"))
 esp.append(Esp("A2"))
-esp.append(Esp("A3"))
+
 
 win_x = 700
 win_y = 500
@@ -135,28 +135,61 @@ def reddrawGameWindow():
     pygame.display.update()  # update the screen frames
 
 
+def checkBeacons():
+    for e in esp:
+        print('Master ESP:', e.uuid, 'has: ')
+        for b in e.beacons:
+            print('->', b.uuid, 'distance: ', b.distance,
+                  'is assigned to: ', b.esp_assigned)
+
+
+def visualize_calculations(esp):
+    # First I copy all the beacons in a local list:
+    local_beacon = []
+    for e in esp:
+        for b in e.beacons:
+            if any(b.uuid in s for s in local_beacon):
+                pass
+            else:
+                local_beacon.append(b.uuid)
+    print('The scan results of all beacons: ', local_beacon)
+    # Search for each beacon if is in more than one esp:
+    for b in local_beacon:
+        for e in esp:
+            for x in e.beacons:
+                print('check', b ,'with',x.uuid)
+                if (b == x.uuid):
+                    x.esp_assigned = x.esp_assigned + e.uuid
+                    print('- I Assigned', x.esp_assigned)
+                    # is_in_esp[]
+    # Visualize on the screen
+    for e in esp:
+        for b in e.beacons:
+            print(b.esp_assigned)
+
+    # Delete all the info
+    for e in esp:
+        for b in e.beacons:
+            b.esp_assigned = ""
+
+
 timer_update_screen = int(round(time.time()))
-refresh_time = 3
+refresh_time = 5
 reddrawGameWindow()
 # I create the beacons:
 
 # I fake create the masters with their beacons
 esp[0].beacons.append(
-    Beacon(random.randint(10, 699), 260, "E2:23:6A:54", 1.43))
+    Beacon(random.randint(10, 699), 260, "test", 1.43))
 esp[0].beacons.append(
-    Beacon(random.randint(10, 699), 260, "V2:23:6A:54", 2.43))
+    Beacon(random.randint(10, 699), 260, "no", 2.43))
 esp[1].beacons.append(
-    Beacon(random.randint(10, 699), 260, "V2:23:6A:54", 1.43))
+    Beacon(random.randint(10, 699), 260, "si", 2.43))
 esp[1].beacons.append(
-    Beacon(random.randint(10, 699), 260, "32:34:5A:22", 2.43))
-esp[2].beacons.append(
-    Beacon(random.randint(10, 699), 260, "V3:23:6A:54", 1.43))
-esp[2].beacons.append(
-    Beacon(random.randint(10, 699), 260, "C2:34:5A:22", 2.43))
-for e in esp:
-    print('Master ESP:', e.uuid, 'has: ')
-    for b in e.beacons:
-        print('->', b.uuid, 'distance: ', b.distance)
+    Beacon(random.randint(10, 699), 260, "test", 1.43))
+
+checkBeacons()
+visualize_calculations(esp)
 
 while(run):
     pygame.time.delay(50)  # 64x64 images
@@ -168,26 +201,8 @@ while(run):
     reddrawGameWindow()  # For drawing all the canvas
     # Every 5 seconds I update the position of the screen:
     if (int(round(time.time())) - timer_update_screen >= refresh_time):
-        # First I copy all the beacons in a local list:
-        is_in_esp = []
-        local_beacon = []
-        for e in esp:
-            for b in e.beacons:
-                if any(b.uuid in s for s in local_beacon):
-                    pass
-                else:
-                    local_beacon.append(b.uuid)
-        print('______The scan results______')
-        for b in local_beacon:
-            print(b)
-            is_in_esp.append('')
-        # Search for each beacon if is in more than one esp:
-        for b in local_beacon:
-            for e in esp:
-                for x in e.beacons:
-                    if (b == x.uuid):
-                        print('Is in ESP', e.uuid)
-                        # is_in_esp[]
+        checkBeacons()
+        visualize_calculations(esp)
         timer_update_screen = int(round(time.time()))
 
 
