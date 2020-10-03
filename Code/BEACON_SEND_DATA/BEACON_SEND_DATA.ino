@@ -6,6 +6,7 @@
 #include <BLEAdvertisedDevice.h>
 #include <BLEAddress.h>
 #include <BLEUUID.h>
+#include <ArduinoJson.h>
 
 #define LED_GREEN 15
 #define LED_RED 13
@@ -72,11 +73,31 @@ class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks
       //I calculate the aproximate distance:
       double distance = 0.0012f * rssi * rssi - 0.0395f * (-rssi) + 0.1818;
       itoa(rssi, snum, 10);
-      client.publish("master_beacon", snum);
+
       match = true;
       timerMatch = millis();
       digitalWrite(LED_ORANGE_UP, HIGH);
       digitalWrite(LED_ORANGE_DOWN, HIGH);
+
+      const size_t capacity = JSON_ARRAY_SIZE(2) + 3 * JSON_OBJECT_SIZE(2);
+      DynamicJsonBuffer jsonBuffer(capacity);
+      JsonObject &root = jsonBuffer.createObject();
+      root["esp"] = "A1";
+      JsonArray &beacon = root.createNestedArray("beacon");
+
+      JsonObject &beacon_0 = beacon.createNestedObject();
+      beacon_0["uuid"] = knownAdress;
+      beacon_0["distance"] = rssi;
+
+      JsonObject &beacon_1 = beacon.createNestedObject();
+      beacon_1["uuid"] = "test";
+      beacon_1["distance"] = rssi;
+
+      Serial.println();
+      root.prettyPrintTo(Serial);
+      char JSONmessageBuffer[100];
+      root.printTo(JSONmessageBuffer, sizeof(JSONmessageBuffer));
+      client.publish("master_beacon", JSONmessageBuffer);
     }
   }
 };
@@ -137,7 +158,6 @@ void loop()
     }
     ledBlink = !ledBlink;
   }
-  client.loop();
   if (Serial.available() > 0)
   {
     char mun[501];
@@ -145,6 +165,7 @@ void loop()
     Serial.readBytesUntil('\n', mun, 500);
     publishSerialData(mun);
   }
+  client.loop();
 }
 
 void setup_wifi()
@@ -205,7 +226,6 @@ void callback(char *topic, byte *payload, unsigned int length)
   Serial.write(payload, length);
   Serial.println();
 }
-
 
 void publishSerialData(char *serialData)
 {
