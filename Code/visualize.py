@@ -80,18 +80,12 @@ def on_message(client, userdata, message):
                     else:
                         e.beacons.append(
                                 Beacon(0, 0, beacon_uuid, beacon_distance))
-        b = 0
-        while (b < len(e.beacons)):
-            print('Beacon nº', b, 'name:', e.beacons[b].uuid)
-            b += 1
+            b = 0
+            while (b < len(e.beacons)):
+                print('Beacon nº', b, 'name:', e.beacons[b].uuid)
+                b += 1
 
             # e.add_beacon(0,0,parsed_json['beacon'], 0)
-
-    # I parse the msg and received the info:
-    # beacons.append(Beacon(300, 260, "E2:23:6A:54", 2.43))
-    # beacons.append(Beacon(400, 260, "A3:57:98:2C", 2.43))
-
-    # beacons[0].x = 500
 
 
 def reddrawGameWindow():
@@ -136,6 +130,7 @@ def visualize_calculations(esp):
             # print(b.esp_assigned)
             b.x = e.x + random.randint(-20, 20)
             b.y = e.y + random.randint(-20, 20)
+    
     # Render the screen:
     reddrawGameWindow()
 
@@ -191,7 +186,6 @@ while(run):
 
     # Every 5 seconds I update the position of the screen:
     if (int(round(time.time())) - timer_update_screen >= refresh_time):
-        # checkBeacons()
         visualize_calculations(esp)
         timer_update_screen = int(round(time.time()))
 
