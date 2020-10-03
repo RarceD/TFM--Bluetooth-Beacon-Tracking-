@@ -21,9 +21,11 @@ class Beacon:
 
 
 class Esp:
-    def __init__(self, uuid):
+    def __init__(self, uuid, x, y):
         self.uuid = uuid
         self.beacons = []
+        self.x = x
+        self.y = y
 
     def add_beacon(self, beacon):
         self.beacons.append(beacon)
@@ -38,7 +40,8 @@ def connect_mqtt():
     print("Subscribing to topic", "master_beacon")
     client.subscribe("master_beacon")
     print("Publishing message to topic", "master_beacon_ack")
-    client.publish("master_beacon/ack", "ok")
+    msg = '''{"ok":true}'''
+    client.publish("master_beacon/ack", msg)
     client.loop_start()  # start the loop
     return client
 
@@ -60,7 +63,7 @@ def on_message(client, userdata, message):
                     parsed_json['beacon'][index]['distance'])
                 beacon_uuid = str(parsed_json['beacon'][index]['uuid'])
                 # Add the beacon to the master if it is not repeat:
-                size_of_beacons = len(e.beacons)
+                size_of_beacons = len(parsed_json['beacon'])
                 if (size_of_beacons == 0):
                     e.beacons.append(
                         Beacon(0, 0, beacon_uuid, beacon_distance))
@@ -68,11 +71,13 @@ def on_message(client, userdata, message):
                 else:
                     i = 0
                     while i < size_of_beacons:
-                        print('Element:', i, beacon_uuid, e.beacons[i].uuid)
-                        if (beacon_uuid != str(e.beacons[i].uuid)):
+                        print('Check on: ', size_of_beacons, 'using: ', beacon_uuid)
+                        # print('Element:', i, beacon_uuid, e.beacons[i].uuid)
+                        if (beacon_uuid != e.beacons[i].uuid):
                             e.beacons.append(
                                 Beacon(0, 0, beacon_uuid, beacon_distance))
-                            print('I create a beacon:', e.beacons[i].uuid)
+                            # print('I create a beacon:', e.beacons[i].uuid)
+                            size_of_beacons = len(e.beacons)
                             break
                         i += 1
         b = 0
@@ -83,29 +88,10 @@ def on_message(client, userdata, message):
             # e.add_beacon(0,0,parsed_json['beacon'], 0)
 
     # I parse the msg and received the info:
-    beacons.append(Beacon(300, 260, "E2:23:6A:54", 2.43))
-    beacons.append(Beacon(400, 260, "A3:57:98:2C", 2.43))
+    # beacons.append(Beacon(300, 260, "E2:23:6A:54", 2.43))
+    # beacons.append(Beacon(400, 260, "A3:57:98:2C", 2.43))
 
-    beacons[0].x = 500
-
-
-run = True  # The game loop running
-beacons = []
-esp = []
-
-esp.append(Esp("A1"))
-esp.append(Esp("A2"))
-
-
-win_x = 700
-win_y = 500
-client = connect_mqtt()  # I connect to mqtt broker
-pygame.init()  # Inicialize pygame interface
-win = pygame.display.set_mode((win_x, win_y - 20))  # dimensions of it
-pygame.display.set_caption("Rolling tracker")  # title of this shit of game
-clock = pygame.time.Clock()
-bg = pygame.image.load('road.jpg')
-font = pygame.font.SysFont('bitstreamverasans', 30, True, True)
+    # beacons[0].x = 500
 
 
 def reddrawGameWindow():
@@ -144,33 +130,39 @@ def checkBeacons():
 
 
 def visualize_calculations(esp):
-    # First I copy all the beacons in a local list:
-    local_beacon = []
-    for e in esp:
-        for b in e.beacons:
-            if any(b.uuid in s for s in local_beacon):
-                pass
-            else:
-                local_beacon.append(b.uuid)
-    print('The scan results of all beacons: ', local_beacon)
-    # Search for each beacon if is in more than one esp:
-    for b in local_beacon:
-        for e in esp:
-            for x in e.beacons:
-                print('check', b ,'with',x.uuid)
-                if (b == x.uuid):
-                    x.esp_assigned = x.esp_assigned + e.uuid
-                    print('- I Assigned', x.esp_assigned)
-                    # is_in_esp[]
-    # Visualize on the screen
+    # Plot on the screen:
     for e in esp:
         for b in e.beacons:
             print(b.esp_assigned)
+            b.x = e.x + random.randint(-20, 20)
+            b.y = e.y + random.randint(-20, 20)
+    # Render the screen:
+    reddrawGameWindow()
 
-    # Delete all the info
+    # Delete all the info:
     for e in esp:
-        for b in e.beacons:
-            b.esp_assigned = ""
+        e.beacons = []
+
+
+run = True  # The game loop running
+beacons = []
+esp = []
+
+esp.append(Esp("A1", 120, 260))
+esp.append(Esp("A2", 350, 260))
+esp.append(Esp("A3", 570, 260))
+
+
+
+win_x = 700
+win_y = 500
+client = connect_mqtt()  # I connect to mqtt broker
+pygame.init()  # Inicialize pygame interface
+win = pygame.display.set_mode((win_x, win_y - 20))  # dimensions of it
+pygame.display.set_caption("Rolling tracker")  # title of this shit of game
+clock = pygame.time.Clock()
+bg = pygame.image.load('road.jpg')
+font = pygame.font.SysFont('bitstreamverasans', 30, True, True)
 
 
 timer_update_screen = int(round(time.time()))
@@ -179,17 +171,16 @@ reddrawGameWindow()
 # I create the beacons:
 
 # I fake create the masters with their beacons
-esp[0].beacons.append(
-    Beacon(random.randint(10, 699), 260, "test", 1.43))
-esp[0].beacons.append(
-    Beacon(random.randint(10, 699), 260, "no", 2.43))
-esp[1].beacons.append(
-    Beacon(random.randint(10, 699), 260, "si", 2.43))
-esp[1].beacons.append(
-    Beacon(random.randint(10, 699), 260, "test", 1.43))
+# esp[0].beacons.append(
+#     Beacon(random.randint(10, 699), 260, "test", 1.43))
+# esp[0].beacons.append(
+#     Beacon(random.randint(10, 699), 260, "no", 2.43))
+# esp[1].beacons.append(
+#     Beacon(random.randint(10, 699), 260, "si", 2.43))
+# esp[1].beacons.append(
+#     Beacon(random.randint(10, 699), 260, "test", 1.43))
 
-checkBeacons()
-visualize_calculations(esp)
+
 
 while(run):
     pygame.time.delay(50)  # 64x64 images
@@ -198,10 +189,9 @@ while(run):
             run = False
             client.loop_stop()  # stop the loop
 
-    reddrawGameWindow()  # For drawing all the canvas
     # Every 5 seconds I update the position of the screen:
     if (int(round(time.time())) - timer_update_screen >= refresh_time):
-        checkBeacons()
+        # checkBeacons()
         visualize_calculations(esp)
         timer_update_screen = int(round(time.time()))
 
