@@ -51,8 +51,9 @@ def on_message(client, userdata, message):
     # print("message retain flag=",message.retain)
     # Example json: {"esp":"A1","beacon":[ {"uuid":5245,"distance":1.23},{"uuid":52345, "distance":1.23 }]}
     msg = str(message.payload.decode("utf-8"))
-    print("message received: ", msg)
+    # print("message received: ", msg)
     parsed_json = (json.loads(msg))
+    print('_________________')
     global esp
     for e in esp:
         if (parsed_json['esp'] == e.uuid):
@@ -62,24 +63,23 @@ def on_message(client, userdata, message):
                 beacon_distance = float(
                     parsed_json['beacon'][index]['distance'])
                 beacon_uuid = str(parsed_json['beacon'][index]['uuid'])
+
                 # Add the beacon to the master if it is not repeat:
-                size_of_beacons = len(parsed_json['beacon'])
-                if (size_of_beacons == 0):
+                print('Checking if ', beacon_uuid, 'in the list ' )
+                all_beacons = []
+                for s in e.beacons: 
+                    all_beacons.append(s.uuid)
+
+                if (len(e.beacons) == 0):
                     e.beacons.append(
                         Beacon(0, 0, beacon_uuid, beacon_distance))
-                    print('First beacon created: ', e.beacons[0].uuid)
+                    # print('First beacon created: ', e.beacons[0].uuid)
                 else:
-                    i = 0
-                    while i < size_of_beacons:
-                        print('Check on: ', size_of_beacons, 'using: ', beacon_uuid)
-                        # print('Element:', i, beacon_uuid, e.beacons[i].uuid)
-                        if (beacon_uuid != e.beacons[i].uuid):
-                            e.beacons.append(
+                    if (beacon_uuid in all_beacons):
+                        print("reapeated so I do not save")
+                    else:
+                        e.beacons.append(
                                 Beacon(0, 0, beacon_uuid, beacon_distance))
-                            # print('I create a beacon:', e.beacons[i].uuid)
-                            size_of_beacons = len(e.beacons)
-                            break
-                        i += 1
         b = 0
         while (b < len(e.beacons)):
             print('Beacon nº', b, 'name:', e.beacons[b].uuid)
@@ -133,7 +133,7 @@ def visualize_calculations(esp):
     # Plot on the screen:
     for e in esp:
         for b in e.beacons:
-            print(b.esp_assigned)
+            # print(b.esp_assigned)
             b.x = e.x + random.randint(-20, 20)
             b.y = e.y + random.randint(-20, 20)
     # Render the screen:
