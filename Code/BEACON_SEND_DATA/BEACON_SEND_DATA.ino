@@ -89,9 +89,9 @@ class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks
       beacon_0["uuid"] = knownAdress;
       beacon_0["distance"] = rssi;
 
-      JsonObject &beacon_1 = beacon.createNestedObject();
-      beacon_1["uuid"] = "test";
-      beacon_1["distance"] = rssi;
+      // JsonObject &beacon_1 = beacon.createNestedObject();
+      // beacon_1["uuid"] = "test";
+      // beacon_1["distance"] = rssi;
 
       Serial.println();
       root.prettyPrintTo(Serial);

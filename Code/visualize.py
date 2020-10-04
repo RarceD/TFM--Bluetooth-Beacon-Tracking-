@@ -115,7 +115,8 @@ def reddrawGameWindow():
     pygame.display.update()  # update the screen frames
 
 
-def checkBeacons():
+def checkBeacons(esp):
+    global position_adjustments
     for e in esp:
         print('Master ESP:', e.uuid, 'has: ')
         for b in e.beacons:
@@ -127,9 +128,8 @@ def visualize_calculations(esp):
     # Plot on the screen:
     for e in esp:
         for b in e.beacons:
-            # print(b.esp_assigned)
-            b.x = e.x + random.randint(-20, 20)
-            b.y = e.y + random.randint(-20, 20)
+            b.x = e.x + random.randint(-20, 20) + position_adjustments[0]
+            b.y = e.y + random.randint(-20, 20) + position_adjustments[1]
     
     # Render the screen:
     reddrawGameWindow()
@@ -142,7 +142,7 @@ def visualize_calculations(esp):
 run = True  # The game loop running
 beacons = []
 esp = []
-
+position_adjustments = [0,0]
 esp.append(Esp("A1", 120, 260))
 esp.append(Esp("A2", 350, 260))
 esp.append(Esp("A3", 570, 260))
@@ -161,7 +161,7 @@ font = pygame.font.SysFont('bitstreamverasans', 30, True, True)
 
 
 timer_update_screen = int(round(time.time()))
-refresh_time = 5
+refresh_time = 6
 reddrawGameWindow()
 # I create the beacons:
 
@@ -184,8 +184,9 @@ while(run):
             run = False
             client.loop_stop()  # stop the loop
 
-    # Every 5 seconds I update the position of the screen:
+    # Every X seconds I update the position of the screen:
     if (int(round(time.time())) - timer_update_screen >= refresh_time):
+        checkBeacons(esp)
         visualize_calculations(esp)
         timer_update_screen = int(round(time.time()))
 
