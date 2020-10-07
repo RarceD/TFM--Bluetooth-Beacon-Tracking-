@@ -4,31 +4,9 @@ import paho.mqtt.client as mqtt
 import time
 import json
 
-
-class Beacon:
-    def __init__(self, x, y, uuid, distance):
-        self.x = x
-        self.y = y
-        self.uuid = uuid
-        self.distance = distance
-        self.color = (random.randint(10, 255), random.randint(
-            10, 255), random.randint(10, 255))
-        self.esp_assigned = "nop"
-
-    def draw(self, win):
-        pygame.draw.circle(win, (0, 0, 0), (self.x, self.y), 18)
-        pygame.draw.circle(win,  self.color, (self.x, self.y), 15)
+from BeaconClass import Beacon, Esp
 
 
-class Esp:
-    def __init__(self, uuid, x, y):
-        self.uuid = uuid
-        self.beacons = []
-        self.x = x
-        self.y = y
-
-    def add_beacon(self, beacon):
-        self.beacons.append(beacon)
 
 
 def connect_mqtt():
@@ -138,6 +116,8 @@ def visualize_calculations(esp):
     for e in esp:
         e.beacons = []
 
+def rssr_distance(rssi, tx, n):
+    return 10**((tx-rssi)/n)
 
 run = True  # The game loop running
 beacons = []
