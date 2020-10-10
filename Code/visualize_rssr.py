@@ -1,11 +1,8 @@
-import pygame
 import random
 import paho.mqtt.client as mqtt
 import time
 import json
-import numpy as np
 
-import pandas as pd  # module for
 from matplotlib import pyplot as plt
 
 # I'm going to plot the results of rssi:
@@ -16,27 +13,6 @@ t_number = 0
 
 fig = plt.figure()
 ax = fig.add_subplot(1, 1, 1)
-
-
-
-
-
-# x = np.linspace(0, 10)
-
-# # Fixing random state for reproducibility
-# np.random.seed(19680801)
-
-# fig, ax = plt.subplots()
-
-# ax.plot(x, np.sin(x) + x + np.random.randn(50))
-# ax.plot(x, np.sin(x) + 0.5 * x + np.random.randn(50))
-# ax.plot(x, np.sin(x) + 2 * x + np.random.randn(50))
-# ax.plot(x, np.sin(x) - 0.5 * x + np.random.randn(50))
-# ax.plot(x, np.sin(x) - 2 * x + np.random.randn(50))
-# ax.plot(x, np.sin(x) + np.random.randn(50))
-# ax.set_title("'fivethirtyeight' style sheet")
-
-# plt.show()
 
 def connect_mqtt():
     broker_address = "broker.mqttdashboard.com"
@@ -51,7 +27,6 @@ def connect_mqtt():
     client.publish("master_beacon/ack", msg)
     client.loop_start()  # start the loop
     return client
-
 
 def on_message(client, userdata, message):
     global rssi_b1, rssi_b2, t_number, x_time
@@ -73,19 +48,20 @@ def on_message(client, userdata, message):
         t_number += 1
 
 
-def rssr_distance(rssi, tx, n):
+def rssi_distance(rssi, tx, n):
     return 10**((tx-rssi)/n)
-
+def rssi_filter(rssi):
+    filter_rssi = 0
+    for r in rssi:
+        filter_rssi+=r
+    return filter_rssi/len(rssi_b1)
 
 run = True  # The game loop running
 beacons = []
 esp = []
 position_adjustments = [0, 0]
 
-
 client = connect_mqtt()  # I connect to mqtt broker
-
-
 
 timer_update_screen = int(round(time.time()))
 refresh_time = 10
@@ -94,11 +70,21 @@ refresh_time = 10
 while(run):
     # Every X seconds I update the position of the screen:
     if (int(round(time.time())) - timer_update_screen >= refresh_time):
-        run = False
+        # run = False
         client.loop_stop()  # stop the loop
         ax.plot(x_time, rssi_b1, color='tab:blue')
         ax.plot(x_time, rssi_b2, color='tab:orange')
-        ax.set_title("RSSI of beacons at 1 meter")
+        ax.set_title("Diferences between RSSI from 2 beacons at 1 meter")
+        ax.set_ylim([-100,-20])
+        ax.set_xlabel("time in seconds")
+        ax.set_ylabel("RSSI")
+
+        #I apply a filter and get the distance:
+        filter_rssi = rssi_filter(rssi_b1)
+        distance_rssi = rssi_distance(filter_rssi, 13, 2.2)
+
+        print(filter_rssi, distance_rssi)
+        
         plt.show()
         timer_update_screen = int(round(time.time()))
 
