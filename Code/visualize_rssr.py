@@ -13,7 +13,7 @@ t_number = 0
 
 fig = plt.figure()
 ax = fig.add_subplot(1, 1, 1)
-
+plt.style.use('fivethirtyeight')
 def connect_mqtt():
     broker_address = "broker.mqttdashboard.com"
     client = mqtt.Client("asdf1234asdf1234asdf")  # create new instance
@@ -64,7 +64,7 @@ position_adjustments = [0, 0]
 client = connect_mqtt()  # I connect to mqtt broker
 
 timer_update_screen = int(round(time.time()))
-refresh_time = 10
+refresh_time = 3
 # reddrawGameWindow()
 
 while(run):
@@ -72,12 +72,14 @@ while(run):
     if (int(round(time.time())) - timer_update_screen >= refresh_time):
         # run = False
         client.loop_stop()  # stop the loop
-        ax.plot(x_time, rssi_b1, color='tab:blue')
-        ax.plot(x_time, rssi_b2, color='tab:orange')
+        ax.plot(x_time, rssi_b1)
+        ax.plot(x_time, rssi_b2)
         ax.set_title("Diferences between RSSI from 2 beacons at 1 meter")
         ax.set_ylim([-100,-20])
         ax.set_xlabel("time in seconds")
         ax.set_ylabel("RSSI")
+        # ax.set_style('fivethirtyeight')
+        # ax.set_style.use('fivethirtyeight')
 
         #I apply a filter and get the distance:
         filter_rssi = rssi_filter(rssi_b1)
