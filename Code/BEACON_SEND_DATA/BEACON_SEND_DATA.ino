@@ -21,6 +21,13 @@ const char *mqtt_server = "broker.mqttdashboard.com";
 #define MQTT_PASSWORD "d"
 #define MQTT_SERIAL_PUBLISH_CH "master_beacon"
 #define MQTT_SERIAL_RECEIVER_CH "master_beaconn"
+// #define DEBUG
+#ifdef DEBUG
+#define DPRINT(x) Serial.println(x)
+#else 
+#define DPRINT(x) 
+#endif
+
 
 /*
 For no antenna these are the results:
@@ -57,11 +64,11 @@ void print_wakeup_reason(){
 
   switch(wakeup_reason)
   {
-    case ESP_SLEEP_WAKEUP_EXT0 : Serial.println("Wakeup caused by external signal using RTC_IO"); break;
-    case ESP_SLEEP_WAKEUP_EXT1 : Serial.println("Wakeup caused by external signal using RTC_CNTL"); break;
-    case ESP_SLEEP_WAKEUP_TIMER : Serial.println("Wakeup caused by timer"); break;
-    case ESP_SLEEP_WAKEUP_TOUCHPAD : Serial.println("Wakeup caused by touchpad"); break;
-    case ESP_SLEEP_WAKEUP_ULP : Serial.println("Wakeup caused by ULP program"); break;
+    case ESP_SLEEP_WAKEUP_EXT0 : DPRINT("Wakeup caused by external signal using RTC_IO"); break;
+    case ESP_SLEEP_WAKEUP_EXT1 : DPRINT("Wakeup caused by external signal using RTC_CNTL"); break;
+    case ESP_SLEEP_WAKEUP_TIMER : DPRINT("Wakeup caused by timer"); break;
+    case ESP_SLEEP_WAKEUP_TOUCHPAD : DPRINT("Wakeup caused by touchpad"); break;
+    case ESP_SLEEP_WAKEUP_ULP : DPRINT("Wakeup caused by ULP program"); break;
     default : Serial.printf("Wakeup was not caused by deep sleep: %d\n",wakeup_reason); break;
   }
 }
@@ -73,17 +80,17 @@ class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks
   {
     //Serial.printf("Advertised Device: %s ", advertisedDevice.toString().c_str());
     int rssi = advertisedDevice.getRSSI();
-    if (advertisedDevice.haveServiceUUID())
-    {
-      // Serial.printf("Name -> %s", advertisedDevice.getServiceUUID().toString().c_str());
-    }
+    // if (advertisedDevice.haveServiceUUID())
+    // {
+    //   // Serial.printf("Name -> %s", advertisedDevice.getServiceUUID().toString().c_str());
+    // }
     //Serial.printf(", rssi -> %i \n", rssi); advertisedDevice.getName()
     const char *macAdress = advertisedDevice.getAddress().toString().c_str();
     //c4:64:e3:f9:35:b3 black
     //e6:13:a7:0b:4f:b2 white
     char *knownAdress = "c4:64:e3:f9:35:b3";
     char *knownAdress_2 = "e6:13:a7:0b:4f:b2";
-     Serial.printf(" Adress: %s // RSSI: %d \n", macAdress, advertisedDevice.getRSSI());
+    //  Serial.printf(" Adress: %s // RSSI: %d \n", macAdress, advertisedDevice.getRSSI());
     //Serial.printf("Searching for: %s \n", knownAdress);
     int val1 = 0;
     int val2 = 0;
@@ -110,7 +117,7 @@ class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks
       const size_t capacity = JSON_ARRAY_SIZE(2) + 3 * JSON_OBJECT_SIZE(2);
       DynamicJsonBuffer jsonBuffer(capacity);
       JsonObject &root = jsonBuffer.createObject();
-      root["esp"] = "A1";
+      root["esp"] = "A2";
       JsonArray &beacon = root.createNestedArray("beacon");
 
       JsonObject &beacon_0 = beacon.createNestedObject();
@@ -121,8 +128,8 @@ class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks
       // beacon_1["uuid"] = "test";
       // beacon_1["distance"] = rssi;
 
-      Serial.println();
-      root.prettyPrintTo(Serial);
+      DPRINT();
+      // root.prettyPrintTo(Serial);
       char JSONmessageBuffer[100];
       root.printTo(JSONmessageBuffer, sizeof(JSONmessageBuffer));
       client.publish("master_beacon", JSONmessageBuffer);
@@ -136,12 +143,12 @@ void setup()
   
   //Increment boot number and print it every reboot
   ++bootCount;
-  Serial.println("Boot number: " + String(bootCount));
+  DPRINT("Boot number: " + String(bootCount));
 
   //Print the wakeup reason for ESP32
   print_wakeup_reason();
   esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
-  Serial.println("Setup ESP32 to sleep for every " + String(TIME_TO_SLEEP) +
+  DPRINT("Setup ESP32 to sleep for every " + String(TIME_TO_SLEEP) +
   " Seconds");
 
   Serial.setTimeout(500); // Set time out for
@@ -166,10 +173,10 @@ void setup()
 
 
     BLEScanResults foundDevices = pBLEScan->start(scanTime, false);
-    Serial.print("Devices found: ");
-    Serial.println(foundDevices.getCount());
+    DPRINT("Devices found: ");
+    DPRINT(foundDevices.getCount());
     pBLEScan->clearResults(); // delete results fromBLEScan buffer to release memory
-    Serial.print("TO SLEEP ");
+    DPRINT("TO SLEEP ");
 
   esp_deep_sleep_start();
 
@@ -182,7 +189,7 @@ void loop()
   {
     BLEScanResults foundDevices = pBLEScan->start(scanTime, false);
     Serial.print("Devices found: ");
-    Serial.println(foundDevices.getCount());
+    DPRINT(foundDevices.getCount());
     pBLEScan->clearResults(); // delete results fromBLEScan buffer to release memory
     schedule = millis();
   }
@@ -221,20 +228,20 @@ void setup_wifi()
 {
   delay(10);
   // We start by connecting to a WiFi network
-  Serial.println();
-  Serial.print("Connecting to ");
-  Serial.println(ssid);
+  DPRINT();
+  DPRINT("Connecting to ");
+  DPRINT(ssid);
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED)
   {
     delay(500);
-    Serial.print(".");
+    DPRINT(".");
   }
   randomSeed(micros());
-  Serial.println("");
-  Serial.println("WiFi connected");
-  Serial.println("IP address: ");
-  Serial.println(WiFi.localIP());
+  DPRINT("");
+  DPRINT("WiFi connected");
+  DPRINT("IP address: ");
+  DPRINT(WiFi.localIP());
 }
 
 void reconnect()
@@ -242,14 +249,14 @@ void reconnect()
   // Loop until we're reconnected
   while (!client.connected())
   {
-    Serial.print("Attempting MQTT connection...");
+    DPRINT("Attempting MQTT connection...");
     // Create a random client ID
     String clientId = "ESP32-";
     clientId += String(random(0xffff), HEX);
     // Attempt to connect
     if (client.connect(clientId.c_str()))
     {
-      Serial.println("connected");
+      DPRINT("connected");
       //Once connected, publish an announcement...
       client.publish("hora_de_siluetas_r", "dick");
       // ... and resubscribe
@@ -257,9 +264,9 @@ void reconnect()
     }
     else
     {
-      Serial.print("failed, rc=");
-      Serial.print(client.state());
-      Serial.println(" try again in 5 seconds");
+      DPRINT("failed, rc=");
+      DPRINT(client.state());
+      DPRINT(" try again in 5 seconds");
       // Wait 5 seconds before retrying
       delay(2000);
     }
@@ -268,12 +275,12 @@ void reconnect()
 
 void callback(char *topic, byte *payload, unsigned int length)
 {
-  Serial.println("-------new message from broker-----");
-  Serial.print("channel:");
-  Serial.println(topic);
-  Serial.print("data:");
+  DPRINT("-------new message from broker-----");
+  DPRINT("channel:");
+  DPRINT(topic);
+  DPRINT("data:");
   Serial.write(payload, length);
-  Serial.println();
+  DPRINT();
 }
 
 void publishSerialData(char *serialData)
