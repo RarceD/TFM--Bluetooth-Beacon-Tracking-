@@ -40,12 +40,33 @@ For no antenna these are the results:
 WiFiClient wifiClient;
 PubSubClient client(wifiClient);
 
-int scanTime = 2; //In seconds
+int scanTime = 3; //In seconds
 BLEScan *pBLEScan;
 bool match;
 unsigned long schedule = 0;
 long timerMatch = 0;
 long timerScan = 0;
+#define uS_TO_S_FACTOR 1000000  /* Conversion factor for micro seconds to seconds */
+#define TIME_TO_SLEEP  10        /* Time ESP32 will go to sleep (in seconds) */
+RTC_DATA_ATTR int bootCount = 0;
+
+void print_wakeup_reason(){
+  esp_sleep_wakeup_cause_t wakeup_reason;
+
+  wakeup_reason = esp_sleep_get_wakeup_cause();
+
+  switch(wakeup_reason)
+  {
+    case ESP_SLEEP_WAKEUP_EXT0 : Serial.println("Wakeup caused by external signal using RTC_IO"); break;
+    case ESP_SLEEP_WAKEUP_EXT1 : Serial.println("Wakeup caused by external signal using RTC_CNTL"); break;
+    case ESP_SLEEP_WAKEUP_TIMER : Serial.println("Wakeup caused by timer"); break;
+    case ESP_SLEEP_WAKEUP_TOUCHPAD : Serial.println("Wakeup caused by touchpad"); break;
+    case ESP_SLEEP_WAKEUP_ULP : Serial.println("Wakeup caused by ULP program"); break;
+    default : Serial.printf("Wakeup was not caused by deep sleep: %d\n",wakeup_reason); break;
+  }
+}
+
+
 class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks
 {
   void onResult(BLEAdvertisedDevice advertisedDevice)
@@ -61,13 +82,20 @@ class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks
     //c4:64:e3:f9:35:b3 black
     //e6:13:a7:0b:4f:b2 white
     char *knownAdress = "c4:64:e3:f9:35:b3";
-    Serial.printf(" Adress: %s // RSSI: %d \n", macAdress, advertisedDevice.getRSSI());
+    char *knownAdress_2 = "e6:13:a7:0b:4f:b2";
+     Serial.printf(" Adress: %s // RSSI: %d \n", macAdress, advertisedDevice.getRSSI());
     //Serial.printf("Searching for: %s \n", knownAdress);
-    int val = 0;
+    int val1 = 0;
+    int val2 = 0;
+
     for (int i = 0; i < 10; i++)
+    {
       if (knownAdress[i] == macAdress[i])
-        val++;
-    if (val > 8)
+        val1++;
+      if (knownAdress_2[i] == macAdress[i])
+        val2++;
+    }
+    if (val1 > 8 || val2>8)
     {
       char snum[25];
       //I calculate the aproximate distance:
@@ -86,7 +114,7 @@ class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks
       JsonArray &beacon = root.createNestedArray("beacon");
 
       JsonObject &beacon_0 = beacon.createNestedObject();
-      beacon_0["uuid"] = knownAdress;
+      beacon_0["uuid"] = macAdress;
       beacon_0["distance"] = rssi;
 
       // JsonObject &beacon_1 = beacon.createNestedObject();
@@ -105,6 +133,17 @@ class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks
 void setup()
 {
   Serial.begin(115200);
+  
+  //Increment boot number and print it every reboot
+  ++bootCount;
+  Serial.println("Boot number: " + String(bootCount));
+
+  //Print the wakeup reason for ESP32
+  print_wakeup_reason();
+  esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
+  Serial.println("Setup ESP32 to sleep for every " + String(TIME_TO_SLEEP) +
+  " Seconds");
+
   Serial.setTimeout(500); // Set time out for
   setup_wifi();
   client.setServer(mqtt_server, mqtt_port);
@@ -124,6 +163,16 @@ void setup()
   timerScan = millis();
   schedule = millis();
   digitalWrite(LED_RED, LOW);
+
+
+    BLEScanResults foundDevices = pBLEScan->start(scanTime, false);
+    Serial.print("Devices found: ");
+    Serial.println(foundDevices.getCount());
+    pBLEScan->clearResults(); // delete results fromBLEScan buffer to release memory
+    Serial.print("TO SLEEP ");
+
+  esp_deep_sleep_start();
+
 }
 
 void loop()
