@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  10 OCT 2020 19:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  12 OCT 2020 10:22
 entering extended mode
 **"c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Memmory/rarced_memmory.tex"
 ("c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Memmory/rarced_memmory.tex"
@@ -268,32 +268,36 @@ Overfull \hbox (36.7949pt too wide) in paragraph at lines 27--30
 
 [2
 
- <./images/5min_beacon_rssi.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 48.
- [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 48.
+ <./images/5min_beacon_rssi.png>] [3]
+Overfull \hbox (6.88477pt too wide) in paragraph at lines 76--77
+[]\OT1/cmr/m/n/12 This re-du-ces po-wer con-sum-ption even further. The chip con-su-mes around
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 95.
+[4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 95.
  ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.aux"
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 48.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 48.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 95.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 95.
 Package rerunfilecheck Info: File `rarced_memmory.out' has not changed.
 (rerunfilecheck)             Checksum: BC55921DBB79182403866D354B25C40C;458.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 48.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 95.
  ) 
 Here is how much of TeX's memory you used:
- 6233 strings out of 480930
- 96046 string characters out of 2909539
- 364911 words of memory out of 3000000
- 21993 multiletter control sequences out of 15000+200000
- 537506 words of font info for 41 fonts, out of 3000000 for 9000
+ 6239 strings out of 480930
+ 96114 string characters out of 2909539
+ 367911 words of memory out of 3000000
+ 21997 multiletter control sequences out of 15000+200000
+ 537843 words of font info for 42 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,7n,35p,314b,395s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on "c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.pdf" (3 pages, 101513 bytes).
+ 34i,7n,35p,395b,406s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Tecnica2\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
+Output written on "c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.pdf" (4 pages, 109558 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 17 named destinations out of 1000 (max. 500000)
+ 93 PDF objects out of 1000 (max. 8388607)
+ 18 named destinations out of 1000 (max. 500000)
  70 words of extra memory for PDF output out of 10000 (max. 10000000)
 

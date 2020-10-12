@@ -40,7 +40,54 @@ asdfasd
 \section{Bibliografía}
 \href{https://campus.masterd.es/campusvirtual/index.htm}{Something Linky} 
 \begin{itemize}
-    \item  yas
+    \item  Active mode: 160-260mA.  Active core, ULP coprocessor and RTC
+     Wifi, Bluetooth, Radio, Peripherals
+    \begin{center}
+        \begin{tabular}{||c | c ||} 
+        \hline
+        ESP32 Mode & Power consumption  \\ [0.5ex] 
+        \hline\hline
+        Wi-Fi Tx packet 13dBm~21dBm & 160~260mA  \\ 
+        \hline
+        Wi-Fi/BT Tx packet 0dBm	 & 120mA  \\
+        \hline
+        Wi-Fi/BT Rx and listening & 80~90mA  \\
+        \hline
+       \end{tabular}
+       \end{center}
+    \item  Sleep mode: 3-20mA Active core, ULP coprocessor and RTC
+    Inactive: Wifi, Bluetooth, Radio, Peripherals
+    \item  Light sleep mode: the CPU is paused by powering off its clock 
+    pulses, while RTC and ULP-coprocessor are kept active. This results in 
+    less power consumption than in modem sleep mode which is around 0.8mA.
+
+    \item Deep sleep mode, the CPU, most of the RAM and all the digital 
+    peripherals are powered off. The only parts of the chip that remains 
+    powered on are: RTC controller, RTC peripherals (including ULP 
+    co-processor), and RTC memories (slow and fast).
+    The chip consumes around 0.15 mA(if ULP co-processor is powered on) to 10µA.
+
+    In Deep sleep mode, power is shut off to the entire chip except RTC module. So, any data that is not in the RTC recovery memory is lost, and the chip will thus restart with a reset. This means program execution starts from the beginning once again.
+
+    \item Hibernation mode: Unlike deep sleep mode, in hibernation mode the chip disables internal 8MHz oscillator and ULP-coprocessor as well. The RTC recovery memory is also powered down, meaning there’s no way we can preserve any data during hibernation mode.
+
+    Everything else is shut off except only one RTC timer on the slow clock and some RTC GPIOs are active. They are responsible for waking up the chip from the hibernation mode.
+    
+    This reduces power consumption even further. The chip consumes around 2.5µA only in hibernation mode.
+
+    \begin{center}
+        \begin{tabular}{||c | c ||} 
+        \hline
+        ESP32 Mode & Power consumption  \\ [0.5ex] 
+        \hline\hline
+        Wi-Fi Tx packet 13dBm~21dBm & 160~260mA  \\ 
+        \hline
+        Wi-Fi/BT Tx packet 0dBm	 & 120mA  \\
+        \hline
+        Wi-Fi/BT Rx and listening & 80~90mA  \\
+        \hline
+       \end{tabular}
+       \end{center}
 \end{itemize}
 \begin{enumerate}
     \item  yas
