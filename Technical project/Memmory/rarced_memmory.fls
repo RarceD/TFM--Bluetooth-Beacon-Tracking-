@@ -103,6 +103,7 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmmi12.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Users\Tecnica2\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
 INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.toc
@@ -117,15 +118,19 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy8.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy6.tfm
 OUTPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.toc
-INPUT C:\Users\Tecnica2\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
-INPUT images\5min_beacon_rssi.png
-INPUT .\images\5min_beacon_rssi.png
-INPUT .\images\5min_beacon_rssi.png
-INPUT .\images\5min_beacon_rssi.png
-INPUT .\images\5min_beacon_rssi.png
-INPUT images\5min_beacon_rssi.png
-INPUT .\images\5min_beacon_rssi.png
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT images\gantt.PNG
+INPUT .\images\gantt.PNG
+INPUT .\images\gantt.PNG
+INPUT .\images\gantt.PNG
+INPUT .\images\gantt.PNG
+INPUT images\5min_beacon_rssi.png
+INPUT .\images\5min_beacon_rssi.png
+INPUT .\images\5min_beacon_rssi.png
+INPUT .\images\5min_beacon_rssi.png
+INPUT .\images\5min_beacon_rssi.png
+INPUT images\5min_beacon_rssi.png
+INPUT .\images\5min_beacon_rssi.png
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.aux
 INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.out
