@@ -21,13 +21,12 @@ const char *mqtt_server = "broker.mqttdashboard.com";
 #define MQTT_PASSWORD "d"
 #define MQTT_SERIAL_PUBLISH_CH "master_beacon"
 #define MQTT_SERIAL_RECEIVER_CH "master_beaconn"
-// #define DEBUG
+#define DEBUG
 #ifdef DEBUG
 #define DPRINT(x) Serial.println(x)
-#else 
-#define DPRINT(x) 
+#else
+#define DPRINT(x)
 #endif
-
 
 /*
 For no antenna these are the results:
@@ -47,32 +46,44 @@ For no antenna these are the results:
 WiFiClient wifiClient;
 PubSubClient client(wifiClient);
 
-int scanTime = 3; //In seconds
+int scanTime = 2; //In seconds
 BLEScan *pBLEScan;
 bool match;
 unsigned long schedule = 0;
 long timerMatch = 0;
 long timerScan = 0;
-#define uS_TO_S_FACTOR 1000000  /* Conversion factor for micro seconds to seconds */
-#define TIME_TO_SLEEP  10        /* Time ESP32 will go to sleep (in seconds) */
+#define uS_TO_S_FACTOR 1000000 /* Conversion factor for micro seconds to seconds */
+#define TIME_TO_SLEEP 1        /* Time ESP32 will go to sleep (in seconds) */
 RTC_DATA_ATTR int bootCount = 0;
 
-void print_wakeup_reason(){
+void print_wakeup_reason()
+{
   esp_sleep_wakeup_cause_t wakeup_reason;
 
   wakeup_reason = esp_sleep_get_wakeup_cause();
 
-  switch(wakeup_reason)
+  switch (wakeup_reason)
   {
-    case ESP_SLEEP_WAKEUP_EXT0 : DPRINT("Wakeup caused by external signal using RTC_IO"); break;
-    case ESP_SLEEP_WAKEUP_EXT1 : DPRINT("Wakeup caused by external signal using RTC_CNTL"); break;
-    case ESP_SLEEP_WAKEUP_TIMER : DPRINT("Wakeup caused by timer"); break;
-    case ESP_SLEEP_WAKEUP_TOUCHPAD : DPRINT("Wakeup caused by touchpad"); break;
-    case ESP_SLEEP_WAKEUP_ULP : DPRINT("Wakeup caused by ULP program"); break;
-    default : Serial.printf("Wakeup was not caused by deep sleep: %d\n",wakeup_reason); break;
+  case ESP_SLEEP_WAKEUP_EXT0:
+    DPRINT("Wakeup caused by external signal using RTC_IO");
+    break;
+  case ESP_SLEEP_WAKEUP_EXT1:
+    DPRINT("Wakeup caused by external signal using RTC_CNTL");
+    break;
+  case ESP_SLEEP_WAKEUP_TIMER:
+    DPRINT("Wakeup caused by timer");
+    break;
+  case ESP_SLEEP_WAKEUP_TOUCHPAD:
+    DPRINT("Wakeup caused by touchpad");
+    break;
+  case ESP_SLEEP_WAKEUP_ULP:
+    DPRINT("Wakeup caused by ULP program");
+    break;
+  default:
+    Serial.printf("Wakeup was not caused by deep sleep: %d\n", wakeup_reason);
+    break;
   }
 }
-
 
 class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks
 {
@@ -102,7 +113,7 @@ class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks
       if (knownAdress_2[i] == macAdress[i])
         val2++;
     }
-    if (val1 > 8 || val2>8)
+    if (val1 > 8 || val2 > 8)
     {
       char snum[25];
       //I calculate the aproximate distance:
@@ -124,104 +135,62 @@ class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks
       beacon_0["uuid"] = macAdress;
       beacon_0["distance"] = rssi;
 
-      // JsonObject &beacon_1 = beacon.createNestedObject();
-      // beacon_1["uuid"] = "test";
-      // beacon_1["distance"] = rssi;
-
-      DPRINT();
-      // root.prettyPrintTo(Serial);
-      char JSONmessageBuffer[100];
-      root.printTo(JSONmessageBuffer, sizeof(JSONmessageBuffer));
-      client.publish("master_beacon", JSONmessageBuffer);
+      if (strcmp(macAdress, "") != 0)
+      {
+        char JSONmessageBuffer[100];
+        root.printTo(JSONmessageBuffer, sizeof(JSONmessageBuffer));
+        client.publish("master_beacon", JSONmessageBuffer);
+        DPRINT("I post  \n");
+      }
     }
   }
 };
 
 void setup()
 {
+  //Start and led red on
+  pinMode(LED_RED, OUTPUT);
+  digitalWrite(LED_RED, HIGH);
   Serial.begin(115200);
-  
-  //Increment boot number and print it every reboot
-  ++bootCount;
-  DPRINT("Boot number: " + String(bootCount));
+  DPRINT(millis());
 
   //Print the wakeup reason for ESP32
   print_wakeup_reason();
   esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR);
-  DPRINT("Setup ESP32 to sleep for every " + String(TIME_TO_SLEEP) +
-  " Seconds");
 
-  Serial.setTimeout(500); // Set time out for
+  // Serial.setTimeout(300); // Set time out for
   setup_wifi();
+  //Connected to wifi and led green on
+
+  pinMode(LED_GREEN, OUTPUT);
+  digitalWrite(LED_GREEN, HIGH);
   client.setServer(mqtt_server, mqtt_port);
   client.setCallback(callback);
   reconnect();
+  //Connected to broker and led green on
   pinMode(12, OUTPUT);
-  pinMode(13, OUTPUT);
-  pinMode(14, OUTPUT);
-  pinMode(15, OUTPUT);
-  digitalWrite(LED_RED, HIGH);
+  digitalWrite(12, HIGH);
   BLEDevice::init("");
   pBLEScan = BLEDevice::getScan(); //create new scan
   pBLEScan->setAdvertisedDeviceCallbacks(new MyAdvertisedDeviceCallbacks());
   pBLEScan->setActiveScan(true); //active scan uses more power, but get results faster
   pBLEScan->setInterval(100);
   pBLEScan->setWindow(99); // less or equal setInterval value
-  timerScan = millis();
-  schedule = millis();
-  digitalWrite(LED_RED, LOW);
 
-
-    BLEScanResults foundDevices = pBLEScan->start(scanTime, false);
-    DPRINT("Devices found: ");
-    DPRINT(foundDevices.getCount());
-    pBLEScan->clearResults(); // delete results fromBLEScan buffer to release memory
-    DPRINT("TO SLEEP ");
+  pinMode(14, OUTPUT);
+  digitalWrite(14, HIGH);
+  BLEScanResults foundDevices = pBLEScan->start(scanTime, false);
+  DPRINT("Devices found: ");
+  DPRINT(foundDevices.getCount());
+  pBLEScan->clearResults(); // delete results fromBLEScan buffer to release memory
+  DPRINT("TO SLEEP ");
+  DPRINT(millis());
 
   esp_deep_sleep_start();
-
 }
 
 void loop()
 {
-
-  if (millis() - schedule > 2000)
-  {
-    BLEScanResults foundDevices = pBLEScan->start(scanTime, false);
-    Serial.print("Devices found: ");
-    DPRINT(foundDevices.getCount());
-    pBLEScan->clearResults(); // delete results fromBLEScan buffer to release memory
-    schedule = millis();
-  }
-  if (match && millis() - timerMatch >= 2000)
-  {
-    match = false;
-    timerMatch = millis();
-    digitalWrite(LED_ORANGE_UP, LOW);
-    digitalWrite(LED_ORANGE_DOWN, LOW);
-  }
-  if (millis() - timerScan >= 5000)
-  {
-    static bool ledBlink;
-    timerScan = millis();
-    if (ledBlink)
-    {
-      digitalWrite(LED_GREEN, HIGH);
-    }
-    else
-    {
-      digitalWrite(LED_GREEN, LOW);
-    }
-    ledBlink = !ledBlink;
-  }
-  if (Serial.available() > 0)
-  {
-    char mun[501];
-    memset(mun, 0, 501);
-    Serial.readBytesUntil('\n', mun, 500);
-    publishSerialData(mun);
-  }
-  client.loop();
 }
 
 void setup_wifi()
