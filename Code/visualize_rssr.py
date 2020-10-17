@@ -57,12 +57,12 @@ def on_message(client, userdata, message):
         beacon_distance = float(parsed_json['beacon'][index]['distance'])
         beacon_uuid = str(parsed_json['beacon'][index]['uuid'])
         # I add the devices to a list:
-        if beacon_uuid == "e6:13:a7:0b:4f:b2":
+        if beacon_uuid == "c4:64:e3:f9:35:b3":
             rssi_b1.append(beacon_distance)
             x_time1.append(str(t_number1))
             t_number1 += 1
 
-        elif beacon_uuid == "c4:64:e3:f9:35:b3":
+        elif beacon_uuid == "e6:13:a7:0b:4f:b2":
             rssi_b2.append(beacon_distance)
             x_time2.append(str(t_number2))
             t_number2 += 1
@@ -97,19 +97,19 @@ while(run):
         run = False
         client.loop_stop()  # stop the loop
         ax.plot(x_time1, rssi_b1)
-        ax.plot(x_time2, rssi_b2)
-        ax.set_title("Diferences between RSSI from 2 beacons at 1 meter")
+        # ax.plot(x_time2, rssi_b2)
+        ax.set_title("Measure RSSI on 3 meters distance")
         ax.set_ylim([-100, -20])
         ax.set_xlabel("time in seconds")
         ax.set_ylabel("RSSI")
 
 
         # I apply a filter and get the distance:
-        filter_rssi = rssi_filter(rssi_b1)
-        distance_rssi = rssi_distance(filter_rssi, 13, 2.2)
-        print(filter_rssi, distance_rssi)
-        filter_rssi = rssi_filter(rssi_b2)
-        distance_rssi = rssi_distance(filter_rssi, 13, 2.2)
-        print(filter_rssi, distance_rssi)
+        # filter_rssi = rssi_filter(rssi_b1)
+        # distance_rssi = rssi_distance(filter_rssi, 13, 2.2)
+        # print(filter_rssi, distance_rssi)
+        # filter_rssi = rssi_filter(rssi_b2)
+        # distance_rssi = rssi_distance(filter_rssi, 13, 2.2)
+        # print(filter_rssi, distance_rssi)
         plt.show()
         timer_update_screen = int(round(time.time()))

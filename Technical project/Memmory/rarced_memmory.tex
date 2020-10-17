@@ -88,10 +88,12 @@ Defensa de 20 min  40
 asdfasd
 
 
-\section{Estado de mediciones}
 
 \section{Bibliografía}
 \href{https://campus.masterd.es/campusvirtual/index.htm}{Something Linky} 
+
+
+\section{Anexo 1: Cálculo de consumos}
 \begin{itemize}
     \item  Active mode: 160-260mA.  Active core, ULP coprocessor and RTC
      Wifi, Bluetooth, Radio, Peripherals
@@ -145,4 +147,27 @@ asdfasd
 \begin{enumerate}
     \item  yas
 \end{enumerate}
+
+\section{Anexo 2: Cálculo de distancia por RSSI}
+\paragraph{}
+El RSSI (Received signal strength indicator) es un indicador de la energía recibida en un mensaje de radio, 
+está asociado con la atenuación de la señal, cuanto más pequeña es su valor menor atenuación.
+\paragraph{}
+Los rangos del RRSI se obtiene bien por aproximaciones teóricas o bien por experimentación, esto es debido a que 
+es fuertemente alterado por las condiciones del medio en el que se encuentre. Es importante mencionar también que
+este parámetro es medido a través de un hardware que rara vez tiene un comportamiento idéntico.
+\paragraph{}
+Los modelos de cálculo del RRSI se basan en la pérdida de señal en el espacio
+\begin{equation}
+    Loss = 32.44 + 10n*\log_{} d+ 10n*\log_{} f
+\end{equation}
+\begin{equation}
+    P_L(d) = P_L(d_0) + 10n*\log_{} \frac{ d }{d_0 }   + X_\sigma
+\end{equation}
+\begin{equation}
+    Loss = 32.44 + 10n*\log_{} d+ 10n*\log_{} f
+\end{equation}
+\paragraph{}
+asdfafasdf oss=32.44+10nlog(d)+10mlog(f)
+
 \end{document}

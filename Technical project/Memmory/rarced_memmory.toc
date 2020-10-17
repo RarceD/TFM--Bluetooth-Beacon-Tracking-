@@ -38,5 +38,10 @@
 \contentsline {subsection}{\numberline {6.1}test}{7}{subsection.6.1}%
 \contentsline {subsubsection}{\numberline {6.1.1}test}{7}{subsubsection.6.1.1}%
 \contentsline {paragraph}{hola}{7}{section*.4}%
-\contentsline {section}{\numberline {7}Estado de mediciones}{8}{section.7}%
-\contentsline {section}{\numberline {8}Bibliografía}{8}{section.8}%
+\contentsline {section}{\numberline {7}Bibliografía}{8}{section.7}%
+\contentsline {section}{\numberline {8}Anexo 1: Cálculo de consumos}{8}{section.8}%
+\contentsline {section}{\numberline {9}Anexo 2: Cálculo de distancia por RSSI}{9}{section.9}%
+\contentsline {paragraph}{}{9}{section*.5}%
+\contentsline {paragraph}{}{9}{section*.6}%
+\contentsline {paragraph}{}{9}{section*.7}%
+\contentsline {paragraph}{}{9}{section*.8}%
