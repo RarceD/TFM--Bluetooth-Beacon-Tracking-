@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  17 OCT 2020 11:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  18 OCT 2020 10:46
 entering extended mode
 **"c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Memmory/rarced_memmory.tex"
 ("c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Memmory/rarced_memmory.tex"
@@ -249,69 +249,78 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \openout4 = `rarced_memmory.toc'.
 
  [3]
-<./images/gantt.PNG, id=215, 978.65625pt x 252.945pt>
-File: ./images/gantt.PNG Graphic file (type png)
-<use ./images/gantt.PNG>
-Package pdftex.def Info: ./images/gantt.PNG  used on input line 34.
-(pdftex.def)             Requested size: 426.80215pt x 227.62523pt.
-
-Overfull \hbox (48.55203pt too wide) in paragraph at lines 34--39
- [][] []
+Overfull \hbox (4.46951pt too wide) in paragraph at lines 45--46
+[]\OT1/cmr/m/n/12 Seguridad: Tan so-lo los em-plea-dos con au-to-ri-za-cion y pro-xi-mi-dad podran
  []
 
 [4
 
- <./images/gantt.PNG>] [5]
-<./images/5min_beacon_rssi.png, id=228, 1295.59032pt x 558.58687pt>
+]
+Overfull \hbox (28.91371pt too wide) in paragraph at lines 57--59
+[]\OT1/cmr/m/n/12 Existen va-rios ti-pos de bea-cons: https://accent-systems.com/es/producto/ibks-
+ []
+
+<./images/gantt.PNG, id=244, 978.65625pt x 252.945pt>
+File: ./images/gantt.PNG Graphic file (type png)
+<use ./images/gantt.PNG>
+Package pdftex.def Info: ./images/gantt.PNG  used on input line 69.
+(pdftex.def)             Requested size: 426.80215pt x 227.62523pt.
+
+Overfull \hbox (48.55203pt too wide) in paragraph at lines 69--74
+ [][] []
+ []
+
+[5] [6 <./images/gantt.PNG>] [7]
+Overfull \hbox (6.88477pt too wide) in paragraph at lines 154--155
+[]\OT1/cmr/m/n/12 This re-du-ces po-wer con-sum-ption even further. The chip con-su-mes around
+ []
+
+[8] [9]
+<./images/5min_beacon_rssi.png, id=296, 1295.59032pt x 558.58687pt>
 File: ./images/5min_beacon_rssi.png Graphic file (type png)
 <use ./images/5min_beacon_rssi.png>
-Package pdftex.def Info: ./images/5min_beacon_rssi.png  used on input line 85.
+Package pdftex.def Info: ./images/5min_beacon_rssi.png  used on input line 217.
 (pdftex.def)             Requested size: 388.6801pt x 167.57735pt.
 File: ./images/5min_beacon_rssi.png Graphic file (type png)
 <use ./images/5min_beacon_rssi.png>
-Package pdftex.def Info: ./images/5min_beacon_rssi.png  used on input line 86.
+Package pdftex.def Info: ./images/5min_beacon_rssi.png  used on input line 218.
 (pdftex.def)             Requested size: 426.7949pt x 227.62427pt.
 
-Overfull \hbox (16.30492pt too wide) in paragraph at lines 85--87
+Overfull \hbox (16.30492pt too wide) in paragraph at lines 217--219
 [][]
  []
 
 
-Overfull \hbox (36.7949pt too wide) in paragraph at lines 85--87
+Overfull \hbox (36.7949pt too wide) in paragraph at lines 217--219
 [] 
  []
 
-[6] [7 <./images/5min_beacon_rssi.png>]
-Overfull \hbox (6.88477pt too wide) in paragraph at lines 131--132
-[]\OT1/cmr/m/n/12 This re-du-ces po-wer con-sum-ption even further. The chip con-su-mes around
- []
-
-[8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 173.
- [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 173.
+[10]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 231.
+ [11 <./images/5min_beacon_rssi.png>] [12]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 231.
  ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.aux"
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 173.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 173.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 231.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 231.
 Package rerunfilecheck Info: File `rarced_memmory.out' has not changed.
-(rerunfilecheck)             Checksum: F3976DB9891D19F87FB39CC5CCB22FC3;2977.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 173.
+(rerunfilecheck)             Checksum: 024E42CCD8882EEF0EEA5A71CE7A1211;3230.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 231.
  ) 
 Here is how much of TeX's memory you used:
- 6325 strings out of 480930
- 97425 string characters out of 2909539
- 370942 words of memory out of 3000000
- 22038 multiletter control sequences out of 15000+200000
+ 6358 strings out of 480930
+ 97823 string characters out of 2909539
+ 370948 words of memory out of 3000000
+ 22045 multiletter control sequences out of 15000+200000
  537843 words of font info for 42 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,7n,35p,395b,654s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Tecnica2\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.pdf" (9 pages, 198265 bytes).
+ 34i,7n,35p,407b,654s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Tecnica2\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
+Output written on "c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.pdf" (12 pages, 233987 bytes).
 PDF statistics:
- 305 PDF objects out of 1000 (max. 8388607)
- 61 named destinations out of 1000 (max. 500000)
- 323 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 369 PDF objects out of 1000 (max. 8388607)
+ 87 named destinations out of 1000 (max. 500000)
+ 347 words of extra memory for PDF output out of 10000 (max. 10000000)
 
