@@ -49,17 +49,60 @@ Defensa de 20 min  40
         \end{enumerate}
     \subsection{Análisis de soluciones}
         \subsubsection {Wifi}
-        Consume como un demonio, inviable 
+        La posibilidad de llevar a cabo el tracking mediante la escucha de wifis es una opción, pero para ello sería
+        necesario en primer lugar que se colocara un móvil en cada uno de los objetos a identificar. Esto es aceptable 
+        en el caso de monitorización de personas pero inasumible para objetos.
+        \paragraph{}
+        El procedimiento consistiría en llevar a cabo un barrido de direcciones MACs que generan los móviles cuando tienen el wifi dado,
+        es decir que esto no funcionaría en el caso de que una persona lleve puestos los datos únicamente.
+        \paragraph{}
+        Otra desventaja es el hecho de que al tener un equipo buscando wifis la información personal del propietario como localización del móvil,
+        la fecha y la hora a la que se intentó conectar y la dirección MAC que identifica y relaciona un móvil a una persona. Se han de tener 
+        en cuenta la política de privacidad empleando esta tecnología para llevar a cabo el tracking.
+        \paragraph{}
+        \includegraphics[scale=0.4]{WifiCounting.jpg}
+        \paragraph{}
+        La única solución al problema es que se ha de pedir permiso formal a la persona de alguna forma para poder llevar a cabo
+        el tratamiento de sus datos, cosa que es dificil puesto que se desconoce quien va a llevar a cabo el uso del equipo.
+        \paragraph{}
+        El artículo 29 de privacidad de datos de la comunidad europea dice lo siguiente:
+        “WiFi-tracking, depending on the circumstances and purposes of the data collection, such tracking under the GDPR is likely
+        either to be subject to consent, or may only be performed if the personal data collected is anonymised.”
         \subsubsection {GPS}
-        A diferencia de la tecnología GPS, tiene potencial como sistema de posicionamiento en interiores y su consumo de batería es muy reducido.
-
-        \subsubsection {Bluetooth Low Energy}
+        La tecnología por excelencia para llevar a cabo el seguimiento de objetos o personas es el GPS, la principal desventaja
+        que presenta es el elevado consumo energético comparado con el wifi o el bluetooth.
+        \paragraph{}
+        Consumo energético: Mantener un módulo GPS encendido y pretender llegar a una autonomía de años es a día de hoy
+        imposible, es por ello por lo que o se emplea un teléfono móvil para llevarlo a cabo, cosa inviable si se pretende 
+        monitorizar objetos en movimiento y no personas, o el tiempo de refresco de los datos ha de ser muy lento, del orden de horas,
+        cosa de nuevo inviable para la aplicación que se tiene entre manos.
+        \paragraph{}
+        Se ha de tener en cuenta también el aumento de precio que supondría un módulo GPS sumado a la antena que lleva consigo de 
+        dimensiones nada despreciables.
+        \subsubsection {Bluetooth Low Energy - Beacon}
         Existen varios tipos de beacons:
         https://accent-systems.com/es/producto/ibks-105/
         \begin{enumerate}
-            \item iBeacon: Apple codigo cerrado
-            \item Eddystone: reado por Google y de código abierto
-            \item AltBeacon
+            \item iBeacon: Fue la primera tecnología BLE Beacon desarrollada por Apple, permite leer y emitir en modo 
+            broadcast para cualquier dispositivo que disponga de Bluetooth low energy. Es un protocolo propietario, es 
+            decir es un estandar cerrado. Se basan en enviar el UUID (indentificador único de dispositivo), una cadena de
+            carácteres de 16 bytes.
+            \paragraph{}
+            \includegraphics[scale=0.5]{tipos_beacon_ibeacon.PNG}
+            \item Eddystone: Creado por Google es un protocolo de código abierto. A diferencia del protocolo anterior este 
+            permite transmitir:
+            \begin{itemize}
+                \item URL: Un url propio de una web, de esta forma se evita la necedad de tener que contar con una app instalada.
+                \item UID: Similar al UUID del iBeacon, este parámetro identifica al beacon y permite llevar acciones individuales.
+                \item TML: Permite enviar información relativa al beacon como por ejemplo el porcentaje de batería o valores de sensores.
+            \end{itemize}
+            \paragraph{}
+            \includegraphics[scale=0.5]{tipos_beacon_edison.PNG}
+            \item AltBeacon: Es un protocolo de código abierto que surge como resultado de las incompatibilidades de las dos 
+            tecnologías anteriores, la ventaja principal es que permite más flexibilidad de modificaciones así como compatibilidad 
+            entre sistemas operativos.
+            \paragraph{}
+            \includegraphics[scale=0.5]{tipos_beacon_altbeacon.PNG}
         \end{enumerate}
     \subsection{Resultados finales}
     \subsection{Planificación}
@@ -72,10 +115,10 @@ Defensa de 20 min  40
         Fase 3: Pruebas de campo
         Fase 4: Evolución del equipo en instalación y depuración 
 \section{Memoria justificativa}
-    \subsection{Calculos justificactivos de la instalación}
+    \subsection{Cálculos justificativos de la instalación}
         Calculos de consumos de los equipos y dimensionamiento de la batería.
         Los datos de partida son el consumo medio y duración del batería durante 2 años.
-        \subsubsection{ Cálculo de distancia por RSSI}
+        \subsubsection{Cálculo de distancia por RSSI}
             \paragraph{}
             El RSSI (Received signal strength indicator) es un indicador de la energía o potencia recibida en un mensaje de radio, 
             está asociado con la atenuación de la señal, cuanto más pequeña es su valor menor atenuación.Este valor está 
@@ -121,7 +164,7 @@ Defensa de 20 min  40
                 \item  Active mode: 160-260mA.  Active core, ULP coprocessor and RTC
                 Wifi, Bluetooth, Radio, Peripherals
                 \begin{center}
-                    \begin{tabular}{||c | c ||} 
+                    \begin{tabular}{||c || c ||} 
                     \hline
                     ESP32 Mode & Power consumption  \\ [0.5ex] 
                     \hline\hline
@@ -170,6 +213,7 @@ Defensa de 20 min  40
             \begin{enumerate}
                 \item  yas
             \end{enumerate}
+        \subsubsection{Cálculo saturación espectro de frecuencia}
 
 
 \section{Planos}

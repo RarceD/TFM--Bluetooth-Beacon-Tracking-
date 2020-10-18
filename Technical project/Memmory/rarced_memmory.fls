@@ -119,6 +119,26 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy8.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy6.tfm
 OUTPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.toc
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT images\WifiCounting.jpg
+INPUT .\images\WifiCounting.jpg
+INPUT .\images\WifiCounting.jpg
+INPUT .\images\WifiCounting.jpg
+INPUT .\images\WifiCounting.jpg
+INPUT images\tipos_beacon_ibeacon.PNG
+INPUT .\images\tipos_beacon_ibeacon.PNG
+INPUT .\images\tipos_beacon_ibeacon.PNG
+INPUT .\images\tipos_beacon_ibeacon.PNG
+INPUT .\images\tipos_beacon_ibeacon.PNG
+INPUT images\tipos_beacon_edison.PNG
+INPUT .\images\tipos_beacon_edison.PNG
+INPUT .\images\tipos_beacon_edison.PNG
+INPUT .\images\tipos_beacon_edison.PNG
+INPUT .\images\tipos_beacon_edison.PNG
+INPUT images\tipos_beacon_altbeacon.PNG
+INPUT .\images\tipos_beacon_altbeacon.PNG
+INPUT .\images\tipos_beacon_altbeacon.PNG
+INPUT .\images\tipos_beacon_altbeacon.PNG
+INPUT .\images\tipos_beacon_altbeacon.PNG
 INPUT images\gantt.PNG
 INPUT .\images\gantt.PNG
 INPUT .\images\gantt.PNG

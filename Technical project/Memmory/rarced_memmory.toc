@@ -5,51 +5,62 @@
 \contentsline {paragraph}{}{4}{section*.2}%
 \contentsline {subsection}{\numberline {1.3}Análisis de soluciones}{5}{subsection.1.3}%
 \contentsline {subsubsection}{\numberline {1.3.1}Wifi}{5}{subsubsection.1.3.1}%
-\contentsline {subsubsection}{\numberline {1.3.2}GPS}{5}{subsubsection.1.3.2}%
-\contentsline {subsubsection}{\numberline {1.3.3}Bluetooth Low Energy}{5}{subsubsection.1.3.3}%
-\contentsline {subsection}{\numberline {1.4}Resultados finales}{5}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Planificación}{5}{subsection.1.5}%
 \contentsline {paragraph}{}{5}{section*.3}%
-\contentsline {paragraph}{}{6}{section*.4}%
-\contentsline {section}{\numberline {2}Memoria justificativa}{6}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Calculos justificactivos de la instalación}{6}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1} Cálculo de distancia por RSSI}{6}{subsubsection.2.1.1}%
-\contentsline {paragraph}{}{6}{section*.5}%
-\contentsline {paragraph}{}{6}{section*.6}%
-\contentsline {paragraph}{}{7}{section*.7}%
-\contentsline {paragraph}{}{7}{section*.8}%
-\contentsline {paragraph}{}{7}{section*.9}%
+\contentsline {paragraph}{}{5}{section*.4}%
+\contentsline {paragraph}{}{5}{section*.5}%
+\contentsline {paragraph}{}{5}{section*.6}%
+\contentsline {paragraph}{}{6}{section*.7}%
+\contentsline {subsubsection}{\numberline {1.3.2}GPS}{6}{subsubsection.1.3.2}%
+\contentsline {paragraph}{}{6}{section*.8}%
+\contentsline {paragraph}{}{6}{section*.9}%
+\contentsline {subsubsection}{\numberline {1.3.3}Bluetooth Low Energy - Beacon}{6}{subsubsection.1.3.3}%
 \contentsline {paragraph}{}{7}{section*.10}%
 \contentsline {paragraph}{}{7}{section*.11}%
-\contentsline {paragraph}{}{7}{section*.12}%
-\contentsline {subsubsection}{\numberline {2.1.2}Cálculo de consumos energéticos}{7}{subsubsection.2.1.2}%
-\contentsline {section}{\numberline {3}Planos}{9}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Plano de mecánicos}{9}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Plano de eléctricos}{9}{subsection.3.2}%
-\contentsline {subsubsection}{\numberline {3.2.1}Esquemático del emisor beacon}{9}{subsubsection.3.2.1}%
-\contentsline {subsubsection}{\numberline {3.2.2}PCB circuito del emisor beacon}{9}{subsubsection.3.2.2}%
-\contentsline {subsubsection}{\numberline {3.2.3}Esquemático del receptor ESP32}{9}{subsubsection.3.2.3}%
-\contentsline {subsubsection}{\numberline {3.2.4}PCB circuito del receptor ESP32}{9}{subsubsection.3.2.4}%
-\contentsline {section}{\numberline {4}Pliego de condiciones}{9}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Prescripciones ténicas generales}{9}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Normativa relativa a radiofrecuencia}{9}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Normativa relativa a }{9}{subsubsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.2}Prescripciones ténicas particulares}{9}{subsection.4.2}%
-\contentsline {subsubsection}{\numberline {4.2.1}Condiciones que ha de reunir el material}{9}{subsubsection.4.2.1}%
-\contentsline {subsubsection}{\numberline {4.2.2}Ejecución del proyecto}{9}{subsubsection.4.2.2}%
-\contentsline {section}{\numberline {5}Presupuestos}{9}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Precios unitarios}{9}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Presupuestos Parciales}{10}{subsection.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}Capitulo 1: Placa de circuito impreso emisor}{10}{subsubsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2}Capitulo 2: Placa de circuito impreso receptor}{10}{subsubsection.5.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.3}Capitulo 1: }{10}{subsubsection.5.2.3}%
-\contentsline {subsubsection}{\numberline {5.2.4}Capitulo 1: }{10}{subsubsection.5.2.4}%
-\contentsline {subsection}{\numberline {5.3}Presupuestos Total}{10}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Factores económicos y financieros}{10}{subsection.5.4}%
-\contentsline {subsubsection}{\numberline {5.4.1}Tasa de interés de retorno(TIR)}{11}{subsubsection.5.4.1}%
-\contentsline {subsubsection}{\numberline {5.4.2}Valor Actual Neto (VAN)}{11}{subsubsection.5.4.2}%
-\contentsline {section}{\numberline {6}Estudio de compativilidad electromagnética}{11}{section.6}%
-\contentsline {subsection}{\numberline {6.1}test}{11}{subsection.6.1}%
-\contentsline {subsubsection}{\numberline {6.1.1}test}{11}{subsubsection.6.1.1}%
-\contentsline {paragraph}{hola}{11}{section*.13}%
-\contentsline {section}{\numberline {7}Bibliografía}{12}{section.7}%
+\contentsline {paragraph}{}{8}{section*.12}%
+\contentsline {subsection}{\numberline {1.4}Resultados finales}{8}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Planificación}{8}{subsection.1.5}%
+\contentsline {paragraph}{}{8}{section*.13}%
+\contentsline {paragraph}{}{8}{section*.14}%
+\contentsline {section}{\numberline {2}Memoria justificativa}{9}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Cálculos justificativos de la instalación}{9}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Cálculo de distancia por RSSI}{9}{subsubsection.2.1.1}%
+\contentsline {paragraph}{}{9}{section*.15}%
+\contentsline {paragraph}{}{9}{section*.16}%
+\contentsline {paragraph}{}{9}{section*.17}%
+\contentsline {paragraph}{}{9}{section*.18}%
+\contentsline {paragraph}{}{9}{section*.19}%
+\contentsline {paragraph}{}{10}{section*.20}%
+\contentsline {paragraph}{}{10}{section*.21}%
+\contentsline {paragraph}{}{10}{section*.22}%
+\contentsline {subsubsection}{\numberline {2.1.2}Cálculo de consumos energéticos}{10}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Cálculo saturación espectro de frecuencia}{12}{subsubsection.2.1.3}%
+\contentsline {section}{\numberline {3}Planos}{12}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Plano de mecánicos}{12}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Plano de eléctricos}{12}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Esquemático del emisor beacon}{12}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}PCB circuito del emisor beacon}{12}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Esquemático del receptor ESP32}{12}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}PCB circuito del receptor ESP32}{12}{subsubsection.3.2.4}%
+\contentsline {section}{\numberline {4}Pliego de condiciones}{12}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Prescripciones ténicas generales}{12}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Normativa relativa a radiofrecuencia}{12}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Normativa relativa a }{12}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}Prescripciones ténicas particulares}{12}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}Condiciones que ha de reunir el material}{12}{subsubsection.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}Ejecución del proyecto}{12}{subsubsection.4.2.2}%
+\contentsline {section}{\numberline {5}Presupuestos}{12}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Precios unitarios}{12}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Presupuestos Parciales}{13}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Capitulo 1: Placa de circuito impreso emisor}{13}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Capitulo 2: Placa de circuito impreso receptor}{13}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}Capitulo 1: }{13}{subsubsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.4}Capitulo 1: }{13}{subsubsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.3}Presupuestos Total}{13}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Factores económicos y financieros}{13}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}Tasa de interés de retorno(TIR)}{14}{subsubsection.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.2}Valor Actual Neto (VAN)}{14}{subsubsection.5.4.2}%
+\contentsline {section}{\numberline {6}Estudio de compativilidad electromagnética}{14}{section.6}%
+\contentsline {subsection}{\numberline {6.1}test}{14}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}test}{14}{subsubsection.6.1.1}%
+\contentsline {paragraph}{hola}{14}{section*.23}%
+\contentsline {section}{\numberline {7}Bibliografía}{15}{section.7}%
