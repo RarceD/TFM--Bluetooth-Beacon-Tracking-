@@ -48,72 +48,118 @@ Defensa de 20 min  40
             \item Anuncios y nueva forma de publicidad: Activar acciones en función de la localización en determinados puntos de interés
         \end{enumerate}
     \subsection{Análisis de soluciones}
+        Se plantean dos problemáticas, en primer lugar se busca llevar a cabo el seguimiento de elementos en movimiento, y por el otro 
+        está el enviar esta información de alguna forma al servidor correspondiente para que lleve a cabo el análisis de los datos, que 
+        es lo realmente interesante desde el punto de vista del cliete de esta tecnología.
+        En lo que respecta a la obtención de datos de posición relativa de objetos o personas se presentan las siguientes opciones:
         \subsubsection {Wifi}
-        La posibilidad de llevar a cabo el tracking mediante la escucha de wifis es una opción, pero para ello sería
-        necesario en primer lugar que se colocara un móvil en cada uno de los objetos a identificar. Esto es aceptable 
-        en el caso de monitorización de personas pero inasumible para objetos.
-        \paragraph{}
-        El procedimiento consistiría en llevar a cabo un barrido de direcciones MACs que generan los móviles cuando tienen el wifi dado,
-        es decir que esto no funcionaría en el caso de que una persona lleve puestos los datos únicamente.
-        \paragraph{}
-        Otra desventaja es el hecho de que al tener un equipo buscando wifis la información personal del propietario como localización del móvil,
-        la fecha y la hora a la que se intentó conectar y la dirección MAC que identifica y relaciona un móvil a una persona. Se han de tener 
-        en cuenta la política de privacidad empleando esta tecnología para llevar a cabo el tracking.
-        \paragraph{}
-        \includegraphics[scale=0.4]{WifiCounting.jpg}
-        \paragraph{}
-        La única solución al problema es que se ha de pedir permiso formal a la persona de alguna forma para poder llevar a cabo
-        el tratamiento de sus datos, cosa que es dificil puesto que se desconoce quien va a llevar a cabo el uso del equipo.
-        \paragraph{}
-        El artículo 29 de privacidad de datos de la comunidad europea dice lo siguiente:
-        “WiFi-tracking, depending on the circumstances and purposes of the data collection, such tracking under the GDPR is likely
-        either to be subject to consent, or may only be performed if the personal data collected is anonymised.”
+            La posibilidad de llevar a cabo el tracking mediante la escucha de wifis es una opción, pero para ello sería
+            necesario en primer lugar que se colocara un móvil en cada uno de los objetos a identificar. Esto es aceptable 
+            en el caso de monitorización de personas pero inasumible para objetos.
+            \paragraph{}
+            El procedimiento consistiría en llevar a cabo un barrido de direcciones MACs que generan los móviles cuando tienen el wifi dado,
+            es decir que esto no funcionaría en el caso de que una persona lleve puestos los datos únicamente.
+            \paragraph{}
+            Otra desventaja es el hecho de que al tener un equipo buscando wifis la información personal del propietario como localización del móvil,
+            la fecha y la hora a la que se intentó conectar y la dirección MAC que identifica y relaciona un móvil a una persona. Se han de tener 
+            en cuenta la política de privacidad empleando esta tecnología para llevar a cabo el tracking.
+            \paragraph{}
+            \includegraphics[scale=0.4]{WifiCounting.jpg}
+            \paragraph{}
+            La única solución al problema es que se ha de pedir permiso formal a la persona de alguna forma para poder llevar a cabo
+            el tratamiento de sus datos, cosa que es dificil puesto que se desconoce quien va a llevar a cabo el uso del equipo.
+            \paragraph{}
+            El artículo 29 de privacidad de datos de la comunidad europea dice lo siguiente:
+            “WiFi-tracking, depending on the circumstances and purposes of the data collection, such tracking under the GDPR is likely
+            either to be subject to consent, or may only be performed if the personal data collected is anonymised.”
         \subsubsection {GPS}
-        La tecnología por excelencia para llevar a cabo el seguimiento de objetos o personas es el GPS, la principal desventaja
-        que presenta es el elevado consumo energético comparado con el wifi o el bluetooth.
-        \paragraph{}
-        Consumo energético: Mantener un módulo GPS encendido y pretender llegar a una autonomía de años es a día de hoy
-        imposible, es por ello por lo que o se emplea un teléfono móvil para llevarlo a cabo, cosa inviable si se pretende 
-        monitorizar objetos en movimiento y no personas, o el tiempo de refresco de los datos ha de ser muy lento, del orden de horas,
-        cosa de nuevo inviable para la aplicación que se tiene entre manos.
-        \paragraph{}
-        Se ha de tener en cuenta también el aumento de precio que supondría un módulo GPS sumado a la antena que lleva consigo de 
-        dimensiones nada despreciables.
+            La tecnología por excelencia para llevar a cabo el seguimiento de objetos o personas es el GPS, la principal desventaja
+            que presenta es el elevado consumo energético comparado con el wifi o el bluetooth.
+            \paragraph{}
+            Consumo energético: Mantener un módulo GPS encendido y pretender llegar a una autonomía de años es a día de hoy
+            imposible, es por ello por lo que o se emplea un teléfono móvil para llevarlo a cabo, cosa inviable si se pretende 
+            monitorizar objetos en movimiento y no personas, o el tiempo de refresco de los datos ha de ser muy lento, del orden de horas,
+            cosa de nuevo inviable para la aplicación que se tiene entre manos.
+            \paragraph{}
+            Se ha de tener en cuenta también el aumento de precio que supondría un módulo GPS sumado a la antena que lleva consigo de 
+            dimensiones nada despreciables.
         \subsubsection {Bluetooth Low Energy - Beacon}
-        Existen varios tipos de beacons:
-        https://accent-systems.com/es/producto/ibks-105/
-        \begin{enumerate}
-            \item iBeacon: Fue la primera tecnología BLE Beacon desarrollada por Apple, permite leer y emitir en modo 
-            broadcast para cualquier dispositivo que disponga de Bluetooth low energy. Es un protocolo propietario, es 
-            decir es un estandar cerrado. 
-            Los iBeacons disponen de los siguientes identificadores:
-            \begin{itemize}
-                \item UUID: Se basan en enviar el indentificador único de dispositivo, una cadena de
-                carácteres de 16 bytes que permite caracterizar a caba equipo.
-                \item Major: Número entero de 0 a 65535, se usa para identificar grupos, un ejemplo sería 
-                asignar un Major común para todos los beacons de una misma planta o habitación.
-                \item Minor: Es también un número entero de 0 a 65535 que se emplea para distinguir un beacon
-                específico dentro de un grupo, entendiéndose como grupo aquellos beacons con mismo valor de Major.
-            \end{itemize}
-            \paragraph{}
-            \includegraphics[scale=0.5]{tipos_beacon_ibeacon.PNG}
-            \item Eddystone: Creado por Google es un protocolo de código abierto. A diferencia del protocolo anterior este 
-            permite transmitir:
-            \begin{itemize}
-                \item URL: Un url propio de una web, de esta forma se evita la necedad de tener que contar con una app instalada.
-                \item UID: Similar al UUID del iBeacon, este parámetro identifica al beacon y permite llevar acciones individuales.
-                \item TML: Permite enviar información relativa al beacon como por ejemplo el porcentaje de batería o valores de sensores.
-            \end{itemize}
-            \paragraph{}
-            \includegraphics[scale=0.5]{tipos_beacon_edison.PNG}
-            \item AltBeacon: Es un protocolo de código abierto que surge como resultado de las incompatibilidades de las dos 
-            tecnologías anteriores, la ventaja principal es que permite más flexibilidad de modificaciones así como compatibilidad 
-            entre sistemas operativos.
-            \paragraph{}
-            \includegraphics[scale=0.5]{tipos_beacon_altbeacon.PNG}
-        \end{enumerate}
-    \subsection{Resultados finales}
-    \subsection{Planificación}
+            Existen varios tipos de beacons:
+            https://accent-systems.com/es/producto/ibks-105/
+            \begin{enumerate}
+                \item iBeacon: Fue la primera tecnología BLE Beacon desarrollada por Apple, permite leer y emitir en modo 
+                broadcast para cualquier dispositivo que disponga de Bluetooth low energy. Es un protocolo propietario, es 
+                decir es un estandar cerrado. 
+                Los iBeacons disponen de los siguientes identificadores:
+                \begin{itemize}
+                    \item UUID: Se basan en enviar el indentificador único de dispositivo, una cadena de
+                    carácteres de 16 bytes que permite caracterizar a caba equipo.
+                    \item Major: Número entero de 0 a 65535, se usa para identificar grupos, un ejemplo sería 
+                    asignar un Major común para todos los beacons de una misma planta o habitación.
+                    \item Minor: Es también un número entero de 0 a 65535 que se emplea para distinguir un beacon
+                    específico dentro de un grupo, entendiéndose como grupo aquellos beacons con mismo valor de Major.
+                \end{itemize}
+                \paragraph{}
+                \includegraphics[scale=0.5]{tipos_beacon_ibeacon.PNG}
+                \item Eddystone: Creado por Google es un protocolo de código abierto. A diferencia del protocolo anterior este 
+                permite transmitir:
+                \begin{itemize}
+                    \item URL: Un url propio de una web, de esta forma se evita la necedad de tener que contar con una app instalada.
+                    \item UID: Similar al UUID del iBeacon, este parámetro identifica al beacon y permite llevar acciones individuales.
+                    \item TML: Permite enviar información relativa al beacon como por ejemplo el porcentaje de batería o valores de sensores.
+                \end{itemize}
+                \paragraph{}
+                \includegraphics[scale=0.5]{tipos_beacon_edison.PNG}
+                \item AltBeacon: Es un protocolo de código abierto que surge como resultado de las incompatibilidades de las dos 
+                tecnologías anteriores, la ventaja principal es que permite más flexibilidad de modificaciones así como compatibilidad 
+                entre sistemas operativos.
+                \paragraph{}
+                \includegraphics[scale=0.5]{tipos_beacon_altbeacon.PNG}
+            Una vez exploradas las opcione de posicionamiento de los equipos se llevará a cabo el estudio de posibilidades de subida de estos datos
+            a la nube, es por ello por lo que se contemplar varias opciones:
+            \subsubsection {MQTT}
+                MQTT es un protocolo estándar aplicado principalmente al IoT (Internet of Things). Está basado en publicación y 
+                suscripción con un servicio de mensajería push, los mensajes se publican el topics en los que los distintos 
+                dispositivos se encuentran escuchando.
+
+                La base de la comunicación es el Broker, encargado de dar soporte a todos los topics, los clientes inician una 
+                conexión TCP/IP con él que se mantiene abierta constantemente hasta que el cliente la finalize. Se emplean los puertos
+                1883 y 8883 empleando seguridad TLS.
+
+                Cada mensaje tiene un QoS (Quality of service), es el mecanismo de calidad del servicio, o lo que es lo mismo es la forma de
+                gestionar la robustez de los mensajes entre clientes ante los fallos de conectividad.
+                \begin{itemize}
+                    \item QoS 0: Envio una única vez
+                    \item QoS 1: Menaje enviado hasta que se garantiza que se entrega.
+                    \item QoS 2: Garantizado que cada mensaje se entrega al suscriptor por una única vez.
+                \end{itemize}
+
+                Esta es una opción de que los equipos que escuchan a los beacons envien la información a la web que escucha el mismo
+                topic en el que envían.
+            \subsubsection {HTTP post}
+                A través del protocolo de transferencia de hipertexto se puede llevar a cabo una serie de  
+            \subsubsection {ESP Now}
+                Se plantea la opción de que no todos los equipos que escuchan a los beacons no tengan internet, es por ello por lo 
+                que se plantéa llevar a cabo una red de elementos que escuchan y que envian a un único concentrador encargado de enviar
+                esta información a internet por cualquier otro método.
+
+                Es decir, se contempla la posibilidad de establecer una red de elementos que escuchan, para ello se emplea 
+                un protocolo de comunicación rápido denominado ESP-NOW, este tiene las siguientes características:
+                \begin{itemize}
+                    \item Encriptación de las comunicaciones.
+                    \item Hasta 250 Bytes de payload o mensaje a enviar.
+                    \item Rapidez de comunicación entre esps
+                \end{itemize}
+                \paragraph{}
+                La idea sería la siguiente:
+                \paragraph{}
+                \includegraphics[scale=0.5]{espnow.png}
+            \end{enumerate}
+            \subsection{Resultados finales}
+            Explorando las tres opciones se ha confeccionado la siguiente tabla en la que se puede ver como el claro ganador es el  bluetooth debido 
+            principalmente al precio que supondría llevar a cabo una red de estas características además del consumo energético.
+            
+            \subsection{Planificación}
         \paragraph{}
         Para sintetizar el proceso de desarrollo del proyecto técnico se empleará un diagrama GANTT: 
         \paragraph{}
@@ -169,59 +215,40 @@ Defensa de 20 min  40
             \end{equation}
         \subsubsection{Cálculo de consumos energéticos}
             \begin{itemize}
-                \item  Active mode: 160-260mA.  Active core, ULP coprocessor and RTC
-                Wifi, Bluetooth, Radio, Peripherals
-                \begin{center}
-                    \begin{tabular}{||c || c ||} 
-                    \hline
-                    ESP32 Mode & Power consumption  \\ [0.5ex] 
-                    \hline\hline
-                    Wi-Fi Tx packet 13dBm~21dBm & 160~260mA  \\ 
-                    \hline
-                    Wi-Fi/BT Tx packet 0dBm	 & 120mA  \\
-                    \hline
-                    Wi-Fi/BT Rx and listening & 80~90mA  \\
-                    \hline
-                \end{tabular}
-                \end{center}
-                \item  Sleep mode: 3-20mA Active core, ULP coprocessor and RTC
-                Inactive: Wifi, Bluetooth, Radio, Peripherals
-                \item  Light sleep mode: the CPU is paused by powering off its clock 
-                pulses, while RTC and ULP-coprocessor are kept active. This results in 
-                less power consumption than in modem sleep mode which is around 0.8mA.
-            
-                \item Deep sleep mode, the CPU, most of the RAM and all the digital 
-                peripherals are powered off. The only parts of the chip that remains 
-                powered on are: RTC controller, RTC peripherals (including ULP 
-                co-processor), and RTC memories (slow and fast).
-                The chip consumes around 0.15 mA(if ULP co-processor is powered on) to 10µA.
-            
-                In Deep sleep mode, power is shut off to the entire chip except RTC module. So, any data that is not in the RTC recovery memory is lost, and the chip will thus restart with a reset. This means program execution starts from the beginning once again.
-            
-                \item Hibernation mode: Unlike deep sleep mode, in hibernation mode the chip disables internal 8MHz oscillator and ULP-coprocessor as well. The RTC recovery memory is also powered down, meaning there’s no way we can preserve any data during hibernation mode.
-            
-                Everything else is shut off except only one RTC timer on the slow clock and some RTC GPIOs are active. They are responsible for waking up the chip from the hibernation mode.
-                
-                This reduces power consumption even further. The chip consumes around 2.5µA only in hibernation mode.
-            
-                \begin{center}
-                    \begin{tabular}{||c | c ||} 
-                    \hline
-                    ESP32 Mode & Power consumption  \\ [0.5ex] 
-                    \hline\hline
-                    Wi-Fi Tx packet 13dBm~21dBm & 160~260mA  \\ 
-                    \hline
-                    Wi-Fi/BT Tx packet 0dBm	 & 120mA  \\
-                    \hline
-                    Wi-Fi/BT Rx and listening & 80~90mA  \\
-                    \hline
-                \end{tabular}
-                \end{center}
+                \item  Active Mode, 160-260mA.  Los dos cores del procesador encendidos así como el procesador ULP,
+                RTC, Wifi, Bluetooth, Radio, Peripherals
+                \item  Sleep mode: 3-20mA Activos los dos cores, el coprocesaror ULP coprocessor y el RTC, inactivos el 
+                Wifi, Bluetooth, Radio y periféricos.
+                \item  Light sleep mode: La CPU está pausada apagando los pulsos de su reloj interno, sin embargo, el RTC
+                y el coprocesador ULP se mantien activo. Esto supone consumo menor que en los anteriores modos de funcionamiento,
+                se puede llegar a los 0.8mA.
+                \item Deep sleep mode, tanto la CPU como gran parte de la RAM así como todos los periféricos se mantienen 
+                apagados. Las únicas parte nos apagadas son los RTC de los periféricos y de la CPU (incluyendo el ULP) y su
+                memoria interna. El chip consume en torno a los 0.15 mA si se mantien encendido el ULP y  10µA si no.
+                En el modo deep sleep todo se encuentra apagado por ello los datos de la memoria del rtc se pierden
+                puesto que se encuentra en reinicio el uP.
+                \item Hibernation mode: A diferencia del modo deep sleep el oscilador de 8MHz y el ULP se encuentran apagados,
+                no es posible almacenar nada de información. Tan solo el RTC funcinando con el reloj de baja velocidad puede funcionar.
+                En este modo de funcionamiento el micro consume sobre los 2.5µA.
             \end{itemize}
-            \begin{enumerate}
-                \item  yas
-            \end{enumerate}
-        \subsubsection{Cálculo saturación espectro de frecuencia}
+            \begin{center}
+                \begin{tabular}{||c || c ||} 
+                \hline
+                Modo del ESP32  & Consumo energético  \\ [0.5ex] 
+                \hline
+                Wi-Fi Tx a 13dBm~21dBm & 160~260mA  \\ 
+                Wi-Fi/BT Tx  a packet 0dBm	 & 120mA  \\
+                Wi-Fi/BT Rx and listening & 80~90mA  \\
+                Sleep mode &  3-20mA   \\
+                Light sleep mode &0,8mA  \\
+                Deep sleep mode &   0,15 mA - 10µA  \\
+                Hibernation mode & 2,5µA  \\
+                \end{tabular}
+            \end{center}
+            A la hora de llevar a cabo la decisión sobre como llevar a cabo el protocolo de comunicación se ha de tener en cuenta 
+            el consumo de los equipos, en especial en lo que respecta a los beacons.
+
+            \subsubsection{Cálculo saturación espectro de frecuencia}
             El espectro de frecuencia es amplio y cada banda tiene su aplicación, dentro de las telecomunicaciones
             distinguimos las siguientes opciones:
             \begin{itemize}
@@ -264,7 +291,6 @@ Defensa de 20 min  40
             \end{itemize}
             La frecuencia de 2.4 GHz con su estándar 802.11 b/g/n ha llegado al límite de su capacidad, se han
             detectado incluso caidas del 30\% en areas urbanas.  
-
             La banda ISM de 2.4GHz es, sin lugar a dudas, la que soporta un uso más intensivo, ya que es utilizada en 
             diferentes estándares de redes Wi-Fi (IEEE 802.11b/g/n) y Bluetooth, (IEEE 802.15.1), llegando en muchas 
             ocasiones a su completa saturación.
