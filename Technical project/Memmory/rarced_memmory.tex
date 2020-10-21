@@ -85,8 +85,16 @@ Defensa de 20 min  40
         \begin{enumerate}
             \item iBeacon: Fue la primera tecnología BLE Beacon desarrollada por Apple, permite leer y emitir en modo 
             broadcast para cualquier dispositivo que disponga de Bluetooth low energy. Es un protocolo propietario, es 
-            decir es un estandar cerrado. Se basan en enviar el UUID (indentificador único de dispositivo), una cadena de
-            carácteres de 16 bytes.
+            decir es un estandar cerrado. 
+            Los iBeacons disponen de los siguientes identificadores:
+            \begin{itemize}
+                \item UUID: Se basan en enviar el indentificador único de dispositivo, una cadena de
+                carácteres de 16 bytes que permite caracterizar a caba equipo.
+                \item Major: Número entero de 0 a 65535, se usa para identificar grupos, un ejemplo sería 
+                asignar un Major común para todos los beacons de una misma planta o habitación.
+                \item Minor: Es también un número entero de 0 a 65535 que se emplea para distinguir un beacon
+                específico dentro de un grupo, entendiéndose como grupo aquellos beacons con mismo valor de Major.
+            \end{itemize}
             \paragraph{}
             \includegraphics[scale=0.5]{tipos_beacon_ibeacon.PNG}
             \item Eddystone: Creado por Google es un protocolo de código abierto. A diferencia del protocolo anterior este 
@@ -136,7 +144,7 @@ Defensa de 20 min  40
             disminuye con el cuadrado de la distancia. Esta ecuación de Friis para la transmisión libre en el espacio espacio es 
             una fórmula teórica, existen aproximaciones obtenidas por métodos empíricos:
             \begin{equation}
-                P_L(d) [dB] = P_L(d_0) [dB] + 10n*\log_{10}* \frac{ d_i }{d_0 } 
+                P_L(d) [dB] = P_L(d_0) [dB] + 10n ·\log_{10} \frac{ d_i }{d_0 } 
             \end{equation}
             \paragraph{}
             Siendo PL (d0)  la pérdida de propagación a 1 metro y n es una constante que depende del medio, será igual
@@ -214,8 +222,52 @@ Defensa de 20 min  40
                 \item  yas
             \end{enumerate}
         \subsubsection{Cálculo saturación espectro de frecuencia}
+            El espectro de frecuencia es amplio y cada banda tiene su aplicación, dentro de las telecomunicaciones
+            distinguimos las siguientes opciones:
+            \begin{itemize}
+                \item Banda ISM: Son las bandas de radio industriales, científicas y médicas, están reservadas a 
+                nivel internacional para estos usos y pueden usarse sin licencias por parte de gobiernos. El uso de esta
+                banda conlleva que todo equipo emisor ha de estar protegido frente a interferencias dentro de su mismo 
+                rango, es decir han de ser tolerantes a errores.
+    
+                Desde el microondas y el mando del garaje hasta el bluetooth, NFC y wifi son ejemplos de tecnologías
+                que emplean este rango que se encuentra comprendido desde   6.78 MHz hasta 244 GHz en distintos tramos,
+                un ejemplo de tramos serían los siguientes:
+                \begin{center}
+                    \begin{tabular}{||c | c | c| c||} 
+                    \hline
+                    Rango de frecuencia & Bandwidth & Center Frequency & Allocation\\ [0.5ex] 
+                    \hline
+                    \hline
+                        6.765 - 6.975 MHz &	0.03 MHz &	6.78 MHz	 & Locally \\ 
+                        13.553 - 13.567 MHz &	0.014 MHz &	13.56 MHz	 & Global\\ 
+                        26.957 - 27.283 MHz &	0.326 MHz &	27.18 MHz	 & Global\\ 
+                        40.66 - 40.7 MHz &	0.04 MHz &	40.68 MHz	 & Global\\ 
+                        433.05 - 434.79 MHz &	1.74 MHz &	433.92 MHz & EU, RU, Africa\\ 
+                        902 - 928 MHz &	26 MHz&	915 MHz &	Americas\\   
+                        2400 - 2500 MHz &	100 MHz &	2450 MHz & Global\\ 
+                        5725 - 5875 MHz &	150 MHz &	5800 MHz & Global\\ 
+                        24 - 24.250 GHz &	250 MHz &	24.125 GHz & 	Global\\ 
+                        61 - 61.5 GHz &	500 MHz &	61.250 GHz & 	Locally \\ 
+                        122 - 123 GHz &	1000 MHz &	122.5 GHz	 & Locally \\ 
+                        244 - 246 GHz &	2000 MHz &	245 GHz & Locally \\ 
+                    \hline
+                    \end{tabular}
+                \end{center}
+                \item Banda no ISM: Para usos no licenciados: Son aquellas que no requieren permisos especiales de las 
+                autoridades para su uso. A nivel mundial el 2,4GHz está dentro de las frecuencias de libre utilización 
+                con ciertas limitaciones en algunos paises.
 
+                Es por ello por lo que al ser libres podemos tener emitiendo a nuestros equipos sin preocuparnos por
+                la legislación existente, la gran versatilidad para tranmitir también conlleva un mayor número de equipos 
+                en este ancho de banda y mayores dificultades.
+            \end{itemize}
+            La frecuencia de 2.4 GHz con su estándar 802.11 b/g/n ha llegado al límite de su capacidad, se han
+            detectado incluso caidas del 30\% en areas urbanas.  
 
+            La banda ISM de 2.4GHz es, sin lugar a dudas, la que soporta un uso más intensivo, ya que es utilizada en 
+            diferentes estándares de redes Wi-Fi (IEEE 802.11b/g/n) y Bluetooth, (IEEE 802.15.1), llegando en muchas 
+            ocasiones a su completa saturación.
 \section{Planos}
     \subsection{Plano de mecánicos}
     \subsection{Plano de eléctricos}
@@ -243,7 +295,7 @@ Defensa de 20 min  40
             \end{tabular}
         \end{center}
     \subsection{Presupuestos Parciales}
-        \subsubsection{Capitulo 1: Placa de circuito impreso emisor}
+        \subsubsection{Capitulo 1: Placa de circuito impreso emisor beacon}
         \subsubsection{Capitulo 2: Placa de circuito impreso receptor}
         \subsubsection{Capitulo 1: }
         \subsubsection{Capitulo 1: }
