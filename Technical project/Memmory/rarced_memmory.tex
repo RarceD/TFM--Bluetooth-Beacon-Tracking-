@@ -137,7 +137,16 @@ Defensa de 20 min  40
                 Esta es una opción de que los equipos que escuchan a los beacons envien la información a la web que escucha el mismo
                 topic en el que envían.
             \subsubsection {HTTP post}
-                A través del protocolo de transferencia de hipertexto se puede llevar a cabo una serie de  
+                A través del protocolo de transferencia de hipertexto se puede llevar a cabo una petición POST, consiste en que
+                un servidor acepte los datos recibidos por el microcontrolador.
+                La ventaja es que con el HTTP Post solo se mantiene la conexión abierta al hacer la conexión, luego se desconecta hasta 
+                la siguiente vez en la que se vuelvan a publicar datos. Otra ventaja es que mediante peticiones se pueden llevar a 
+                cabo varias a distintos servidores, por el contrario con MQTT solo se puede enviar información a aquellos que estén
+                suscritos al mismo tópic.
+
+                El principal inconveniente es que está demostrado que en una red 3G una petición post es del orden de 93 veces
+                más lenta que un mensaje MQTT, con el consiguiente consumo energético que esto conlleva. Otro inconveniente es el hecho 
+                de que se requiera de un servidor con una API o endpoint constantemente escuchando a los distintos posts.
             \subsubsection {ESP Now}
                 Se plantea la opción de que no todos los equipos que escuchan a los beacons no tengan internet, es por ello por lo 
                 que se plantéa llevar a cabo una red de elementos que escuchan y que envian a un único concentrador encargado de enviar
@@ -248,7 +257,7 @@ Defensa de 20 min  40
             A la hora de llevar a cabo la decisión sobre como llevar a cabo el protocolo de comunicación se ha de tener en cuenta 
             el consumo de los equipos, en especial en lo que respecta a los beacons.
 
-            \subsubsection{Cálculo saturación espectro de frecuencia}
+        \subsubsection{Cálculo saturación espectro de frecuencia}
             El espectro de frecuencia es amplio y cada banda tiene su aplicación, dentro de las telecomunicaciones
             distinguimos las siguientes opciones:
             \begin{itemize}
@@ -341,13 +350,5 @@ Defensa de 20 min  40
 \paragraph{hola}
 asdfasd
 
-
-
 \section{Bibliografía}
-\href{https://campus.masterd.es/campusvirtual/index.htm}{Something Linky} 
-
-
-
-
-
 \end{document}
