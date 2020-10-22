@@ -164,11 +164,11 @@ Defensa de 20 min  40
                 \paragraph{}
                 \includegraphics[scale=0.5]{espnow.png}
             \end{enumerate}
-            \subsection{Resultados finales}
-            Explorando las tres opciones se ha confeccionado la siguiente tabla en la que se puede ver como el claro ganador es el  bluetooth debido 
-            principalmente al precio que supondría llevar a cabo una red de estas características además del consumo energético.
+    \subsection{Resultados finales}
+        Explorando las tres opciones se ha confeccionado la siguiente tabla en la que se puede ver como el claro ganador es el  bluetooth debido 
+        principalmente al precio que supondría llevar a cabo una red de estas características además del consumo energético.
             
-            \subsection{Planificación}
+    \subsection{Planificación}
         \paragraph{}
         Para sintetizar el proceso de desarrollo del proyecto técnico se empleará un diagrama GANTT: 
         \paragraph{}
@@ -182,46 +182,79 @@ Defensa de 20 min  40
         Calculos de consumos de los equipos y dimensionamiento de la batería.
         Los datos de partida son el consumo medio y duración del batería durante 2 años.
         \subsubsection{Cálculo de distancia por RSSI}
-            \paragraph{}
-            El RSSI (Received signal strength indicator) es un indicador de la energía o potencia recibida en un mensaje de radio, 
-            está asociado con la atenuación de la señal, cuanto más pequeña es su valor menor atenuación.Este valor está 
-            presente no solo en Bluetooth sino también en el Wifi (2,4 GHz)o en las bandas de radio industriales, científicas y médicas,
-            las denominadas ISM (desde 433MHz a 458.5MHz y desde 860MHz a 960MHz)
-            \paragraph{}
-            De las muestras obtenidas se puede concluir que se puede llegar a estimar la distancia a partir de los valores
-            de rrsi con un error que disminuye cuanto más alejados son los elementos a medir. 
-            \paragraph{}
-            Los rangos del RRSI se obtiene bien por aproximaciones teóricas o bien por experimentación, esto es debido a que 
-            es fuertemente alterado por las condiciones del medio en el que se encuentre. Es importante mencionar también que
-            este parámetro es medido a través de un hardware que rara vez tiene un comportamiento idéntico.
-            \paragraph{}
-            Los modelos de cálculo del RRSI se basan en la pérdida de señal en el espacio, como sabemos la potencia de la señal
-            disminuye con el cuadrado de la distancia. Esta ecuación de Friis para la transmisión libre en el espacio espacio es 
-            una fórmula teórica, existen aproximaciones obtenidas por métodos empíricos:
-            \begin{equation}
-                P_L(d) [dB] = P_L(d_0) [dB] + 10n ·\log_{10} \frac{ d_i }{d_0 } 
-            \end{equation}
-            \paragraph{}
-            Siendo PL (d0)  la pérdida de propagación a 1 metro y n es una constante que depende del medio, será igual
-            a 2 si se encuentra en el espacio libre sin obstáculos ni reflexiones o dispersiones de señal.
-            \paragraph{}
-            Para calcular este parámetro 'n' se ha de aplicar la siguiente fórmula, como podemos ver para llevar a cabo el 
-            cálculo se han de tomar valores empíricos de potencias:
-            \begin{equation}
-                n = \frac{ P_L(d_i) - P_L(d_0) }{10n*\log_{}\frac{d_i}{d_0}}
-            \end{equation}
-            \paragraph{}
-            Por lo tanto, y una vez obtenidos los valores de potencia a distintas distancias podemos obtener la ganacia
-            de la señal recibida:
-            \begin{equation}
-                RRSI [dBm] = -10n*\log_{10} d+ A[dBm]
-            \end{equation}
-            \paragraph{}
-            Disponiendo ya del valor de la constante de pérdidas, d, calculado con la ecuación (2) y los valores
-            de rssi medidos desde la antena receptora a 1 metro de distancia, A, podemos obtener:
-            \begin{equation}
-                d= 10^\frac{-(RRSI - A) }{10n}
-            \end{equation}
+            \subsubsubsection{Rssi}
+                \paragraph{}
+                El RSSI (Received signal strength indicator) es un indicador de la energía o potencia recibida en un mensaje de radio, 
+                está asociado con la atenuación de la señal, cuanto más pequeña es su valor menor atenuación.Este valor está 
+                presente no solo en Bluetooth sino también en el Wifi (2,4 GHz)o en las bandas de radio industriales, científicas y médicas,
+                las denominadas ISM (desde 433MHz a 458.5MHz y desde 860MHz a 960MHz)
+                \paragraph{}
+                De las muestras obtenidas se puede concluir que se puede llegar a estimar la distancia a partir de los valores
+                de rrsi con un error que disminuye cuanto más alejados son los elementos a medir. 
+                \paragraph{}
+                Los rangos del RRSI se obtiene bien por aproximaciones teóricas o bien por experimentación, esto es debido a que 
+                es fuertemente alterado por las condiciones del medio en el que se encuentre. Es importante mencionar también que
+                este parámetro es medido a través de un hardware que rara vez tiene un comportamiento idéntico.
+                \paragraph{}
+                Los modelos de cálculo del RRSI se basan en la pérdida de señal en el espacio, como sabemos la potencia de la señal
+                disminuye con el cuadrado de la distancia. Esta ecuación de Friis para la transmisión libre en el espacio espacio es 
+                una fórmula teórica, existen aproximaciones obtenidas por métodos empíricos:
+                \begin{equation}
+                    P_L(d) [dB] = P_L(d_0) [dB] + 10n *\log_{10} \frac{ d_i }{d_0} 
+                \end{equation}
+                \paragraph{}
+                Siendo PL (d0)  la pérdida de propagación a 1 metro y n es una constante que depende del medio, será igual
+                a 2 si se encuentra en el espacio libre sin obstáculos ni reflexiones o dispersiones de señal.
+                \paragraph{}
+                Para calcular este parámetro 'n' se ha de aplicar la siguiente fórmula, como podemos ver para llevar a cabo el 
+                cálculo se han de tomar valores empíricos de potencias:
+                \begin{equation}
+                    n = \frac{ P_L(d_i) - P_L(d_0) }{10n*\log_{}\frac{d_i}{d_0}}
+                \end{equation}
+                \paragraph{}
+                Por lo tanto, y una vez obtenidos los valores de potencia a distintas distancias podemos obtener la ganacia
+                de la señal recibida:
+                \begin{equation}
+                    RRSI [dBm] = -10n*\log_{10} d+ A[dBm]
+                \end{equation}
+                \paragraph{}
+                Disponiendo ya del valor de la constante de pérdidas, d, calculado con la ecuación (2) y los valores
+                de rssi medidos desde la antena receptora a 1 metro de distancia, A, podemos obtener:
+                \begin{equation}
+                    d= 10^\frac{-(RRSI - A)}{10n}
+                \end{equation}
+            \subsubsubsection{Trilateración y posicionamiento}
+                Una vez obtenidas las distancias a los distintos equipos que receptores es necesario llevar a cabo el
+                posicionamiento exácto de los equipos, para ello se emplea la trilateración:
+                \includegraphics[scale=0.3]{trilateration_circle.png}
+                Para ello hemos de resolver las siguientes ecuaciones básicas sobre la distancia entre recta y un punto en 
+                una circunferencia:
+                \begin{equation}
+                    d_{A1}= \sqrt[2]{(x-x_A)^2+(y-y_A)^2}
+                \end{equation}
+                \begin{equation}
+                    d_{B1}= \sqrt[2]{(x-x_B)^2+(y-y_B)^2}
+                \end{equation}
+                \begin{equation}
+                    d_{C1}= \sqrt[2]{(x-x_C)^2+(y-y_C)^2}
+                \end{equation}
+                Llevando a cabo la simplificación obtenemos el siguiente sistema:
+                \begin{equation}
+                    \begin{pmatrix}
+                        x \\
+                        y 
+                    \end{pmatrix}=
+                    \begin{pmatrix}
+                        2(x_A-x_C) 2(y_A-y_C) \\
+                        2(x_B-x_C) 2(y_B-y_C) 
+                    \end{pmatrix} 
+                    * 
+                    \begin{pmatrix}
+                        x_A^2-x_C^2+y_A^2-y_C^2+d_C^2-d_A^2 \\
+                        x_B^2-x_C^2+y_B^2-y_C^2+d_C^2-d_B^2 
+                    \end{pmatrix} 
+                \end{equation}
+                
         \subsubsection{Cálculo de consumos energéticos}
             \begin{itemize}
                 \item  Active Mode, 160-260mA.  Los dos cores del procesador encendidos así como el procesador ULP,
