@@ -13,34 +13,34 @@
 \BOOKMARK [1][-]{section.2}{Memoria justificativa}{}% 13
 \BOOKMARK [2][-]{subsection.2.1}{C\341lculos justificativos de la instalaci\363n}{section.2}% 14
 \BOOKMARK [3][-]{subsubsection.2.1.1}{C\341lculo de distancia por RSSI}{subsection.2.1}% 15
-\BOOKMARK [3][-]{subsubsection.2.1.2}{C\341lculo de consumos energ\351ticos}{subsection.2.1}% 16
-\BOOKMARK [3][-]{subsubsection.2.1.3}{C\341lculo saturaci\363n espectro de frecuencia}{subsection.2.1}% 17
-\BOOKMARK [1][-]{section.3}{Planos}{}% 18
-\BOOKMARK [2][-]{subsection.3.1}{Plano de mec\341nicos}{section.3}% 19
-\BOOKMARK [2][-]{subsection.3.2}{Plano de el\351ctricos}{section.3}% 20
-\BOOKMARK [3][-]{subsubsection.3.2.1}{Esquem\341tico del emisor beacon}{subsection.3.2}% 21
-\BOOKMARK [3][-]{subsubsection.3.2.2}{PCB circuito del emisor beacon}{subsection.3.2}% 22
-\BOOKMARK [3][-]{subsubsection.3.2.3}{Esquem\341tico del receptor ESP32}{subsection.3.2}% 23
-\BOOKMARK [3][-]{subsubsection.3.2.4}{PCB circuito del receptor ESP32}{subsection.3.2}% 24
-\BOOKMARK [1][-]{section.4}{Pliego de condiciones}{}% 25
-\BOOKMARK [2][-]{subsection.4.1}{Prescripciones t\351nicas generales}{section.4}% 26
-\BOOKMARK [3][-]{subsubsection.4.1.1}{Normativa relativa a radiofrecuencia}{subsection.4.1}% 27
-\BOOKMARK [3][-]{subsubsection.4.1.2}{Normativa relativa a }{subsection.4.1}% 28
-\BOOKMARK [2][-]{subsection.4.2}{Prescripciones t\351nicas particulares}{section.4}% 29
-\BOOKMARK [3][-]{subsubsection.4.2.1}{Condiciones que ha de reunir el material}{subsection.4.2}% 30
-\BOOKMARK [3][-]{subsubsection.4.2.2}{Ejecuci\363n del proyecto}{subsection.4.2}% 31
-\BOOKMARK [1][-]{section.5}{Presupuestos}{}% 32
-\BOOKMARK [2][-]{subsection.5.1}{Precios unitarios}{section.5}% 33
-\BOOKMARK [2][-]{subsection.5.2}{Presupuestos Parciales}{section.5}% 34
-\BOOKMARK [3][-]{subsubsection.5.2.1}{Capitulo 1: Placa de circuito impreso emisor beacon}{subsection.5.2}% 35
-\BOOKMARK [3][-]{subsubsection.5.2.2}{Capitulo 2: Placa de circuito impreso receptor}{subsection.5.2}% 36
-\BOOKMARK [3][-]{subsubsection.5.2.3}{Capitulo 1: }{subsection.5.2}% 37
-\BOOKMARK [3][-]{subsubsection.5.2.4}{Capitulo 1: }{subsection.5.2}% 38
-\BOOKMARK [2][-]{subsection.5.3}{Presupuestos Total}{section.5}% 39
-\BOOKMARK [2][-]{subsection.5.4}{Factores econ\363micos y financieros}{section.5}% 40
-\BOOKMARK [3][-]{subsubsection.5.4.1}{Tasa de inter\351s de retorno\(TIR\)}{subsection.5.4}% 41
-\BOOKMARK [3][-]{subsubsection.5.4.2}{Valor Actual Neto \(VAN\)}{subsection.5.4}% 42
-\BOOKMARK [1][-]{section.6}{Estudio de compativilidad electromagn\351tica}{}% 43
-\BOOKMARK [2][-]{subsection.6.1}{test}{section.6}% 44
-\BOOKMARK [3][-]{subsubsection.6.1.1}{test}{subsection.6.1}% 45
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Rssi}{subsection.2.1}% 16
+\BOOKMARK [3][-]{subsubsection.2.1.3}{Trilateraci\363n y posicionamiento}{subsection.2.1}% 17
+\BOOKMARK [3][-]{subsubsection.2.1.4}{C\341lculo de consumos energ\351ticos}{subsection.2.1}% 18
+\BOOKMARK [3][-]{subsubsection.2.1.5}{C\341lculo saturaci\363n espectro de frecuencia}{subsection.2.1}% 19
+\BOOKMARK [1][-]{section.3}{Planos}{}% 20
+\BOOKMARK [2][-]{subsection.3.1}{Plano de mec\341nicos}{section.3}% 21
+\BOOKMARK [2][-]{subsection.3.2}{Plano de el\351ctricos}{section.3}% 22
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Esquem\341tico del emisor beacon}{subsection.3.2}% 23
+\BOOKMARK [3][-]{subsubsection.3.2.2}{PCB circuito del emisor beacon}{subsection.3.2}% 24
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Esquem\341tico del receptor ESP32}{subsection.3.2}% 25
+\BOOKMARK [3][-]{subsubsection.3.2.4}{PCB circuito del receptor ESP32}{subsection.3.2}% 26
+\BOOKMARK [1][-]{section.4}{Pliego de condiciones}{}% 27
+\BOOKMARK [2][-]{subsection.4.1}{Prescripciones t\351nicas generales}{section.4}% 28
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Normativa relativa a radiofrecuencia}{subsection.4.1}% 29
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Normativa relativa a bluetooth}{subsection.4.1}% 30
+\BOOKMARK [2][-]{subsection.4.2}{Prescripciones t\351nicas particulares}{section.4}% 31
+\BOOKMARK [3][-]{subsubsection.4.2.1}{Condiciones que ha de reunir el material}{subsection.4.2}% 32
+\BOOKMARK [3][-]{subsubsection.4.2.2}{Ejecuci\363n del proyecto}{subsection.4.2}% 33
+\BOOKMARK [1][-]{section.5}{Presupuestos}{}% 34
+\BOOKMARK [2][-]{subsection.5.1}{Precios unitarios}{section.5}% 35
+\BOOKMARK [2][-]{subsection.5.2}{Presupuestos Parciales}{section.5}% 36
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Placa de circuito impreso emisor beacon}{subsection.5.2}% 37
+\BOOKMARK [3][-]{subsubsection.5.2.2}{Placa de circuito impreso receptor o gateway}{subsection.5.2}% 38
+\BOOKMARK [3][-]{subsubsection.5.2.3}{Desarrollo e instalaci\363n}{subsection.5.2}% 39
+\BOOKMARK [3][-]{subsubsection.5.2.4}{Capitulo 1: }{subsection.5.2}% 40
+\BOOKMARK [2][-]{subsection.5.3}{Presupuestos Total}{section.5}% 41
+\BOOKMARK [2][-]{subsection.5.4}{Factores econ\363micos y financieros}{section.5}% 42
+\BOOKMARK [3][-]{subsubsection.5.4.1}{Tasa de inter\351s de retorno\(TIR\)}{subsection.5.4}% 43
+\BOOKMARK [3][-]{subsubsection.5.4.2}{Valor Actual Neto \(VAN\)}{subsection.5.4}% 44
+\BOOKMARK [1][-]{section.6}{Estudio de compatibilidad electromagn\351tica}{}% 45
 \BOOKMARK [1][-]{section.7}{Bibliograf\355a}{}% 46

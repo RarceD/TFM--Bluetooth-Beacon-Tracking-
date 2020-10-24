@@ -182,7 +182,7 @@ Defensa de 20 min  40
         Calculos de consumos de los equipos y dimensionamiento de la batería.
         Los datos de partida son el consumo medio y duración del batería durante 2 años.
         \subsubsection{Cálculo de distancia por RSSI}
-            \subsubsubsection{Rssi}
+            \subsubsection{Rssi}
                 \paragraph{}
                 El RSSI (Received signal strength indicator) es un indicador de la energía o potencia recibida en un mensaje de radio, 
                 está asociado con la atenuación de la señal, cuanto más pequeña es su valor menor atenuación.Este valor está 
@@ -223,11 +223,12 @@ Defensa de 20 min  40
                 \begin{equation}
                     d= 10^\frac{-(RRSI - A)}{10n}
                 \end{equation}
-            \subsubsubsection{Trilateración y posicionamiento}
-                Una vez obtenidas las distancias a los distintos equipos que receptores es necesario llevar a cabo el
-                posicionamiento exácto de los equipos, para ello se emplea la trilateración:
-                \includegraphics[scale=0.3]{trilateration_circle.png}
-                Para ello hemos de resolver las siguientes ecuaciones básicas sobre la distancia entre recta y un punto en 
+            \subsubsection{Trilateración y posicionamiento}
+            
+            Una vez obtenidas las distancias a los distintos equipos que receptores es necesario llevar a cabo el
+            posicionamiento exácto de los equipos, para ello se emplea la trilateración:
+            \includegraphics[scale=0.3]{trilateration_circle.png}
+            Para ello hemos de resolver las siguientes ecuaciones básicas sobre la distancia entre recta y un punto en 
                 una circunferencia:
                 \begin{equation}
                     d_{A1}= \sqrt[2]{(x-x_A)^2+(y-y_A)^2}
@@ -248,13 +249,13 @@ Defensa de 20 min  40
                         2(x_A-x_C) 2(y_A-y_C) \\
                         2(x_B-x_C) 2(y_B-y_C) 
                     \end{pmatrix} 
-                    * 
+                    +
                     \begin{pmatrix}
                         x_A^2-x_C^2+y_A^2-y_C^2+d_C^2-d_A^2 \\
                         x_B^2-x_C^2+y_B^2-y_C^2+d_C^2-d_B^2 
                     \end{pmatrix} 
                 \end{equation}
-                
+
         \subsubsection{Cálculo de consumos energéticos}
             \begin{itemize}
                 \item  Active Mode, 160-260mA.  Los dos cores del procesador encendidos así como el procesador ULP,
@@ -345,43 +346,117 @@ Defensa de 20 min  40
         \subsubsection{PCB circuito del receptor ESP32}
 \section{Pliego de condiciones}
     \subsection{Prescripciones ténicas generales}
-        \subsubsection{Normativa relativa a radiofrecuencia}
-        \subsubsection{Normativa relativa a }
+    \subsubsection{Normativa relativa a radiofrecuencia}
+    \subsubsection{Normativa relativa a bluetooth}
+    Se ha de tener en cuenta que para poder emplear dispositivos bluethoot se ha de respetar los estándares
+    \begin{itemize}
+        \item IEEE 802.15.1 define Bluetooth 1.x, que puede alcanzar velocidades de 1 Mbps;
+         \item IEEE 802.15.2 recomienda prácticas para utilizar la banda de frecuencia de 2.4 GHz (la frecuencia también utilizada por WiFi). Sin embargo, este estándar todavía no se ha aprobado;
+         \item IEEE 802.15.3 es un estándar que actualmente se está desarrollando, que ofrecerá velocidad de banda ancha (20 Mbps) con Bluetooth;
+         \item IEEE 802.15.4 es un estándar que actualmente se está desarrollando para el uso con aplicaciones Bluetooth de baja velocidad.
+    \end{itemize}
+    Se ha de tener en cuenta también la clase del disposivo que queda recogida en la siguiente tabla:
+    \begin{center}
+        \begin{tabular}{||c | c |c ||} 
+        \hline
+        Clase & Potencia  & Alcance aproximado\\ [0.5ex] 
+        \hline\hline
+        Clase 1 & 100 mW / 20 dBm & 100 m \\ 
+        Clase 2 & 2,5 mW / 4 dBm & 5 - 10 m \\ 
+        Clase 3 & 1 mW / 0 dBm & 1 m \\ 
+        Clase 4 & 0,5 mW / -3 dBm & 0,5 m \\ 
+    \hline
+        \end{tabular}
+    \end{center}
+    En nuestro caso y teniendo en cuenta la aplicación se ha optado por emitir en los 20 dBm de tal forma
+    que se ha de 
     \subsection{Prescripciones ténicas particulares}
         \subsubsection{Condiciones que ha de reunir el material}
         \subsubsection{Ejecución del proyecto}
         Placa ha de cumplir solo 1 capa
-\section{Presupuestos}
-    \subsection{Precios unitarios}
+        \section{Presupuestos}
+        \subsection{Precios unitarios}
+        La tabla de precios se va a elaborar en distintas unidades que corresponden al precio por separado de cada
+        una de las PCBs que se han elaborarado.
+        \subsection{Presupuestos Parciales}
+            \subsubsection{Placa de circuito impreso emisor beacon}
+                \begin{center}
+                    \begin{tabular}{||c | c |c ||} 
+                    \hline
+                    Componente & Cantidad & Precio unitario  \\ [0.5ex] 
+                    \hline\hline
+                    Resistencia metálica SMD 0805 1k 10 & 4 & 0,0035 \\ 
+                    Resistencia metálica SMD 0805 10k 10  & 1 & 0,0035 \\ 
+                    Condensador cerámico SMD 0805 0,1uF  & 1 & 0,0035 \\ 
+                    Condensador cerámico SMD 0805 10uF  & 3 & 0,0035 \\ 
+                    Regulador tensión LDO AMS1117-3.3V  & 1 & 0,0035 \\ 
+                    Microcontrolador ESP32-WROOM-32D   & 1 & 2,803 \\ 
+                    Led SMD 0805 verde& 1 & 0,0603 \\ 
+                    Led SMD 0805 rojo& 1 & 0,0803 \\ 
+                    Led SMD 0805 naranja & 2 & 0,00403 \\ 
+                    Pinheader conector para programación & 1 & 0,00403 \\ 
+                    UART-TTL herramienta de dasarrollo & 1 & 0,00403 \\ 
+                \hline
+                    \end{tabular}
+                \end{center}
+                \subsubsection{Placa de circuito impreso receptor o gateway}
+                \begin{center}
+                    \begin{tabular}{||c | c |c ||} 
+                    \hline
+                    Componente & Cantidad & Precio unitario  \\ [0.5ex] 
+                    \hline\hline
+                    Resistencia metálica SMD 0805 1k 10 & 4 & 0,0035 \\ 
+                    Resistencia metálica SMD 0805 10k 10  & 1 & 0,0035 \\ 
+                    Condensador cerámico SMD 0805 0,1uF  & 1 & 0,0035 \\ 
+                    Condensador cerámico SMD 0805 10uF  & 3 & 0,0035 \\ 
+                    Regulador tensión LDO AMS1117-3.3V  & 1 & 0,0035 \\ 
+                    Microcontrolador ESP32-WROOM-32D   & 1 & 2,803 \\ 
+                    Led SMD 0805 verde& 1 & 0,0603 \\ 
+                    Led SMD 0805 rojo& 1 & 0,0803 \\ 
+                    Led SMD 0805 naranja & 2 & 0,00403 \\ 
+                    Pinheader conector para programación & 1 & 0,00403 \\ 
+                    UART-TTL herramienta de dasarrollo & 1 & 0,00403 \\ 
+                    \hline
+                    \end{tabular}
+                \end{center}
+            \subsubsection{Desarrollo e instalación}
+            \begin{center}
+                \begin{tabular}{||c | c |c ||} 
+                \hline
+                Componente & Cantidad (h) & Precio unitario  \\ [0.5ex] 
+                \hline\hline
+                Diseñador hardware placas circuito impreso & 10 & 50 \\ 
+                Desarrollador  software sistema embebido & 350 & 40 \\ 
+                Programador full stack web developer & 100 & 50 \\ 
+                Instalador de equipos, oficial de 1ª & 2 & 35 \\ 
+                \hline
+                \end{tabular}
+            \end{center}
+            \subsubsection{Capitulo 1: }
+    \subsection{Presupuestos Total}
+        El presupuesto total se compone de la suma de los presupuestos parciales:
         \begin{center}
-            \begin{tabular}{||c | c ||} 
+            \begin{tabular}{||c | c |c ||} 
             \hline
-            ESP32 Mode & Power consumption  \\ [0.5ex] 
+            Unidad & Cantidad & Precio  \\ [0.5ex] 
             \hline\hline
-            Wi-Fi Tx packet 13dBm~21dBm & 160~260mA  \\ 
+            Placa de circuito impreso beacon o emisor & 1 & 40 \\ 
+            Placa de circuito impreso receptor o gateway & 1 & 50 \\ 
+            Desarrollo e instalación & 1 & 35 \\ 
+            \hline
+            \hline
+            Total &  & 1234€ \\ 
+             & IVA 21\%& 6534€ \\ 
+             & & 6534€ \\ 
             \hline
             \end{tabular}
         \end{center}
-    \subsection{Presupuestos Parciales}
-        \subsubsection{Capitulo 1: Placa de circuito impreso emisor beacon}
-        \subsubsection{Capitulo 2: Placa de circuito impreso receptor}
-        \subsubsection{Capitulo 1: }
-        \subsubsection{Capitulo 1: }
-    \subsection{Presupuestos Total}
-        con iva
+        Por lo tanto el presupuesto total con iva asciende a la cantidad de 1234123 4123 y veintimeil euros.
     \subsection{Factores económicos y financieros}
     Estudio de viabilidad económica
         \subsubsection{Tasa de interés de retorno(TIR)}
         \subsubsection{Valor Actual Neto (VAN)}
-
-\section{Estudio de compativilidad electromagnética}
-\subsection{test}
-\subsubsection{test}
-
-\includegraphics[scale=0.3]{5min_beacon_rssi}
-\includegraphics[width=15cm, height=8cm]{5min_beacon_rssi}
-\paragraph{hola}
-asdfasd
+\section{Estudio de compatibilidad electromagnética}
 
 \section{Bibliografía}
 \end{document}
