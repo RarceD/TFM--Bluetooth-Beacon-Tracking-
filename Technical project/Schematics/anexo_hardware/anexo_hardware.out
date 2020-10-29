@@ -2,13 +2,15 @@
 \BOOKMARK [1][-]{section.2}{Emisor beacon}{}% 2
 \BOOKMARK [2][-]{subsection.2.1}{Aspectos a considerar}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{Circuito el\351ctrico}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{PCB de control}{section.2}% 5
-\BOOKMARK [2][-]{subsection.2.4}{Im\341genes renderizado}{section.2}% 6
-\BOOKMARK [2][-]{subsection.2.5}{Im\341genes reales}{section.2}% 7
-\BOOKMARK [1][-]{section.3}{Receptor beacon o gateway}{}% 8
-\BOOKMARK [2][-]{subsection.3.1}{Aspectos a considerar}{section.3}% 9
-\BOOKMARK [2][-]{subsection.3.2}{Circuito el\351ctrico}{section.3}% 10
-\BOOKMARK [2][-]{subsection.3.3}{PCB de control}{section.3}% 11
-\BOOKMARK [2][-]{subsection.3.4}{Im\341genes renderizado}{section.3}% 12
-\BOOKMARK [2][-]{subsection.3.5}{Im\341genes reales}{section.3}% 13
-\BOOKMARK [1][-]{section.4}{Bibliograf\355a}{}% 14
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Microcontrolador}{subsection.2.2}% 5
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Alimentaci\363n}{subsection.2.2}% 6
+\BOOKMARK [2][-]{subsection.2.3}{PCB de control}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.4}{Im\341genes renderizado}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.5}{Im\341genes reales}{section.2}% 9
+\BOOKMARK [1][-]{section.3}{Receptor beacon o gateway}{}% 10
+\BOOKMARK [2][-]{subsection.3.1}{Aspectos a considerar}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.2}{Circuito el\351ctrico}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.3}{PCB de control}{section.3}% 13
+\BOOKMARK [2][-]{subsection.3.4}{Im\341genes renderizado}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.5}{Im\341genes reales}{section.3}% 15
+\BOOKMARK [1][-]{section.4}{Bibliograf\355a}{}% 16

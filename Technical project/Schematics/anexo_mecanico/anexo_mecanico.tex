@@ -16,21 +16,30 @@
 \section{Introducción}
 Para llevar a cabo el diseño mecánico de estas piezas concretas se ha optado por emplear Freecad, un
 programa de software libre que permite hacer modelos sencillos de forma gratuita.
-Se ha empleado la versión 12 del mismo corriendo en una raspberry pi 4 de 4Gb de RAM, es un programa
-que consume pocos recursos.
+Se ha empleado la versión 12 del mismo corriendo en una raspberry pi 4 de 4Gb de RAM, este es el único
+programa que corre en linux de diseño 3D y además consume pocos recursos.
+\paragraph{}
+Los primeros prototipos se han llevado a cabo con una impresora 3D Anet A8 con el firmware de Marling
+2.0 y como material PLA de 1,75mm y distancia entre capa de 0,2 mm.
 \section{Emisor beacon}
     \subsection{Aspectos a considerar en el diseño}
         \begin{enumerate}
             \item Estéticamente atractivo
             \item Pequeñas dimensiones
+            \item Cómodo para llevar colgado del cuello
+            \item Facilidad para desmontar y recargar las baterías o pilas
         \end{enumerate}
     \subsection{Planos y dimensiones}
-    \subsection{Imágenes renderizado}   
-        \includegraphics[scale=0.4]{../receiver_1.PNG}
-        \includegraphics[scale=0.4]{../receiver_2.PNG}
+        Una vez llevado a cabo el siseño se han obtenido los planos y se ha llevado a cabo la impresión 3d de los mismos.
+        \includegraphics[scale=0.25]{../receiver_1.PNG}
+    \subsection{Imágenes renderizado}
+    \begin{center}
+        \includegraphics[scale=0.25]{../receiver_1.PNG}
+        \includegraphics[scale=0.25]{../receiver_2.PNG}
+    \end{center}
     \subsection{Imágenes reales}
-        \includegraphics[scale=0.4]{../receiver_1.PNG}
-        \includegraphics[scale=0.4]{../receiver_2.PNG}
+        \includegraphics[scale=0.2]{../receiver_1.PNG}
+        \includegraphics[scale=0.2]{../receiver_2.PNG}
 
 \section{Receptor beacon o gateway}
     \subsection{Aspectos a considerar en el diseño}
@@ -40,12 +49,14 @@ que consume pocos recursos.
         \end{enumerate}
     \subsection{Planos y dimensiones}
     \subsection{Imágenes renderizado}   
-        \includegraphics[scale=0.4]{../receiver_1.PNG}
+        \includegraphics[scale=0.2]{../receiver_1.PNG}
         \includegraphics[scale=0.4]{../receiver_2.PNG}
     \subsection{Imágenes reales}
-        \includegraphics[scale=0.4]{../receiver_1.PNG}
+        \includegraphics[scale=0.2]{../receiver_1.PNG}
         \includegraphics[scale=0.4]{../receiver_2.PNG}
 
-\section{Bibliografía}
-https://www.bluetooth.com/
+\section{Conclusiones}
+    Tras desarrollar los primeros prototipos se procedió a llevar a cabo una prueba real con los mismos 
+    en un entorno industrial para comprobar si era necesaria una versión 2.0 de los mismos, los resultados
+    dejaron claro que este primer diseño era el acertado.
 \end{document}

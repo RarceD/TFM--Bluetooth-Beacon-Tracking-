@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  28 OCT 2020 06:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  29 OCT 2020 06:57
 entering extended mode
-**"c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Schematics/anexo/anexo_hardware.tex"
-("c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Schematics/anexo/anexo_hardware.tex"
+**"c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Schematics/anexo_hardware/anexo_hardware.tex"
+("c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Schematics/anexo_hardware/anexo_hardware.tex"
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-04-06> ("C:\Program Files\MiKTeX 2.9\tex/latex/base\article.cls"
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
@@ -168,7 +168,7 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count188
 \l__pdf_internal_box=\box45
-) ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo\anexo_hardware.aux"
+) ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_hardware\anexo_hardware.aux"
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
@@ -206,7 +206,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 6.
 LaTeX Info: Redefining \pageref on input line 6.
 LaTeX Info: Redefining \nameref on input line 6.
- ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo\anexo_hardware.out") ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo\anexo_hardware.out")
+ ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_hardware\anexo_hardware.out") ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_hardware\anexo_hardware.out")
 \@outlinefile=\write3
 \openout3 = `anexo_hardware.out'.
 
@@ -233,15 +233,15 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 12.
  [1
 
-{C:/Users/Tecnica2/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo\anexo_hardware.toc"
+{C:/Users/Tecnica2/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_hardware\anexo_hardware.toc"
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 4.
+(Font)              <12> on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 4.
+(Font)              <8> on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 4.
+(Font)              <6> on input line 5.
 )
 \tf@toc=\write4
 \openout4 = `anexo_hardware.toc'.
@@ -249,64 +249,84 @@ LaTeX Font Info:    External font `cmex10' loaded for size
  [2
 
 ]
-<../receiver_1.PNG, id=86, 710.655pt x 608.2725pt>
+<../receiver_1.PNG, id=96, 710.655pt x 608.2725pt>
 File: ../receiver_1.PNG Graphic file (type png)
 <use ../receiver_1.PNG>
-Package pdftex.def Info: ../receiver_1.PNG  used on input line 27.
+Package pdftex.def Info: ../receiver_1.PNG  used on input line 34.
 (pdftex.def)             Requested size: 284.25696pt x 243.30469pt.
-<../receiver_2.PNG, id=88, 686.565pt x 609.02531pt>
+ [3
+
+]
+File: ../receiver_1.PNG Graphic file (type png)
+<use ../receiver_1.PNG>
+Package pdftex.def Info: ../receiver_1.PNG  used on input line 36.
+(pdftex.def)             Requested size: 284.25696pt x 243.30469pt.
+File: ../receiver_1.PNG Graphic file (type png)
+<use ../receiver_1.PNG>
+Package pdftex.def Info: ../receiver_1.PNG  used on input line 41.
+(pdftex.def)             Requested size: 284.25696pt x 243.30469pt.
+
+Overfull \hbox (89.1091pt too wide) in paragraph at lines 39--44
+\OT1/cmr/m/n/12 ha lle-va-do a ca-bo el ru-teo de la tar-je-ta. []
+ []
+
+[4 <../receiver_1.PNG>]
+File: ../receiver_1.PNG Graphic file (type png)
+<use ../receiver_1.PNG>
+Package pdftex.def Info: ../receiver_1.PNG  used on input line 45.
+(pdftex.def)             Requested size: 284.25696pt x 243.30469pt.
+<../receiver_2.PNG, id=111, 686.565pt x 609.02531pt>
 File: ../receiver_2.PNG Graphic file (type png)
 <use ../receiver_2.PNG>
-Package pdftex.def Info: ../receiver_2.PNG  used on input line 28.
+Package pdftex.def Info: ../receiver_2.PNG  used on input line 46.
 (pdftex.def)             Requested size: 274.62112pt x 243.6058pt.
 
-Overfull \hbox (189.11398pt too wide) in paragraph at lines 27--29
+Overfull \hbox (189.11398pt too wide) in paragraph at lines 45--47
 [][] [] 
  []
 
-[3
-
- <../receiver_1.PNG> <../receiver_2.PNG>]
-<../emiter_1.PNG, id=98, 493.845pt x 499.11469pt>
+[5]
+<../emiter_1.PNG, id=117, 493.845pt x 499.11469pt>
 File: ../emiter_1.PNG Graphic file (type png)
 <use ../emiter_1.PNG>
-Package pdftex.def Info: ../emiter_1.PNG  used on input line 40.
+Package pdftex.def Info: ../emiter_1.PNG  used on input line 58.
 (pdftex.def)             Requested size: 197.53448pt x 199.64232pt.
-<../emiter_2.PNG, id=99, 506.6428pt x 605.26125pt>
+<../emiter_2.PNG, id=118, 506.6428pt x 605.26125pt>
 File: ../emiter_2.PNG Graphic file (type png)
 <use ../emiter_2.PNG>
-Package pdftex.def Info: ../emiter_2.PNG  used on input line 41.
+Package pdftex.def Info: ../emiter_2.PNG  used on input line 59.
 (pdftex.def)             Requested size: 202.65353pt x 242.1002pt.
 
-Overfull \hbox (30.42392pt too wide) in paragraph at lines 40--42
+Overfull \hbox (30.42392pt too wide) in paragraph at lines 58--60
 [][] [] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 46.
-[4 <../emiter_1.PNG> <../emiter_2.PNG>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 46.
- ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo\anexo_hardware.aux"
+[6 <../receiver_2.PNG>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 64.
+ [7 <../emiter_1.PNG> <../emiter_2.PNG>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 64.
+ ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_hardware\anexo_hardware.aux"
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 46.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 46.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 64.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 64.
 Package rerunfilecheck Info: File `anexo_hardware.out' has not changed.
-(rerunfilecheck)             Checksum: 7D430038537303FC79E6D375060442BB;897.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 46.
+(rerunfilecheck)             Checksum: 0FDCE7C869B4DC2D055EEE4EF9E88A02;1048.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 64.
  ) 
 Here is how much of TeX's memory you used:
- 6265 strings out of 480930
- 96635 string characters out of 2909539
- 365896 words of memory out of 3000000
- 22013 multiletter control sequences out of 15000+200000
+ 6274 strings out of 480930
+ 96897 string characters out of 2909539
+ 365900 words of memory out of 3000000
+ 22015 multiletter control sequences out of 15000+200000
  537506 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,7n,35p,323b,422s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,7n,35p,332b,379s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on "c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo\anexo_hardware.pdf" (4 pages, 215393 bytes).
+Output written on "c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_hardware\anexo_hardware.pdf" (7 pages, 224515 bytes).
 PDF statistics:
- 126 PDF objects out of 1000 (max. 8388607)
- 25 named destinations out of 1000 (max. 500000)
- 133 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 153 PDF objects out of 1000 (max. 8388607)
+ 32 named destinations out of 1000 (max. 500000)
+ 149 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  28 OCT 2020 06:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  29 OCT 2020 06:29
 entering extended mode
 **"c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Schematics/anexo_mecanico/anexo_mecanico.tex"
 ("c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Schematics/anexo_mecanico/anexo_mecanico.tex"
@@ -237,11 +237,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 4.
+(Font)              <12> on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 4.
+(Font)              <8> on input line 5.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 4.
+(Font)              <6> on input line 5.
 )
 \tf@toc=\write4
 \openout4 = `anexo_mecanico.toc'.
@@ -252,86 +252,80 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 <../receiver_1.PNG, id=76, 710.655pt x 608.2725pt>
 File: ../receiver_1.PNG Graphic file (type png)
 <use ../receiver_1.PNG>
-Package pdftex.def Info: ../receiver_1.PNG  used on input line 29.
-(pdftex.def)             Requested size: 284.25696pt x 243.30469pt.
+Package pdftex.def Info: ../receiver_1.PNG  used on input line 34.
+(pdftex.def)             Requested size: 177.66331pt x 152.06775pt.
+File: ../receiver_1.PNG Graphic file (type png)
+<use ../receiver_1.PNG>
+Package pdftex.def Info: ../receiver_1.PNG  used on input line 37.
+(pdftex.def)             Requested size: 177.66331pt x 152.06775pt.
 <../receiver_2.PNG, id=78, 686.565pt x 609.02531pt>
 File: ../receiver_2.PNG Graphic file (type png)
 <use ../receiver_2.PNG>
-Package pdftex.def Info: ../receiver_2.PNG  used on input line 30.
-(pdftex.def)             Requested size: 274.62112pt x 243.6058pt.
+Package pdftex.def Info: ../receiver_2.PNG  used on input line 38.
+(pdftex.def)             Requested size: 171.64082pt x 152.25595pt.
+ [3
 
-Overfull \hbox (189.11398pt too wide) in paragraph at lines 29--31
-[][] [] 
- []
-
+ <../receiver_1.PNG>]
 File: ../receiver_1.PNG Graphic file (type png)
 <use ../receiver_1.PNG>
-Package pdftex.def Info: ../receiver_1.PNG  used on input line 32.
-(pdftex.def)             Requested size: 284.25696pt x 243.30469pt.
+Package pdftex.def Info: ../receiver_1.PNG  used on input line 41.
+(pdftex.def)             Requested size: 142.12848pt x 121.65234pt.
 File: ../receiver_2.PNG Graphic file (type png)
 <use ../receiver_2.PNG>
-Package pdftex.def Info: ../receiver_2.PNG  used on input line 33.
-(pdftex.def)             Requested size: 274.62112pt x 243.6058pt.
-
-Overfull \hbox (189.11398pt too wide) in paragraph at lines 32--34
-[][] [] 
- []
-
-[3
-
- <../receiver_1.PNG> <../receiver_2.PNG>]
+Package pdftex.def Info: ../receiver_2.PNG  used on input line 42.
+(pdftex.def)             Requested size: 137.31056pt x 121.8029pt.
 File: ../receiver_1.PNG Graphic file (type png)
 <use ../receiver_1.PNG>
-Package pdftex.def Info: ../receiver_1.PNG  used on input line 43.
-(pdftex.def)             Requested size: 284.25696pt x 243.30469pt.
+Package pdftex.def Info: ../receiver_1.PNG  used on input line 52.
+(pdftex.def)             Requested size: 142.12848pt x 121.65234pt.
 File: ../receiver_2.PNG Graphic file (type png)
 <use ../receiver_2.PNG>
-Package pdftex.def Info: ../receiver_2.PNG  used on input line 44.
+Package pdftex.def Info: ../receiver_2.PNG  used on input line 53.
 (pdftex.def)             Requested size: 274.62112pt x 243.6058pt.
 
-Overfull \hbox (189.11398pt too wide) in paragraph at lines 43--45
+Overfull \hbox (46.9855pt too wide) in paragraph at lines 52--54
 [][] [] 
  []
 
-[4]
+[4 <../receiver_2.PNG>]
 File: ../receiver_1.PNG Graphic file (type png)
 <use ../receiver_1.PNG>
-Package pdftex.def Info: ../receiver_1.PNG  used on input line 46.
-(pdftex.def)             Requested size: 284.25696pt x 243.30469pt.
+Package pdftex.def Info: ../receiver_1.PNG  used on input line 55.
+(pdftex.def)             Requested size: 142.12848pt x 121.65234pt.
 File: ../receiver_2.PNG Graphic file (type png)
 <use ../receiver_2.PNG>
-Package pdftex.def Info: ../receiver_2.PNG  used on input line 47.
+Package pdftex.def Info: ../receiver_2.PNG  used on input line 56.
 (pdftex.def)             Requested size: 274.62112pt x 243.6058pt.
 
-Overfull \hbox (189.11398pt too wide) in paragraph at lines 46--48
+Overfull \hbox (46.9855pt too wide) in paragraph at lines 55--57
 [][] [] 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 51.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 62.
 [5] [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 51.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 62.
  ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.aux"
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 51.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 51.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 62.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 62.
 Package rerunfilecheck Info: File `anexo_mecanico.out' has not changed.
-(rerunfilecheck)             Checksum: 7AB344F5E44C4DE8593B18D70230A8D6;799.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 51.
+(rerunfilecheck)             Checksum: 7B9F5E7A69FFC5D25AA308509D033DD8;796.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 62.
  ) 
 Here is how much of TeX's memory you used:
- 6250 strings out of 480930
- 96513 string characters out of 2909539
+ 6254 strings out of 480930
+ 96543 string characters out of 2909539
  365896 words of memory out of 3000000
- 22001 multiletter control sequences out of 15000+200000
+ 22002 multiletter control sequences out of 15000+200000
  537506 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,7n,35p,332b,379s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,7n,35p,332b,408s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on "c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.pdf" (6 pages, 143926 bytes).
+Output written on "c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.pdf" (6 pages, 146733 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
- 24 named destinations out of 1000 (max. 500000)
+ 122 PDF objects out of 1000 (max. 8388607)
+ 27 named destinations out of 1000 (max. 500000)
  107 words of extra memory for PDF output out of 10000 (max. 10000000)
 
