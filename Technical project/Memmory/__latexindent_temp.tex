@@ -1,14 +1,12 @@
 \documentclass[a4paper ,12pt, onecolumn]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
-
 \usepackage[hidelinks]{hyperref}
 \usepackage{graphicx}
 \graphicspath{ {./images/} }
 
 
 \begin{document}
-
 \title{Sistemas de posicionamiento de objetos mediante tecnología Bluetooth Low Energy
 Beacon }
 \author{Rubén Arce}
@@ -22,13 +20,13 @@ Antecedentes, objeto, normativa, reglamentación
 Extensión máxima de 30 páginas + anexos 60
 Defensa de 20 min  40
     \subsection{Antecedentes y objeto del proyecto}
-        Este proyecto surge como solución a una necesidad de poder localizar un número elevado de equipos en 
+        Este proyecto surge como solución a la necesidad de poder localizar a un número elevado de equipos en 
         constante movimiento con cierta exactitud en un espacio cerrado.
         \begin{enumerate}
             \item Estudio sobre las distintas alternativas para llevar a cabo este tracking de objetos de una forma
             sencilla y sin requerir de una inversión grande.
             \item Análisis de las tecnologías existentes para la monitorización en interiores.
-            \item  Estudio del parámetro RSSI como medida de la potencia de una señal y cálculo de la distancia entre equipos.
+            \item Estudio del parámetro RSSI como medida de la potencia de una señal y cálculo de la distancia entre equipos.
             \item Desarrollo de un sistema de visualización mediante un mapa sobre el que poder ver los equipos en movimiento.
             \item Diseño de hardware específico para la aplicación requerida.
             \item Programación tanto del equipo emisor como del receptor así como del algoritmo de visualización.
@@ -36,33 +34,40 @@ Defensa de 20 min  40
         \end{enumerate}
     \subsection{Ambito de aplicación}
         El tracking de objetos en espacios cerrados está día a día incrementando su popularidad debido a que es una 
-        arma de propaganda muy poderosa que demandan los grandes hipermercados para llevar a cabo estudios de marketing
+        arma de propaganda muy poderosa que demandan los grandes centros comerciales para llevar a cabo estudios de marketing
         y poder analizar el comportamiento de los clietes.
+        Además de esta aplicación el mayor nicho de mercado es aplicado a no tener que tocar objetos para interactuar con ellos, 
+        esto teniendo en cuenta los tiempos que corren es una necesidad de numerosas empresas.
         \paragraph{}
-        Los principales ámbitos de aplicación de esta tecnología son:
+        A modo de resumen se engloban los principales ámbitos de aplicación de esta tecnología:
         \begin{enumerate}
-            \item Marketing: Estudios de mercado y de necesidad de los clientes. "heat map"
-            \item Seguridad: Tan solo los empleados con autorización y proximidad podrán llevar a cabo acciones.
+            \item Marketing: Estudios de mercado y de necesidad de los clientes. Elaboración de un "heat map" o mapa 
+            de las zonas con más afluencia de gente.
+            \item Seguridad: Tan solo los empleados con autorización y proximidad podrán llevar a cabo acciones, esto tiene 
+            sentido a la hora de no tener que dar una llave a cada empleado que pueda copiarse.
             \item Vandalismo: Conociendo la localización de los equipos dentro de un local cerrado en el momento 
             en el que se deja de situar un elemento se puede dar la voz de alarma ante un robo.
-            \item Anuncios y nueva forma de publicidad: Activar acciones en función de la localización en determinados puntos de interés
+            \item Propaganda y nueva forma de publicidad: Activar acciones en función de la localización en determinados
+            puntos de interés permite llevar a otro nivel las ideas de los publicistas.
         \end{enumerate}
+        Vemos por tanto que hay numerosas aplicaciones y demanda de este producto tecnológico, es por ello por lo que se 
+        procede a explorar cual es la forma más adecuada para llevarlo a cabo y hacerlo realidad.
     \subsection{Análisis de soluciones}
         Se plantean dos problemáticas, en primer lugar se busca llevar a cabo el seguimiento de elementos en movimiento, y por el otro 
-        está el enviar esta información de alguna forma al servidor correspondiente para que lleve a cabo el análisis de los datos, que 
-        es lo realmente interesante desde el punto de vista del cliete de esta tecnología.
+        está el enviar esta información de alguna forma al sistema correspondiente para que lleve a cabo el análisis de los datos. Esta
+        última acción es esencial en el proceso, es lo realmente interesante desde el punto de vista del cliente de esta tecnología.
         En lo que respecta a la obtención de datos de posición relativa de objetos o personas se presentan las siguientes opciones:
         \subsubsection {Wifi}
-            La posibilidad de llevar a cabo el tracking mediante la escucha de wifis es una opción, pero para ello sería
+            La posibilidad de llevar a cabo el tracking mediante la escucha de wifis es una opción, para ello sería
             necesario en primer lugar que se colocara un móvil en cada uno de los objetos a identificar. Esto es aceptable 
             en el caso de monitorización de personas pero inasumible para objetos.
             \paragraph{}
-            El procedimiento consistiría en llevar a cabo un barrido de direcciones MACs que generan los móviles cuando tienen el wifi dado,
-            es decir que esto no funcionaría en el caso de que una persona lleve puestos los datos únicamente.
+            El procedimiento consistiría en llevar a cabo un barrido de direcciones MACs que generan los móviles cuando tienen el wifi activado,
+            es decir que esto no funcionaría en el caso de que una persona lleve puestos los datos del móvil únicamente.
             \paragraph{}
-            Otra desventaja es el hecho de que al tener un equipo buscando wifis la información personal del propietario como localización del móvil,
-            la fecha y la hora a la que se intentó conectar y la dirección MAC que identifica y relaciona un móvil a una persona. Se han de tener 
-            en cuenta la política de privacidad empleando esta tecnología para llevar a cabo el tracking.
+            Otra desventaja es el hecho de que al tener un equipo buscando wifis la información personal del propietario como localización,
+            fecha y hora a la que se intentó conectar y la dirección MAC que identifica y relaciona un móvil a una persona queda expuesta.
+            Se han de tener en cuenta la política de privacidad vigente, empleando esta tecnología para llevar a cabo el tracking se inclumple.
             \paragraph{}
             \includegraphics[scale=0.4]{WifiCounting.jpg}
             \paragraph{}
@@ -71,19 +76,24 @@ Defensa de 20 min  40
             \paragraph{}
             El artículo 29 de privacidad de datos de la comunidad europea dice lo siguiente:
             “WiFi-tracking, depending on the circumstances and purposes of the data collection, such tracking under the GDPR is likely
-            either to be subject to consent, or may only be performed if the personal data collected is anonymised.”
+            either to be subject to consent, or may only be performed if the personal data collected is anonymised”
+            Es por ello por lo que aunque se tendrá en cuenta como opción hay numerosos puntos en contra de implementar un sistema como este.
         \subsubsection {GPS}
             La tecnología por excelencia para llevar a cabo el seguimiento de objetos o personas es el GPS, la principal desventaja
             que presenta es el elevado consumo energético comparado con el wifi o el bluetooth.
             \paragraph{}
-            Consumo energético: Mantener un módulo GPS encendido y pretender llegar a una autonomía de años es a día de hoy
+            Mantener un módulo GPS encendido y pretender llegar a una autonomía de años es a día de hoy
             imposible, es por ello por lo que o se emplea un teléfono móvil para llevarlo a cabo, cosa inviable si se pretende 
-            monitorizar objetos en movimiento y no personas, o el tiempo de refresco de los datos ha de ser muy lento, del orden de horas,
+            monitorizar objetos  y no personas en movimiento, o el tiempo de refresco de los datos ha de ser muy lento, del orden de horas,
             cosa de nuevo inviable para la aplicación que se tiene entre manos.
             \paragraph{}
             Se ha de tener en cuenta también el aumento de precio que supondría un módulo GPS sumado a la antena que lleva consigo de 
-            dimensiones nada despreciables.
+            dimensiones nada despreciables. 
+            Es por ello por lo que esta tecnología se tendrá en cuenta pero no es la más adecuada para la problemática presente.
         \subsubsection {Bluetooth Low Energy - Beacon}
+            Bluetooth 
+            Emisión desde los -20 dBm (0.01 mW) hasta los +20 dBm (100 mW). Cuanta mayor potencia de emisión mayor consumo energético
+            del dispositivo pero también conseguiremos una mayor distancia.
             Existen varios tipos de beacons:
             https://accent-systems.com/es/producto/ibks-105/
             \begin{enumerate}
@@ -117,25 +127,22 @@ Defensa de 20 min  40
                 \includegraphics[scale=0.5]{tipos_beacon_altbeacon.PNG}
             Una vez exploradas las opcione de posicionamiento de los equipos se llevará a cabo el estudio de posibilidades de subida de estos datos
             a la nube, es por ello por lo que se contemplar varias opciones:
-            \subsubsection {MQTT}
-                MQTT es un protocolo estándar aplicado principalmente al IoT (Internet of Things). Está basado en publicación y 
-                suscripción con un servicio de mensajería push, los mensajes se publican el topics en los que los distintos 
-                dispositivos se encuentran escuchando.
-
-                La base de la comunicación es el Broker, encargado de dar soporte a todos los topics, los clientes inician una 
-                conexión TCP/IP con él que se mantiene abierta constantemente hasta que el cliente la finalize. Se emplean los puertos
-                1883 y 8883 empleando seguridad TLS.
-
-                Cada mensaje tiene un QoS (Quality of service), es el mecanismo de calidad del servicio, o lo que es lo mismo es la forma de
-                gestionar la robustez de los mensajes entre clientes ante los fallos de conectividad.
-                \begin{itemize}
-                    \item QoS 0: Envio una única vez
-                    \item QoS 1: Menaje enviado hasta que se garantiza que se entrega.
-                    \item QoS 2: Garantizado que cada mensaje se entrega al suscriptor por una única vez.
-                \end{itemize}
-
-                Esta es una opción de que los equipos que escuchan a los beacons envien la información a la web que escucha el mismo
-                topic en el que envían.
+        \subsubsection {MQTT}
+            MQTT es un protocolo estándar aplicado principalmente al IoT (Internet of Things). Está basado en publicación y 
+            suscripción con un servicio de mensajería push, los mensajes se publican el topics en los que los distintos 
+            dispositivos se encuentran escuchando.
+            La base de la comunicación es el Broker, encargado de dar soporte a todos los topics, los clientes inician una 
+            conexión TCP/IP con él que se mantiene abierta constantemente hasta que el cliente la finalize. Se emplean los puertos
+            1883 y 8883 empleando seguridad TLS.
+            Cada mensaje tiene un QoS (Quality of service), es el mecanismo de calidad del servicio, o lo que es lo mismo es la forma de
+            gestionar la robustez de los mensajes entre clientes ante los fallos de conectividad.
+            \begin{itemize}
+                \item QoS 0: Envio una única vez
+                \item QoS 1: Menaje enviado hasta que se garantiza que se entrega.
+                \item QoS 2: Garantizado que cada mensaje se entrega al suscriptor por una única vez.
+            \end{itemize}
+            Esta es una opción de que los equipos que escuchan a los beacons envien la información a la web que escucha el mismo
+            topic en el que envían.
             \subsubsection {HTTP post}
                 A través del protocolo de transferencia de hipertexto se puede llevar a cabo una petición POST, consiste en que
                 un servidor acepte los datos recibidos por el microcontrolador.
@@ -167,7 +174,30 @@ Defensa de 20 min  40
     \subsection{Resultados finales}
         Explorando las tres opciones se ha confeccionado la siguiente tabla en la que se puede ver como el claro ganador es el  bluetooth debido 
         principalmente al precio que supondría llevar a cabo una red de estas características además del consumo energético.
-            
+        \begin{center}
+            \begin{tabular}{||c | c| c| c| c ||} 
+            \hline
+            Tecnología  & Coste  & Implementación & Distancia & Consumo energético \\ [0.5ex] 
+            \hline
+            GPS& Elevado& Baja & Ilimitada& Muy alto\\
+            Wifi& Medio& Media & ~ 100 m & Alto\\ 
+            Bluetooth& Bajo& Media & ~ 100 m & Muy bajo\\ 
+            \hline
+            \end{tabular}
+        \end{center}   
+        En lo que respecta a la comunicación de estos datos de distancia entre equipos a internet se ha reunido en la 
+        siguiente tabla un resumen con las opciones y los puntos a favor y en contra.
+        \begin{center}
+            \begin{tabular}{||c | c| c| c||} 
+            \hline
+            Tecnología  & Velocidad  & Implementación & Coste \\ [0.5ex] 
+            \hline
+            MQTT& Elevada & Baja & Ilimitada\\
+            HTTP POST& Medio& Media & ~ 100 m \\ 
+            ESP NOW& Bajo& Media & ~ 100 m \\ 
+            \hline
+            \end{tabular}
+        \end{center}   
     \subsection{Planificación}
         \paragraph{}
         Para sintetizar el proceso de desarrollo del proyecto técnico se empleará un diagrama GANTT: 
@@ -292,6 +322,10 @@ Defensa de 20 min  40
             el consumo de los equipos, en especial en lo que respecta a los beacons.
 
         \subsubsection{Cálculo saturación espectro de frecuencia}
+            Los fundamentos básicos de las distintas frecuencias es que a menor frecuencia mayor distancia vamos a conseguir 
+            en las comunicaciones. Por el contrario, cuanto menor frecuencia menor volumen de datos es posible.
+            La tecnología bluetooth usa la frecuencia de 2.4GHz ISM (2400 to 2483.5 MHz), esta banda permite una buena relación
+            de compromiso entre distancia y volumen de datos a transmitir.
             El espectro de frecuencia es amplio y cada banda tiene su aplicación, dentro de las telecomunicaciones
             distinguimos las siguientes opciones:
             \begin{itemize}
@@ -304,7 +338,7 @@ Defensa de 20 min  40
                 que emplean este rango que se encuentra comprendido desde   6.78 MHz hasta 244 GHz en distintos tramos,
                 un ejemplo de tramos serían los siguientes:
                 \begin{center}
-                    \begin{tabular}{||c | c | c| c||} 
+                    \begin{tabular}{||c | c | c| c ||} 
                     \hline
                     Rango de frecuencia & Bandwidth & Center Frequency & Allocation\\ [0.5ex] 
                     \hline
@@ -337,9 +371,31 @@ Defensa de 20 min  40
             La banda ISM de 2.4GHz es, sin lugar a dudas, la que soporta un uso más intensivo, ya que es utilizada en 
             diferentes estándares de redes Wi-Fi (IEEE 802.11b/g/n) y Bluetooth, (IEEE 802.15.1), llegando en muchas 
             ocasiones a su completa saturación.
+        \subsubsection{Cálculo de ganancia de antenas}
+            Una antena convierte la enegía electrica del transmisor en energía electromagnética y viceversa, las antenas pueden ser 
+            para recibir, para transmitir o ambas. La localización de la antena, las dimensiones y el diseño pueden afectar drásticamente
+            en el funcionamiento óptimo de la red de beacons. 
+            Las antenas típicas en aplicaciones de radiofrecuencia con bluetooth son de -10dBm a 10dBm.
+
+            El denominado path loss o atenuación de la señal de radio es la reducción de la densidad de potencia de una onda durante la 
+            propagación en el espacio. Este parámetro es esencial a la hora de poder establecer una red de bluetooth de estas dimensiones.
+            Antenas monopolo $\lambda$/4
+            Antenas dipolo $\lambda$ /2 
+            \paragraph{}
+            \includegraphics[scale=0.4]{antenna_design.png}
+            \includegraphics[scale=0.5]{antenna_design_monopole.png}
+            \paragraph{}
+            Dentro del mundo de las antenas existen numerosos modelos u opciones que se enumeran a continuación:
+            \begin{enumerate}
+                \item Antenas de cable, son las más sencillas de todas y como su propio nombre indica es un simple cable soldado a la PCB de una dimensión determinada, esta logitud corresponde con la de una antena monopolo $\lambda$/4. El cable aporta el mayor rendimiento y rango de radiofrecuencia debido a sus dimensiones y a su caracter flexible, moldeable y orientable sin importar  la posición de la tarjeta.
+                \item Antena PCB, es una pista en el propio circuito impreso que puede tener numerosas formas, a diferencia de la de cable esta solo se encuentra en el espacio 2D. Tienen menos eficiciencia que las anteriores y requieren más espacio pero son incluso más baratas.
+                \item Antena de chip, este tipo de antena es una tarjeta o módulo que ocupa menos espacio que cualquiera de las anteriores y tiene un rendimiento intermedio entre ambas otras dos opciones.
+            \end{enumerate}
 \section{Planos}
-    \subsection{Plano de mecánicos}
-    \subsection{Plano de eléctricos}
+    \subsection{Planos mecánicos}
+        \subsubsection{Chasis de receptor o gateway}
+        \subsubsection{Chasis de emisor o beacon}
+    \subsection{Plano eléctricos}
         \subsubsection{Esquemático del emisor beacon}
         \subsubsection{PCB circuito del emisor beacon}
         \subsubsection{Esquemático del receptor ESP32}
@@ -347,7 +403,29 @@ Defensa de 20 min  40
 \section{Pliego de condiciones}
     \subsection{Prescripciones ténicas generales}
     \subsubsection{Normativa relativa a radiofrecuencia}
-    \subsubsection{Normativa relativa a }
+    \subsubsection{Normativa relativa a bluetooth}
+    Se ha de tener en cuenta que para poder emplear dispositivos bluetooth se ha de respetar los estándares
+    \begin{itemize}
+        \item IEEE 802.15.1 define Bluetooth 1.x, que puede alcanzar velocidades de 1 Mbps;
+         \item IEEE 802.15.2 recomienda prácticas para utilizar la banda de frecuencia de 2.4 GHz (la frecuencia también utilizada por WiFi). Sin embargo, este estándar todavía no se ha aprobado;
+         \item IEEE 802.15.3 es un estándar que actualmente se está desarrollando, que ofrecerá velocidad de banda ancha (20 Mbps) con Bluetooth;
+         \item IEEE 802.15.4 es un estándar que actualmente se está desarrollando para el uso con aplicaciones Bluetooth de baja velocidad.
+    \end{itemize}
+    Se ha de tener en cuenta también la clase del disposivo que queda recogida en la siguiente tabla:
+    \begin{center}
+        \begin{tabular}{||c | c |c ||} 
+        \hline
+        Clase & Potencia  & Alcance aproximado\\ [0.5ex] 
+        \hline\hline
+        Clase 1 & 100 mW / 20 dBm & 100 m \\ 
+        Clase 2 & 2,5 mW / 4 dBm & 5 - 10 m \\ 
+        Clase 3 & 1 mW / 0 dBm & 1 m \\ 
+        Clase 4 & 0,5 mW / -3 dBm & 0,5 m \\ 
+    \hline
+        \end{tabular}
+    \end{center}
+    En nuestro caso y teniendo en cuenta la aplicación se ha optado por emitir en los 20 dBm de tal forma
+    que se ha de 
     \subsection{Prescripciones ténicas particulares}
         \subsubsection{Condiciones que ha de reunir el material}
         \subsubsection{Ejecución del proyecto}
@@ -418,26 +496,24 @@ Defensa de 20 min  40
             \hline
             Unidad & Cantidad & Precio  \\ [0.5ex] 
             \hline\hline
-             Placa de circuito impreso beacon o emisor & 1 & 40 \\ 
+            Placa de circuito impreso beacon o emisor & 1 & 40 \\ 
             Placa de circuito impreso receptor o gateway & 1 & 50 \\ 
             Desarrollo e instalación & 1 & 35 \\ 
             \hline
+            \hline
+            Total &  & 1234€ \\ 
+             & IVA 21\%& 6534€ \\ 
+             & & 6534€ \\ 
+            \hline
             \end{tabular}
         \end{center}
-        con iva
+        Por lo tanto el presupuesto total con iva asciende a la cantidad de 1234123 4123 y veintimeil euros.
     \subsection{Factores económicos y financieros}
     Estudio de viabilidad económica
         \subsubsection{Tasa de interés de retorno(TIR)}
         \subsubsection{Valor Actual Neto (VAN)}
-
-\section{Estudio de compativilidad electromagnética}
-\subsection{test}
-\subsubsection{test}
-
-\includegraphics[scale=0.3]{5min_beacon_rssi}
-\includegraphics[width=15cm, height=8cm]{5min_beacon_rssi}
-\paragraph{hola}
-asdfasd
+\section{Estudio de compatibilidad electromagnética}
 
 \section{Bibliografía}
+https://www.bluetooth.com/
 \end{document}

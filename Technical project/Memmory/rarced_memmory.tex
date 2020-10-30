@@ -3,6 +3,16 @@
 \usepackage[spanish]{babel}
 \usepackage[hidelinks]{hyperref}
 \usepackage{graphicx}
+
+\usepackage{pgfgantt}
+\usepackage{xcolor}
+\usepackage[utf8]{inputenc}
+
+\definecolor{barblue}{RGB}{153,204,254}
+\definecolor{groupblue}{RGB}{51,102,254}
+\definecolor{linkred}{RGB}{165,0,33} 
+
+
 \graphicspath{ {./images/} }
 
 
@@ -92,7 +102,6 @@ Defensa de 20 min  40
             Es por ello por lo que esta tecnología se tendrá en cuenta pero no es la más adecuada para la problemática presente.
         \subsubsection {Bluetooth Low Energy - Beacon}
             Bluetooth 
-
             Emisión desde los -20 dBm (0.01 mW) hasta los +20 dBm (100 mW). Cuanta mayor potencia de emisión mayor consumo energético
             del dispositivo pero también conseguiremos una mayor distancia.
             Existen varios tipos de beacons:
@@ -128,25 +137,22 @@ Defensa de 20 min  40
                 \includegraphics[scale=0.5]{tipos_beacon_altbeacon.PNG}
             Una vez exploradas las opcione de posicionamiento de los equipos se llevará a cabo el estudio de posibilidades de subida de estos datos
             a la nube, es por ello por lo que se contemplar varias opciones:
-            \subsubsection {MQTT}
-                MQTT es un protocolo estándar aplicado principalmente al IoT (Internet of Things). Está basado en publicación y 
-                suscripción con un servicio de mensajería push, los mensajes se publican el topics en los que los distintos 
-                dispositivos se encuentran escuchando.
-
-                La base de la comunicación es el Broker, encargado de dar soporte a todos los topics, los clientes inician una 
-                conexión TCP/IP con él que se mantiene abierta constantemente hasta que el cliente la finalize. Se emplean los puertos
-                1883 y 8883 empleando seguridad TLS.
-
-                Cada mensaje tiene un QoS (Quality of service), es el mecanismo de calidad del servicio, o lo que es lo mismo es la forma de
-                gestionar la robustez de los mensajes entre clientes ante los fallos de conectividad.
-                \begin{itemize}
-                    \item QoS 0: Envio una única vez
-                    \item QoS 1: Menaje enviado hasta que se garantiza que se entrega.
-                    \item QoS 2: Garantizado que cada mensaje se entrega al suscriptor por una única vez.
-                \end{itemize}
-
-                Esta es una opción de que los equipos que escuchan a los beacons envien la información a la web que escucha el mismo
-                topic en el que envían.
+        \subsubsection {MQTT}
+            MQTT es un protocolo estándar aplicado principalmente al IoT (Internet of Things). Está basado en publicación y 
+            suscripción con un servicio de mensajería push, los mensajes se publican el topics en los que los distintos 
+            dispositivos se encuentran escuchando.
+            La base de la comunicación es el Broker, encargado de dar soporte a todos los topics, los clientes inician una 
+            conexión TCP/IP con él que se mantiene abierta constantemente hasta que el cliente la finalize. Se emplean los puertos
+            1883 y 8883 empleando seguridad TLS.
+            Cada mensaje tiene un QoS (Quality of service), es el mecanismo de calidad del servicio, o lo que es lo mismo es la forma de
+            gestionar la robustez de los mensajes entre clientes ante los fallos de conectividad.
+            \begin{itemize}
+                \item QoS 0: Envio una única vez
+                \item QoS 1: Menaje enviado hasta que se garantiza que se entrega.
+                \item QoS 2: Garantizado que cada mensaje se entrega al suscriptor por una única vez.
+            \end{itemize}
+            Esta es una opción de que los equipos que escuchan a los beacons envien la información a la web que escucha el mismo
+            topic en el que envían.
             \subsubsection {HTTP post}
                 A través del protocolo de transferencia de hipertexto se puede llevar a cabo una petición POST, consiste en que
                 un servidor acepte los datos recibidos por el microcontrolador.
@@ -178,16 +184,60 @@ Defensa de 20 min  40
     \subsection{Resultados finales}
         Explorando las tres opciones se ha confeccionado la siguiente tabla en la que se puede ver como el claro ganador es el  bluetooth debido 
         principalmente al precio que supondría llevar a cabo una red de estas características además del consumo energético.
-            
+        \begin{center}
+            \begin{tabular}{||c | c| c| c| c ||} 
+            \hline
+            Tecnología  & Coste  & Implementación & Distancia & Consumo energético \\ [0.5ex] 
+            \hline
+            GPS& Elevado& Baja & Ilimitada& Muy alto\\
+            Wifi& Medio& Media & ~ 100 m & Alto\\ 
+            Bluetooth& Bajo& Media & ~ 100 m & Muy bajo\\ 
+            \hline
+            \end{tabular}
+        \end{center}   
+        En lo que respecta a la comunicación de estos datos de distancia entre equipos a internet se ha reunido en la 
+        siguiente tabla un resumen con las opciones y los puntos a favor y en contra.
+        \begin{center}
+            \begin{tabular}{||c | c| c| c||} 
+            \hline
+            Tecnología  & Velocidad (y en consecuencia consumo) & Coste \\ [0.5ex] 
+            \hline
+            MQTT& Elevada  & Bajo\\
+            HTTP POST& Baja & ~ 100 m \\ 
+            ESP NOW& Media & ~ 100 m \\ 
+            \hline
+            \end{tabular}
+        \end{center}   
+        La elección en este caso está mucho más ajustada, en el caso de que se pueda conectar a todos los equipos que 
+        escuchan a internet el ganador será la opción de MQTT puesto que la forma más facil de llevar a cabo el envio de datos.
+
+        En el caso de que no llegue la señal wifi a todos los puntos en los que se decida llevar a cabo el tracking de objetos 
+        surgue un problema puesto que perderemos esos datos, la solucion a esta problemática es hacer que este equipo que no 
+        tiene conexión a internet envie los datos por EspNow a otro que si que sea capaz de subir tanto su información como la 
+        de su compañero al broker por Mqtt.
+
+        Puesto que se pretende llevar a cabo un sistema válido para toda la posible se han contemplado ambas opciones
+        y la implementación real llevará a cabo dos.
+        
+        Es decir que la única opción desechada ha sido la conexión directa con un servidor mediante HTTP debido a que, en primer
+        lugar sería necesario programar un servicio que escuchara en este endpoint y luego sería necesario hostearlo 
+        para que disponga de una IP pública estática y sea accesible desde cualquier parte del mundo.
     \subsection{Planificación}
         \paragraph{}
         Para sintetizar el proceso de desarrollo del proyecto técnico se empleará un diagrama GANTT: 
         \paragraph{}
-        \includegraphics[width=15cm, height=8cm]{gantt.PNG}
-        Fase 1: Analisis de la problemática y búsqueda de soluciones
-        Fase 2: Prototipos y programación
-        Fase 3: Pruebas de campo
-        Fase 4: Evolución del equipo en instalación y depuración 
+        \includegraphics[scale=0.3]{gantt.PNG}
+        https://online.visual-paradigm.com/ tiene buena pinta para hacer esto
+        Fase 1: Analisis de la situación.
+        Fase 2: Definición de la problemática.
+        Fase 3: Búsqueda de soluciones y alcance del proyecto.
+        Fase 4: Desarrollo de hardware acorde a especificaciones.
+        Fase 5: Programación del receptor de los datos.
+        Fase 6: Programación del hardware.
+        Fase 7: Pruebas de campo.
+        Fase 8: Depuración tanto de programación como de bug en hardware.
+        Fase 9: Evolución del equipo en instalación.
+        Fase 10: Evaluación de producto y producción masiva.
 \section{Memoria justificativa}
     \subsection{Cálculos justificativos de la instalación}
         Calculos de consumos de los equipos y dimensionamiento de la batería.
@@ -411,11 +461,11 @@ Defensa de 20 min  40
         \subsubsection{Condiciones que ha de reunir el material}
         \subsubsection{Ejecución del proyecto}
         Placa ha de cumplir solo 1 capa
-        \section{Presupuestos}
-        \subsection{Precios unitarios}
+\section{Presupuestos}
+    \subsection{Precios unitarios}
         La tabla de precios se va a elaborar en distintas unidades que corresponden al precio por separado de cada
         una de las PCBs que se han elaborarado.
-        \subsection{Presupuestos Parciales}
+    \subsection{Presupuestos Parciales}
             \subsubsection{Placa de circuito impreso emisor beacon}
                 \begin{center}
                     \begin{tabular}{||c | c |c ||} 
@@ -493,7 +543,6 @@ Defensa de 20 min  40
     Estudio de viabilidad económica
         \subsubsection{Tasa de interés de retorno(TIR)}
         \subsubsection{Valor Actual Neto (VAN)}
-\section{Estudio de compatibilidad electromagnética}
 
 \section{Bibliografía}
 https://www.bluetooth.com/

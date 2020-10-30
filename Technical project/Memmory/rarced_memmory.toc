@@ -14,32 +14,32 @@
 \contentsline {paragraph}{}{6}{section*.8}%
 \contentsline {paragraph}{}{7}{section*.9}%
 \contentsline {subsubsection}{\numberline {1.3.3}Bluetooth Low Energy - Beacon}{7}{subsubsection.1.3.3}%
-\contentsline {paragraph}{}{8}{section*.10}%
+\contentsline {paragraph}{}{7}{section*.10}%
 \contentsline {paragraph}{}{8}{section*.11}%
-\contentsline {paragraph}{}{9}{section*.12}%
+\contentsline {paragraph}{}{8}{section*.12}%
 \contentsline {subsubsection}{\numberline {1.3.4}MQTT}{9}{subsubsection.1.3.4}%
 \contentsline {subsubsection}{\numberline {1.3.5}HTTP post}{9}{subsubsection.1.3.5}%
 \contentsline {subsubsection}{\numberline {1.3.6}ESP Now}{10}{subsubsection.1.3.6}%
 \contentsline {paragraph}{}{10}{section*.13}%
 \contentsline {paragraph}{}{10}{section*.14}%
-\contentsline {subsection}{\numberline {1.4}Resultados finales}{11}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.4}Resultados finales}{10}{subsection.1.4}%
 \contentsline {subsection}{\numberline {1.5}Planificación}{11}{subsection.1.5}%
 \contentsline {paragraph}{}{11}{section*.15}%
 \contentsline {paragraph}{}{11}{section*.16}%
-\contentsline {section}{\numberline {2}Memoria justificativa}{11}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Cálculos justificativos de la instalación}{11}{subsection.2.1}%
+\contentsline {section}{\numberline {2}Memoria justificativa}{12}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Cálculos justificativos de la instalación}{12}{subsection.2.1}%
 \contentsline {subsubsection}{\numberline {2.1.1}Cálculo de distancia por RSSI}{12}{subsubsection.2.1.1}%
 \contentsline {subsubsection}{\numberline {2.1.2}Rssi}{12}{subsubsection.2.1.2}%
 \contentsline {paragraph}{}{12}{section*.17}%
 \contentsline {paragraph}{}{12}{section*.18}%
 \contentsline {paragraph}{}{12}{section*.19}%
 \contentsline {paragraph}{}{12}{section*.20}%
-\contentsline {paragraph}{}{12}{section*.21}%
-\contentsline {paragraph}{}{12}{section*.22}%
+\contentsline {paragraph}{}{13}{section*.21}%
+\contentsline {paragraph}{}{13}{section*.22}%
 \contentsline {paragraph}{}{13}{section*.23}%
 \contentsline {paragraph}{}{13}{section*.24}%
 \contentsline {subsubsection}{\numberline {2.1.3}Trilateración y posicionamiento}{13}{subsubsection.2.1.3}%
-\contentsline {subsubsection}{\numberline {2.1.4}Cálculo de consumos energéticos}{13}{subsubsection.2.1.4}%
+\contentsline {subsubsection}{\numberline {2.1.4}Cálculo de consumos energéticos}{14}{subsubsection.2.1.4}%
 \contentsline {subsubsection}{\numberline {2.1.5}Cálculo saturación espectro de frecuencia}{14}{subsubsection.2.1.5}%
 \contentsline {subsubsection}{\numberline {2.1.6}Cálculo de ganancia de antenas}{16}{subsubsection.2.1.6}%
 \contentsline {paragraph}{}{16}{section*.25}%
@@ -71,5 +71,4 @@
 \contentsline {subsection}{\numberline {5.4}Factores económicos y financieros}{20}{subsection.5.4}%
 \contentsline {subsubsection}{\numberline {5.4.1}Tasa de interés de retorno(TIR)}{20}{subsubsection.5.4.1}%
 \contentsline {subsubsection}{\numberline {5.4.2}Valor Actual Neto (VAN)}{20}{subsubsection.5.4.2}%
-\contentsline {section}{\numberline {6}Estudio de compatibilidad electromagnética}{20}{section.6}%
-\contentsline {section}{\numberline {7}Bibliografía}{20}{section.7}%
+\contentsline {section}{\numberline {6}Bibliografía}{20}{section.6}%
