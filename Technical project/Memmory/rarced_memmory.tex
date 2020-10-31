@@ -8,17 +8,10 @@
 \usepackage{xcolor}
 \usepackage[utf8]{inputenc}
 
-\definecolor{barblue}{RGB}{153,204,254}
-\definecolor{groupblue}{RGB}{51,102,254}
-\definecolor{linkred}{RGB}{165,0,33} 
-
 
 \graphicspath{ {./images/} }
-
-
 \begin{document}
-\title{Sistemas de posicionamiento de objetos mediante tecnología Bluetooth Low Energy
-Beacon }
+\title{Sistemas de posicionamiento de objetos mediante tecnología Bluetooth Low Energy Beacon }
 \author{Rubén Arce}
 \date{\today}
 \maketitle
@@ -30,8 +23,10 @@ Antecedentes, objeto, normativa, reglamentación
 Extensión máxima de 30 páginas + anexos 60
 Defensa de 20 min  40
     \subsection{Antecedentes y objeto del proyecto}
-        Este proyecto surge como solución a la necesidad de poder localizar a un número elevado de equipos en 
-        constante movimiento con cierta exactitud en un espacio cerrado.
+        Este proyecto surge como respuesta a la necesidad de poder localizar un número elevado de equipos en 
+        constante movimiento con exactitud en un espacio cerrado.
+        \paragraph{}
+        Se pretende conseguir los siguientes objetivos:
         \begin{enumerate}
             \item Estudio sobre las distintas alternativas para llevar a cabo este tracking de objetos de una forma
             sencilla y sin requerir de una inversión grande.
@@ -42,30 +37,43 @@ Defensa de 20 min  40
             \item Programación tanto del equipo emisor como del receptor así como del algoritmo de visualización.
             \item Pruebas de campo y comprobación del rendimiento del equipo.
         \end{enumerate}
+        \paragraph{}
+        Una vez fijado el alcance del proyecto se puede empezar a planificar el mismo y buscar la mejor solución 
+        posible, por ello surgen los siguientes objetivos derivados de los primeros para poder sacar el producto 
+        al mercado:
+        \begin{enumerate}
+            \item Precio muy competitivo.
+            \item Producto estándar y de fácil aplicación.
+            \item Sencillez de instalación por un usuario no técnico.
+            \item Poco o nulo manteniminto.
+            \item Producto seguro y que preparado para superar los marcados UL y CE.
+        \end{enumerate}
     \subsection{Ambito de aplicación}
-        El tracking de objetos en espacios cerrados está día a día incrementando su popularidad debido a que es una 
+        El tracking de objetos en espacios cerrados está incrementando su popularidad debido a que es una 
         arma de propaganda muy poderosa que demandan los grandes centros comerciales para llevar a cabo estudios de marketing
         y poder analizar el comportamiento de los clietes.
+        \paragraph{}
         Además de esta aplicación el mayor nicho de mercado es aplicado a no tener que tocar objetos para interactuar con ellos, 
-        esto teniendo en cuenta los tiempos que corren es una necesidad de numerosas empresas.
+        esto teniendo en cuenta los tiempos que corren es una necesidad de numerosas empresas privadas, ayuntamientos 
+        y empresas estatales.
         \paragraph{}
         A modo de resumen se engloban los principales ámbitos de aplicación de esta tecnología:
         \begin{enumerate}
-            \item Marketing: Estudios de mercado y de necesidad de los clientes. Elaboración de un "heat map" o mapa 
+            \item Marketing: Estudios de mercado y de necesidad de los clientes. Elaboración de un "heat map", o mapa 
             de las zonas con más afluencia de gente.
-            \item Seguridad: Tan solo los empleados con autorización y proximidad podrán llevar a cabo acciones, esto tiene 
-            sentido a la hora de no tener que dar una llave a cada empleado que pueda copiarse.
+            \item Seguridad: Tan solo los empleados con autorización y proximidad podrán llevar a cabo acciones,
+            esto tiene sentido a la hora de no tener que dar una llave a cada empleado que pueda duplicarse.
             \item Vandalismo: Conociendo la localización de los equipos dentro de un local cerrado en el momento 
             en el que se deja de situar un elemento se puede dar la voz de alarma ante un robo.
             \item Propaganda y nueva forma de publicidad: Activar acciones en función de la localización en determinados
             puntos de interés permite llevar a otro nivel las ideas de los publicistas.
         \end{enumerate}
         Vemos por tanto que hay numerosas aplicaciones y demanda de este producto tecnológico, es por ello por lo que se 
-        procede a explorar cual es la forma más adecuada para llevarlo a cabo y hacerlo realidad.
-    \subsection{Análisis de soluciones}
+        procede a explorar cual es la forma más adecuada para llevarlo a cabo e implementarlo.
+    \subsection{Análisis de soluciones al tracking de objetos}
         Se plantean dos problemáticas, en primer lugar se busca llevar a cabo el seguimiento de elementos en movimiento, y por el otro 
         está el enviar esta información de alguna forma al sistema correspondiente para que lleve a cabo el análisis de los datos. Esta
-        última acción es esencial en el proceso, es lo realmente interesante desde el punto de vista del cliente de esta tecnología.
+        última acción es esencial en el proceso, es lo realmente interesante desde el punto de vista del cliente final de esta tecnología.
         En lo que respecta a la obtención de datos de posición relativa de objetos o personas se presentan las siguientes opciones:
         \subsubsection {Wifi}
             La posibilidad de llevar a cabo el tracking mediante la escucha de wifis es una opción, para ello sería
@@ -73,15 +81,15 @@ Defensa de 20 min  40
             en el caso de monitorización de personas pero inasumible para objetos.
             \paragraph{}
             El procedimiento consistiría en llevar a cabo un barrido de direcciones MACs que generan los móviles cuando tienen el wifi activado,
-            es decir que esto no funcionaría en el caso de que una persona lleve puestos los datos del móvil únicamente.
+            es decir que este sistema no funcionaría en el caso de que una persona lleve puestos los datos del móvil únicamente.
             \paragraph{}
-            Otra desventaja es el hecho de que al tener un equipo buscando wifis la información personal del propietario como localización,
-            fecha y hora a la que se intentó conectar y la dirección MAC que identifica y relaciona un móvil a una persona queda expuesta.
-            Se han de tener en cuenta la política de privacidad vigente, empleando esta tecnología para llevar a cabo el tracking se inclumple.
-            \paragraph{}
-            \includegraphics[scale=0.4]{WifiCounting.jpg}
-            \paragraph{}
-            La única solución al problema es que se ha de pedir permiso formal a la persona de alguna forma para poder llevar a cabo
+            Otra desventaja es el hecho de que al tener un equipo buscando wifis la información personal del propietario, es decir, localización,
+            fecha, hora a la que se intentó conectar y la dirección MAC que identifica y relaciona un móvil a una persona queda expuesta.
+            Se han de tener en cuenta la política de privacidad vigente, empleando esta tecnología para llevar a cabo el tracking se inclumpliría.
+            \begin{center}
+                \includegraphics[scale=0.3]{WifiCounting.jpg}
+            \end{center}
+            La única solución al problema es que se ha de pedir permiso formal a la persona para poder llevar a cabo
             el tratamiento de sus datos, cosa que es dificil puesto que se desconoce quien va a llevar a cabo el uso del equipo.
             \paragraph{}
             El artículo 29 de privacidad de datos de la comunidad europea dice lo siguiente:
@@ -105,7 +113,6 @@ Defensa de 20 min  40
             Emisión desde los -20 dBm (0.01 mW) hasta los +20 dBm (100 mW). Cuanta mayor potencia de emisión mayor consumo energético
             del dispositivo pero también conseguiremos una mayor distancia.
             Existen varios tipos de beacons:
-            https://accent-systems.com/es/producto/ibks-105/
             \begin{enumerate}
                 \item iBeacon: Fue la primera tecnología BLE Beacon desarrollada por Apple, permite leer y emitir en modo 
                 broadcast para cualquier dispositivo que disponga de Bluetooth low energy. Es un protocolo propietario, es 
@@ -119,8 +126,9 @@ Defensa de 20 min  40
                     \item Minor: Es también un número entero de 0 a 65535 que se emplea para distinguir un beacon
                     específico dentro de un grupo, entendiéndose como grupo aquellos beacons con mismo valor de Major.
                 \end{itemize}
-                \paragraph{}
-                \includegraphics[scale=0.5]{tipos_beacon_ibeacon.PNG}
+                \begin{center}
+                    \includegraphics[scale=0.4]{tipos_beacon_ibeacon.PNG}
+                \end{center}
                 \item Eddystone: Creado por Google es un protocolo de código abierto. A diferencia del protocolo anterior este 
                 permite transmitir:
                 \begin{itemize}
@@ -128,15 +136,15 @@ Defensa de 20 min  40
                     \item UID: Similar al UUID del iBeacon, este parámetro identifica al beacon y permite llevar acciones individuales.
                     \item TML: Permite enviar información relativa al beacon como por ejemplo el porcentaje de batería o valores de sensores.
                 \end{itemize}
-                \paragraph{}
-                \includegraphics[scale=0.5]{tipos_beacon_edison.PNG}
+                \begin{center}
+                    \includegraphics[scale=0.4]{tipos_beacon_edison.PNG}
+                \end{center}
                 \item AltBeacon: Es un protocolo de código abierto que surge como resultado de las incompatibilidades de las dos 
                 tecnologías anteriores, la ventaja principal es que permite más flexibilidad de modificaciones así como compatibilidad 
                 entre sistemas operativos.
-                \paragraph{}
-                \includegraphics[scale=0.5]{tipos_beacon_altbeacon.PNG}
-            Una vez exploradas las opcione de posicionamiento de los equipos se llevará a cabo el estudio de posibilidades de subida de estos datos
-            a la nube, es por ello por lo que se contemplar varias opciones:
+    \subsection{Análisis de soluciones a la subida de datos}
+        Una vez exploradas las opciones de posicionamiento de los equipos se llevará a cabo el estudio de posibilidades de subida de estos datos
+        a la nube, es por ello por lo que se contemplar varias opciones:
         \subsubsection {MQTT}
             MQTT es un protocolo estándar aplicado principalmente al IoT (Internet of Things). Está basado en publicación y 
             suscripción con un servicio de mensajería push, los mensajes se publican el topics en los que los distintos 
@@ -151,43 +159,52 @@ Defensa de 20 min  40
                 \item QoS 1: Menaje enviado hasta que se garantiza que se entrega.
                 \item QoS 2: Garantizado que cada mensaje se entrega al suscriptor por una única vez.
             \end{itemize}
-            Esta es una opción de que los equipos que escuchan a los beacons envien la información a la web que escucha el mismo
-            topic en el que envían.
-            \subsubsection {HTTP post}
-                A través del protocolo de transferencia de hipertexto se puede llevar a cabo una petición POST, consiste en que
-                un servidor acepte los datos recibidos por el microcontrolador.
-                La ventaja es que con el HTTP Post solo se mantiene la conexión abierta al hacer la conexión, luego se desconecta hasta 
-                la siguiente vez en la que se vuelvan a publicar datos. Otra ventaja es que mediante peticiones se pueden llevar a 
-                cabo varias a distintos servidores, por el contrario con MQTT solo se puede enviar información a aquellos que estén
-                suscritos al mismo tópic.
-
-                El principal inconveniente es que está demostrado que en una red 3G una petición post es del orden de 93 veces
-                más lenta que un mensaje MQTT, con el consiguiente consumo energético que esto conlleva. Otro inconveniente es el hecho 
-                de que se requiera de un servidor con una API o endpoint constantemente escuchando a los distintos posts.
-            \subsubsection {ESP Now}
-                Se plantea la opción de que no todos los equipos que escuchan a los beacons no tengan internet, es por ello por lo 
-                que se plantéa llevar a cabo una red de elementos que escuchan y que envian a un único concentrador encargado de enviar
-                esta información a internet por cualquier otro método.
-
-                Es decir, se contempla la posibilidad de establecer una red de elementos que escuchan, para ello se emplea 
-                un protocolo de comunicación rápido denominado ESP-NOW, este tiene las siguientes características:
-                \begin{itemize}
-                    \item Encriptación de las comunicaciones.
-                    \item Hasta 250 Bytes de payload o mensaje a enviar.
-                    \item Rapidez de comunicación entre esps
-                \end{itemize}
-                \paragraph{}
-                La idea sería la siguiente:
-                \paragraph{}
-                \includegraphics[scale=0.5]{espnow.png}
+            Esta es una opción para que los equipos que escuchan a los beacons y envian la información a un mismo
+            topic en el que el sistema de visualiación está escuchando.
+        \subsubsection {HTTP post}
+            A través del protocolo de transferencia de hipertexto se puede llevar a cabo una petición POST, consiste en que
+            un servidor acepte los datos recibidos por el microcontrolador.
+            La ventaja es que con el HTTP Post solo se mantiene la conexión abierta al hacer la conexión, luego se desconecta hasta 
+            la siguiente vez en la que se vuelvan a publicar datos. Otra ventaja es que mediante peticiones se pueden llevar a 
+            cabo varias a distintos servidores, por el contrario con MQTT solo se puede enviar información a aquellos que estén
+            suscritos al mismo tópic.
+            El principal inconveniente es que está demostrado que en una red 3G una petición post es del orden de 93 veces
+            más lenta que un mensaje MQTT, con el consiguiente consumo energético que esto conlleva. Otro inconveniente es el hecho 
+            de que se requiera de un servidor con una API o endpoint constantemente escuchando a los distintos posts.
+        \subsubsection {ESP Now}
+            Se plantea la opción de que no todos los equipos que escuchan a los beacons no tengan internet, es por ello por lo 
+            que se plantéa llevar a cabo una red de elementos que escuchan y que envian a un único concentrador encargado de enviar
+            esta información a internet por cualquier otro método.
+            Es decir, se contempla la posibilidad de establecer una red de elementos que escuchan, para ello se emplea 
+            un protocolo de comunicación rápido denominado ESP-NOW, este tiene las siguientes características:
+            \begin{itemize}
+                \item Encriptación de las comunicaciones.
+                \item Hasta 250 Bytes de payload o mensaje a enviar.
+                \item Rapidez de comunicación entre esps
+            \end{itemize}
+            \paragraph{}
+            La idea sería la siguiente:
+            \begin{enumerate}
+                \item El equipo que lleva a cabo el barrido y búsqueda de beacons escanea e intenta conectarse a 
+                internet por wifi.
+                \item Si lo consigue publica los datos, en el caso de que falle enviará por ESP NOW la información
+                que no puede subir a internet a otro equipo en su misma red que si que pueda.
+                \item Este segundo hará lo mismo hasta que finalmente haya uno que si que pueda subir estos datos.
             \end{enumerate}
+            \begin{center}
+                \includegraphics[scale=0.4]{espnow.png}
+            \end{center}
+        \end{enumerate}
     \subsection{Resultados finales}
-        Explorando las tres opciones se ha confeccionado la siguiente tabla en la que se puede ver como el claro ganador es el  bluetooth debido 
-        principalmente al precio que supondría llevar a cabo una red de estas características además del consumo energético.
+        Una vez analizadas las dos problemáticas y las distintas soluciones a cada una de ellas se ha confeccionado la siguiente tabla 
+        en la que se puede ver una comparativa entre cada una de ellas.
+
+        Por un lado está la forma en la que poder medir las distancias de los equipos con respecto a los equipos que escuchan,
+        se contemplaban las siguientes opciones:
         \begin{center}
-            \begin{tabular}{||c | c| c| c| c ||} 
+            \begin{tabular}{|c | c| c| c| c |} 
             \hline
-            Tecnología  & Coste  & Implementación & Distancia & Consumo energético \\ [0.5ex] 
+            Tecnología  & Coste  & Complejidad & Distancia & Consumo energético \\ [0.5ex] 
             \hline
             GPS& Elevado& Baja & Ilimitada& Muy alto\\
             Wifi& Medio& Media & ~ 100 m & Alto\\ 
@@ -195,16 +212,22 @@ Defensa de 20 min  40
             \hline
             \end{tabular}
         \end{center}   
-        En lo que respecta a la comunicación de estos datos de distancia entre equipos a internet se ha reunido en la 
-        siguiente tabla un resumen con las opciones y los puntos a favor y en contra.
+        El claro ganador en este caso es el Bluetooth debido principalmente al precio que supondría llevar a cabo una red de estas 
+        características además del consumo energético tan bajo hace que el mantenimiento de los equipos sea casi inexistente.
+        \paragraph{}
+        Recordemos que una de las premisas iniciales era que los equipos requerieran de poco cuidado por parte del cliente, empleando
+        esta tecnología se puede conseguir que solo sea necesario cambiar una pila una vez al año.
+        \paragraph{}
+        En lo que respecta a la comunicación de estos datos de distancia entre equipos a internet se ha reunido de nuevo en la 
+        siguiente tabla un resumen con las opciones y los puntos a favor y en contra de cada una de las tecnologías.
         \begin{center}
             \begin{tabular}{||c | c| c| c||} 
             \hline
-            Tecnología  & Velocidad (y en consecuencia consumo) & Coste \\ [0.5ex] 
+            Tecnología  & Velocidad de datos & Coste & Complejidad \\ [0.5ex] 
             \hline
-            MQTT& Elevada  & Bajo\\
-            HTTP POST& Baja & ~ 100 m \\ 
-            ESP NOW& Media & ~ 100 m \\ 
+            MQTT& Elevada  & No & Baja\\
+            HTTP POST& Baja & Medio & Baja\\ 
+            ESP NOW& Media & No & Alta\\ 
             \hline
             \end{tabular}
         \end{center}   
@@ -212,12 +235,11 @@ Defensa de 20 min  40
         escuchan a internet el ganador será la opción de MQTT puesto que la forma más facil de llevar a cabo el envio de datos.
 
         En el caso de que no llegue la señal wifi a todos los puntos en los que se decida llevar a cabo el tracking de objetos 
-        surgue un problema puesto que perderemos esos datos, la solucion a esta problemática es hacer que este equipo que no 
-        tiene conexión a internet envie los datos por EspNow a otro que si que sea capaz de subir tanto su información como la 
-        de su compañero al broker por Mqtt.
+        surge un problema puesto que perderemos esos datos, la solucion es hacer que este equipo, que no tiene conexión a internet,
+        envie los datos por ESP NOW a otro que si que sea capaz de subir tanto su información como la de su compañero al broker por MQTT.
 
-        Puesto que se pretende llevar a cabo un sistema válido para toda la posible se han contemplado ambas opciones
-        y la implementación real llevará a cabo dos.
+        Puesto que se pretende llevar a cabo un sistema válido para toda la casuística de instalaciones se han contemplado ambas opciones
+        y la implementación real llevará a cabo los dos métodos.
         
         Es decir que la única opción desechada ha sido la conexión directa con un servidor mediante HTTP debido a que, en primer
         lugar sería necesario programar un servicio que escuchara en este endpoint y luego sería necesario hostearlo 
@@ -225,29 +247,35 @@ Defensa de 20 min  40
     \subsection{Planificación}
         \paragraph{}
         Para sintetizar el proceso de desarrollo del proyecto técnico se empleará un diagrama GANTT: 
-        \paragraph{}
-        \includegraphics[scale=0.3]{gantt.PNG}
+        \begin{itemize}
+            \item Fase 1: Analisis de la situación.
+            \item Fase 2: Definición de la problemática.
+            \item Fase 3: Búsqueda de soluciones y alcance del proyecto.
+            \item Fase 4: Desarrollo de hardware acorde a especificaciones.
+            \item Fase 5: Programación del receptor de los datos.
+            \item Fase 6: Programación del hardware.
+            \item Fase 7: Pruebas de campo.
+            \item Fase 8: Depuración tanto de programación como de bug en hardware.
+            \item Fase 9: Evolución del equipo en instalación.
+            \item Fase 10: Evaluación de producto y producción masiva.
+        \end{itemize}
+        \begin{center}
+            \includegraphics[scale=0.35]{gantt.PNG}
+        \end{center}
         https://online.visual-paradigm.com/ tiene buena pinta para hacer esto
-        Fase 1: Analisis de la situación.
-        Fase 2: Definición de la problemática.
-        Fase 3: Búsqueda de soluciones y alcance del proyecto.
-        Fase 4: Desarrollo de hardware acorde a especificaciones.
-        Fase 5: Programación del receptor de los datos.
-        Fase 6: Programación del hardware.
-        Fase 7: Pruebas de campo.
-        Fase 8: Depuración tanto de programación como de bug en hardware.
-        Fase 9: Evolución del equipo en instalación.
-        Fase 10: Evaluación de producto y producción masiva.
+        
 \section{Memoria justificativa}
     \subsection{Cálculos justificativos de la instalación}
-        Calculos de consumos de los equipos y dimensionamiento de la batería.
-        Los datos de partida son el consumo medio y duración del batería durante 2 años.
-        \subsubsection{Cálculo de distancia por RSSI}
+        En este apartado de llevará a cabo el estudio de la viabilidad del proyecto desde el punto de vista
+        técnico, para lo cual se contemplará un estudio del rssi como forma de medir distancia, un análisis 
+        de la previsión energética de los equipos, un análisis del las frecuencias y ganancias de las antenas 
+        empleadas.
+    \subsection{Cálculo de distancia por RSSI}
             \subsubsection{Rssi}
                 \paragraph{}
                 El RSSI (Received signal strength indicator) es un indicador de la energía o potencia recibida en un mensaje de radio, 
-                está asociado con la atenuación de la señal, cuanto más pequeña es su valor menor atenuación.Este valor está 
-                presente no solo en Bluetooth sino también en el Wifi (2,4 GHz)o en las bandas de radio industriales, científicas y médicas,
+                está asociado con la atenuación de la señal, cuanto más pequeña es su valor menor atenuación. Este valor está 
+                presente no solo en Bluetooth sino también en el Wifi (2,4 GHz) o en las bandas de radio industriales, científicas y médicas,
                 las denominadas ISM (desde 433MHz a 458.5MHz y desde 860MHz a 960MHz)
                 \paragraph{}
                 De las muestras obtenidas se puede concluir que se puede llegar a estimar la distancia a partir de los valores
@@ -264,7 +292,7 @@ Defensa de 20 min  40
                     P_L(d) [dB] = P_L(d_0) [dB] + 10n *\log_{10} \frac{ d_i }{d_0} 
                 \end{equation}
                 \paragraph{}
-                Siendo PL (d0)  la pérdida de propagación a 1 metro y n es una constante que depende del medio, será igual
+                Siendo PL (d0) la pérdida de propagación a 1 metro y n es una constante que depende del medio, será igual
                 a 2 si se encuentra en el espacio libre sin obstáculos ni reflexiones o dispersiones de señal.
                 \paragraph{}
                 Para calcular este parámetro 'n' se ha de aplicar la siguiente fórmula, como podemos ver para llevar a cabo el 
@@ -284,43 +312,54 @@ Defensa de 20 min  40
                 \begin{equation}
                     d= 10^\frac{-(RRSI - A)}{10n}
                 \end{equation}
-            \subsubsection{Trilateración y posicionamiento}
-            
-            Una vez obtenidas las distancias a los distintos equipos que receptores es necesario llevar a cabo el
-            posicionamiento exácto de los equipos, para ello se emplea la trilateración:
-            \includegraphics[scale=0.3]{trilateration_circle.png}
-            Para ello hemos de resolver las siguientes ecuaciones básicas sobre la distancia entre recta y un punto en 
-                una circunferencia:
-                \begin{equation}
-                    d_{A1}= \sqrt[2]{(x-x_A)^2+(y-y_A)^2}
-                \end{equation}
-                \begin{equation}
-                    d_{B1}= \sqrt[2]{(x-x_B)^2+(y-y_B)^2}
-                \end{equation}
-                \begin{equation}
-                    d_{C1}= \sqrt[2]{(x-x_C)^2+(y-y_C)^2}
-                \end{equation}
-                Llevando a cabo la simplificación obtenemos el siguiente sistema:
-                \begin{equation}
-                    \begin{pmatrix}
-                        x \\
-                        y 
-                    \end{pmatrix}=
-                    \begin{pmatrix}
-                        2(x_A-x_C) 2(y_A-y_C) \\
-                        2(x_B-x_C) 2(y_B-y_C) 
-                    \end{pmatrix} 
-                    +
-                    \begin{pmatrix}
-                        x_A^2-x_C^2+y_A^2-y_C^2+d_C^2-d_A^2 \\
-                        x_B^2-x_C^2+y_B^2-y_C^2+d_C^2-d_B^2 
-                    \end{pmatrix} 
-                \end{equation}
+                Llevados a cabo los cálculos por parte del equipo que escucha a los distintos beacons podemos calcular la distancia 
+                real a cada uno de ellos. En el caso de que se solapen y dos receptores escuchen el mismo beacon será necesario
+                llevar a cabo el proceso de trilateración expuesto a continuación.
 
-        \subsubsection{Cálculo de consumos energéticos}
+                Para comprobar la fluctiación del parámetro del rssi se ha llevado a cabo la toma de este valor a los largo de un 
+                periodo de tiempo largo y estos son lo resultados a 2 metros y a 3 metros:
+                \begin{center}
+                    \includegraphics[scale=0.35]{1_beacon_2_meters.PNG}
+                    \includegraphics[scale=0.3]{1_beacon_3_meters.PNG}
+                \end{center}
+                Podemos ver que hay pequeñas fluctiaciones y es por ello por lo que será necesario implementar un sencillo filtro para
+                evitar el ruido electromagnético que hemos visto anteriormente.
+                \paragraph{}
+                Otra prueba llevada a cabo ha sido la de incrementar el número de iBeacons y situarlos a la misma distancia del 
+                equipo que escucha, los resultados son los siguientes:
+                \begin{center}
+                    \includegraphics[scale=0.2]{10min_2beacons_same_distance.PNG}
+                \end{center}
+                Podemos ver de nuevo que las diferencias son notables, esto de nuevo afianza la idea de implementar
+                un filtro que no falsee las medidas y cree falsas distancias puntuales entre los equipos.
+                \paragraph{}
+                El filtro más habitual para este tipo de aplicaciones es el denominado Kalman Filter:
+                \begin{equation}
+                    RSSI_suavizado=\alpha · RSSI_{n} + (1-\alpha) · RSSI_{(n-1)}
+                \end{equation}
+                Otra opción que experimentalmente me ha dado buenos resultados es la de coger lo 20 valores anteriores,
+                obtener la media y si se separa más de un 30\% el valor nuevo lo rechazo. Con esto consigo eliminar las 
+                fluctuaciones indesadas.
+            \subsubsection{Trilateración y posicionamiento}
+                Una vez obtenidas las distancias a los distintos equipos que receptores es necesario llevar a cabo el
+                posicionamiento exácto de los equipos, para ello se emplea la trilateración:
+                \includegraphics[scale=0.3]{trilateration_circle.png}
+                Para ello hemos de resolver las siguientes ecuaciones básicas sobre la distancia entre recta y un punto en 
+                    una circunferencia:
+                    \begin{equation}
+                        d_{A1}= \sqrt[2]{(x-x_A)^2+(y-y_A)^2}
+                    \end{equation}
+                    \begin{equation}
+                        d_{B1}= \sqrt[2]{(x-x_B)^2+(y-y_B)^2}
+                    \end{equation}
+                    \begin{equation}
+                        d_{C1}= \sqrt[2]{(x-x_C)^2+(y-y_C)^2}
+                    \end{equation}
+                    Llevando a cabo la simplificación obtenemos el siguiente sistema:
+    \subsection{Cálculo de consumos energéticos}
             \begin{itemize}
                 \item  Active Mode, 160-260mA.  Los dos cores del procesador encendidos así como el procesador ULP,
-                RTC, Wifi, Bluetooth, Radio, Peripherals
+                RTC, Wifi, Bluetooth, Radio, Peripherals.
                 \item  Sleep mode: 3-20mA Activos los dos cores, el coprocesaror ULP coprocessor y el RTC, inactivos el 
                 Wifi, Bluetooth, Radio y periféricos.
                 \item  Light sleep mode: La CPU está pausada apagando los pulsos de su reloj interno, sin embargo, el RTC
@@ -351,8 +390,41 @@ Defensa de 20 min  40
             \end{center}
             A la hora de llevar a cabo la decisión sobre como llevar a cabo el protocolo de comunicación se ha de tener en cuenta 
             el consumo de los equipos, en especial en lo que respecta a los beacons.
+            Es por ello por lo que se ha optado es por dormir el equipo durante 58 segundos, despertárlo,
+            enviar su trama bluetooth y luego dormirlo hasta la siguiente vez que despierte.
+            Con esto conseguimos un consumo que varía en función de la frecuencia de envio, en la siguiente tabla
+            se puede ver un análisis en función del tiempo:
+            \begin{center}
+                \begin{tabular}{||c || c ||} 
+                \hline
+                Frecuencia de envio  & Consumo energético  \\ [0.5ex] 
+                \hline
+                1 min &  2,415 mA \\
+                5 min &  0,495 mA \\ 
+                10 min &  0,255 mA \\ 
+                15 min &  0,175 mA \\ 
+                30 min &  0,095 mA \\ 
+                \hline
+                \end{tabular}
+            \end{center}
+            Y en consecuencia está la duración media de las baterías, poniendo el ejemplo para una frecuencia de 
+            envío de 10 minutos vemos que la autonomía será:
+            \begin{center}
+                \begin{tabular}{|c | c| c| c |} 
+                \hline
+                Tipo de batería & Capacidad (mAh) & Autonomía(días) & Autonomía(días)   \\ [0.5ex] 
+                &  &  f=10 min &  f=5 min   \\ [0.5ex] 
+                \hline
+                \hline
+                    Pila CRC 2032 &  240 mAh  & 39   & 20 \\ 
+                    Pila AA       &  2500 mAh & 409  & 210 \\ 
+                    Batería Li-Ion&  1600 mAh & 261  & 135 \\ 
+                \hline
+                \end{tabular}
+            \end{center}
+            
 
-        \subsubsection{Cálculo saturación espectro de frecuencia}
+    \subsection{Cálculo saturación espectro de frecuencia}
             Los fundamentos básicos de las distintas frecuencias es que a menor frecuencia mayor distancia vamos a conseguir 
             en las comunicaciones. Por el contrario, cuanto menor frecuencia menor volumen de datos es posible.
             La tecnología bluetooth usa la frecuencia de 2.4GHz ISM (2400 to 2483.5 MHz), esta banda permite una buena relación
@@ -402,7 +474,7 @@ Defensa de 20 min  40
             La banda ISM de 2.4GHz es, sin lugar a dudas, la que soporta un uso más intensivo, ya que es utilizada en 
             diferentes estándares de redes Wi-Fi (IEEE 802.11b/g/n) y Bluetooth, (IEEE 802.15.1), llegando en muchas 
             ocasiones a su completa saturación.
-        \subsubsection{Cálculo de ganancia de antenas}
+    \subsection{Cálculo de ganancia de antenas}
             Una antena convierte la enegía electrica del transmisor en energía electromagnética y viceversa, las antenas pueden ser 
             para recibir, para transmitir o ambas. La localización de la antena, las dimensiones y el diseño pueden afectar drásticamente
             en el funcionamiento óptimo de la red de beacons. 
@@ -546,4 +618,5 @@ Defensa de 20 min  40
 
 \section{Bibliografía}
 https://www.bluetooth.com/
+https://accent-systems.com/es/producto/ibks-105/
 \end{document}
