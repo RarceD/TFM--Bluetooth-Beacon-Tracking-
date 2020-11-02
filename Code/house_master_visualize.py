@@ -9,30 +9,37 @@ from BeaconClass import Beacon, Esp
 
 
 class Room:
-    def __init__(self, pos_x, pos_y, width, length, beacon):
+    def __init__(self, name, pos_x, pos_y, width, length, beacon, color):
+        self.name = str(name)
         self.pos_x = pos_x
         self.pos_y = pos_y
         self.width = width
         self.length = length
         self.beacon = beacon
+        self.color = color
 
     def plot(self, win):
         pygame.draw.rect(win, (0, 0, 0),
-                (self.pos_x - 5, self.pos_y- 5, self.width + 5*2, self.length+ 5*2))
-        pygame.draw.rect(win, (191, 86, 252),
-                         (self.pos_x, self.pos_y, self.width, self.length))
+                         (self.pos_x , self.pos_y, self.width , self.length ))
+        pygame.draw.rect(win, self.color,
+                         (self.pos_x + 5, self.pos_y +5, self.width - 5*2, self.length-5*2))
+        x = font.render(self.name, 1, (0, 0, 0))
+
+        medium_x = abs(self.width - self.pos_x)
+        medium_y = abs(self.length - self.pos_y)
+        win.blit(x, (self.pos_x + medium_x/2- len(self.name)*4, self.pos_y +round(self.length/2)- 30))
 
 
 def connect_mqtt():
-    broker_address="broker.mqttdashboard.com"
-    client=mqtt.Client("asdf1234asdf1234asdf")  # create new instance
-    client.on_message=on_message  # attach function to callback
+    broker_address = "broker.mqttdashboard.com"
+    client = mqtt.Client("asdf1234asdf1234asdf")  # create new instance
+    client.on_message = on_message  # attach function to callback
     print("connecting to broker")
     client.connect(broker_address)  # connect to broker
     print("Subscribing to topic", "master_beacon")
     client.subscribe("master_beacon")
     print("Publishing message to topic", "master_beacon_ack")
-    msg='''{"ok":true}'''
+    msg = '''{"ok":true}'''
     client.publish("master_beacon/ack", msg)
     client.loop_start()  # start the loop
     return client
@@ -42,9 +49,9 @@ def on_message(client, userdata, message):
     # print("message topic=",message.topic)
     # print("message retain flag=",message.retain)
     # Example json: {"esp":"A1","beacon":[ {"uuid":5245,"distance":1.23},{"uuid":52345, "distance":1.23 }]}
-    msg=str(message.payload.decode("utf-8"))
+    msg = str(message.payload.decode("utf-8"))
     # print("message received: ", msg)
-    parsed_json=(json.loads(msg))
+    parsed_json = (json.loads(msg))
     print('_________________')
     global esp
     for e in esp:
@@ -52,13 +59,13 @@ def on_message(client, userdata, message):
             # print(parsed_json['esp'])
             for index, b in enumerate(parsed_json['beacon']):
                 # Get the distance and the uuid of the beacon:
-                beacon_distance=float(
+                beacon_distance = float(
                     parsed_json['beacon'][index]['distance'])
-                beacon_uuid=str(parsed_json['beacon'][index]['uuid'])
+                beacon_uuid = str(parsed_json['beacon'][index]['uuid'])
 
                 # Add the beacon to the master if it is not repeat:
                 print('Checking if ', beacon_uuid, 'in the list ')
-                all_beacons=[]
+                all_beacons = []
                 for s in e.beacons:
                     all_beacons.append(s.uuid)
 
@@ -72,7 +79,7 @@ def on_message(client, userdata, message):
                     else:
                         e.beacons.append(
                             Beacon(0, 0, beacon_uuid, beacon_distance))
-            b=0
+            b = 0
             while (b < len(e.beacons)):
                 print('Beacon nº', b, 'name:', e.beacons[b].uuid)
                 b += 1
@@ -81,30 +88,28 @@ def on_message(client, userdata, message):
 
 
 def reddrawGameWindow():
+    win.fill((145, 213, 250))
     # I set a grid to better positioning
-    l_x, l_y=0, 0
-    debug=True
+    l_x, l_y = 0, 0
+    debug = True
     while (debug and (l_x <= win_x or l_y <= win_y)):
         pygame.draw.line(win, (134, 136, 143), (l_x, 0), (l_x, win_y))
         pygame.draw.line(win, (134, 136, 143), (0, l_y), (win_x, l_y))
         l_y += 50
         l_x += 50
 
-    offset=50
-    win.fill((145, 213, 250))
-
-    r = Room(50, 50 + offset, 400, 50, 1)
-    r.plot(win)
+    for r in rooms:
+        r.plot(win)
     # pygame.draw.rect(win, (191, 86, 252), (50, 50 + offset, 400, 50))
     # pygame.draw.rect(win, (191, 86, 252), (400, 50 + offset, 50, 12*50))
 
-    pygame.draw.rect(win, (247, 40, 102), (1*50, 3*50 + offset, 7*50, 3*50))
-    pygame.draw.rect(win, (99, 40, 88), (1*50, 7*50 + offset, 7*50, 3*50))
-    pygame.draw.rect(win, (60, 76, 199),  (3*50, 11*50 + offset, 5*50, 5*50))
+    # pygame.draw.rect(win, (247, 40, 102), (1*50, 3*50 + offset, 7*50, 3*50))
+    # pygame.draw.rect(win, (99, 40, 88), (1*50, 7*50 + offset, 7*50, 3*50))
+    # pygame.draw.rect(win, (60, 76, 199),  (3*50, 11*50 + offset, 5*50, 5*50))
 
-    pygame.draw.rect(win, (250, 142, 27), (9*50, 0 + offset, 5*50, 3*50))
-    pygame.draw.rect(win, (59, 148, 21),  (9*50, 4*50 + offset, 5*50, 3*50))
-    pygame.draw.rect(win, (250, 117, 87),  (9*50, 8*50 + offset, 5*50, 6*50))
+    # pygame.draw.rect(win, (250, 142, 27), (9*50, 0 + offset, 5*50, 3*50))
+    # pygame.draw.rect(win, (59, 148, 21),  (9*50, 4*50 + offset, 5*50, 3*50))
+    # pygame.draw.rect(win, (250, 117, 87),  (9*50, 8*50 + offset, 5*50, 6*50))
 
     for e in esp:
         for b in e.beacons:
@@ -125,48 +130,82 @@ def visualize_calculations(esp):
     # Plot on the screen:
     for e in esp:
         for b in e.beacons:
-            b.x=e.x + random.randint(-20, 20) + position_adjustments[0]
-            b.y=e.y + random.randint(-20, 20) + position_adjustments[1]
+            b.x = e.x + random.randint(-20, 20) + position_adjustments[0]
+            b.y = e.y + random.randint(-20, 20) + position_adjustments[1]
 
     # Render the screen:
     reddrawGameWindow()
 
     # Delete all the info:
     for e in esp:
-        e.beacons=[]
+        e.beacons = []
 
 
 def rssr_distance(rssi, tx, n):
     return 10**((tx-rssi)/n)
 
 
-run=True  # The game loop running
-beacons=[]
-esp=[]
-position_adjustments=[0, 0]
+run = True  # The game loop running
+beacons = []
+esp = []
+position_adjustments = [0, 0]
 esp.append(Esp("A1", 120, 260))
 esp.append(Esp("A2", 350, 260))
 esp.append(Esp("A3", 570, 260))
 
 
-win_x=750
-win_y=900
-client=connect_mqtt()  # I connect to mqtt broker
+win_x = 750
+win_y = 900
+client = connect_mqtt()  # I connect to mqtt broker
 pygame.init()  # Inicialize pygame interface
-win=pygame.display.set_mode((win_x, win_y))  # dimensions of it
+win = pygame.display.set_mode((win_x, win_y))  # dimensions of it
 # title of this shit of game
 pygame.display.set_caption("House members tracker")
-clock=pygame.time.Clock()
-font=pygame.font.SysFont('bitstreamverasans', 30, True, True)
+clock = pygame.time.Clock()
+font = pygame.font.SysFont('bitstreamverasans', 30, True, True)
+rooms = []
+offset = 50
+
+colors = []
+try:
+    file = open("input.txt", "r+")
+    inputFile = file.readlines()
+    file.close()
+    # print(inputFile)
+    color = ""
+    for line in range(1,9):
+        color= inputFile[line][1:-2]
+        res = eval(color)
+        colors.append(res)
+except:
+    print("No se ha cargado el archivo")
+
+print(colors[0])
+print(colors[1])
+
+rooms.append(Room("Salón", 50, 50 + offset, 400, 50, 1, colors[0]))
+rooms.append(Room("Pasillo", 50, 50 + offset, 400, 50, 0, colors[1]))
+# rooms.append(Room("Pasillo", 400, 50 + offset, 50, 12*50, 0, (191, 86, 252)))
+
+rooms.append(Room("Baño", 1*50, 3*50 + offset, 7*50, 3*50, 0, colors[2]))
+rooms.append(Room("Cocina", 1*50, 7*50 + offset, 7*50, 3*50, 0, colors[3]))
+rooms.append(Room("Habitación 1", 3*50, 11*50 +
+                  offset, 5*50, 5*50, 0, colors[4]))
+
+rooms.append(Room("Salón", 9*50, 0 + offset, 5*50, 3*50, 0, colors[5]))
+rooms.append(Room("Habitación 2", 9*50, 4*50 +
+                  offset, 5*50, 3*50, 0, colors[6]))
+rooms.append(Room("Habitación 3", 9*50, 8*50 +
+                  offset, 5*50, 6*50, 0, colors[7]))
 
 
-timer_update_screen=int(round(time.time()))
-refresh_time=6
+timer_update_screen = int(round(time.time()))
+refresh_time = 6
 while(run):
     pygame.time.delay(50)  # 64x64 images
     for event in pygame.event.get():  # Check for events of close
         if event.type == pygame.QUIT:
-            run=False
+            run = False
             client.loop_stop()  # stop the loop
     reddrawGameWindow()
 
