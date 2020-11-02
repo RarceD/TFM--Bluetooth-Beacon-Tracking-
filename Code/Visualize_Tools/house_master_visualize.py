@@ -173,15 +173,12 @@ try:
     file.close()
     # print(inputFile)
     color = ""
-    for line in range(1,9):
+    for line in range(0,8):
         color= inputFile[line][1:-2]
         res = eval(color)
         colors.append(res)
 except:
     print("No se ha cargado el archivo")
-
-print(colors[0])
-print(colors[1])
 
 rooms.append(Room("Salón", 50, 50 + offset, 400, 50, 1, colors[0]))
 rooms.append(Room("Pasillo", 50, 50 + offset, 400, 50, 0, colors[1]))
