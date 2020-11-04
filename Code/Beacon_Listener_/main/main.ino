@@ -12,10 +12,10 @@
 // #include <PubSubClient.h>
 // #include <ArduinoJson.h>
 
-#define LED_GREEN 15
-#define LED_RED 13
-#define LED_ORANGE_UP 12
-#define LED_ORANGE_DOWN 14
+#define LED_GREEN 25
+#define LED_RED 26
+#define LED_ORANGE_UP 27
+#define LED_ORANGE_DOWN 13
 
 #define mqtt_port 1883
 #define MQTT_USER "d"
@@ -72,7 +72,7 @@ class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks
 {
   void onResult(BLEAdvertisedDevice advertisedDevice)
   {
-    //Serial.printf("Advertised Device: %s ", advertisedDevice.toString().c_str());
+    // Serial.printf("Advertised Device: %s ", advertisedDevice.toString().c_str());
     int rssi = advertisedDevice.getRSSI();
     // if (advertisedDevice.haveServiceUUID())
     // {
@@ -84,7 +84,7 @@ class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks
     //e6:13:a7:0b:4f:b2 white
     char *knownAdress = "c4:64:e3:f9:35:b3";
     char *knownAdress_2 = "e6:13:a7:0b:4f:b2";
-    //  Serial.printf(" Adress: %s // RSSI: %d \n", macAdress, advertisedDevice.getRSSI());
+    Serial.printf(" Adress: %s // RSSI: %d \n", macAdress, advertisedDevice.getRSSI());
     //Serial.printf("Searching for: %s \n", knownAdress);
     int val1 = 0;
     int val2 = 0;
@@ -131,22 +131,22 @@ class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks
 
 void setup()
 {
+  Serial.begin(115200);
+  //I initialize the reset pin to the wifi:
+  pinMode(BUTTON_RESET, INPUT);
   //Start and led red on
   pinMode(LED_RED, OUTPUT);
   digitalWrite(LED_RED, HIGH);
-  Serial.begin(115200);
-
-
+  //Connect to wifi or try it at least:
   auto_wifi_connect();
-
+  //Connect to mqtt and publish
   pinMode(LED_GREEN, OUTPUT);
   digitalWrite(LED_GREEN, HIGH);
   init_mqtt();
   reconnect();
-
   //Connected to broker and led green on
-  pinMode(12, OUTPUT);
-  digitalWrite(12, HIGH);
+  pinMode(LED_ORANGE_UP, OUTPUT);
+  digitalWrite(LED_ORANGE_UP, HIGH);
   BLEDevice::init("");
   pBLEScan = BLEDevice::getScan(); //create new scan
   pBLEScan->setAdvertisedDeviceCallbacks(new MyAdvertisedDeviceCallbacks());
@@ -154,18 +154,23 @@ void setup()
   pBLEScan->setInterval(100);
   pBLEScan->setWindow(99); // less or equal setInterval value
 
-  pinMode(14, OUTPUT);
-  digitalWrite(14, HIGH);
-  BLEScanResults foundDevices = pBLEScan->start(scanTime, false);
-  DPRINT("Devices found: ");
-  DPRINT(foundDevices.getCount());
-  pBLEScan->clearResults(); // delete results fromBLEScan buffer to release memory
-  DPRINT("TO SLEEP ");
-  DPRINT(millis());
-  while (true){
-    
+  pinMode(LED_ORANGE_DOWN, OUTPUT);
+
+  while (true)
+  {
+    digitalWrite(LED_ORANGE_DOWN, HIGH);
+    delay(2000);
+
+    BLEScanResults foundDevices = pBLEScan->start(scanTime, false);
+    DPRINT("Devices found: ");
+    DPRINT(foundDevices.getCount());
+    pBLEScan->clearResults(); // delete results fromBLEScan buffer to release memory
+    digitalWrite(LED_ORANGE_DOWN, LOW);
+
+    delay(2000);
   }
 }
+
 
 void loop()
 {

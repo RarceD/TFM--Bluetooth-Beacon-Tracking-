@@ -26,7 +26,7 @@ void reconnect()
         if (client.connect(clientId.c_str(), MQTT_USER, MQTT_PASSWORD))
         {
             Serial.println("connected");
-            String topic = String(sys.uuid_) + "/+/app";
+            String topic =  "beacon_master/+";
             client.subscribe(topic.c_str());
             Serial.println(topic);
         }

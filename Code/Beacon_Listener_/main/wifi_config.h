@@ -167,7 +167,6 @@ bool get_credentials()
     return false;
 }
 void auto_wifi_connect()
-
 {
     const char *ssid = "Beacon_AP";
     const char *password = "beacon";
@@ -179,15 +178,12 @@ void auto_wifi_connect()
     //I alocate the eeprom memmory:
     EEPROMClass eeprom;
     eeprom.begin(100);
-    // if (digitalRead(BUTTON_RESET) == HIGH)
-    // {
-    //     eeprom.writeString(0, "nop");
-    //     eeprom.writeString(80, "nop");
-    //     eeprom.commit();
-    //     // digitalWrite(LED_RED, HIGH);
-    //     // delay(2000);
-    //     // digitalWrite(LED_RED, LOW);
-    // }
+    if (digitalRead(BUTTON_RESET) == LOW)
+    {
+        eeprom.writeString(0, "nop");
+        eeprom.writeString(80, "nop");
+        eeprom.commit();
+    }
     Serial.println("----Alocated on flash:");
     String wifi_flash_memmory_user = eeprom.readString(0);
     String wifi_flash_memmory_pass = eeprom.readString(80);
