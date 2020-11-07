@@ -1,5 +1,6 @@
 #include "header.h"
 #include "wifi_config.h"
+#include "app_responses.h"
 // #include <WiFi.h>
 #include <BLEDevice.h>
 #include <BLEUtils.h>
@@ -8,7 +9,6 @@
 #include <BLEAddress.h>
 #include <BLEUUID.h>
 
-#include "app_responses.h"
 // #include <PubSubClient.h>
 // #include <ArduinoJson.h>
 
@@ -122,10 +122,11 @@ class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks
       {
         char JSONmessageBuffer[100];
         root.printTo(JSONmessageBuffer, sizeof(JSONmessageBuffer));
-        client.publish("master_beacon", JSONmessageBuffer);
+        clientMQTT.publish("master_beacon", JSONmessageBuffer);
         DPRINT("I post  \n");
       }
     }
+    // clientMQTT.publish("master_beacon", "test");
   }
 };
 
@@ -143,10 +144,9 @@ void setup()
   pinMode(LED_GREEN, OUTPUT);
   digitalWrite(LED_GREEN, HIGH);
   init_mqtt();
-  reconnect();
   //Connected to broker and led green on
   pinMode(LED_ORANGE_UP, OUTPUT);
-  digitalWrite(LED_ORANGE_UP, HIGH);
+  digitalWrite(LED_ORANGE_UP, LOW);
   BLEDevice::init("");
   pBLEScan = BLEDevice::getScan(); //create new scan
   pBLEScan->setAdvertisedDeviceCallbacks(new MyAdvertisedDeviceCallbacks());
@@ -155,22 +155,21 @@ void setup()
   pBLEScan->setWindow(99); // less or equal setInterval value
 
   pinMode(LED_ORANGE_DOWN, OUTPUT);
-  digitalWrite(LED_ORANGE_DOWN , HIGH);
+  digitalWrite(LED_ORANGE_DOWN, HIGH);
+  uint64_t repeat_ble = millis();
   while (true)
   {
-    digitalWrite(LED_ORANGE_DOWN, HIGH);
-    delay(2000);
-
-    BLEScanResults foundDevices = pBLEScan->start(scanTime, false);
-    DPRINT("Devices found: ");
-    DPRINT(foundDevices.getCount());
-    pBLEScan->clearResults(); // delete results fromBLEScan buffer to release memory
-    digitalWrite(LED_ORANGE_DOWN, LOW);
-
-    delay(2000);
+    if (millis() - repeat_ble > 4000)
+    {
+      digitalWrite(LED_ORANGE_UP, HIGH);
+      BLEScanResults foundDevices = pBLEScan->start(scanTime, false);
+      DPRINT("Devices found: ");
+      DPRINT(foundDevices.getCount());
+      pBLEScan->clearResults(); // delete results fromBLEScan buffer to release memory
+      digitalWrite(LED_ORANGE_UP, LOW);
+    }
   }
 }
-
 
 void loop()
 {

@@ -7,10 +7,10 @@
 #define LOGLN(x) 
 #endif
 
-const char *mqtt_server = "broker.hivemq.com";
+const char *mqtt_server = "broker.mqttdashboard.com";
 
-#define MQTT_USER " "
-#define MQTT_PASSWORD " "
+#define MQTT_USER "asd"
+#define MQTT_PASSWORD "fds"
 #define MQTT_PORT 1883
 
 #define UUID "abcab9a1-8b22-40b0-b4bf-fb8e182f7508"
