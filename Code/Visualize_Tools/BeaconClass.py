@@ -26,3 +26,6 @@ class Esp:
 
     def add_beacon(self, beacon):
         self.beacons.append(beacon)
+    def get_position(self):
+        pos = [self.x, self.y]
+        return pos

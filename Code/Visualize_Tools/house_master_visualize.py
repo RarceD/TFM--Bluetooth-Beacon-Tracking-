@@ -9,25 +9,32 @@ from BeaconClass import Beacon, Esp
 
 
 class Room:
-    def __init__(self, name, pos_x, pos_y, width, length, beacon, color):
+    def __init__(self, name, pos_x, pos_y, width, length, esp_name, esp_x, esp_y, color):
         self.name = str(name)
         self.pos_x = pos_x
         self.pos_y = pos_y
         self.width = width
         self.length = length
-        self.beacon = beacon
+        self.esp = Esp(esp_name, esp_x, esp_y)
         self.color = color
 
     def plot(self, win):
+        # Plot the room:
         pygame.draw.rect(win, (0, 0, 0),
-                         (self.pos_x , self.pos_y, self.width , self.length ))
+                         (self.pos_x, self.pos_y, self.width, self.length))
         pygame.draw.rect(win, self.color,
-                         (self.pos_x + 5, self.pos_y +5, self.width - 5*2, self.length-5*2))
+                         (self.pos_x + 5, self.pos_y + 5, self.width - 5*2, self.length-5*2))
+        # Plot the Esp:
+        x = self.esp.get_position()
+        pygame.draw.rect(win, (0, 0, 0), (x[0], x[1], 34, 34))
+        pygame.draw.rect(win, (255, random.randint(0, 120), random.randint(0, 120)),
+                         (self.esp.x + 5, self.esp.y+5, 34-5*2, 34-5*2))
+        # Plot the text:
         x = font.render(self.name, 1, (0, 0, 0))
-
         medium_x = abs(self.width - self.pos_x)
         medium_y = abs(self.length - self.pos_y)
-        win.blit(x, (self.pos_x + medium_x/2- len(self.name)*4, self.pos_y +round(self.length/2)- 30))
+        win.blit(x, (self.pos_x + medium_x/2 - len(self.name)
+                     * 4, self.pos_y + round(self.length/2) - 30))
 
 
 def connect_mqtt():
@@ -86,7 +93,34 @@ def on_message(client, userdata, message):
 
             # e.add_beacon(0,0,parsed_json['beacon'], 0)
 
-
+def load_file(rooms):
+    try:
+        file = open("input.txt", "r+")
+        inputFile = file.readlines()
+        file.close()
+        room_colors = []
+        esp_coordinates = []
+        room_coordinates = []
+        for line in range(1, 9):
+            color = inputFile[line][1:-2]
+            res = eval(color)
+            room_colors.append(res)
+        for line in range(11, 18):
+            pos = inputFile[line][1:-2]
+            coordinates = pos.split()
+            esp_coordinates.append(coordinates)
+        for line in range(20, 27):
+            pos = inputFile[line][1:-2]
+            coordinates = pos.split()
+            room_coordinates.append(coordinates)
+        #Create all the rooms:
+        for i in range(0, 7):
+            rooms.append(Room(room_coordinates[i][4], int(room_coordinates[i][0]),
+                            int(room_coordinates[i][1]), int(room_coordinates[i][2]),
+                            int(room_coordinates[i][3]), esp_coordinates[i][2],
+                            int(esp_coordinates[i][0]),  int(esp_coordinates[i][1]), room_colors[i]))
+    except:
+        print("No se ha cargado el archivo")
 def reddrawGameWindow():
     win.fill((145, 213, 250))
     # I set a grid to better positioning
@@ -163,39 +197,11 @@ win = pygame.display.set_mode((win_x, win_y))  # dimensions of it
 pygame.display.set_caption("House members tracker")
 clock = pygame.time.Clock()
 font = pygame.font.SysFont('bitstreamverasans', 30, True, True)
+#Load the config file with the colors and room dimensions
 rooms = []
-offset = 50
+load_file(rooms)
 
-colors = []
-try:
-    file = open("input.txt", "r+")
-    inputFile = file.readlines()
-    file.close()
-    # print(inputFile)
-    color = ""
-    for line in range(0,8):
-        color= inputFile[line][1:-2]
-        res = eval(color)
-        colors.append(res)
-except:
-    print("No se ha cargado el archivo")
-
-rooms.append(Room("Salón", 50, 50 + offset, 400, 50, 1, colors[0]))
-rooms.append(Room("Pasillo", 50, 50 + offset, 400, 50, 0, colors[1]))
-# rooms.append(Room("Pasillo", 400, 50 + offset, 50, 12*50, 0, (191, 86, 252)))
-
-rooms.append(Room("Baño", 1*50, 3*50 + offset, 7*50, 3*50, 0, colors[2]))
-rooms.append(Room("Cocina", 1*50, 7*50 + offset, 7*50, 3*50, 0, colors[3]))
-rooms.append(Room("Habitación 1", 3*50, 11*50 +
-                  offset, 5*50, 5*50, 0, colors[4]))
-
-rooms.append(Room("Salón", 9*50, 0 + offset, 5*50, 3*50, 0, colors[5]))
-rooms.append(Room("Habitación 2", 9*50, 4*50 +
-                  offset, 5*50, 3*50, 0, colors[6]))
-rooms.append(Room("Habitación 3", 9*50, 8*50 +
-                  offset, 5*50, 6*50, 0, colors[7]))
-
-
+reddrawGameWindow()
 timer_update_screen = int(round(time.time()))
 refresh_time = 4
 while(run):
@@ -207,11 +213,11 @@ while(run):
     # reddrawGameWindow()
 
     # Every X seconds I update the position of the screen:
-    
+
     if (int(round(time.time())) - timer_update_screen >= refresh_time):
         checkBeacons(esp)
         visualize_calculations(esp)
         timer_update_screen = int(round(time.time()))
-    
+
 
 pygame.quit()
