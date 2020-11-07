@@ -1,7 +1,9 @@
 #include <esp_now.h>
 #include <WiFi.h>
 // 7C:9E:BD:03:31:14 mac of the listenner
-uint8_t broadcastAddress[] = {0x7C, 0x9E, 0xBD, 0x03, 0x31, 0x14};
+uint8_t broadcastAddress[] = {0x3C, 0x71, 0xBF, 0x04, 0x30, 0xB0};
+// uint8_t broadcastAddress[] = {0x84, 0x0D, 0x8E, 0x38, 0xED, 0x54};
+// 84:0D:8E:38:ED:54
 typedef struct struct_message {
   char a[32];
   int b;

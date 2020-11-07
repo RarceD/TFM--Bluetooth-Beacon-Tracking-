@@ -168,22 +168,24 @@ bool get_credentials()
 }
 void auto_wifi_connect()
 {
-    const char *ssid = "Beacon_AP";
-    const char *password = "beacon";
+
     int attemps = 0;
-    Serial.begin(115200);
+    
     Serial.println();
     Serial.println("Configuring access point");
 
     //I alocate the eeprom memmory:
     EEPROMClass eeprom;
     eeprom.begin(100);
+    Serial.println(digitalRead(BUTTON_RESET));
     if (digitalRead(BUTTON_RESET) == LOW)
     {
         eeprom.writeString(0, "nop");
         eeprom.writeString(80, "nop");
         eeprom.commit();
     }
+        eeprom.writeString(0, "RUBEN14");
+        eeprom.writeString(80, "9472302440");
     Serial.println("----Alocated on flash:");
     String wifi_flash_memmory_user = eeprom.readString(0);
     String wifi_flash_memmory_pass = eeprom.readString(80);
@@ -216,6 +218,8 @@ void auto_wifi_connect()
     }
     else
     {
+          const char *ssid = "Beacon_AP";
+    const char *password = "beacon";
         Serial.println("Fail on connected with store flash data, genetate access point");
         WiFi.softAP(ssid, password);
         IPAddress myIP = WiFi.softAPIP();

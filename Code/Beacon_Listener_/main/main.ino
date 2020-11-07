@@ -155,7 +155,7 @@ void setup()
   pBLEScan->setWindow(99); // less or equal setInterval value
 
   pinMode(LED_ORANGE_DOWN, OUTPUT);
-
+  digitalWrite(LED_ORANGE_DOWN , HIGH);
   while (true)
   {
     digitalWrite(LED_ORANGE_DOWN, HIGH);

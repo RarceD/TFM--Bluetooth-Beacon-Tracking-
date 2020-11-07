@@ -51,5 +51,6 @@ void setup() {
 }
  
 void loop() {
+  esp_now_register_recv_cb(OnDataRecv);
 
 }

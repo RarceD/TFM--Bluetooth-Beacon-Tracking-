@@ -71,14 +71,14 @@ def on_message(client, userdata, message):
 
                 if (len(e.beacons) == 0):
                     e.beacons.append(
-                        Beacon(0, 0, beacon_uuid, beacon_distance))
+                        Beacon(150, 400, beacon_uuid, beacon_distance))
                     # print('First beacon created: ', e.beacons[0].uuid)
                 else:
                     if (beacon_uuid in all_beacons):
                         print("reapeated so I do not save")
                     else:
                         e.beacons.append(
-                            Beacon(0, 0, beacon_uuid, beacon_distance))
+                            Beacon(150, 400, beacon_uuid, beacon_distance))
             b = 0
             while (b < len(e.beacons)):
                 print('Beacon nº', b, 'name:', e.beacons[b].uuid)
@@ -150,7 +150,7 @@ beacons = []
 esp = []
 position_adjustments = [0, 0]
 esp.append(Esp("A1", 120, 260))
-esp.append(Esp("A2", 350, 260))
+esp.append(Esp("A2", 150, 400))
 esp.append(Esp("A3", 570, 260))
 
 
@@ -197,21 +197,21 @@ rooms.append(Room("Habitación 3", 9*50, 8*50 +
 
 
 timer_update_screen = int(round(time.time()))
-refresh_time = 6
+refresh_time = 4
 while(run):
     pygame.time.delay(50)  # 64x64 images
     for event in pygame.event.get():  # Check for events of close
         if event.type == pygame.QUIT:
             run = False
             client.loop_stop()  # stop the loop
-    reddrawGameWindow()
+    # reddrawGameWindow()
 
     # Every X seconds I update the position of the screen:
-    """
+    
     if (int(round(time.time())) - timer_update_screen >= refresh_time):
         checkBeacons(esp)
         visualize_calculations(esp)
         timer_update_screen = int(round(time.time()))
-    """
+    
 
 pygame.quit()
