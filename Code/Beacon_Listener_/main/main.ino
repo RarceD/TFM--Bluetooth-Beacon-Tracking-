@@ -147,26 +147,40 @@ void setup()
   //Connected to broker and led green on
   pinMode(LED_ORANGE_UP, OUTPUT);
   digitalWrite(LED_ORANGE_UP, LOW);
-  BLEDevice::init("");
-  pBLEScan = BLEDevice::getScan(); //create new scan
-  pBLEScan->setAdvertisedDeviceCallbacks(new MyAdvertisedDeviceCallbacks());
-  pBLEScan->setActiveScan(true); //active scan uses more power, but get results faster
-  pBLEScan->setInterval(100);
-  pBLEScan->setWindow(99); // less or equal setInterval value
 
   pinMode(LED_ORANGE_DOWN, OUTPUT);
   digitalWrite(LED_ORANGE_DOWN, HIGH);
-  uint64_t repeat_ble = millis();
+  uint32_t repeat_ble = millis();
+  uint32_t repeat_mqtt = millis();
+
   while (true)
   {
-    if (millis() - repeat_ble > 4000)
+    if (millis() - repeat_ble >= 10000)
     {
+      LOGLN("in");
+      // esp_bluedroid_deinit();
+      // esp_bt_controller_init();
+      BLEDevice::init("");
+      BLEScan *pBLEScan;
+      pBLEScan = BLEDevice::getScan(); //create new scan
+      pBLEScan->setAdvertisedDeviceCallbacks(new MyAdvertisedDeviceCallbacks());
+      pBLEScan->setActiveScan(true); //active scan uses more power, but get results faster
+      pBLEScan->setInterval(100);
+      pBLEScan->setWindow(99); // less or equal setInterval value
       digitalWrite(LED_ORANGE_UP, HIGH);
       BLEScanResults foundDevices = pBLEScan->start(scanTime, false);
       DPRINT("Devices found: ");
       DPRINT(foundDevices.getCount());
       pBLEScan->clearResults(); // delete results fromBLEScan buffer to release memory
       digitalWrite(LED_ORANGE_UP, LOW);
+      // esp_bluedroid_disable();
+      esp_bt_controller_deinit();
+      repeat_ble = millis();
+    }
+    if (millis() - repeat_mqtt >= 17000){
+      LOGLN("mqtt task");
+      clientMQTT.publish("master_beacon", "{test:true}");
+      repeat_mqtt=millis();
     }
   }
 }
