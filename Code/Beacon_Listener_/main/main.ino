@@ -96,8 +96,8 @@ class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks
       if (knownAdress_2[i] == macAdress[i])
         val2++;
     }
-    if (val1 > 8 || val2 > 8)
-    {
+    // if (val1 > 8 || val2 > 8)
+    // {
       char snum[25];
       //I calculate the aproximate distance:
       double distance = 0.0012f * rssi * rssi - 0.0395f * (-rssi) + 0.1818;
@@ -125,7 +125,7 @@ class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks
         clientMQTT.publish("master_beacon", JSONmessageBuffer);
         DPRINT("I post  \n");
       }
-    }
+    // }
     // clientMQTT.publish("master_beacon", "test");
   }
 };
@@ -135,6 +135,7 @@ void setup()
   Serial.begin(115200);
   //I initialize the reset pin to the wifi:
   pinMode(BUTTON_RESET, INPUT);
+  Serial.println(ESP.getFlashChipSize());
   //Start and led red on
   pinMode(LED_RED, OUTPUT);
   digitalWrite(LED_RED, HIGH);
@@ -155,11 +156,41 @@ void setup()
 
   while (true)
   {
+    //Handler timers to publish:
+    if (millis()-repeat_mqtt >=13000)
+    {
+      digitalWrite(LED, HIGH);
+      // uint32_t isrCount = 0, isrTime = 0;
+      // // Read the interrupt count and time
+      // portENTER_CRITICAL(&timerMux);
+      // isrCount = isrCounter;
+      // isrTime = lastIsrAt;
+      // portEXIT_CRITICAL(&timerMux);
+      // Serial.print("Counter ISR:");
+      // Serial.println(isrCount);
+      // Serial.println(sys.selector_auto);
+      // if (isrCount % 21 == 0)
+      // {
+        // publish_counter++;
+        // char json[100];
+        // DynamicJsonBuffer jsonBuffer(32);
+        // JsonObject &root = jsonBuffer.createObject();
+        // root.set("publish", publish_counter);
+        // root.set("heap", esp_get_free_heap_size());
+        // root.set("heap_min", esp_get_minimum_free_heap_size());
+        // root.set("uptime", isrTime);
+        // root.printTo(json);
+        // client.publish((String(sys.uuid_) + "/uptime").c_str(), (const uint8_t *)json, strlen(json), false);
+        // Serial.println("Publish");
+        Serial.println(esp_get_free_heap_size());
+        LOGLN("mqtt task");
+        // clientMQTT.publish("master_beacon", "{test:true}");
+        repeat_mqtt = millis();
+      
+      
+    }
     if (millis() - repeat_ble >= 10000)
     {
-      LOGLN("in");
-      // esp_bluedroid_deinit();
-      // esp_bt_controller_init();
       BLEDevice::init("");
       BLEScan *pBLEScan;
       pBLEScan = BLEDevice::getScan(); //create new scan
@@ -173,14 +204,8 @@ void setup()
       DPRINT(foundDevices.getCount());
       pBLEScan->clearResults(); // delete results fromBLEScan buffer to release memory
       digitalWrite(LED_ORANGE_UP, LOW);
-      // esp_bluedroid_disable();
       esp_bt_controller_deinit();
       repeat_ble = millis();
-    }
-    if (millis() - repeat_mqtt >= 17000){
-      LOGLN("mqtt task");
-      clientMQTT.publish("master_beacon", "{test:true}");
-      repeat_mqtt=millis();
     }
   }
 }

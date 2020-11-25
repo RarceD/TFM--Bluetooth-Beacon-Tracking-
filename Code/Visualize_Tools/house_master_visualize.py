@@ -6,6 +6,7 @@ import json
 import sys
 
 from BeaconClass import Beacon, Esp
+import math 
 
 
 class Room:
@@ -68,6 +69,7 @@ def on_message(client, userdata, message):
                 # Get the distance and the uuid of the beacon:
                 beacon_distance = float(
                     parsed_json['beacon'][index]['distance'])
+                beacon_distance = rssr_distance(beacon_distance, -69)
                 beacon_uuid = str(parsed_json['beacon'][index]['uuid'])
 
                 # Add the beacon to the master if it is not repeat:
@@ -187,8 +189,12 @@ def visualize_calculations(esp):
         e.beacons = []
 
 
-def rssr_distance(rssi, tx, n):
-    return 10**((tx-rssi)/n)
+def rssr_distance(rssi, txCalibratedPower):
+    ratio_db = txCalibratedPower - rssi
+    ratio_linear = 10**(ratio_db / 10)
+    r = math.sqrt(ratio_linear)
+    return r
+
 
 
 position_adjustments = [0, 0]

@@ -19,12 +19,16 @@ Appling trilateration we can obtein the position between three masters and only 
 | Flash          |         m        | 
 | SRAM           |         m        | 
 
-### Images ###
+### Images beacon ###
 In the following image we can see the pcb of the esp32 beacon device and the master esp32 pcb:
-<img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/emiter_1.PNG" alt="drawing" width="400"/>
-<img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/emiter_2.PNG" alt="drawing" width="400"/>
-<img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/receiver_2.PNG" alt="drawing" width="400"/>
-<img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/receiver_1.PNG" alt="drawing" width="400"/>
+<img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/emiter_1.PNG" alt="drawing" width="200"/>
+<img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/emiter_2.PNG" alt="drawing" width="200"/>
+
+
+### Images master listener ###
+
+<img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/receiver_2.PNG" alt="drawing" width="200"/>
+<img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/receiver_1.PNG" alt="drawing" width="200"/>
 
 
 ## 3D Printing ##

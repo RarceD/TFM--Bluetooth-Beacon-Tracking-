@@ -5,7 +5,6 @@
 #include <EEPROM.h>
 #include "SPIFFS.h"
 
-
 char web_compleat[] = "<!DOCTYPE html>\
     <html <head>\
     <meta name=\"viewport \" content=\"width=device-width, initial-scale=1\">\
@@ -73,7 +72,6 @@ AP_data_user AP_data;
 void get_url_info(char *data, uint16_t index);
 bool get_credentials();
 void auto_wifi_connect();
-
 
 void get_url_info(char *data, uint16_t index)
 {
@@ -170,7 +168,7 @@ void auto_wifi_connect()
 {
 
     int attemps = 0;
-    
+
     Serial.println();
     Serial.println("Configuring access point");
 
@@ -184,8 +182,8 @@ void auto_wifi_connect()
         eeprom.writeString(80, "nop");
         eeprom.commit();
     }
-        eeprom.writeString(0, "RUBEN14");
-        eeprom.writeString(80, "9472302440");
+    eeprom.writeString(0, "RUBEN14");
+    eeprom.writeString(80, "9472302440");
     Serial.println("----Alocated on flash:");
     String wifi_flash_memmory_user = eeprom.readString(0);
     String wifi_flash_memmory_pass = eeprom.readString(80);
@@ -218,10 +216,10 @@ void auto_wifi_connect()
     }
     else
     {
-          const char *ssid = "Beacon_AP";
-    const char *password = "beacon";
+        const char *ssid = "Beacon_AP";
+        const char *password = "beacon";
         Serial.println("Fail on connected with store flash data, genetate access point");
-        WiFi.softAP(ssid, password);
+        WiFi.softAP("Beacon_AP", "beacon2020");
         IPAddress myIP = WiFi.softAPIP();
         Serial.print("AP IP address: ");
         Serial.println(myIP);
