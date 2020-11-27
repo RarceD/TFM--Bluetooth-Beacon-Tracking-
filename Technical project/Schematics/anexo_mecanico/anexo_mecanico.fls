@@ -87,8 +87,14 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\refcount\refcount.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\refcount\refcount.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\gettitlestring\gettitlestring.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\gettitlestring\gettitlestring.sty
-OUTPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.out
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.out
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.out
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.out
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.out
 OUTPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.pdf
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.out
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.out
+OUTPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.out
 INPUT C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
@@ -100,14 +106,27 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Users\Tecnica2\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.toc
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.toc
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr6.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmmi8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy8.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy6.tfm
 OUTPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.toc
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.lof
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.lof
+OUTPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.lof
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
-INPUT ..\receiver_1.PNG
-INPUT ..\receiver_1.PNG
-INPUT ..\receiver_1.PNG
-INPUT ..\receiver_1.PNG
-INPUT ..\receiver_1.PNG
+INPUT ..\model_beacon.PNG
+INPUT ..\model_beacon.PNG
+INPUT ..\model_beacon.PNG
+INPUT ..\model_beacon.PNG
+INPUT ..\model_beacon.PNG
 INPUT ..\mechanical_beacon.PNG
 INPUT ..\mechanical_beacon.PNG
 INPUT ..\mechanical_beacon.PNG
@@ -118,9 +137,21 @@ INPUT ..\emiter_1.PNG
 INPUT ..\emiter_1.PNG
 INPUT ..\emiter_1.PNG
 INPUT ..\emiter_1.PNG
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmtt12.tfm
-INPUT ..\receiver_1.PNG
-INPUT ..\receiver_1.PNG
+INPUT ..\3d_beacon_2.jpeg
+INPUT ..\3d_beacon_2.jpeg
+INPUT ..\3d_beacon_2.jpeg
+INPUT ..\3d_beacon_2.jpeg
+INPUT ..\3d_beacon_2.jpeg
+INPUT ..\3d_beacon_1.jpeg
+INPUT ..\3d_beacon_1.jpeg
+INPUT ..\3d_beacon_1.jpeg
+INPUT ..\3d_beacon_1.jpeg
+INPUT ..\3d_beacon_1.jpeg
+INPUT ..\model_master.PNG
+INPUT ..\model_master.PNG
+INPUT ..\model_master.PNG
+INPUT ..\model_master.PNG
+INPUT ..\model_master.PNG
 INPUT ..\mechanical_master.PNG
 INPUT ..\mechanical_master.PNG
 INPUT ..\mechanical_master.PNG
@@ -150,5 +181,3 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr17.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr17.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt12.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt12.pfb
