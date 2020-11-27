@@ -6,8 +6,8 @@ import json
 import sys
 
 from BeaconClass import Beacon, Esp
-import math 
 
+PROPORTIONALITY = 250 / 3.3
 
 class Room:
     def __init__(self, name, pos_x, pos_y, width, length, esp_name, esp_x, esp_y, color):
@@ -28,7 +28,7 @@ class Room:
         # Plot the Esp:
         x = self.esp.get_position()
         pygame.draw.rect(win, (0, 0, 0), (x[0], x[1], 25, 25))
-        pygame.draw.rect(win, (255,0, 53),
+        pygame.draw.rect(win, (255, 0, 53),
                          (self.esp.x + 5, self.esp.y+5, 25-5*2, 25-5*2))
         # Plot the text:
         x = font.render(self.name, 1, (0, 0, 0))
@@ -40,7 +40,7 @@ class Room:
 
 def connect_mqtt():
     broker_address = "broker.mqttdashboard.com"
-    client = mqtt.Client("asdf1234asdf1234asdf")  # create new instance
+    client = mqtt.Client("asd1f1234asdf1234asdf")  # create new instance
     client.on_message = on_message  # attach function to callback
     print("connecting to broker")
     client.connect(broker_address)  # connect to broker
@@ -59,8 +59,7 @@ def on_message(client, userdata, message):
     # Example json: {"esp":"A1","beacon":[ {"uuid":5245,"distance":1.23},{"uuid":52345, "distance":1.23 }]}
     msg = str(message.payload.decode("utf-8"))
     # print("message received: ", msg)
-    parsed_json = (json.loads(msg))
-    print('_________________')
+    parsed_json = json.loads(msg)
     global esp
     for e in esp:
         if (parsed_json['esp'] == e.uuid):
@@ -69,11 +68,11 @@ def on_message(client, userdata, message):
                 # Get the distance and the uuid of the beacon:
                 beacon_distance = float(
                     parsed_json['beacon'][index]['distance'])
-                beacon_distance = rssr_distance(beacon_distance, -69)
+                # beacon_distance = e.rssr_distance(beacon_distance, -69)
                 beacon_uuid = str(parsed_json['beacon'][index]['uuid'])
 
                 # Add the beacon to the master if it is not repeat:
-                print('Checking if ', beacon_uuid, 'in the list ')
+                # print('Checking if ', beacon_uuid, 'in the list ')
                 all_beacons = []
                 for s in e.beacons:
                     all_beacons.append(s.uuid)
@@ -84,16 +83,10 @@ def on_message(client, userdata, message):
                     # print('First beacon created: ', e.beacons[0].uuid)
                 else:
                     if (beacon_uuid in all_beacons):
-                        print("reapeated so I do not save")
+                        pass
                     else:
                         e.beacons.append(
                             Beacon(150, 400, beacon_uuid, beacon_distance))
-            b = 0
-            while (b < len(e.beacons)):
-                print('Beacon nº', b, 'name:', e.beacons[b].uuid)
-                b += 1
-
-            # e.add_beacon(0,0,parsed_json['beacon'], 0)
 
 
 def load_file(esp):
@@ -119,17 +112,18 @@ def load_file(esp):
             room_coordinates.append(coordinates)
         # Create all the rooms:
         for i in range(0, 7):
-            rooms.append(Room(room_coordinates[i][4], int(room_coordinates[i][0]),
-                              int(room_coordinates[i][1]), int(
-                                  room_coordinates[i][2]),
-                              int(room_coordinates[i][3]
-                                  ), esp_coordinates[i][2],
-                              int(esp_coordinates[i][0]),  int(esp_coordinates[i][1]), room_colors[i]))
+            rooms.append(Room(room_coordinates[i][4],
+                              int(room_coordinates[i][0]),
+                              int(room_coordinates[i][1]),
+                              int(room_coordinates[i][2]),
+                              int(room_coordinates[i][3]),
+                              esp_coordinates[i][2],
+                              int(esp_coordinates[i][0]),
+                              int(esp_coordinates[i][1]), room_colors[i]))
             esp.append(Esp(esp_coordinates[i][2],
                            int(esp_coordinates[i][0]),
                            int(esp_coordinates[i][1])))
 
-        # print(esp)
         return rooms
     except:
         print("No se ha cargado el archivo")
@@ -148,16 +142,6 @@ def reddrawGameWindow():
 
     for r in rooms:
         r.plot(win)
-    # pygame.draw.rect(win, (191, 86, 252), (50, 50 + offset, 400, 50))
-    # pygame.draw.rect(win, (191, 86, 252), (400, 50 + offset, 50, 12*50))
-
-    # pygame.draw.rect(win, (247, 40, 102), (1*50, 3*50 + offset, 7*50, 3*50))
-    # pygame.draw.rect(win, (99, 40, 88), (1*50, 7*50 + offset, 7*50, 3*50))
-    # pygame.draw.rect(win, (60, 76, 199),  (3*50, 11*50 + offset, 5*50, 5*50))
-
-    # pygame.draw.rect(win, (250, 142, 27), (9*50, 0 + offset, 5*50, 3*50))
-    # pygame.draw.rect(win, (59, 148, 21),  (9*50, 4*50 + offset, 5*50, 3*50))
-    # pygame.draw.rect(win, (250, 117, 87),  (9*50, 8*50 + offset, 5*50, 6*50))
 
     for e in esp:
         for b in e.beacons:
@@ -181,19 +165,6 @@ def visualize_calculations(esp):
             b.x = e.x + random.randint(-20, 20) + position_adjustments[0]
             b.y = e.y + random.randint(-20, 20) + position_adjustments[1]
 
-    # Render the screen:
-    reddrawGameWindow()
-
-    # Delete all the info:
-    for e in esp:
-        e.beacons = []
-
-
-def rssr_distance(rssi, txCalibratedPower):
-    ratio_db = txCalibratedPower - rssi
-    ratio_linear = 10**(ratio_db / 10)
-    r = math.sqrt(ratio_linear)
-    return r
 
 
 
@@ -212,13 +183,13 @@ font = pygame.font.SysFont('bitstreamverasans', 30, True, True)
 beacons = []
 esp = []
 rooms = load_file(esp)
-#Render for the first time the window:
+# Render for the first time the window:
 reddrawGameWindow()
-#Set a timer to reload the game
+# Set a timer to reload the game
 timer_update_screen = int(round(time.time()))
-refresh_time = 4
+refresh_time = 5
 # The game loop running
-run = True  
+run = True
 while(run):
     pygame.time.delay(50)  # 64x64 images
     for event in pygame.event.get():  # Check for events of close
@@ -230,5 +201,11 @@ while(run):
     if (int(round(time.time())) - timer_update_screen >= refresh_time):
         checkBeacons(esp)
         visualize_calculations(esp)
+        # Render the screen:
+        reddrawGameWindow()
+        # Delete all the info:
+        for e in esp:
+            e.beacons = []
+        #Reestart the timer:
         timer_update_screen = int(round(time.time()))
 pygame.quit()

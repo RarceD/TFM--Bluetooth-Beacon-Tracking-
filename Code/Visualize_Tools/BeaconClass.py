@@ -1,5 +1,6 @@
 import random
 import pygame 
+import math
 
 class Beacon:
     def __init__(self, x, y, uuid, distance):
@@ -29,4 +30,11 @@ class Esp:
     def get_position(self):
         pos = [self.x, self.y]
         return pos
+    def rssr_distance(self, rssi, txCalibratedPower):
+        ratio_db = txCalibratedPower - rssi
+        ratio_linear = 10**(ratio_db / 10)
+        r = math.sqrt(ratio_linear)
+        return r
+
+
 
