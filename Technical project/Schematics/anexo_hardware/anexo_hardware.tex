@@ -48,22 +48,22 @@
         \paragraph{}
         Una vez tenidas en cuenta estas especificaciones en el esquema eléctrico se ha llevado a cabo el ruteo de la tarjeta.
         \begin{center}
-            \begin{figure}[h]
+            \begin{figure}[ht]
                 \centering
                 \includegraphics[width=0.4\textwidth]{../emiter_1.PNG}
                 \includegraphics[width=0.35\textwidth]{../emiter_2.PNG}
                 \caption{Renderizado de PCB del Beacon}
-                \label{fig:mesh1}
+                \label{fig:mesh8}
             \end{figure}    
         \end{center}
         Vemos que se han llevado a cabo el trazado de pistas con planos de masa para evitar el efecto de la 
         electricidad estática de las personas no afecte demasiado a la electrónica.
         \begin{center}
-            \begin{figure}[h]
+            \begin{figure}[ht]
                 \centering
                 \includegraphics[width=0.40\textwidth]{../emiter_PCB.PNG}
                 \caption{PCB del Beacon obtenida con Kicad}
-                \label{fig:mesh1}
+                \label{fig:mesh9}
             \end{figure}    
         \end{center}
         Dejando lo más despejada la zona de la antena para mejor la ganancia de la misma y en conscuencia el alcance.
@@ -71,11 +71,11 @@
         \paragraph{}
         Tras llevar a cabo la fabricación de las tarjetas prototipo estos son los resultados:
         \begin{center}
-            \begin{figure}[h]
+            \begin{figure}[ht]
                 \centering
                 \includegraphics[width=0.5\textwidth]{../real_beacon_pcb.jpeg}
                 \caption{Renderizado de PCB del master o gateway}
-                \label{fig:mesh1}
+                \label{fig:mesh3}
             \end{figure}    
         \end{center}       
 \section{Receptor beacon o gateway}
@@ -105,7 +105,7 @@
                     \centering
                     \includegraphics[width=0.8\textwidth]{../receiver_main_power.PNG}
                     \caption{Fuentes de alimentación de la PCB master}
-                    \label{fig:mesh1}
+                    \label{fig:mesh4}
                 \end{figure}    
             \end{center}    
     \subsection{PCB de control}
@@ -113,32 +113,32 @@
         conectores en el extremos de la tarjeta, uno con una UART para comunicarse con otros sistemas de las planta y otro conector para sensores
         i2c, pensado para la lectura de humedad y temperatura y envío de estos datos a la web de control.
         \begin{center}
-            \begin{figure}[h]
+            \begin{figure}[ht]
                 \centering
                 \includegraphics[width=0.4\textwidth]{../receiver_1.PNG}
                 \includegraphics[width=0.4\textwidth]{../receiver_2.PNG}
                 \caption{Renderizado de PCB del master o gateway}
-                \label{fig:mesh1}
+                \label{fig:mesh5}
             \end{figure}    
         \end{center}
         En el apartado de planos se puede ver con mayor detalle el esquema eléctrico y dimensiones de la tarjeta.
         \begin{center}
-            \begin{figure}[h]
+            \begin{figure}[ht]
                 \centering
                 \includegraphics[width=0.5\textwidth]{../receiver_PCB.PNG}
                 \caption{Renderizado de PCB del master o gateway}
-                \label{fig:mesh1}
+                \label{fig:mesh6}
             \end{figure}    
         \end{center}
     \subsection{Imágenes reales}
         Por último y tras fabricar las tarjetas e imprimir las cajas que lo contienen se obtiene el siguiente resultado:
         \begin{center}
-            \begin{figure}[h]
+            \begin{figure}[ht]
                 \centering
                 \includegraphics[width=0.4\textwidth]{../3d_antenna.jpeg}
                 \includegraphics[width=0.51\textwidth]{../real_master_pcb.jpeg}
                 \caption{Images reales de la PCB gateway}
-                \label{fig:mesh1}
+                \label{fig:mesh7}
             \end{figure}    
         \end{center}
     \subsection{Conclusiones}

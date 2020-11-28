@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  28 NOV 2020 09:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  28 NOV 2020 09:32
 entering extended mode
 **"c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Schematics/anexo_hardware/anexo_hardware.tex"
 ("c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Schematics/anexo_hardware/anexo_hardware.tex"
@@ -171,25 +171,6 @@ File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 ) ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_hardware\anexo_hardware.aux"
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
-
-
-LaTeX Warning: Label `fig:mesh1' multiply defined.
-
-
-LaTeX Warning: Label `fig:mesh1' multiply defined.
-
-
-LaTeX Warning: Label `fig:mesh1' multiply defined.
-
-
-LaTeX Warning: Label `fig:mesh1' multiply defined.
-
-
-LaTeX Warning: Label `fig:mesh1' multiply defined.
-
-
-LaTeX Warning: Label `fig:mesh1' multiply defined.
-
 )
 \openout1 = `anexo_hardware.aux'.
 
@@ -292,19 +273,12 @@ File: ../emiter_PCB.PNG Graphic file (type png)
 <use ../emiter_PCB.PNG>
 Package pdftex.def Info: ../emiter_PCB.PNG  used on input line 64.
 (pdftex.def)             Requested size: 155.99762pt x 184.24883pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 <../real_beacon_pcb.jpeg, id=126, 852.93657pt x 624.08156pt>
 File: ../real_beacon_pcb.jpeg Graphic file (type jpg)
 <use ../real_beacon_pcb.jpeg>
 Package pdftex.def Info: ../real_beacon_pcb.jpeg  used on input line 76.
 (pdftex.def)             Requested size: 195.0pt x 142.6787pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[4 <../emiter_1.PNG> <../emiter_2.PNG>] [5 <../emiter_PCB.PNG> <../real_beacon_pcb.jpeg>]
+ [4 <../emiter_1.PNG> <../emiter_2.PNG>] [5 <../emiter_PCB.PNG> <../real_beacon_pcb.jpeg>]
 <../receiver_main_power.PNG, id=142, 580.569pt x 306.54526pt>
 File: ../receiver_main_power.PNG Graphic file (type png)
 <use ../receiver_main_power.PNG>
@@ -348,17 +322,13 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 148.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 148.
 Package rerunfilecheck Info: File `anexo_hardware.out' has not changed.
 (rerunfilecheck)             Checksum: 39D50FB00A31B9EF8C6F91D45329FD8F;1064.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
  ) 
 Here is how much of TeX's memory you used:
- 6335 strings out of 480930
- 98216 string characters out of 2909539
- 367995 words of memory out of 3000000
- 22051 multiletter control sequences out of 15000+200000
+ 6341 strings out of 480930
+ 98282 string characters out of 2909539
+ 368308 words of memory out of 3000000
+ 22057 multiletter control sequences out of 15000+200000
  537675 words of font info for 42 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  34i,7n,35p,332b,427s stack positions out of 5000i,500n,10000p,200000b,50000s
