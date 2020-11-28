@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  2 NOV 2020 08:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  28 NOV 2020 10:45
 entering extended mode
 **"c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Memmory/rarced_memmory.tex"
 ("c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Memmory/rarced_memmory.tex"
@@ -183,7 +183,10 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
 \l__kernel_color_stack_int=\count188
 \l__pdf_internal_box=\box45
-) ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.aux")
+) ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.aux"
+LaTeX Info: Redefining \. on input line 24.
+LaTeX Info: Redefining \% on input line 24.
+)
 \openout1 = `rarced_memmory.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
@@ -218,6 +221,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 9.
 LaTeX Info: Redefining \pageref on input line 9.
 LaTeX Info: Redefining \nameref on input line 9.
+ ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.out") ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.out")
 \@outlinefile=\write3
 \openout3 = `rarced_memmory.out'.
 
@@ -244,104 +248,173 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 14.
  [1
 
-{C:/Users/Tecnica2/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/Users/Tecnica2/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.toc"
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 3.
+ [2
+
+])
 \tf@toc=\write4
 \openout4 = `rarced_memmory.toc'.
 
+ ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.lof"
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
 \tf@lof=\write5
 \openout5 = `rarced_memmory.lof'.
 
+ ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.lot"
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
 \tf@lot=\write6
 \openout6 = `rarced_memmory.lot'.
 
- [2
-
-] [3
+ [3] [4
 
 ]
-Overfull \hbox (4.46951pt too wide) in paragraph at lines 65--67
+Overfull \hbox (4.46951pt too wide) in paragraph at lines 64--66
 []\OT1/cmr/m/n/12 Seguridad: Tan so-lo los em-plea-dos con au-to-ri-za-cion y pro-xi-mi-dad podran
  []
 
-[4]
-<./images/WifiCounting.jpg, id=50, 752.8125pt x 393.47pt>
+[5]
+<./images/WifiCounting.jpg, id=274, 752.8125pt x 393.47pt>
 File: ./images/WifiCounting.jpg Graphic file (type jpg)
 <use ./images/WifiCounting.jpg>
-Package pdftex.def Info: ./images/WifiCounting.jpg  used on input line 93.
-(pdftex.def)             Requested size: 117.00119pt x 61.14932pt.
- [5 <./images/WifiCounting.jpg>]
-<./images/tipos_beacon_ibeacon.PNG, id=60, 608.2725pt x 243.91125pt>
+Package pdftex.def Info: ./images/WifiCounting.jpg  used on input line 92.
+(pdftex.def)             Requested size: 155.99762pt x 81.53242pt.
+ [6 <./images/WifiCounting.jpg>]
+Overfull \hbox (12.69028pt too wide) in paragraph at lines 117--120
+[]\OT1/cmr/m/n/12 La tec-no-loga Blue-tooth es un es-tan-dar in-dus-trial pa-ra co-ne-xio-nes inalambri-
+ []
+
+[7]
+<./images/tipos_beacon_ibeacon.PNG, id=291, 608.2725pt x 243.91125pt>
 File: ./images/tipos_beacon_ibeacon.PNG Graphic file (type png)
 <use ./images/tipos_beacon_ibeacon.PNG>
-Package pdftex.def Info: ./images/tipos_beacon_ibeacon.PNG  used on input line 141.
-(pdftex.def)             Requested size: 117.00119pt x 46.91304pt.
+Package pdftex.def Info: ./images/tipos_beacon_ibeacon.PNG  used on input line 144.
+(pdftex.def)             Requested size: 234.00238pt x 93.82982pt.
+<./images/tipos_beacon_edison.PNG, id=293, 640.3925pt x 360.34625pt>
+File: ./images/tipos_beacon_edison.PNG Graphic file (type png)
+<use ./images/tipos_beacon_edison.PNG>
+Package pdftex.def Info: ./images/tipos_beacon_edison.PNG  used on input line 159.
+(pdftex.def)             Requested size: 195.0pt x 109.72124pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[6]
-<./images/tipos_beacon_edison.PNG, id=71, 640.3925pt x 360.34625pt>
-File: ./images/tipos_beacon_edison.PNG Graphic file (type png)
-<use ./images/tipos_beacon_edison.PNG>
-Package pdftex.def Info: ./images/tipos_beacon_edison.PNG  used on input line 160.
-(pdftex.def)             Requested size: 117.00119pt x 65.83275pt.
- [7 <./images/tipos_beacon_ibeacon.PNG> <./images/tipos_beacon_edison.PNG>] [8]
-<./images/espnow.PNG, id=89, 508.90125pt x 291.33844pt>
+[8 <./images/tipos_beacon_ibeacon.PNG>] [9 <./images/tipos_beacon_edison.PNG>] [10]
+<./images/espnow.PNG, id=313, 508.90125pt x 291.33844pt>
 File: ./images/espnow.PNG Graphic file (type png)
 <use ./images/espnow.PNG>
-Package pdftex.def Info: ./images/espnow.PNG  used on input line 222.
-(pdftex.def)             Requested size: 117.00119pt x 66.97975pt.
- [9 <./images/espnow.PNG>]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 237.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 237.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 237.
- [10] [11] [12]
-<./images/1_beacon_2_meters.PNG, id=137, 939.51pt x 569.87906pt>
+Package pdftex.def Info: ./images/espnow.PNG  used on input line 219.
+(pdftex.def)             Requested size: 155.99762pt x 89.30486pt.
+ [11 <./images/espnow.PNG>] [12] [13]
+<./images/1_beacon_2_meters.PNG, id=335, 939.51pt x 569.87906pt>
 File: ./images/1_beacon_2_meters.PNG Graphic file (type png)
 <use ./images/1_beacon_2_meters.PNG>
-Package pdftex.def Info: ./images/1_beacon_2_meters.PNG  used on input line 354.
+Package pdftex.def Info: ./images/1_beacon_2_meters.PNG  used on input line 351.
 (pdftex.def)             Requested size: 234.00238pt x 141.93896pt.
-<./images/1_beacon_3_meters.PNG, id=138, 956.82469pt x 526.21594pt>
+<./images/1_beacon_3_meters.PNG, id=336, 956.82469pt x 526.21594pt>
 File: ./images/1_beacon_3_meters.PNG Graphic file (type png)
 <use ./images/1_beacon_3_meters.PNG>
-Package pdftex.def Info: ./images/1_beacon_3_meters.PNG  used on input line 355.
+Package pdftex.def Info: ./images/1_beacon_3_meters.PNG  used on input line 352.
 (pdftex.def)             Requested size: 214.50119pt x 117.96791pt.
- [13 <./images/1_beacon_2_meters.PNG> <./images/1_beacon_3_meters.PNG>]
-<./images/10min_2beacons_same_distance.PNG, id=152, 1561.33313pt x 642.90187pt>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[14]
+<./images/10min_2beacons_same_distance.PNG, id=356, 1561.33313pt x 642.90187pt>
 File: ./images/10min_2beacons_same_distance.PNG Graphic file (type png)
 <use ./images/10min_2beacons_same_distance.PNG>
-Package pdftex.def Info: ./images/10min_2beacons_same_distance.PNG  used on input line 368.
+Package pdftex.def Info: ./images/10min_2beacons_same_distance.PNG  used on input line 365.
 (pdftex.def)             Requested size: 234.00238pt x 96.35263pt.
 
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 378.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 375.
 
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 378.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 375.
 
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 378.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 375.
 
 
-LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 378.
+LaTeX Warning: Command \textperiodcentered invalid in math mode on input line 375.
 
 Missing character: There is no · in font cmr12!
 Missing character: There is no · in font cmr12!
-<./images/trilateration_circle.png, id=153, 413.1435pt x 302.3295pt>
+[15 <./images/1_beacon_2_meters.PNG> <./images/1_beacon_3_meters.PNG> <./images/10min_2beacons_same_distance.PNG>]
+<./images/trilateration_circle.png, id=365, 413.1435pt x 302.3295pt>
 File: ./images/trilateration_circle.png Graphic file (type png)
 <use ./images/trilateration_circle.png>
-Package pdftex.def Info: ./images/trilateration_circle.png  used on input line 389.
+Package pdftex.def Info: ./images/trilateration_circle.png  used on input line 386.
 (pdftex.def)             Requested size: 155.99762pt x 114.1529pt.
+ [16 <./images/trilateration_circle.png>] [17]
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 459.
 
-[14 <./images/10min_2beacons_same_distance.PNG>] [15 <./images/trilateration_circle.png>]
+
 Overfull \hbox (3.43398pt too wide) in paragraph at lines 460--471
+[][] 
+ []
+
+
+Overfull \hbox (23.93245pt too wide) in paragraph at lines 491--510
  [] 
  []
 
-[16]
-Overfull \hbox (23.93245pt too wide) in paragraph at lin
+[18] [19]
+<./images/antenna_design.png, id=392, 477.28313pt x 565.36218pt>
+File: ./images/antenna_design.png Graphic file (type png)
+<use ./images/antenna_design.png>
+Package pdftex.def Info: ./images/antenna_design.png  used on input line 538.
+(pdftex.def)             Requested size: 155.99762pt x 184.78436pt.
+<./images/antenna_design_monopole.png, id=393, 397.485pt x 424.58624pt>
+File: ./images/antenna_design_monopole.png Graphic file (type png)
+<use ./images/antenna_design_monopole.png>
+Package pdftex.def Info: ./images/antenna_design_monopole.png  used on input line 539.
+(pdftex.def)             Requested size: 175.49881pt x 187.46638pt.
+ [20 <./images/antenna_design.png> <./images/antenna_design_monopole.png>] [21] [22] [23]
+Overfull \hbox (17.7018pt too wide) in paragraph at lines 674--684
+ [] 
+ []
+
+[24]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 720.
+ [25]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 720.
+ ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.aux"
+LaTeX Info: Redefining \. on input line 24.
+LaTeX Info: Redefining \% on input line 24.
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 720.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 720.
+Package rerunfilecheck Info: File `rarced_memmory.out' has not changed.
+(rerunfilecheck)             Checksum: D894D9E65E9765F5D0CBC3341831B3B5;2986.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 720.
+ ) 
+Here is how much of TeX's memory you used:
+ 6919 strings out of 480930
+ 105398 string characters out of 2909539
+ 385747 words of memory out of 3000000
+ 22534 multiletter control sequences out of 15000+200000
+ 538190 words of font info for 43 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 34i,9n,37p,547b,655s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Tecnica2\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on "c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.pdf" (25 pages, 1148792 bytes).
+PDF statistics:
+ 508 PDF objects out of 1000 (max. 8388607)
+ 136 named destinations out of 1000 (max. 500000)
+ 363 words of extra memory for PDF output out of 10000 (max. 10000000)
+

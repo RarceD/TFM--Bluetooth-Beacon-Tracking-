@@ -16,11 +16,11 @@
 \listoffigures
 \listoftables
 \cleardoublepage
+Antecedentes, objeto, normativa, reglamentación
+Extensión máxima de 30 páginas + anexos 60
+Defensa de 20 min  40
 
 \section{Memoria descriptiva}
-    Antecedentes, objeto, normativa, reglamentación
-    Extensión máxima de 30 páginas + anexos 60
-    Defensa de 20 min  40
     \subsection{Antecedentes y objeto del proyecto}
         Este proyecto surge como respuesta a la necesidad de poder localizar un número elevado de equipos en 
         constante movimiento con exactitud en un espacio cerrado.
@@ -45,12 +45,12 @@
             \item Producto estándar y de fácil aplicación.
             \item Sencillez de instalación por un usuario no técnico.
             \item Poco o nulo manteniminto.
-            \item Producto seguro y que preparado para superar los marcados UL y CE.
+            \item Producto seguro y que preparado para superar los marcados UL y CE así como protecciones frente a ESD.
         \end{enumerate}
     \subsection{Ambito de aplicación}
         El tracking de objetos en espacios cerrados está incrementando su popularidad debido a que es una 
-        arma de propaganda muy poderosa que demandan los grandes centros comerciales para llevar a cabo estudios de marketing
-        y poder analizar el comportamiento de los clietes.
+        arma de publicidad muy poderosa que demandan los grandes centros comerciales para llevar a cabo estudios de marketing
+        y poder analizar el comportamiento de sus clietes.
         \paragraph{}
         Además de esta aplicación el mayor nicho de mercado es aplicado a no tener que tocar objetos para interactuar con ellos, 
         esto teniendo en cuenta los tiempos que corren es una necesidad de numerosas empresas privadas, ayuntamientos 
@@ -60,10 +60,11 @@
         \begin{enumerate}
             \item Marketing: Estudios de mercado y de necesidad de los clientes. Elaboración de un "heat map", o mapa 
             de las zonas con más afluencia de gente.
+            \item Sanidad: Monitorización de pacientes en planta. 
             \item Seguridad: Tan solo los empleados con autorización y proximidad podrán llevar a cabo acciones,
-            esto tiene sentido a la hora de no tener que dar una llave a cada empleado que pueda duplicarse.
+            esto tiene sentido a la hora de no tener que dar una llave a cada empleado que pueda copiarse.
             \item Vandalismo: Conociendo la localización de los equipos dentro de un local cerrado en el momento 
-            en el que se deja de situar un elemento se puede dar la voz de alarma ante un robo.
+            en el que se deja de situar un elemento en el mapa se puede dar la voz de alarma ante un robo.
             \item Propaganda y nueva forma de publicidad: Activar acciones en función de la localización en determinados
             puntos de interés permite llevar a otro nivel las ideas de los publicistas.
         \end{enumerate}
@@ -71,11 +72,11 @@
         procede a explorar cual es la forma más adecuada para llevarlo a cabo e implementarlo.
     \subsection{Análisis de soluciones al tracking de objetos}
         Se plantean dos problemáticas, en primer lugar se busca llevar a cabo el seguimiento de elementos en movimiento, y por el otro 
-        está el enviar esta información de alguna forma al sistema correspondiente para que lleve a cabo el análisis de los datos. Esta
+        se ha de enviar esta información de alguna forma al sistema correspondiente para que lleve a cabo el análisis de los datos. Esta
         última acción es esencial en el proceso, es lo realmente interesante desde el punto de vista del cliente final de esta tecnología.
         En lo que respecta a la obtención de datos de posición relativa de objetos o personas se presentan las siguientes opciones:
         \subsubsection {Wifi}
-            La posibilidad de llevar a cabo el tracking mediante la escucha de wifis es una opción, para ello sería
+            La posibilidad de llevar a cabo el tracking mediante la escucha de wifis es una posibilidad, para ello sería
             necesario en primer lugar que se colocara un móvil en cada uno de los objetos a identificar. Esto es aceptable 
             en el caso de monitorización de personas pero inasumible para objetos.
             \paragraph{}
@@ -88,7 +89,7 @@
             \begin{center}
                 \begin{figure}[h]
                     \centering
-                    \includegraphics[width=0.3\textwidth]{WifiCounting.jpg}
+                    \includegraphics[width=0.4\textwidth]{WifiCounting.jpg}
                     \caption{Detección de personas aplicando redes wifi}
                     \label{fig:mesh1}
                 \end{figure}
@@ -99,7 +100,7 @@
             El artículo 29 de privacidad de datos de la comunidad europea dice lo siguiente:
             “WiFi-tracking, depending on the circumstances and purposes of the data collection, such tracking under the GDPR is likely
             either to be subject to consent, or may only be performed if the personal data collected is anonymised”
-            Es por ello por lo que aunque se tendrá en cuenta como opción hay numerosos puntos en contra de implementar un sistema como este.
+            Es por ello por lo que  se tendrá en cuenta como opción aunque haya numerosos puntos en contra de implementar un sistema como este.
         \subsubsection {GPS}
             La tecnología por excelencia para llevar a cabo el seguimiento de objetos o personas es el GPS, la principal desventaja
             que presenta es el elevado consumo energético comparado con el wifi o el bluetooth.
@@ -107,15 +108,22 @@
             Mantener un módulo GPS encendido y pretender llegar a una autonomía de años es a día de hoy
             imposible, es por ello por lo que o se emplea un teléfono móvil para llevarlo a cabo, cosa inviable si se pretende 
             monitorizar objetos  y no personas en movimiento, o el tiempo de refresco de los datos ha de ser muy lento, del orden de horas,
-            cosa de nuevo inviable para la aplicación que se tiene entre manos.
+            cosa de nuevo inviable para la aplicación que se presenta.
             \paragraph{}
             Se ha de tener en cuenta también el aumento de precio que supondría un módulo GPS sumado a la antena que lleva consigo de 
             dimensiones nada despreciables. 
             Es por ello por lo que esta tecnología se tendrá en cuenta pero no es la más adecuada para la problemática presente.
         \subsubsection {Bluetooth Low Energy - Beacon}
-            Bluetooth 
-            Emisión desde los -20 dBm (0.01 mW) hasta los +20 dBm (100 mW). Cuanta mayor potencia de emisión mayor consumo energético
+            La tecnología Bluetooth es un estandar industrial para conexiones inalámbricas, permite transferir 
+            grandes cantidades de información en distancias cortas a bajas velocidades. Puede ser enfocado a conexión
+            punto a punto o como es nuestro caso llevar a cabo una red de equipos que emiten en modo broadcast.
+            \paragraph{}
+            La potencia de emisión va desde los -20 dBm (0.01 mW) hasta los +20 dBm (100 mW). Cuanta mayor potencia de emisión mayor consumo energético
             del dispositivo pero también conseguiremos una mayor distancia.
+            \paragraph{}
+            La forma de envío de datos que más encaja dentro de la tecnología BLE (Bluetooth Low Energy) es Beacon o baliza, un 
+            dispositivo que transmite una señal de bluetooth cada cierto tiempo y es visible por cualquier otro equipo que escuche 
+            en esa misma frecuencia. La principal ventaja es que no es necesario llevar a cabo la conexión al equipo que escucha.
             Existen varios tipos de beacons:
             \begin{enumerate}
                 \item iBeacon: Fue la primera tecnología BLE Beacon desarrollada por Apple, permite leer y emitir en modo 
@@ -131,17 +139,13 @@
                     específico dentro de un grupo, entendiéndose como grupo aquellos beacons con mismo valor de Major.
                 \end{itemize}
                 \begin{center}
-                \end{center}
-                
-                \begin{center}
                     \begin{figure}[h]
                         \centering
-                        \includegraphics[width=0.3\textwidth]{tipos_beacon_ibeacon.PNG}
+                        \includegraphics[width=0.6\textwidth]{tipos_beacon_ibeacon.PNG}
                         \caption{Trama de bytes de cabecera de modo iBeacon (Apple)}
-                        \label{fig:mesh1}
+                        \label{fig:mesh2}
                     \end{figure}
                 \end{center}
-
                 \item Eddystone: Creado por Google es un protocolo de código abierto. A diferencia del protocolo anterior este 
                 permite transmitir:
                 \begin{itemize}
@@ -150,17 +154,13 @@
                     \item TML: Permite enviar información relativa al beacon como por ejemplo el porcentaje de batería o valores de sensores.
                 \end{itemize}
                 \begin{center}
-                \end{center}
-                
-                \begin{center}
                     \begin{figure}[h]
                         \centering
-                        \includegraphics[width=0.3\textwidth]{tipos_beacon_edison.PNG}
+                        \includegraphics[width=0.5\textwidth]{tipos_beacon_edison.PNG}
                         \caption{Modo Beacon Edison (Google) }
-                        \label{fig:mesh1}
+                        \label{fig:mesh3}
                     \end{figure}
                 \end{center}
-
                 \item AltBeacon: Es un protocolo de código abierto que surge como resultado de las incompatibilidades de las dos 
                 tecnologías anteriores, la ventaja principal es que permite más flexibilidad de modificaciones así como compatibilidad 
                 entre sistemas operativos.
@@ -173,12 +173,12 @@
             dispositivos se encuentran escuchando.
             La base de la comunicación es el Broker, encargado de dar soporte a todos los topics, los clientes inician una 
             conexión TCP/IP con él que se mantiene abierta constantemente hasta que el cliente la finalize. Se emplean los puertos
-            1883 y 8883 empleando seguridad TLS.
+            1883 o 8883 con seguridad TLS.
             Cada mensaje tiene un QoS (Quality of service), es el mecanismo de calidad del servicio, o lo que es lo mismo es la forma de
             gestionar la robustez de los mensajes entre clientes ante los fallos de conectividad.
             \begin{itemize}
                 \item QoS 0: Envio una única vez
-                \item QoS 1: Menaje enviado hasta que se garantiza que se entrega.
+                \item QoS 1: Mensaje enviado hasta que se garantiza que se entrega.
                 \item QoS 2: Garantizado que cada mensaje se entrega al suscriptor por una única vez.
             \end{itemize}
             Esta es una opción para que los equipos que escuchan a los beacons y envian la información a un mismo
@@ -195,7 +195,7 @@
             de que se requiera de un servidor con una API o endpoint constantemente escuchando a los distintos posts.
         \subsubsection {ESP Now}
             Se plantea la opción de que no todos los equipos que escuchan a los beacons no tengan internet, es por ello por lo 
-            que se plantéa llevar a cabo una red de elementos que escuchan y que envian a un único concentrador encargado de enviar
+            que se baraja llevar a cabo una red de elementos que escuchan y que envian a un único concentrador encargado de enviar
             esta información a internet por cualquier otro método.
             Es decir, se contempla la posibilidad de establecer una red de elementos que escuchan, para ello se emplea 
             un protocolo de comunicación rápido denominado ESP-NOW, este tiene las siguientes características:
@@ -213,17 +213,14 @@
                 que no puede subir a internet a otro equipo en su misma red que si que pueda.
                 \item Este segundo hará lo mismo hasta que finalmente haya uno que si que pueda subir estos datos.
             \end{enumerate}
-
             \begin{center}
                 \begin{figure}[h]
                     \centering
-                    \includegraphics[width=0.3\textwidth]{espnow.PNG}
+                    \includegraphics[width=0.4\textwidth]{espnow.PNG}
                     \caption{Diagrama explicativo del una red de ESP32}
-                    \label{fig:mesh1}
+                    \label{fig:mesh4}
                 \end{figure}
             \end{center}
-
-            
         \end{enumerate}
     \subsection{Resultados finales}
         Una vez analizadas las dos problemáticas y las distintas soluciones a cada una de ellas se ha confeccionado la siguiente tabla 
@@ -232,6 +229,7 @@
         Por un lado está la forma en la que poder medir las distancias de los equipos con respecto a los equipos que escuchan,
         se contemplaban las siguientes opciones:
         \begin{center}
+            \addcontentsline{lot}{table}{Comparativa de opciones de posicionamiento}
             \begin{tabular}{|c | c| c| c| c |} 
             \hline
             Tecnología  & Coste  & Complejidad & Distancia & Consumo energético \\ [0.5ex] 
@@ -251,6 +249,7 @@
         En lo que respecta a la comunicación de estos datos de distancia entre equipos a internet se ha reunido de nuevo en la 
         siguiente tabla un resumen con las opciones y los puntos a favor y en contra de cada una de las tecnologías.
         \begin{center}
+            \addcontentsline{lot}{table}{Comparativa de opciones de subida de datos a Internet}
             \begin{tabular}{||c | c| c| c||} 
             \hline
             Tecnología  & Velocidad de datos & Coste & Complejidad \\ [0.5ex] 
@@ -352,7 +351,7 @@
                         \includegraphics[width=0.6\textwidth]{1_beacon_2_meters.PNG}
                         \includegraphics[width=0.55\textwidth]{1_beacon_3_meters.PNG}
                         \caption{Prueba de campo, medición RSSI de Beacons a 2 y 3 metros}
-                        \label{fig:mesh1}
+                        \label{fig:mesh5}
                     \end{figure}
                 \end{center}
                 Podemos ver que hay pequeñas fluctiaciones y es por ello por lo que será necesario implementar un sencillo filtro para
@@ -365,7 +364,7 @@
                         \centering
                         \includegraphics[width=0.6\textwidth]{10min_2beacons_same_distance.PNG}
                         \caption{Variaciones de rssi entre beacons a distancias iguales}
-                        \label{fig:mesh1}
+                        \label{fig:mesh6}
                     \end{figure}
                 \end{center}
                 Podemos ver de nuevo que las diferencias son notables, esto de nuevo afianza la idea de implementar
@@ -386,7 +385,7 @@
                         \centering
                         \includegraphics[width=0.4\textwidth]{trilateration_circle.png}
                         \caption{Trilataración con tres equipos escuchando al mismo Beacon}
-                        \label{fig:mesh1}
+                        \label{fig:mesh7}
                     \end{figure}
                 \end{center}
                 Para ello hemos de resolver las siguientes ecuaciones básicas sobre la distancia entre recta y un punto en 
@@ -420,6 +419,7 @@
                 En este modo de funcionamiento el micro consume sobre los 2.5µA.
             \end{itemize}
             \begin{center}
+            \addcontentsline{lot}{table}{Consumos energéticos ESP32}
                 \begin{tabular}{||c || c ||} 
                 \hline
                 Modo del ESP32  & Consumo energético  \\ [0.5ex] 
@@ -440,6 +440,7 @@
             Con esto conseguimos un consumo que varía en función de la frecuencia de envio, en la siguiente tabla
             se puede ver un análisis en función del tiempo:
             \begin{center}
+                \addcontentsline{lot}{table}{Frecuencia de envío frente a consumo medio}
                 \begin{tabular}{||c || c ||} 
                 \hline
                 Frecuencia de envio  & Consumo energético  \\ [0.5ex] 
@@ -455,17 +456,19 @@
             Y en consecuencia está la duración media de las baterías, poniendo el ejemplo para una frecuencia de 
             envío de 10 minutos vemos que la autonomía será:
             \begin{center}
-                \begin{tabular}{|c | c| c| c |} 
-                \hline
-                    Tipo de batería & Capacidad (mAh) & Autonomía(días) & Autonomía(días)   \\ [0.5ex] 
-                    &  &  f=10 min &  f=5 min   \\ [0.5ex] 
-                \hline
-                \hline
-                    Pila CRC 2032 &  240 mAh  & 39   & 20 \\ 
-                    Pila AA       &  2500 mAh & 409  & 210 \\ 
-                    Batería Li-Ion&  1600 mAh & 261  & 135 \\ 
-                \hline
-                \end{tabular}
+                \begin{table}[]
+                    \begin{tabular}{|c | c| c| c |} 
+                    \hline
+                        Tipo de batería & Capacidad (mAh) & Autonomía(días) & Autonomía(días)   \\ [0.5ex] 
+                        &  &  f=10 min &  f=5 min   \\ [0.5ex] 
+                    \hline
+                    \hline
+                        Pila CRC 2032 &  240 mAh  & 39   & 20 \\ 
+                        Pila AA       &  2500 mAh & 409  & 210 \\ 
+                        Batería Li-Ion&  1600 mAh & 261  & 135 \\ 
+                    \hline
+                    \end{tabular}
+                \end{table}
             \end{center}
     \subsection{Cálculo saturación espectro de frecuencia}
             Los fundamentos básicos de las distintas frecuencias es que a menor frecuencia mayor distancia vamos a conseguir 
@@ -484,6 +487,7 @@
                 que emplean este rango que se encuentra comprendido desde   6.78 MHz hasta 244 GHz en distintos tramos,
                 un ejemplo de tramos serían los siguientes:
                 \begin{center}
+                    \addcontentsline{lot}{table}{Rangos de frecuencias por regiones del mundo}
                     \begin{tabular}{||c | c | c| c ||} 
                     \hline
                     Rango de frecuencia & Bandwidth & Center Frequency & Allocation\\ [0.5ex] 
@@ -534,7 +538,7 @@
                     \includegraphics[width=0.4\textwidth]{antenna_design.png}
                     \includegraphics[width=0.45\textwidth]{antenna_design_monopole.png}
                     \caption{Diferencia entre antena de media o cuarto de $\lambda$}
-                    \label{fig:mesh1}
+                    \label{fig:mesh8}
                 \end{figure}
             \end{center}
             \paragraph{}
@@ -594,6 +598,7 @@
         \end{itemize}
         Se ha de tener en cuenta también la clase del disposivo que queda recogida en la siguiente tabla:
         \begin{center}
+            \addcontentsline{lot}{table}{Potencia y alcance BLE}
             \begin{tabular}{||c | c |c ||} 
             \hline
             Clase & Potencia  & Alcance aproximado\\ [0.5ex] 
@@ -615,6 +620,7 @@
     \subsection{Presupuestos Parciales}
             \subsubsection{Placa de circuito impreso emisor beacon}
                 \begin{center}
+                    \addcontentsline{lot}{table}{Tabla de precios Emisor Beacon}
                     \begin{tabular}{||c | c |c ||} 
                     \hline
                     Componente & Cantidad & Precio unitario  \\ [0.5ex] 
@@ -637,6 +643,7 @@
                 \end{center}
             \subsubsection{Placa de circuito impreso receptor o gateway}
                 \begin{center}
+                    \addcontentsline{lot}{table}{Tabla de precios receptor o gateway}
                     \begin{tabular}{||c | c |c ||} 
                     \hline
                     Componente & Cantidad & Precio unitario  \\ [0.5ex] 
@@ -663,6 +670,7 @@
                 \end{center}
             \subsubsection{Desarrollo e instalación}
             \begin{center}
+                \addcontentsline{lot}{table}{Tabla de precios desarrollo e instalación}
                 \begin{tabular}{||c | c |c ||} 
                 \hline
                 Componente & Cantidad (h) & Precio unitario  \\ [0.5ex] 
@@ -677,6 +685,7 @@
     \subsection{Presupuestos Total}
         El presupuesto total se compone de la suma de los presupuestos parciales:
         \begin{center}
+            \addcontentsline{lot}{table}{Presupuesto general}
             \begin{tabular}{||c | c |c ||} 
             \hline
             Unidad & Cantidad & Precio  \\ [0.5ex] 
@@ -699,13 +708,13 @@
         \subsubsection{Valor Actual Neto (VAN)}
 
 \section{Bibliografía}
-\begin{itemize}
-    \item \href{https://www.bluetooth.com/}{hola}
-    \item \href{https://accent-systems.com/es/producto/ibks-105/}{Ejemplo de una empresa que tiene un equipo
-    similar al desarrollado}
-    \item \href{https://www.boe.es/diario_boe/txt.php?id=BOE-A-2002-694}{BOE 1}
-    \item \href{https://www.boe.es/buscar/act.php?id=BOE-A-2014-4950}{BOE 2}
-    \item \href{https://www.boe.es/buscar/act.php?id=BOE-A-2014-4950}{BOE 3}
-    \item \href{http://www.sharelatex.com}{Documentación sobre el editor de texto Latex empleado} 
-\end{itemize}
+    \begin{itemize}
+        \item \href{https://www.bluetooth.com/}{hola}
+        \item \href{https://accent-systems.com/es/producto/ibks-105/}{Ejemplo de una empresa que tiene un equipo
+        similar al desarrollado}
+        \item \href{https://www.boe.es/diario_boe/txt.php?id=BOE-A-2002-694}{BOE 1}
+        \item \href{https://www.boe.es/buscar/act.php?id=BOE-A-2014-4950}{BOE 2}
+        \item \href{https://www.boe.es/buscar/act.php?id=BOE-A-2014-4950}{BOE 3}
+        \item \href{http://www.sharelatex.com}{Documentación sobre el editor de texto Latex empleado} 
+    \end{itemize}
 \end{document} 
