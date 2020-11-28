@@ -118,23 +118,11 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy8.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy6.tfm
 OUTPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_hardware\anexo_hardware.toc
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_hardware\anexo_hardware.lof
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_hardware\anexo_hardware.lof
+OUTPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_hardware\anexo_hardware.lof
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
-INPUT ..\receiver_1.PNG
-INPUT ..\receiver_1.PNG
-INPUT ..\receiver_1.PNG
-INPUT ..\receiver_1.PNG
-INPUT ..\receiver_1.PNG
-INPUT ..\receiver_1.PNG
-INPUT ..\receiver_1.PNG
-INPUT ..\receiver_1.PNG
-INPUT ..\receiver_1.PNG
-INPUT ..\receiver_1.PNG
-INPUT ..\receiver_1.PNG
-INPUT ..\receiver_2.PNG
-INPUT ..\receiver_2.PNG
-INPUT ..\receiver_2.PNG
-INPUT ..\receiver_2.PNG
-INPUT ..\receiver_2.PNG
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmtt12.tfm
 INPUT ..\emiter_1.PNG
 INPUT ..\emiter_1.PNG
 INPUT ..\emiter_1.PNG
@@ -145,6 +133,46 @@ INPUT ..\emiter_2.PNG
 INPUT ..\emiter_2.PNG
 INPUT ..\emiter_2.PNG
 INPUT ..\emiter_2.PNG
+INPUT ..\emiter_PCB.PNG
+INPUT ..\emiter_PCB.PNG
+INPUT ..\emiter_PCB.PNG
+INPUT ..\emiter_PCB.PNG
+INPUT ..\emiter_PCB.PNG
+INPUT ..\real_beacon_pcb.jpeg
+INPUT ..\real_beacon_pcb.jpeg
+INPUT ..\real_beacon_pcb.jpeg
+INPUT ..\real_beacon_pcb.jpeg
+INPUT ..\real_beacon_pcb.jpeg
+INPUT ..\receiver_main_power.PNG
+INPUT ..\receiver_main_power.PNG
+INPUT ..\receiver_main_power.PNG
+INPUT ..\receiver_main_power.PNG
+INPUT ..\receiver_main_power.PNG
+INPUT ..\receiver_1.PNG
+INPUT ..\receiver_1.PNG
+INPUT ..\receiver_1.PNG
+INPUT ..\receiver_1.PNG
+INPUT ..\receiver_1.PNG
+INPUT ..\receiver_2.PNG
+INPUT ..\receiver_2.PNG
+INPUT ..\receiver_2.PNG
+INPUT ..\receiver_2.PNG
+INPUT ..\receiver_2.PNG
+INPUT ..\receiver_PCB.PNG
+INPUT ..\receiver_PCB.PNG
+INPUT ..\receiver_PCB.PNG
+INPUT ..\receiver_PCB.PNG
+INPUT ..\receiver_PCB.PNG
+INPUT ..\3d_antenna.jpeg
+INPUT ..\3d_antenna.jpeg
+INPUT ..\3d_antenna.jpeg
+INPUT ..\3d_antenna.jpeg
+INPUT ..\3d_antenna.jpeg
+INPUT ..\real_master_pcb.jpeg
+INPUT ..\real_master_pcb.jpeg
+INPUT ..\real_master_pcb.jpeg
+INPUT ..\real_master_pcb.jpeg
+INPUT ..\real_master_pcb.jpeg
 INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_hardware\anexo_hardware.aux
 INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_hardware\anexo_hardware.out
 INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_hardware\anexo_hardware.out
@@ -154,3 +182,5 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr17.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr17.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt12.pfb
