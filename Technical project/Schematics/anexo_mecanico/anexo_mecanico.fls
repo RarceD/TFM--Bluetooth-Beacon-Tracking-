@@ -132,21 +132,16 @@ INPUT ..\mechanical_beacon.PNG
 INPUT ..\mechanical_beacon.PNG
 INPUT ..\mechanical_beacon.PNG
 INPUT ..\mechanical_beacon.PNG
-INPUT ..\emiter_1.PNG
-INPUT ..\emiter_1.PNG
-INPUT ..\emiter_1.PNG
-INPUT ..\emiter_1.PNG
-INPUT ..\emiter_1.PNG
-INPUT ..\3d_beacon_2.jpeg
-INPUT ..\3d_beacon_2.jpeg
-INPUT ..\3d_beacon_2.jpeg
-INPUT ..\3d_beacon_2.jpeg
-INPUT ..\3d_beacon_2.jpeg
 INPUT ..\3d_beacon_1.jpeg
 INPUT ..\3d_beacon_1.jpeg
 INPUT ..\3d_beacon_1.jpeg
 INPUT ..\3d_beacon_1.jpeg
 INPUT ..\3d_beacon_1.jpeg
+INPUT ..\3d_beacon_2.jpeg
+INPUT ..\3d_beacon_2.jpeg
+INPUT ..\3d_beacon_2.jpeg
+INPUT ..\3d_beacon_2.jpeg
+INPUT ..\3d_beacon_2.jpeg
 INPUT ..\model_master.PNG
 INPUT ..\model_master.PNG
 INPUT ..\model_master.PNG
@@ -157,11 +152,6 @@ INPUT ..\mechanical_master.PNG
 INPUT ..\mechanical_master.PNG
 INPUT ..\mechanical_master.PNG
 INPUT ..\mechanical_master.PNG
-INPUT ..\receiver_2.PNG
-INPUT ..\receiver_2.PNG
-INPUT ..\receiver_2.PNG
-INPUT ..\receiver_2.PNG
-INPUT ..\receiver_2.PNG
 INPUT ..\3d_master_1.jpeg
 INPUT ..\3d_master_1.jpeg
 INPUT ..\3d_master_1.jpeg
@@ -172,6 +162,16 @@ INPUT ..\3d_master_2.jpeg
 INPUT ..\3d_master_2.jpeg
 INPUT ..\3d_master_2.jpeg
 INPUT ..\3d_master_2.jpeg
+INPUT ..\3d_master_2_box.jpeg
+INPUT ..\3d_master_2_box.jpeg
+INPUT ..\3d_master_2_box.jpeg
+INPUT ..\3d_master_2_box.jpeg
+INPUT ..\3d_master_2_box.jpeg
+INPUT ..\3d_antenna.jpeg
+INPUT ..\3d_antenna.jpeg
+INPUT ..\3d_antenna.jpeg
+INPUT ..\3d_antenna.jpeg
+INPUT ..\3d_antenna.jpeg
 INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.aux
 INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.out
 INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.out

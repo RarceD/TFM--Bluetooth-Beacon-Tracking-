@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  27 NOV 2020 18:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  28 NOV 2020 08:14
 entering extended mode
 **"c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Schematics/anexo_mecanico/anexo_mecanico.tex"
 ("c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Schematics/anexo_mecanico/anexo_mecanico.tex"
@@ -190,15 +190,6 @@ LaTeX Warning: Label `fig:mesh1' multiply defined.
 
 LaTeX Warning: Label `fig:mesh1' multiply defined.
 
-
-LaTeX Warning: Label `fig:mesh1' multiply defined.
-
-
-LaTeX Warning: Label `fig:mesh1' multiply defined.
-
-
-LaTeX Warning: Label `fig:mesh1' multiply defined.
-
 )
 \openout1 = `anexo_mecanico.aux'.
 
@@ -265,11 +256,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 5.
+(Font)              <12> on input line 6.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 5.
+(Font)              <8> on input line 6.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 5.
+(Font)              <6> on input line 6.
 )
 \tf@toc=\write4
 \openout4 = `anexo_mecanico.toc'.
@@ -284,11 +275,11 @@ LaTeX Info: Redefining \% on input line 1.
  [2
 
 ]
-<../model_beacon.PNG, id=97, 925.20656pt x 663.22781pt>
+<../model_beacon.PNG, id=91, 925.20656pt x 663.22781pt>
 File: ../model_beacon.PNG Graphic file (type png)
 <use ../model_beacon.PNG>
 Package pdftex.def Info: ../model_beacon.PNG  used on input line 44.
-(pdftex.def)             Requested size: 195.0pt x 139.77783pt.
+(pdftex.def)             Requested size: 234.00238pt x 167.73947pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -296,109 +287,95 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [3
 
 ]
-<../mechanical_beacon.PNG, id=109, 822.07124pt x 578.91281pt>
+<../mechanical_beacon.PNG, id=104, 822.07124pt x 578.91281pt>
 File: ../mechanical_beacon.PNG Graphic file (type png)
 <use ../mechanical_beacon.PNG>
 Package pdftex.def Info: ../mechanical_beacon.PNG  used on input line 54.
 (pdftex.def)             Requested size: 117.00119pt x 82.38992pt.
-<../emiter_1.PNG, id=110, 493.845pt x 499.11469pt>
-File: ../emiter_1.PNG Graphic file (type png)
-<use ../emiter_1.PNG>
-Package pdftex.def Info: ../emiter_1.PNG  used on input line 62.
-(pdftex.def)             Requested size: 117.00119pt x 118.24394pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../3d_beacon_2.jpeg, id=111, 1138.2525pt x 2023.56pt>
-File: ../3d_beacon_2.jpeg Graphic file (type jpg)
-<use ../3d_beacon_2.jpeg>
-Package pdftex.def Info: ../3d_beacon_2.jpeg  used on input line 73.
-(pdftex.def)             Requested size: 155.99762pt x 277.30634pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../3d_beacon_1.jpeg, id=112, 1138.2525pt x 2023.56pt>
+<../3d_beacon_1.jpeg, id=105, 851.43094pt x 800.23969pt>
 File: ../3d_beacon_1.jpeg Graphic file (type jpg)
 <use ../3d_beacon_1.jpeg>
-Package pdftex.def Info: ../3d_beacon_1.jpeg  used on input line 81.
-(pdftex.def)             Requested size: 117.00119pt x 207.98746pt.
+Package pdftex.def Info: ../3d_beacon_1.jpeg  used on input line 67.
+(pdftex.def)             Requested size: 140.40024pt x 131.94836pt.
+<../3d_beacon_2.jpeg, id=106, 848.4197pt x 723.45282pt>
+File: ../3d_beacon_2.jpeg Graphic file (type jpg)
+<use ../3d_beacon_2.jpeg>
+Package pdftex.def Info: ../3d_beacon_2.jpeg  used on input line 68.
+(pdftex.def)             Requested size: 155.99762pt x 133.01979pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [4 <../model_beacon.PNG> <../mechanical_beacon.PNG>]
-<../model_master.PNG, id=119, 923.70094pt x 660.96938pt>
+<../model_master.PNG, id=114, 923.70094pt x 660.96938pt>
 File: ../model_master.PNG Graphic file (type png)
 <use ../model_master.PNG>
-Package pdftex.def Info: ../model_master.PNG  used on input line 101.
+Package pdftex.def Info: ../model_master.PNG  used on input line 92.
 (pdftex.def)             Requested size: 214.50119pt x 153.48216pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<../mechanical_master.PNG, id=120, 885.3075pt x 583.42969pt>
+[5 <../3d_beacon_1.jpeg> <../3d_beacon_2.jpeg>]
+<../mechanical_master.PNG, id=127, 885.3075pt x 583.42969pt>
 File: ../mechanical_master.PNG Graphic file (type png)
 <use ../mechanical_master.PNG>
-Package pdftex.def Info: ../mechanical_master.PNG  used on input line 111.
+Package pdftex.def Info: ../mechanical_master.PNG  used on input line 105.
 (pdftex.def)             Requested size: 214.50119pt x 141.35243pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../receiver_2.PNG, id=121, 686.565pt x 609.02531pt>
-File: ../receiver_2.PNG Graphic file (type png)
-<use ../receiver_2.PNG>
-Package pdftex.def Info: ../receiver_2.PNG  used on input line 119.
-(pdftex.def)             Requested size: 214.50119pt x 190.27347pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<../3d_master_1.jpeg, id=122, 1138.2525pt x 2023.56pt>
+<../3d_master_1.jpeg, id=128, 851.43094pt x 759.58781pt>
 File: ../3d_master_1.jpeg Graphic file (type jpg)
 <use ../3d_master_1.jpeg>
-Package pdftex.def Info: ../3d_master_1.jpeg  used on input line 130.
-(pdftex.def)             Requested size: 117.00119pt x 207.98746pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[5 <../emiter_1.PNG>]
-<../3d_master_2.jpeg, id=132, 1138.2525pt x 2023.56pt>
+Package pdftex.def Info: ../3d_master_1.jpeg  used on input line 117.
+(pdftex.def)             Requested size: 117.00119pt x 104.3712pt.
+<../3d_master_2.jpeg, id=129, 848.4197pt x 756.57657pt>
 File: ../3d_master_2.jpeg Graphic file (type jpg)
 <use ../3d_master_2.jpeg>
-Package pdftex.def Info: ../3d_master_2.jpeg  used on input line 138.
-(pdftex.def)             Requested size: 117.00119pt x 207.98746pt.
+Package pdftex.def Info: ../3d_master_2.jpeg  used on input line 118.
+(pdftex.def)             Requested size: 117.00119pt x 104.32686pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 152.
-[6 <../3d_beacon_2.jpeg>] [7 <../3d_beacon_1.jpeg> <../model_master.PNG>] [8 <../mechanical_master.PNG> <../receiver_2.PNG>] [9 <../3d_master_1.jpeg> <../3d_master_2.jpeg>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 152.
+<../3d_master_2_box.jpeg, id=130, 1116.42094pt x 795.72281pt>
+File: ../3d_master_2_box.jpeg Graphic file (type jpg)
+<use ../3d_master_2_box.jpeg>
+Package pdftex.def Info: ../3d_master_2_box.jpeg  used on input line 128.
+(pdftex.def)             Requested size: 226.20071pt x 161.21797pt.
+<../3d_antenna.jpeg, id=131, 852.93657pt x 893.58844pt>
+File: ../3d_antenna.jpeg Graphic file (type jpg)
+<use ../3d_antenna.jpeg>
+Package pdftex.def Info: ../3d_antenna.jpeg  used on input line 129.
+(pdftex.def)             Requested size: 155.99762pt x 163.42963pt.
+[6 <../model_master.PNG> <../mechanical_master.PNG>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 144.
+ [7 <../3d_master_1.jpeg> <../3d_master_2.jpeg> <../3d_master_2_box.jpeg> <../3d_antenna.jpeg>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 144.
  ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.aux"
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 152.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 152.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 144.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 144.
 Package rerunfilecheck Info: File `anexo_mecanico.out' has not changed.
 (rerunfilecheck)             Checksum: 7B9F5E7A69FFC5D25AA308509D033DD8;796.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 152.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 144.
  ) 
 Here is how much of TeX's memory you used:
- 6327 strings out of 480930
- 98059 string characters out of 2909539
- 367983 words of memory out of 3000000
+ 6330 strings out of 480930
+ 98156 string characters out of 2909539
+ 367003 words of memory out of 3000000
  22046 multiletter control sequences out of 15000+200000
  537506 words of font info for 41 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,7n,35p,332b,404s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 34i,7n,35p,332b,427s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on "c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.pdf" (9 pages, 1464754 bytes).
+Output written on "c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.pdf" (7 pages, 2335310 bytes).
 PDF statistics:
- 177 PDF objects out of 1000 (max. 8388607)
- 44 named destinations out of 1000 (max. 500000)
+ 169 PDF objects out of 1000 (max. 8388607)
+ 47 named destinations out of 1000 (max. 500000)
  147 words of extra memory for PDF output out of 10000 (max. 10000000)
 
