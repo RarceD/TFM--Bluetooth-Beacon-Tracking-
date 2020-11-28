@@ -261,7 +261,7 @@ Defensa de 20 min  40
             \end{tabular}
         \end{center}   
         La elección en este caso está mucho más ajustada, en el caso de que se pueda conectar a todos los equipos que 
-        escuchan a internet el ganador será la opción de MQTT puesto que la forma más facil de llevar a cabo el envio de datos.
+        escuchan a internet el ganador será la opción de MQTT puesto que la forma más fácil de llevar a cabo el envio de datos.
 
         En el caso de que no llegue la señal wifi a todos los puntos en los que se decida llevar a cabo el tracking de objetos 
         surge un problema puesto que perderemos esos datos, la solucion es hacer que este equipo, que no tiene conexión a internet,
@@ -275,22 +275,15 @@ Defensa de 20 min  40
         para que disponga de una IP pública estática y sea accesible desde cualquier parte del mundo.
     \subsection{Planificación}
         \paragraph{}
-        Para sintetizar el proceso de desarrollo del proyecto técnico se empleará un diagrama GANTT: 
-        \begin{itemize}
-            \item Fase 1: Analisis de la situación.
-            \item Fase 2: Definición de la problemática.
-            \item Fase 3: Búsqueda de soluciones y alcance del proyecto.
-            \item Fase 4: Desarrollo de hardware acorde a especificaciones.
-            \item Fase 5: Programación del receptor de los datos.
-            \item Fase 6: Programación del hardware.
-            \item Fase 7: Pruebas de campo.
-            \item Fase 8: Depuración tanto de programación como de bug en hardware.
-            \item Fase 9: Evolución del equipo en instalación.
-            \item Fase 10: Evaluación de producto y producción masiva.
-        \end{itemize}
-
-        https://online.visual-paradigm.com/ tiene buena pinta para hacer esto
-        
+        Para sintetizar el profceso de desarrollo del proyecto técnico se empleará un diagrama GANTT: 
+        \begin{center}
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=1\textwidth]{diagrama de gantt.PNG}
+                \caption{Diagrama de GANTT}
+                \label{fig:mesh8}
+            \end{figure}
+        \end{center} 
 \section{Memoria justificativa}
     \subsection{Cálculos justificativos de la instalación}
         En este apartado de llevará a cabo el estudio de la viabilidad del proyecto desde el punto de vista
@@ -703,18 +696,44 @@ Defensa de 20 min  40
         \end{center}
         Por lo tanto el presupuesto total con iva asciende a la cantidad de 1234123 4123 y veintimeil euros.
     \subsection{Factores económicos y financieros}
-    Estudio de viabilidad económica
-        \subsubsection{Tasa de interés de retorno(TIR)}
-        \subsubsection{Valor Actual Neto (VAN)}
-
+        Para llevar a cabo el estudio de viabilidad económica se ha confeccionado la siguiente tabla donde
+        podemos ver los flujos de caja así como la inversión inicial del proyecto:
+        \begin{center}
+            \addcontentsline{lot}{table}{Flujos de caja de la inversión, VAN y TIR}
+            \begin{tabular}{||c | c |c |c |c ||} 
+            \hline
+             - & Periodo 0 & Periodo 1& Periodo 2 & Periodo 3  \\ [0.5ex] 
+            \hline
+            \hline
+            Inversión/gastos & 1200€ & 4134€ & 4134€ &4134€ \\ 
+            Flujos de caja   & 1200€ & 4134€ & 4134€ &4134€ \\ 
+            \hline
+            \end{tabular}
+        \end{center}
+        Se ha de tener en cuenta que esto es un proyecto real y que los gastos son reales y surgen de pago de
+        las cuotas de autónomos, electricidad y gasolina que supone trabajar desde casa. Con todo esto y fijando una cuota
+        de COK o coste de oportunidad de capital o mínima rentabilidad admisible para afrontar la realización del
+        proyecto. Se ha establecido de un 10\%.
+    \subsubsection{TIR y VAN}
+        El análisis de la tasa de interés de retorno y del valor actual neto son los recogidos en la tabla inferior:
+        \begin{center}
+            \addcontentsline{lot}{table}{Flujos de caja de la inversión, VAN y TIR}
+            \begin{tabular}{||c | c ||} 
+            \hline
+            TIR & 234,42 € \\ [0.5ex] 
+            VAN & 34 \%  \\ [0.5ex] 
+            \hline
+            \end{tabular}
+        \end{center}
 \section{Bibliografía}
     \begin{itemize}
-        \item \href{https://www.bluetooth.com/}{hola}
+        \item \href{https://www.bluetooth.com/}{Web oficial del estándar Bluetooth}
         \item \href{https://accent-systems.com/es/producto/ibks-105/}{Ejemplo de una empresa que tiene un equipo
         similar al desarrollado}
-        \item \href{https://www.boe.es/diario_boe/txt.php?id=BOE-A-2002-694}{BOE 1}
-        \item \href{https://www.boe.es/buscar/act.php?id=BOE-A-2014-4950}{BOE 2}
-        \item \href{https://www.boe.es/buscar/act.php?id=BOE-A-2014-4950}{BOE 3}
+        \item \href{https://www.boe.es/diario_boe/txt.php?id=BOE-A-2002-694}{BOE - Orden CTE/23/2002, de 11 de enero, por la que se establecen condiciones para la presentación de determinados estudios y certificaciones por operadores de servicios de radiocomunicaciones.}
+        \item \href{https://www.boe.es/buscar/act.php?id=BOE-A-2014-4950}{BOE - Ley 9/2014, de 9 de mayo, General de Telecomunicaciones.}
         \item \href{http://www.sharelatex.com}{Documentación sobre el editor de texto Latex empleado} 
+        \item \href{https://docs.espressif.com/projects/esp-idf/en/stable/}{Documentación sobre el microcontrolador ESP32 Espressif}
+        \item \href{https://github.com/espressif/esp-idf}{Ejemplos de código del esp-software development kit}
     \end{itemize}
 \end{document} 

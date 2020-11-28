@@ -3,7 +3,8 @@
 \contentsline {figure}{\numberline {2}{\ignorespaces Trama de bytes de cabecera de modo iBeacon (Apple)}}{8}{figure.2}%
 \contentsline {figure}{\numberline {3}{\ignorespaces Modo Beacon Edison (Google) }}{9}{figure.3}%
 \contentsline {figure}{\numberline {4}{\ignorespaces Diagrama explicativo del una red de ESP32}}{11}{figure.4}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Prueba de campo, medición RSSI de Beacons a 2 y 3 metros}}{15}{figure.5}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Variaciones de rssi entre beacons a distancias iguales}}{15}{figure.6}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Trilataración con tres equipos escuchando al mismo Beacon}}{16}{figure.7}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Diferencia entre antena de media o cuarto de $\lambda $}}{20}{figure.8}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Diagrama de GANTT}}{13}{figure.5}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Prueba de campo, medición RSSI de Beacons a 2 y 3 metros}}{15}{figure.6}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Variaciones de rssi entre beacons a distancias iguales}}{16}{figure.7}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Trilataración con tres equipos escuchando al mismo Beacon}}{16}{figure.8}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Diferencia entre antena de media o cuarto de $\lambda $}}{20}{figure.9}%

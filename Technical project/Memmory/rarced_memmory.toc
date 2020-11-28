@@ -27,40 +27,39 @@
 \contentsline {paragraph}{}{12}{section*.17}%
 \contentsline {subsection}{\numberline {1.6}Planificación}{12}{subsection.1.6}%
 \contentsline {paragraph}{}{12}{section*.18}%
-\contentsline {section}{\numberline {2}Memoria justificativa}{13}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Cálculos justificativos de la instalación}{13}{subsection.2.1}%
+\contentsline {section}{\numberline {2}Memoria justificativa}{12}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Cálculos justificativos de la instalación}{12}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Cálculo de distancia por RSSI}{13}{subsection.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.1}Rssi}{13}{subsubsection.2.2.1}%
 \contentsline {paragraph}{}{13}{section*.19}%
 \contentsline {paragraph}{}{13}{section*.20}%
 \contentsline {paragraph}{}{13}{section*.21}%
-\contentsline {paragraph}{}{14}{section*.22}%
+\contentsline {paragraph}{}{13}{section*.22}%
 \contentsline {paragraph}{}{14}{section*.23}%
 \contentsline {paragraph}{}{14}{section*.24}%
 \contentsline {paragraph}{}{14}{section*.25}%
 \contentsline {paragraph}{}{14}{section*.26}%
-\contentsline {paragraph}{}{15}{section*.27}%
-\contentsline {paragraph}{}{16}{section*.28}%
-\contentsline {subsubsection}{\numberline {2.2.2}Trilateración y posicionamiento}{16}{subsubsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.3}Cálculo de consumos energéticos}{17}{subsection.2.3}%
+\contentsline {paragraph}{}{14}{section*.27}%
+\contentsline {paragraph}{}{15}{section*.28}%
+\contentsline {subsubsection}{\numberline {2.2.2}Trilateración y posicionamiento}{15}{subsubsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3}Cálculo de consumos energéticos}{16}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Cálculo saturación espectro de frecuencia}{18}{subsection.2.4}%
 \contentsline {subsection}{\numberline {2.5}Cálculo de ganancia de antenas}{19}{subsection.2.5}%
-\contentsline {paragraph}{}{20}{section*.29}%
-\contentsline {section}{\numberline {3}Planos}{21}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Planos mecánicos}{21}{subsection.3.1}%
+\contentsline {paragraph}{}{19}{section*.29}%
+\contentsline {section}{\numberline {3}Planos}{20}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Planos mecánicos}{20}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Plano eléctricos}{21}{subsection.3.2}%
 \contentsline {section}{\numberline {4}Pliego de condiciones}{21}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Prescripciones ténicas generales}{21}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}Normativa relativa a radiofrecuencia}{21}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Normativa relativa a bluetooth y wifi}{22}{subsubsection.4.1.2}%
-\contentsline {section}{\numberline {5}Presupuestos}{23}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Precios unitarios}{23}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Normativa relativa a bluetooth y wifi}{21}{subsubsection.4.1.2}%
+\contentsline {section}{\numberline {5}Presupuestos}{22}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Precios unitarios}{22}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Presupuestos Parciales}{23}{subsection.5.2}%
 \contentsline {subsubsection}{\numberline {5.2.1}Placa de circuito impreso emisor beacon}{23}{subsubsection.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2}Placa de circuito impreso receptor o gateway}{24}{subsubsection.5.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.3}Desarrollo e instalación}{24}{subsubsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.2}Placa de circuito impreso receptor o gateway}{23}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}Desarrollo e instalación}{23}{subsubsection.5.2.3}%
 \contentsline {subsection}{\numberline {5.3}Presupuestos Total}{24}{subsection.5.3}%
-\contentsline {subsection}{\numberline {5.4}Factores económicos y financieros}{25}{subsection.5.4}%
-\contentsline {subsubsection}{\numberline {5.4.1}Tasa de interés de retorno(TIR)}{25}{subsubsection.5.4.1}%
-\contentsline {subsubsection}{\numberline {5.4.2}Valor Actual Neto (VAN)}{25}{subsubsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4}Factores económicos y financieros}{24}{subsection.5.4}%
+\contentsline {subsubsection}{\numberline {5.4.1}TIR y VAN}{24}{subsubsection.5.4.1}%
 \contentsline {section}{\numberline {6}Bibliografía}{25}{section.6}%
