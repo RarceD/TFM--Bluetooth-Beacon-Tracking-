@@ -176,6 +176,7 @@ INPUT .\images\trilateration_circle.png
 INPUT .\images\trilateration_circle.png
 INPUT .\images\trilateration_circle.png
 INPUT .\images\trilateration_circle.png
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmtt12.tfm
 INPUT images\antenna_design.png
 INPUT .\images\antenna_design.png
 INPUT .\images\antenna_design.png
@@ -186,6 +187,16 @@ INPUT .\images\antenna_design_monopole.png
 INPUT .\images\antenna_design_monopole.png
 INPUT .\images\antenna_design_monopole.png
 INPUT .\images\antenna_design_monopole.png
+INPUT images\antenna_types.PNG
+INPUT .\images\antenna_types.PNG
+INPUT .\images\antenna_types.PNG
+INPUT .\images\antenna_types.PNG
+INPUT .\images\antenna_types.PNG
+INPUT images\antennas_variety.jpeg
+INPUT .\images\antennas_variety.jpeg
+INPUT .\images\antennas_variety.jpeg
+INPUT .\images\antennas_variety.jpeg
+INPUT .\images\antennas_variety.jpeg
 INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.aux
 INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.out
 INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.out
@@ -217,3 +228,5 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt12.pfb

@@ -291,109 +291,111 @@ Defensa de 20 min  40
         de la previsión energética de los equipos, un análisis del las frecuencias y ganancias de las antenas 
         empleadas.
     \subsection{Cálculo de distancia por RSSI}
-            \subsubsection{Rssi}
-                \paragraph{}
-                El RSSI (Received signal strength indicator) es un indicador de la energía o potencia recibida en un mensaje de radio, 
-                está asociado con la atenuación de la señal, cuanto más pequeña es su valor menor atenuación. Este valor está 
-                presente no solo en Bluetooth sino también en el Wifi (2,4 GHz) o en las bandas de radio industriales, científicas y médicas,
-                las denominadas ISM (desde 433MHz a 458.5MHz y desde 860MHz a 960MHz)
-                \paragraph{}
-                De las muestras obtenidas se puede concluir que se puede llegar a estimar la distancia a partir de los valores
-                de rrsi con un error que disminuye cuanto más alejados son los elementos a medir. 
-                \paragraph{}
-                Los rangos del RRSI se obtiene bien por aproximaciones teóricas o bien por experimentación, esto es debido a que 
-                es fuertemente alterado por las condiciones del medio en el que se encuentre. Es importante mencionar también que
-                este parámetro es medido a través de un hardware que rara vez tiene un comportamiento idéntico.
-                \paragraph{}
-                Los modelos de cálculo del RRSI se basan en la pérdida de señal en el espacio, como sabemos la potencia de la señal
-                disminuye con el cuadrado de la distancia. Esta ecuación de Friis para la transmisión libre en el espacio espacio es 
-                una fórmula teórica, existen aproximaciones obtenidas por métodos empíricos:
+        \subsubsection{Rssi}
+            \paragraph{}
+            El RSSI (Received signal strength indicator) es un indicador de la energía o potencia recibida en un mensaje de radio, 
+            está asociado con la atenuación de la señal, cuanto más pequeña es su valor menor atenuación. Este valor está 
+            presente no solo en Bluetooth sino también en el Wifi (2,4 GHz) o en las bandas de radio industriales, científicas y médicas,
+            las denominadas ISM (desde 433MHz a 458.5MHz y desde 860MHz a 960MHz)
+            \paragraph{}
+            De las muestras obtenidas en pruebas de campo con bluetooth se puede concluir que se puede llegar a estimar la distanciaç
+            a partir de los valores de rrsi con un error que disminuye cuanto más alejados son los elementos a medir. 
+            \paragraph{}
+            Los rangos del RRSI se obtiene bien por aproximaciones teóricas o bien por experimentación, esto es debido a que 
+            es fuertemente alterado por las condiciones del medio en el que se encuentre. Es importante mencionar también que
+            este parámetro es medido a través de un hardware que rara vez tiene un comportamiento idéntico.
+            \paragraph{}
+            Los modelos de cálculo del RRSI se basan en la pérdida de señal en el espacio, como sabemos la potencia de la señal
+            disminuye con el cuadrado de la distancia. Esta ecuación de Friis para la transmisión libre en el espacio espacio es 
+            una fórmula teórica, existen aproximaciones obtenidas por métodos empíricos:
+            \begin{equation}
+                P_L(d) [dB] = P_L(d_0) [dB] + 10n * \log_{10} \frac{d_i}{d_0} 
+            \end{equation}
+            \paragraph{}
+            Siendo PL (d0) la pérdida de propagación a 1 metro y n es una constante que depende del medio, será igual
+            a 2 si se encuentra en el espacio libre sin obstáculos ni reflexiones o dispersiones de señal.
+            \paragraph{}
+            Para calcular este parámetro 'n' se ha de aplicar la siguiente fórmula, como podemos ver para llevar a cabo el 
+            cálculo se han de tomar valores empíricos de potencias:
+            \begin{equation}
+                n = \frac{ P_L(d_i) - P_L(d_0) }{10n*\log_{}\frac{d_i}{d_0}}
+            \end{equation}
+            \paragraph{}
+            Por lo tanto, y una vez obtenidos los valores de potencia a distintas distancias podemos obtener la ganacia
+            de la señal recibida:
+            \begin{equation}
+                RRSI [dBm] = -10n*\log_{10} d+ A[dBm]
+            \end{equation}
+            \paragraph{}
+            Disponiendo ya del valor de la constante de pérdidas, d, calculado con la ecuación (2) y los valores
+            de rssi medidos desde la antena receptora a 1 metro de distancia, A, podemos obtener:
+            \begin{equation}
+                d= 10^\frac{-(RRSI - A)}{10n}
+            \end{equation}
+            Llevados a cabo los cálculos por parte del equipo que escucha a los distintos beacons podemos calcular la distancia 
+            real a cada uno de ellos. En el caso de que se solapen y dos receptores escuchen el mismo beacon será necesario
+            llevar a cabo el proceso de trilateración expuesto a continuación.
+            Para comprobar la fluctiación del parámetro del rssi se ha llevado a cabo la toma de este valor a los largo de un 
+            periodo de tiempo largo y estos son lo resultados a 2 metros y a 3 metros:
+            \begin{center}
+                \begin{figure}[h]
+                    \centering
+                    \includegraphics[width=0.6\textwidth]{1_beacon_2_meters.PNG}
+                    \includegraphics[width=0.55\textwidth]{1_beacon_3_meters.PNG}
+                    \caption{Prueba de campo, medición RSSI de Beacons a 2 y 3 metros}
+                    \label{fig:mesh5}
+                \end{figure}
+            \end{center}
+            Podemos ver que hay pequeñas fluctiaciones y es por ello por lo que será necesario implementar un sencillo filtro para
+            evitar el ruido electromagnético que hemos visto anteriormente.
+            \paragraph{}
+            Otra prueba llevada a cabo ha sido la de incrementar el número de iBeacons y situarlos a la misma distancia del 
+            equipo que escucha, los resultados son los siguientes:
+            \begin{center}
+                \begin{figure}[h]
+                    \centering
+                    \includegraphics[width=0.6\textwidth]{10min_2beacons_same_distance.PNG}
+                    \caption{Variaciones de rssi entre beacons a distancias iguales}
+                    \label{fig:mesh6}
+                \end{figure}
+            \end{center}
+            Podemos ver de nuevo que las diferencias son notables, esto de nuevo afianza la idea de implementar
+            un filtro que no falsee las medidas y cree distancias incoherentes puntuales entre los equipos.
+            \paragraph{}
+            El filtro más habitual para este tipo de aplicaciones es el denominado Kalman Filter:
+            \begin{equation}
+                RSSI_{suavizado} = \alpha · RSSI_{n} + (1-\alpha) · RSSI_{(n-1)}
+            \end{equation}
+            Otra opción que experimentalmente me ha dado buenos resultados es la de coger lo 20 valores anteriores,
+            obtener la media y si se separa más de un 30\% el valor nuevo lo rechazo. Con esto consigo eliminar las 
+            fluctuaciones indesadas.
+        \subsubsection{Trilateración y posicionamiento}
+            Una vez obtenidas las distancias a los distintos equipos que receptores es necesario llevar a cabo el
+            posicionamiento exácto de los equipos, para ello se emplea la trilateración:
+            \begin{center}
+                \begin{figure}[h]
+                    \centering
+                    \includegraphics[width=0.4\textwidth]{trilateration_circle.png}
+                    \caption{Trilataración con tres equipos escuchando al mismo Beacon}
+                    \label{fig:mesh7}
+                \end{figure}
+            \end{center}
+            Para ello hemos de resolver las siguientes ecuaciones básicas sobre la distancia entre recta y un punto en 
+                una circunferencia:
                 \begin{equation}
-                    P_L(d) [dB] = P_L(d_0) [dB] + 10n *\log_{10} \frac{ d_i }{d_0} 
+                    d_{A1}= \sqrt[2]{(x-x_A)^2+(y-y_A)^2}
                 \end{equation}
-                \paragraph{}
-                Siendo PL (d0) la pérdida de propagación a 1 metro y n es una constante que depende del medio, será igual
-                a 2 si se encuentra en el espacio libre sin obstáculos ni reflexiones o dispersiones de señal.
-                \paragraph{}
-                Para calcular este parámetro 'n' se ha de aplicar la siguiente fórmula, como podemos ver para llevar a cabo el 
-                cálculo se han de tomar valores empíricos de potencias:
                 \begin{equation}
-                    n = \frac{ P_L(d_i) - P_L(d_0) }{10n*\log_{}\frac{d_i}{d_0}}
+                d_{B1}= \sqrt[2]{(x-x_B)^2+(y-y_B)^2}
                 \end{equation}
-                \paragraph{}
-                Por lo tanto, y una vez obtenidos los valores de potencia a distintas distancias podemos obtener la ganacia
-                de la señal recibida:
                 \begin{equation}
-                    RRSI [dBm] = -10n*\log_{10} d+ A[dBm]
+                    d_{C1}= \sqrt[2]{(x-x_C)^2+(y-y_C)^2}
                 \end{equation}
-                \paragraph{}
-                Disponiendo ya del valor de la constante de pérdidas, d, calculado con la ecuación (2) y los valores
-                de rssi medidos desde la antena receptora a 1 metro de distancia, A, podemos obtener:
-                \begin{equation}
-                    d= 10^\frac{-(RRSI - A)}{10n}
-                \end{equation}
-                Llevados a cabo los cálculos por parte del equipo que escucha a los distintos beacons podemos calcular la distancia 
-                real a cada uno de ellos. En el caso de que se solapen y dos receptores escuchen el mismo beacon será necesario
-                llevar a cabo el proceso de trilateración expuesto a continuación.
-
-                Para comprobar la fluctiación del parámetro del rssi se ha llevado a cabo la toma de este valor a los largo de un 
-                periodo de tiempo largo y estos son lo resultados a 2 metros y a 3 metros:
-                \begin{center}
-                    \begin{figure}[h]
-                        \centering
-                        \includegraphics[width=0.6\textwidth]{1_beacon_2_meters.PNG}
-                        \includegraphics[width=0.55\textwidth]{1_beacon_3_meters.PNG}
-                        \caption{Prueba de campo, medición RSSI de Beacons a 2 y 3 metros}
-                        \label{fig:mesh5}
-                    \end{figure}
-                \end{center}
-                Podemos ver que hay pequeñas fluctiaciones y es por ello por lo que será necesario implementar un sencillo filtro para
-                evitar el ruido electromagnético que hemos visto anteriormente.
-                \paragraph{}
-                Otra prueba llevada a cabo ha sido la de incrementar el número de iBeacons y situarlos a la misma distancia del 
-                equipo que escucha, los resultados son los siguientes:
-                \begin{center}
-                    \begin{figure}[h]
-                        \centering
-                        \includegraphics[width=0.6\textwidth]{10min_2beacons_same_distance.PNG}
-                        \caption{Variaciones de rssi entre beacons a distancias iguales}
-                        \label{fig:mesh6}
-                    \end{figure}
-                \end{center}
-                Podemos ver de nuevo que las diferencias son notables, esto de nuevo afianza la idea de implementar
-                un filtro que no falsee las medidas y cree falsas distancias puntuales entre los equipos.
-                \paragraph{}
-                El filtro más habitual para este tipo de aplicaciones es el denominado Kalman Filter:
-                \begin{equation}
-                    RSSI_{suavizado}=\alpha · RSSI_{n} + (1-\alpha) · RSSI_{(n-1)}
-                \end{equation}
-                Otra opción que experimentalmente me ha dado buenos resultados es la de coger lo 20 valores anteriores,
-                obtener la media y si se separa más de un 30\% el valor nuevo lo rechazo. Con esto consigo eliminar las 
-                fluctuaciones indesadas.
-            \subsubsection{Trilateración y posicionamiento}
-                Una vez obtenidas las distancias a los distintos equipos que receptores es necesario llevar a cabo el
-                posicionamiento exácto de los equipos, para ello se emplea la trilateración:
-                \begin{center}
-                    \begin{figure}[h]
-                        \centering
-                        \includegraphics[width=0.4\textwidth]{trilateration_circle.png}
-                        \caption{Trilataración con tres equipos escuchando al mismo Beacon}
-                        \label{fig:mesh7}
-                    \end{figure}
-                \end{center}
-                Para ello hemos de resolver las siguientes ecuaciones básicas sobre la distancia entre recta y un punto en 
-                    una circunferencia:
-                    \begin{equation}
-                        d_{A1}= \sqrt[2]{(x-x_A)^2+(y-y_A)^2}
-                    \end{equation}
-                    \begin{equation}
-                        d_{B1}= \sqrt[2]{(x-x_B)^2+(y-y_B)^2}
-                    \end{equation}
-                    \begin{equation}
-                        d_{C1}= \sqrt[2]{(x-x_C)^2+(y-y_C)^2}
-                    \end{equation}
-                    Llevando a cabo la simplificación obtenemos el siguiente sistema:
+                Llevando a cabo la simplificación obtenemos un sistema de ecuaciones que permite calcular la distancia
+                relativa a cada uno de los equipos que escuchan.
+                \url{https://journals.sagepub.com/doi/full/10.1155/2014/371350#:~:text=RSSI%3DPt%2DPL(d).&text=In%20this%20formula%2C%20Pt,%2DPL(d).}
     \subsection{Cálculo de consumos energéticos}
+            El procesador empleado tanto para el equipo emisor como para el receptor disponen de los siguientes modos de funcionamiento:
             \begin{itemize}
                 \item  Active Mode, 160-260mA.  Los dos cores del procesador encendidos así como el procesador ULP,
                 RTC, Wifi, Bluetooth, Radio, Peripherals.
@@ -424,14 +426,18 @@ Defensa de 20 min  40
                 Light sleep mode &0,8mA  \\
                 Deep sleep mode &   0,15 mA - 10µA  \\
                 Hibernation mode & 2,5µA  \\
+                \hline
                 \end{tabular}
             \end{center}
             A la hora de llevar a cabo la decisión sobre como llevar a cabo el protocolo de comunicación se ha de tener en cuenta 
             el consumo de los equipos, en especial en lo que respecta a los beacons.
+            \paragraph{}
             Es por ello por lo que se ha optado es por dormir el equipo durante 58 segundos, despertárlo,
             enviar su trama bluetooth y luego dormirlo hasta la siguiente vez que despierte.
-            Con esto conseguimos un consumo que varía en función de la frecuencia de envio, en la siguiente tabla
-            se puede ver un análisis en función del tiempo:
+            Con esto conseguimos un consumo que varía en función de la frecuencia de envio, en las siguiente tablas
+            se puede ver un análisis en función del tiempo y en consecuencia la duración media de las baterías.
+            Se ha puesto como ejemplo a una frecuencia de envío de 10 minutos.
+            \paragraph{}
             \begin{center}
                 \addcontentsline{lot}{table}{Frecuencia de envío frente a consumo medio}
                 \begin{tabular}{||c || c ||} 
@@ -446,26 +452,23 @@ Defensa de 20 min  40
                 \hline
                 \end{tabular}
             \end{center}
-            Y en consecuencia está la duración media de las baterías, poniendo el ejemplo para una frecuencia de 
-            envío de 10 minutos vemos que la autonomía será:
             \begin{center}
-                \begin{table}[]
-                    \begin{tabular}{|c | c| c| c |} 
-                    \hline
-                        Tipo de batería & Capacidad (mAh) & Autonomía(días) & Autonomía(días)   \\ [0.5ex] 
-                        &  &  f=10 min &  f=5 min   \\ [0.5ex] 
-                    \hline
-                    \hline
-                        Pila CRC 2032 &  240 mAh  & 39   & 20 \\ 
-                        Pila AA       &  2500 mAh & 409  & 210 \\ 
-                        Batería Li-Ion&  1600 mAh & 261  & 135 \\ 
-                    \hline
-                    \end{tabular}
-                \end{table}
+                \addcontentsline{lot}{table}{Frecuencia de envío frente a consumo medio}
+                \begin{tabular}{|c | c| c| c |} 
+                \hline
+                    Tipo de batería & Capacidad (mAh) & Autonomía(días) & Autonomía(días)   \\ [0.5ex] 
+                    &  &  f=10 min &  f=5 min   \\ [0.5ex] 
+                \hline
+                \hline
+                    Pila CRC 2032 &  240 mAh  & 39   & 20 \\ 
+                    Pila AA       &  2500 mAh & 409  & 210 \\ 
+                    Batería Li-Ion&  1600 mAh & 261  & 135 \\ 
+                \hline
+                \end{tabular}
             \end{center}
     \subsection{Cálculo saturación espectro de frecuencia}
-            Los fundamentos básicos de las distintas frecuencias es que a menor frecuencia mayor distancia vamos a conseguir 
-            en las comunicaciones. Por el contrario, cuanto menor frecuencia menor volumen de datos es posible.
+            Partiendo de la premisa inicial de que a menor frecuencia de señal emitida mayor distancia vamos a conseguir 
+            en las comunicaciones y de que, por el contrario, cuanto menor frecuencia menor volumen de datos es posible.
             La tecnología bluetooth usa la frecuencia de 2.4GHz ISM (2400 to 2483.5 MHz), esta banda permite una buena relación
             de compromiso entre distancia y volumen de datos a transmitir.
             El espectro de frecuencia es amplio y cada banda tiene su aplicación, dentro de las telecomunicaciones
@@ -477,7 +480,7 @@ Defensa de 20 min  40
                 rango, es decir han de ser tolerantes a errores.
     
                 Desde el microondas y el mando del garaje hasta el bluetooth, NFC y wifi son ejemplos de tecnologías
-                que emplean este rango que se encuentra comprendido desde   6.78 MHz hasta 244 GHz en distintos tramos,
+                que emplean este rango que se encuentra comprendido desde 6.78 MHz hasta 244 GHz en distintos tramos,
                 un ejemplo de tramos serían los siguientes:
                 \begin{center}
                     \addcontentsline{lot}{table}{Rangos de frecuencias por regiones del mundo}
@@ -514,6 +517,11 @@ Defensa de 20 min  40
             La banda ISM de 2.4GHz es, sin lugar a dudas, la que soporta un uso más intensivo, ya que es utilizada en 
             diferentes estándares de redes Wi-Fi (IEEE 802.11b/g/n) y Bluetooth, (IEEE 802.15.1), llegando en muchas 
             ocasiones a su completa saturación.
+            \paragraph{}
+            Hemos de tener en cuenta que llevar a cabo una red de cientos de equipos que emitan en frecuencias similares puede
+            llegar a congestionar el sistema o incluso dejarlo inutilizado. A pesar de los riesgos y basándose en estudios que 
+            comprueban la saturación admisible se opta por continuar con el proceso debido al volumen de datos que se emite es 
+            absurdamente bajo.
     \subsection{Cálculo de ganancia de antenas}
             Una antena convierte la enegía electrica del transmisor en energía electromagnética y viceversa, las antenas pueden ser 
             para recibir, para transmitir o ambas. La localización de la antena, las dimensiones y el diseño pueden afectar drásticamente
@@ -522,9 +530,16 @@ Defensa de 20 min  40
 
             El denominado path loss o atenuación de la señal de radio es la reducción de la densidad de potencia de una onda durante la 
             propagación en el espacio. Este parámetro es esencial a la hora de poder establecer una red de bluetooth de estas dimensiones.
-            Antenas monopolo $\lambda$/4
-            Antenas dipolo $\lambda$ /2 
-           
+            Las dimensiones de la antena se pueden llegar a obtener mediante:
+            \begin{equation}
+                % f(Hz)=\frac{v(m/s)}{\lambda(m)}
+                \lambda_0(m)=\frac{v_0(m/s)}{f(Hz)} = \frac{2,998*10^8}{2,4*10^9} = 12,49 cm
+            \end{equation}
+            Para la aplicación que se plantéa existen dos tipos de antenas:
+            \begin{itemize}
+                \item  Antenas monopolo $\lambda$/4: Menor tamaño pero menor eficiencia. 
+                \item  Antenas dipolo $\lambda$ /2: Mayor tamaño pero mejores resultados.
+            \end{itemize}
             \begin{center}
                 \begin{figure}[h]
                     \centering
@@ -534,13 +549,42 @@ Defensa de 20 min  40
                     \label{fig:mesh8}
                 \end{figure}
             \end{center}
-            \paragraph{}
+            Además se ha de tener en cuenta que las antenas atienden a su diagrama de radiación, es decir, al
+            espectro tridimensional de emisión, según la forma de radiación podemos distinguir:
+            \begin{itemize}
+                \item  Antenas isotrópica: Emite con la misma densidad en todas las direcciones.
+                \item  Antenas omnidireccionales: Emite en torno a un solo plano isotrópico.
+                \item  Antena directiva: Concentra la energía radiada tan solo en una dirección del espacio.
+            \end{itemize}
+            \begin{center}
+                \begin{figure}[h]
+                    \centering
+                    \includegraphics[width=0.8\textwidth]{antenna_types.PNG}
+                    \caption{Tipos de antena en función del espectro de emisión}
+                    \label{fig:mesh10}
+                \end{figure}
+            \end{center}
             Dentro del mundo de las antenas existen numerosos modelos u opciones que se enumeran a continuación:
             \begin{enumerate}
                 \item Antenas de cable, son las más sencillas de todas y como su propio nombre indica es un simple cable soldado a la PCB de una dimensión determinada, esta logitud corresponde con la de una antena monopolo $\lambda$/4. El cable aporta el mayor rendimiento y rango de radiofrecuencia debido a sus dimensiones y a su caracter flexible, moldeable y orientable sin importar  la posición de la tarjeta.
                 \item Antena PCB, es una pista en el propio circuito impreso que puede tener numerosas formas, a diferencia de la de cable esta solo se encuentra en el espacio 2D. Tienen menos eficiciencia que las anteriores y requieren más espacio pero son incluso más baratas.
                 \item Antena de chip, este tipo de antena es una tarjeta o módulo que ocupa menos espacio que cualquiera de las anteriores y tiene un rendimiento intermedio entre ambas otras dos opciones.
             \end{enumerate}
+            Se han llevado pruebas de campo con distintos modelos y distintas posiciones dentro de la caja, a continuación se muestran las 
+            antenas con las que se han llevado a cabo las pruebas reales.
+            \begin{center}
+                \begin{figure}[h]
+                    \centering
+                    \includegraphics[width=0.8\textwidth]{antennas_variety.jpeg}
+                    \caption{Tipos de antena durante las pruebas de campo}
+                    \label{fig:mesh9}
+                \end{figure}
+            \end{center}
+            Las conclusiones obtenidas son que las antenas pcb de $\lambda$ /2 obtiene más uniformidad en las medidas a igual distancia, las 
+            antenas de cable son las que mayor rango ofrecen pero también son las menos discretas. En definitiva la antena es algo esencial y más 
+            allá del modelo elegido prioriza más el hecho de que todos los equipos de la red dispongan de exáctamente el mismo modelo.
+            
+
 \section{Planos}
     \subsection{Planos mecánicos}
         Los planos catalogados como mecánicos son denominados así debido a que son la estructura de plástico
