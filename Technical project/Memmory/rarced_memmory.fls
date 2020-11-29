@@ -80,6 +80,8 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty
+INPUT C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdfmode.def
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdfmode.def
 INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.aux
@@ -121,6 +123,7 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmmi6.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy8.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy6.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsl12.tfm
 OUTPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.toc
 INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.lof
 INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.lof
@@ -170,13 +173,12 @@ INPUT .\images\10min_2beacons_same_distance.PNG
 INPUT .\images\10min_2beacons_same_distance.PNG
 INPUT .\images\10min_2beacons_same_distance.PNG
 INPUT .\images\10min_2beacons_same_distance.PNG
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT images\trilateration_circle.png
 INPUT .\images\trilateration_circle.png
 INPUT .\images\trilateration_circle.png
 INPUT .\images\trilateration_circle.png
 INPUT .\images\trilateration_circle.png
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmtt12.tfm
+INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT images\antenna_design.png
 INPUT .\images\antenna_design.png
 INPUT .\images\antenna_design.png
@@ -220,6 +222,8 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr6.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr6.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsl12.pfb
+INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsl12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy6.pfb
@@ -228,5 +232,3 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti12.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt12.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt12.pfb

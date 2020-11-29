@@ -4,9 +4,13 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage{graphicx}
 \usepackage{xcolor}
+\usepackage{fancyhdr}
 
 \graphicspath{ {./images/} }
 \begin{document}
+\pagestyle{fancy}
+\fancyfoot[R]{Rubén Arce}
+\fancyfoot[L]{BLE Tracking - 2020}
 \title{Sistemas de posicionamiento de objetos mediante tecnología Bluetooth Low Energy Beacon }
 \author{Rubén Arce}
 \date{\today}
@@ -16,10 +20,6 @@
 \listoffigures
 \listoftables
 \cleardoublepage
-Antecedentes, objeto, normativa, reglamentación
-Extensión máxima de 30 páginas + anexos 60
-Defensa de 20 min  40
-
 \section{Memoria descriptiva}
     \subsection{Antecedentes y objeto del proyecto}
         Este proyecto surge como respuesta a la necesidad de poder localizar un número elevado de equipos en 
@@ -61,7 +61,7 @@ Defensa de 20 min  40
             \item Marketing: Estudios de mercado y de necesidad de los clientes. Elaboración de un "heat map", o mapa 
             de las zonas con más afluencia de gente.
             \item Sanidad: Monitorización de pacientes en planta. 
-            \item Seguridad: Tan solo los empleados con autorización y proximidad podrán llevar a cabo acciones,
+            \item Seguridad: Únicamente los empleados con autorización y proximidad podrán llevar a cabo acciones,
             esto tiene sentido a la hora de no tener que dar una llave a cada empleado que pueda copiarse.
             \item Vandalismo: Conociendo la localización de los equipos dentro de un local cerrado en el momento 
             en el que se deja de situar un elemento en el mapa se puede dar la voz de alarma ante un robo.
@@ -87,7 +87,7 @@ Defensa de 20 min  40
             fecha, hora a la que se intentó conectar y la dirección MAC que identifica y relaciona un móvil a una persona queda expuesta.
             Se han de tener en cuenta la política de privacidad vigente, empleando esta tecnología para llevar a cabo el tracking se inclumpliría.
             \begin{center}
-                \begin{figure}[h]
+                \begin{figure}[ht]
                     \centering
                     \includegraphics[width=0.4\textwidth]{WifiCounting.jpg}
                     \caption{Detección de personas aplicando redes wifi}
@@ -114,7 +114,7 @@ Defensa de 20 min  40
             dimensiones nada despreciables. 
             Es por ello por lo que esta tecnología se tendrá en cuenta pero no es la más adecuada para la problemática presente.
         \subsubsection {Bluetooth Low Energy - Beacon}
-            La tecnología Bluetooth es un estandar industrial para conexiones inalámbricas, permite transferir 
+            La tecnología Bluetooth es un estandar industrial aplicado a conexiones inalámbricas, este permite transferir 
             grandes cantidades de información en distancias cortas a bajas velocidades. Puede ser enfocado a conexión
             punto a punto o como es nuestro caso llevar a cabo una red de equipos que emiten en modo broadcast.
             \paragraph{}
@@ -139,7 +139,7 @@ Defensa de 20 min  40
                     específico dentro de un grupo, entendiéndose como grupo aquellos beacons con mismo valor de Major.
                 \end{itemize}
                 \begin{center}
-                    \begin{figure}[h]
+                    \begin{figure}[ht]
                         \centering
                         \includegraphics[width=0.6\textwidth]{tipos_beacon_ibeacon.PNG}
                         \caption{Trama de bytes de cabecera de modo iBeacon (Apple)}
@@ -154,7 +154,7 @@ Defensa de 20 min  40
                     \item TML: Permite enviar información relativa al beacon como por ejemplo el porcentaje de batería o valores de sensores.
                 \end{itemize}
                 \begin{center}
-                    \begin{figure}[h]
+                    \begin{figure}[ht]
                         \centering
                         \includegraphics[width=0.5\textwidth]{tipos_beacon_edison.PNG}
                         \caption{Modo Beacon Edison (Google) }
@@ -214,7 +214,7 @@ Defensa de 20 min  40
                 \item Este segundo hará lo mismo hasta que finalmente haya uno que si que pueda subir estos datos.
             \end{enumerate}
             \begin{center}
-                \begin{figure}[h]
+                \begin{figure}[ht]
                     \centering
                     \includegraphics[width=0.4\textwidth]{espnow.PNG}
                     \caption{Diagrama explicativo del una red de ESP32}
@@ -277,11 +277,11 @@ Defensa de 20 min  40
         \paragraph{}
         Para sintetizar el profceso de desarrollo del proyecto técnico se empleará un diagrama GANTT: 
         \begin{center}
-            \begin{figure}[h]
+            \begin{figure}[ht]
                 \centering
                 \includegraphics[width=1\textwidth]{diagrama de gantt.PNG}
                 \caption{Diagrama de GANTT}
-                \label{fig:mesh8}
+                \label{fig:mesh18}
             \end{figure}
         \end{center} 
 \section{Memoria justificativa}
@@ -338,7 +338,7 @@ Defensa de 20 min  40
             Para comprobar la fluctiación del parámetro del rssi se ha llevado a cabo la toma de este valor a los largo de un 
             periodo de tiempo largo y estos son lo resultados a 2 metros y a 3 metros:
             \begin{center}
-                \begin{figure}[h]
+                \begin{figure}[ht]
                     \centering
                     \includegraphics[width=0.6\textwidth]{1_beacon_2_meters.PNG}
                     \includegraphics[width=0.55\textwidth]{1_beacon_3_meters.PNG}
@@ -352,7 +352,7 @@ Defensa de 20 min  40
             Otra prueba llevada a cabo ha sido la de incrementar el número de iBeacons y situarlos a la misma distancia del 
             equipo que escucha, los resultados son los siguientes:
             \begin{center}
-                \begin{figure}[h]
+                \begin{figure}[ht]
                     \centering
                     \includegraphics[width=0.6\textwidth]{10min_2beacons_same_distance.PNG}
                     \caption{Variaciones de rssi entre beacons a distancias iguales}
@@ -364,7 +364,7 @@ Defensa de 20 min  40
             \paragraph{}
             El filtro más habitual para este tipo de aplicaciones es el denominado Kalman Filter:
             \begin{equation}
-                RSSI_{suavizado} = \alpha · RSSI_{n} + (1-\alpha) · RSSI_{(n-1)}
+                RSSI_{suavizado} = \alpha * RSSI_{n} + (1-\alpha) * RSSI_{(n-1)}
             \end{equation}
             Otra opción que experimentalmente me ha dado buenos resultados es la de coger lo 20 valores anteriores,
             obtener la media y si se separa más de un 30\% el valor nuevo lo rechazo. Con esto consigo eliminar las 
@@ -393,7 +393,8 @@ Defensa de 20 min  40
                 \end{equation}
                 Llevando a cabo la simplificación obtenemos un sistema de ecuaciones que permite calcular la distancia
                 relativa a cada uno de los equipos que escuchan.
-                \url{https://journals.sagepub.com/doi/full/10.1155/2014/371350#:~:text=RSSI%3DPt%2DPL(d).&text=In%20this%20formula%2C%20Pt,%2DPL(d).}
+                \paragraph{}
+                % \url{https://journals.sagepub.com/doi/full/10.1155/2014/371350#:~:text=RSSI%3DPt%2DPL(d).&text=In%20this%20formula%2C%20Pt,%2DPL(d).}
     \subsection{Cálculo de consumos energéticos}
             El procesador empleado tanto para el equipo emisor como para el receptor disponen de los siguientes modos de funcionamiento:
             \begin{itemize}
@@ -456,8 +457,8 @@ Defensa de 20 min  40
                 \addcontentsline{lot}{table}{Frecuencia de envío frente a consumo medio}
                 \begin{tabular}{|c | c| c| c |} 
                 \hline
-                    Tipo de batería & Capacidad (mAh) & Autonomía(días) & Autonomía(días)   \\ [0.5ex] 
-                    &  &  f=10 min &  f=5 min   \\ [0.5ex] 
+                    Tipo de batería & Capacidad  & Autonomía(días) & Autonomía(días)   \\ [0.5ex] 
+                    & (mAh) &  f=10 min &  f=5 min   \\ [0.5ex] 
                 \hline
                 \hline
                     Pila CRC 2032 &  240 mAh  & 39   & 20 \\ 
@@ -466,7 +467,7 @@ Defensa de 20 min  40
                 \hline
                 \end{tabular}
             \end{center}
-    \subsection{Cálculo saturación espectro de frecuencia}
+    \subsection{Saturación espectro de frecuencia}
             Partiendo de la premisa inicial de que a menor frecuencia de señal emitida mayor distancia vamos a conseguir 
             en las comunicaciones y de que, por el contrario, cuanto menor frecuencia menor volumen de datos es posible.
             La tecnología bluetooth usa la frecuencia de 2.4GHz ISM (2400 to 2483.5 MHz), esta banda permite una buena relación
@@ -486,21 +487,23 @@ Defensa de 20 min  40
                     \addcontentsline{lot}{table}{Rangos de frecuencias por regiones del mundo}
                     \begin{tabular}{||c | c | c| c ||} 
                     \hline
-                    Rango de frecuencia & Bandwidth & Center Frequency & Allocation\\ [0.5ex] 
+                    Rango  & Bandwidth & Center Frequency & Allocation\\ [0.5ex] 
+                      de frecuencia& MHz & MHz & \\ [0.5ex] 
                     \hline
                     \hline
-                        6.765 - 6.975 MHz &	0.03 MHz &	6.78 MHz	 & Locally \\ 
-                        13.553 - 13.567 MHz &	0.014 MHz &	13.56 MHz	 & Global\\ 
-                        26.957 - 27.283 MHz &	0.326 MHz &	27.18 MHz	 & Global\\ 
-                        40.66 - 40.7 MHz &	0.04 MHz &	40.68 MHz	 & Global\\ 
-                        433.05 - 434.79 MHz &	1.74 MHz &	433.92 MHz & EU, RU, Africa\\ 
-                        902 - 928 MHz &	26 MHz&	915 MHz &	Americas\\   
-                        2400 - 2500 MHz &	100 MHz &	2450 MHz & Global\\ 
-                        5725 - 5875 MHz &	150 MHz &	5800 MHz & Global\\ 
-                        24 - 24.250 GHz &	250 MHz &	24.125 GHz & 	Global\\ 
-                        61 - 61.5 GHz &	500 MHz &	61.250 GHz & 	Locally \\ 
-                        122 - 123 GHz &	1000 MHz &	122.5 GHz	 & Locally \\ 
-                        244 - 246 GHz &	2000 MHz &	245 GHz & Locally \\ 
+                        6.765 - 6.975 MHz &	0.03  &	6.78 	 & Locally \\ 
+                        13.553 - 13.567 MHz &	0.014  &	13.56 	 & Global\\ 
+                        26.957 - 27.283 MHz &	0.326  &	27.18 	 & Global\\ 
+                        40.66 - 40.7 MHz &	0.04  &	40.68 	 & Global\\ 
+                        433.05 - 434.79 MHz &	1.74  &	433.92  & EU\\ 
+                         &	& & RU, Africa\\ 
+                        902 - 928 MHz &	26 &	915  &	Americas\\   
+                        2400 - 2500 MHz &	100  &	2450  & Global\\ 
+                        5725 - 5875 MHz &	150  &	5800  & Global\\ 
+                        24 - 24.250 GHz &	250  &	24.125 GHz & 	Global\\ 
+                        61 - 61.5 GHz &	500 &	61.250 GHz & 	Locally \\ 
+                        122 - 123 GHz &	1000  &	122.5 GHz	 & Locally \\ 
+                        244 - 246 GHz &	2000  &	245 GHz & Locally \\ 
                     \hline
                     \end{tabular}
                 \end{center}
@@ -570,14 +573,15 @@ Defensa de 20 min  40
                 \item Antena PCB, es una pista en el propio circuito impreso que puede tener numerosas formas, a diferencia de la de cable esta solo se encuentra en el espacio 2D. Tienen menos eficiciencia que las anteriores y requieren más espacio pero son incluso más baratas.
                 \item Antena de chip, este tipo de antena es una tarjeta o módulo que ocupa menos espacio que cualquiera de las anteriores y tiene un rendimiento intermedio entre ambas otras dos opciones.
             \end{enumerate}
+            \paragraph{}
             Se han llevado pruebas de campo con distintos modelos y distintas posiciones dentro de la caja, a continuación se muestran las 
             antenas con las que se han llevado a cabo las pruebas reales.
             \begin{center}
-                \begin{figure}[h]
+                \begin{figure}[ht]
                     \centering
-                    \includegraphics[width=0.8\textwidth]{antennas_variety.jpeg}
+                    \includegraphics[width=0.5\textwidth]{antennas_variety.jpeg}
                     \caption{Tipos de antena durante las pruebas de campo}
-                    \label{fig:mesh9}
+                    \label{fig:mesh11}
                 \end{figure}
             \end{center}
             Las conclusiones obtenidas son que las antenas pcb de $\lambda$ /2 obtiene más uniformidad en las medidas a igual distancia, las 
@@ -710,7 +714,8 @@ Defensa de 20 min  40
                 \addcontentsline{lot}{table}{Tabla de precios desarrollo e instalación}
                 \begin{tabular}{||c | c |c ||} 
                 \hline
-                Componente & Cantidad (h) & Precio unitario  \\ [0.5ex] 
+                Componente & Cantidad  & Precio unitario  \\ [0.5ex] 
+                 & (h) & € \\ [0.5ex] 
                 \hline\hline
                 Diseñador hardware placas circuito impreso   & 10  & 50 \\ 
                 Desarrollador  software sistema embebido     & 350 & 40 \\ 
