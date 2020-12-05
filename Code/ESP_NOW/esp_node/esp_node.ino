@@ -21,8 +21,15 @@ void OnDataRecv(const uint8_t *mac, const uint8_t *incomingData, int len)
   Serial.println(len);
 
   Serial.print("UUID ");
-  for (uint8_t index = 0; index < 10; index++)
+  for (uint8_t index = 0; index < 20; index++)
     Serial.write(myData.uuid[index]);
+  Serial.println();
+  Serial.print("Beacon ");
+  for (uint8_t index = 0; index < 20; index++)
+    Serial.write(myData.beacon[index]);
+  Serial.println();
+  Serial.print("RSSI: ");
+  Serial.println(myData.rssi);
   Serial.println();
 }
 
