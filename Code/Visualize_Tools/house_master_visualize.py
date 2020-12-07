@@ -4,10 +4,12 @@ import paho.mqtt.client as mqtt
 import time
 import json
 import sys
-
+import math
 from BeaconClass import Beacon, Esp
 
 PROPORTIONALITY = 250 / 3.3
+PI = 3.141592653589793
+
 
 class Room:
     def __init__(self, name, pos_x, pos_y, width, length, esp_name, esp_x, esp_y, color):
@@ -146,14 +148,18 @@ def reddrawGameWindow():
     for e in esp:
         for b in e.beacons:
             b.draw(win)
+    esp_center = [50, 400]
+    rectangle = [100, 400, 150, 150]
+    # pygame.draw.rect(win, (0,0,240),rectangle , 2)
+    # pygame.draw.arc(win,  (223,0,0), rectangle, 3*PI/2, 0, 10)
     pygame.display.update()  # update the screen frames
 
 
 def checkBeacons(esp):
     global position_adjustments
     for e in esp:
-        print('Master ESP:', e.uuid, 'has: ')
         for b in e.beacons:
+            print('Master ESP:', e.uuid, 'has: ')
             print('->', b.uuid, 'distance: ', b.distance,
                   'is assigned to: ', b.esp_assigned)
 
@@ -162,10 +168,18 @@ def visualize_calculations(esp):
     # Plot on the screen:
     for e in esp:
         for b in e.beacons:
-            b.x = e.x + random.randint(-20, 20) + position_adjustments[0]
-            b.y = e.y + random.randint(-20, 20) + position_adjustments[1]
-
-
+            if e.uuid == "A2":
+                b.x = 4.2857*abs(b.distance)-28.571
+                b.y = 275
+            elif e.uuid == "A3":
+                b.x = 4.2857*abs(b.distance)-28.571
+                b.y = 475
+            elif e.uuid == "A5":
+                b.x = -3.5714*abs(b.distance)+807.14
+                b.y = 125
+            else:
+                b.x = e.x + random.randint(-20, 20) + position_adjustments[0]
+                b.y = e.y + random.randint(-20, 20) + position_adjustments[1]
 
 
 position_adjustments = [0, 0]
@@ -206,6 +220,6 @@ while(run):
         # Delete all the info:
         for e in esp:
             e.beacons = []
-        #Reestart the timer:
+        # Reestart the timer:
         timer_update_screen = int(round(time.time()))
 pygame.quit()

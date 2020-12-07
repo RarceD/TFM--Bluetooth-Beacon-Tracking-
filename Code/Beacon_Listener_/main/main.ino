@@ -111,7 +111,7 @@ class MyAdvertisedDeviceCallbacks : public BLEAdvertisedDeviceCallbacks
       const size_t capacity = JSON_ARRAY_SIZE(2) + 3 * JSON_OBJECT_SIZE(2);
       DynamicJsonBuffer jsonBuffer(capacity);
       JsonObject &root = jsonBuffer.createObject();
-      root["esp"] = "A2";
+      root["esp"] = "A5";
       JsonArray &beacon = root.createNestedArray("beacon");
 
       JsonObject &beacon_0 = beacon.createNestedObject();
@@ -207,6 +207,9 @@ void setup()
       esp_bt_controller_deinit();
       repeat_ble = millis();
     }
+        reconnect();
+
+
   }
 }
 

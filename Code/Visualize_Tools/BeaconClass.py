@@ -14,7 +14,12 @@ class Beacon:
         self.esp_assigned = "nop"
 
     def draw(self, win):
+        self.x = int(self.x)
+        self.y = int(self.y)
         pygame.draw.circle(win, (0, 0, 0), (self.x, self.y), 18)
+        pygame.draw.circle(win,  self.color, (self.x, self.y), 15)
+    def draw_range(self, win, center, radio):
+        pygame.draw.circle(win, (0, 0, 0), (self.x, self.y), radio)
         pygame.draw.circle(win,  self.color, (self.x, self.y), 15)
 
 
