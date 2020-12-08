@@ -72,8 +72,7 @@ def on_message(client, userdata, message):
 def trilateration(beacon_data):
     for b in beacon_data:
         print(b.name)
-        if (len(b.esp) > 1):
-            # print("2 masters find the beacon")
+        if (len(b.esp) == 2):
             x0 = 100
             y0 = 50
             r0 = abs(b.rssi[0]) * 6
@@ -91,29 +90,68 @@ def trilateration(beacon_data):
                 pygame.draw.circle(win, (234, random.randint(2,255), random.randint(2,255)), (intersection_points[2], intersection_points[3]), 7)
             except:
                 pass
-
-            print(r0, r1, intersection_points)
             
-
-
-        else:
-            pass
+        elif(len(b.esp) == 1):
+            if b.esp[0] == "A2":
+                x = int(10*abs(b.rssi[0]) - 200)
+                y = 50
+                pygame.draw.circle(win, (234,random.randint(2,255), random.randint(2,255)), (x, y), 7)
+                print(x,y)
+            elif b.esp[0] == "A5":
+                x = int(-8.57*abs(b.rssi[0]) + 957.14)
+                y = 550
+                print(x,y)
+                pygame.draw.circle(win, (234,random.randint(2,255), random.randint(2,255)), (x, y), 7)
+        elif(len(b.esp) == 3):
+            x0 = 100
+            y0 = 50
+            r0 = abs(b.rssi[0]) * 6
+            x1 = 700
+            y1 = 550
+            r1 = abs(b.rssi[1]) * 6
+            x2 = 100
+            y2 = 550
+            r2 = abs(b.rssi[2]) * 6
+            pygame.draw.circle(win, (77, 126, 189), (x0, y0), int(r0),1)
+            pygame.draw.circle(win, (150, 74, 189), (x1, y1), int(r1),1)
+            pygame.draw.circle(win, (43, 74, 189), (x2, y2), int(r2),1)
+            x = [x0, x1, x2]
+            y = [y0, y1, y2]
+            r = [r0, r1, r2]
+            for i in range(1,3):
+                points = get_intersections(x0, y0, r0, x[i], y[i], r[i])
+                try:
+                    intersection_points = []            
+                    for p in points:
+                        intersection_points.append(int(p))
+                    pygame.draw.circle(win, (234,255, random.randint(2,255)), (intersection_points[0], intersection_points[1]), 7)
+                    pygame.draw.circle(win, (234,255, random.randint(2,255)), (intersection_points[2], intersection_points[3]), 7)
+                except:
+                    pass
+            for i in range(0,2):
+                points = get_intersections(x2, y2, r2, x[i], y[i], r[i])
+                try:
+                    intersection_points = []            
+                    for p in points:
+                        intersection_points.append(int(p))
+                    pygame.draw.circle(win, (234,255,random.randint(2,255)), (intersection_points[0], intersection_points[1]), 7)
+                    pygame.draw.circle(win, (234,255, random.randint(2,255)), (intersection_points[2], intersection_points[3]), 7)
+                except:
+                    pass
             # print("1 master only")
 
 def reddrawGameWindow():
     global beacon_data
     win.fill((145, 213, 250))
     win.blit(word_image, (0, 0))
-    
-
     # I set a grid to better positioning
     l_x, l_y = 0, 0
-    debug = True
-    # while (debug and (l_x <= win_x or l_y <= win_y)):
-    #     pygame.draw.line(win, (134, 136, 143), (l_x, 0), (l_x, win_y))
-    #     pygame.draw.line(win, (134, 136, 143), (0, l_y), (win_x, l_y))
-    #     l_y += 50
-    #     l_x += 50
+    debug = False
+    while (debug and (l_x <= win_x or l_y <= win_y)):
+        pygame.draw.line(win, (134, 136, 143), (l_x, 0), (l_x, win_y))
+        pygame.draw.line(win, (134, 136, 143), (0, l_y), (win_x, l_y))
+        l_y += 50
+        l_x += 50
 
     for e in esp:
         pygame.draw.rect(win, (0, 0, 0), (e.x, e.y, 25, 25))
@@ -121,47 +159,8 @@ def reddrawGameWindow():
                          (e.x + 5, e.y+5, 25-5*2, 25-5*2))
         for b in e.beacons:
             b.draw(win)
-    esp_center = [75, 25]
-    r = 100
-
-    # for i in range(0, 2):
-    #     pass
-    # range_max = 7
-    # for i in range(0, range_max):
-    #     rectangle = [-r + esp_center[0], -r+esp_center[1], 2*r, 2*r]
-    #     # pygame.draw.rect(win, (0, 0, 240), rectangle, 2)
-    #     pygame.draw.arc(win,  (64, 143, 222), rectangle, 3*PI/2, 0, 2)
-    #     r += 100
-    # esp_center = [755, 575]
-    # r = 100
-    # for i in range(0, range_max):
-    #     rectangle = [-r + esp_center[0], -r+esp_center[1], 2*r, 2*r]
-    #     # pygame.draw.rect(win, (0, 0, 240), rectangle, 2)
-    #     pygame.draw.arc(win,  (217, 85, 41), rectangle, PI/2, PI, 2)
-    #     r += 100
     trilateration(beacon_data)
-    
     pygame.display.update()  # update the screen frames
-
-
-
-
-
-def visualize_calculations(esp):
-    # Plot on the screen:
-    for e in esp:
-        for b in e.beacons:
-            if e.uuid == "A2":
-                b.x = 10*abs(b.distance) - 200
-                b.y = 50
-                print(b.distance, b.x)
-            elif e.uuid == "A5":
-                b.x = -8.57*abs(b.distance) + 957.14
-                b.y = 550
-            else:
-                b.x = e.x + random.randint(-20, 20) 
-                b.y = e.y + random.randint(-20, 20) 
-
 
 win_x = 900
 win_y = 600
