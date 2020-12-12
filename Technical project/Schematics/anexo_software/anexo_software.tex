@@ -28,9 +28,54 @@
     a continuación se muetra el procedimiento y resultados.
 \section{Firmware}
     \subsection{Emisor BLE o beacon}
+        La ventaja de los beacons es que se ha llevado a cabo el paradigma de plug and play, es decir, tan solo hay que conectar la batería y comienza 
+        a funcionar sin problemas. La única posibilidad de configuración podría ser el tiempo de envio de datos, teniendo en cuenta que estamos en fases 
+        de pruebas no se ha adoptado un perfil demasiado conservador en lo que a batería se refiere. 
+
+        En la versión real para cliente se le dará la posibilidad de configurar a su gusto la frecuencia de envio de datos con las conscuencias 
+        que esto conlleva.
     \subsection{Receptor gateway o master}
-       
-\section{Herramientas de visualización}
+        \subsubsection{Configuración inicial}
+        El equipo que escucha a los beacons ha de hacer un barrido cada X tiempo, obtener el rssi y por último enviar a través de mqtt los datos 
+        para que el sistema de visualización sea capaz de posicionarlos dentro de un mapa.
+        Para que todo esto funciona es necesario que alguien les configure el Wifi al que han de conectarse para poder transmitir los datos,
+            esta configuración inicial ha de ser sencilla y sobretodo ha de poderse cambiar en el caso de que la contraseña cambie o de que se desplacen 
+            los equipos a otro lugar.
+            
+            Para ello se ha programado lo siguiente:
+            \begin{enumerate}
+                \item El Master intenta conectarse al wifi que tenga en memoria guardado, según sale de fábrica lo intenta con números aleatorios.
+                \item Cuando fracase en el intento generará un punto de acceso, es decir, se crea un wifi al que el usuario ha de conectarse.
+                \item Una vez conectado a este wifi sin internet ha de meterse en la página web alojada en el 192.168.4.1 donde introducirá los credenciales 
+                del wifi real al que ha de conectarse.
+                \item Tras recibir los datos proporcionados por el cliente el equipo se conectará a internet y estará listo para usarse y escuchar beacons.
+                \item Se guarda en memoria flash los datos para que cada vez que se apage no sea necesario repetir el proceso
+            \end{enumerate}
+            En todo momento si se quisiera volver a condiciones de fábrica se puede pulsar el botón a la vez que se enciende el dispositivo y se reseteará 
+            la memoria previamente configurada y volverá a generarse el punto de acceso wifi para repetir el proceso.
+            \begin{center}
+                \begin{figure}[]
+                    \centering
+                    \includegraphics[width=0.3\textwidth]{../../Memmory/images/AP_wifi_config.jpeg}
+                    \caption{Captura de pagina web generada por el dispositivo}
+                    \label{fig:mesh11}
+                \end{figure}
+            \end{center}
+        \subsubsection{Funcionamiento}
+            Una vez llevada a cabo esta configuración inicial y conectados al terminal a través del puerto serie podemos ver como se lleva a cabo el barrido 
+            de beacons y el procesamiento de los mismos:
+            \begin{center}
+                \begin{figure}[]
+                    \centering
+                    \includegraphics[width=0.5\textwidth]{../../Memmory/images/s_scanning_1.PNG}
+                    \includegraphics[width=0.5\textwidth]{../../Memmory/images/s_scanning_2.PNG}
+                    \caption{Escaneo y procesamiento de dispositivos beacons}
+                    \label{fig:mesh11}
+                \end{figure}
+            \end{center}
+            El envio de datos a través de mqtt se lleva a cabo en el acto consiguiente una frecuencia elevada de datos que alimentan a nuestra herramienta 
+            de visualización de una forma muy dinámica.
+            \section{Herramientas de visualización}
     \subsection{Tecnologías}
         Para generar las pantallas y animaciones he empleado Python con su librería "Pygame", en lo que respecta a los cálculos 
         y gráficas se ha empleado Matplotlib y para hacer operaciones de una forma rápida "NumPy".    
@@ -135,5 +180,17 @@
             
             Podemos ver como los puntos amarillos son los carros de la compra percibidos por ambos beacons y los rojos son aquellos
             que solo son escuchados por un master, de tal modo que le punto en el que se encuentran es menos precio.
+    \subsection{Conclusiones}
+        Podemos concluir que la tecnología de posicionamiento de objetos o personas en interiores es suficientemente precisa como para 
+        situar de una forma acertada dentro de una habitación.
+        
+        Se han de tener en cuenta de las limitaciones físicas que esto conlleva puesto
+        que los equipos presentan fluctuaciones en su percepción de rssi así como de la influencia de medio en el que se coloquen.
+
+        Aún con todo esto estamos ante un sistema perfectamente válido para la aplicación que tenemos entre manos siempre y cuando no se requiera de una
+        exactitud o precisión elevada. 
+
+        El mayor punto a favor de este sistema es su relación calidad precio, por escasos euros se puede colocar un dispositivos emisor y posicionarlo 
+        sin miedo a que se pierda puesto que un sustituto sería asequible.
 
 \end{document} 

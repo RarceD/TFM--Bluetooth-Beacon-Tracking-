@@ -4,11 +4,14 @@
 \contentsline {section}{\numberline {2}Firmware}{3}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Emisor BLE o beacon}{3}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Receptor gateway o master}{3}{subsection.2.2}%
-\contentsline {section}{\numberline {3}Herramientas de visualización}{3}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Tecnologías}{3}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Procedimiento}{3}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Simulaciones}{4}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Prueba de concepto}{4}{subsubsection.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}Estabilidad del sistema}{4}{subsubsection.3.3.2}%
-\contentsline {subsubsection}{\numberline {3.3.3}Posicionamiento real}{5}{subsubsection.3.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.4}Prueba en supermercado}{8}{subsubsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {2.2.1}Configuración inicial}{3}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}Funcionamiento}{4}{subsubsection.2.2.2}%
+\contentsline {section}{\numberline {3}Herramientas de visualización}{5}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Tecnologías}{5}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Procedimiento}{5}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Simulaciones}{6}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Prueba de concepto}{6}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Estabilidad del sistema}{6}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}Posicionamiento real}{7}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.4}Prueba en supermercado}{10}{subsubsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.4}Conclusiones}{10}{subsection.3.4}%
