@@ -275,7 +275,8 @@
         para que disponga de una IP pública estática y sea accesible desde cualquier parte del mundo.
     \subsection{Planificación}
         \paragraph{}
-        Para sintetizar el profceso de desarrollo del proyecto técnico se empleará un diagrama GANTT: 
+        Para sintetizar el profceso de desarrollo del proyecto técnico se empleará un diagrama GANTT, en la
+        figura 5 podemos ver la evolución del desarrollo del mismos así como la duración exacta de cada etapa. 
         \begin{center}
             \begin{figure}[ht]
                 \centering
@@ -298,12 +299,13 @@
             presente no solo en Bluetooth sino también en el Wifi (2,4 GHz) o en las bandas de radio industriales, científicas y médicas,
             las denominadas ISM (desde 433MHz a 458.5MHz y desde 860MHz a 960MHz)
             \paragraph{}
-            De las muestras obtenidas en pruebas de campo con bluetooth se puede concluir que se puede llegar a estimar la distanciaç
-            a partir de los valores de rrsi con un error que disminuye cuanto más alejados son los elementos a medir. 
+            De las muestras obtenidas en pruebas de campo con bluetooth se puede concluir que se puede llegar a estimar la distancia
+            a partir de los valores de rrsi con un error que disminuye cuanto más alejados se encuentren los elementos a medir. 
             \paragraph{}
             Los rangos del RRSI se obtiene bien por aproximaciones teóricas o bien por experimentación, esto es debido a que 
             es fuertemente alterado por las condiciones del medio en el que se encuentre. Es importante mencionar también que
-            este parámetro es medido a través de un hardware que rara vez tiene un comportamiento idéntico.
+            este parámetro es medido a través de un hardware que rara vez tiene un comportamiento idéntico, eso explica las fluctuaciones 
+            también.
             \paragraph{}
             Los modelos de cálculo del RRSI se basan en la pérdida de señal en el espacio, como sabemos la potencia de la señal
             disminuye con el cuadrado de la distancia. Esta ecuación de Friis para la transmisión libre en el espacio espacio es 
@@ -321,22 +323,25 @@
                 n = \frac{ P_L(d_i) - P_L(d_0) }{10n*\log_{}\frac{d_i}{d_0}}
             \end{equation}
             \paragraph{}
-            Por lo tanto, y una vez obtenidos los valores de potencia a distintas distancias podemos obtener la ganacia
+            Por lo tanto, y una vez obtenidos los valores de potencia a distintas distancias podemos obtener la ganancia
             de la señal recibida:
             \begin{equation}
                 RRSI [dBm] = -10n*\log_{10} d+ A[dBm]
             \end{equation}
             \paragraph{}
             Disponiendo ya del valor de la constante de pérdidas, d, calculado con la ecuación (2) y los valores
-            de rssi medidos desde la antena receptora a 1 metro de distancia, A, podemos obtener:
+            de rssi medidos desde la antena receptora a 1 metro de distancia, (3), podemos obtener:
             \begin{equation}
                 d= 10^\frac{-(RRSI - A)}{10n}
             \end{equation}
             Llevados a cabo los cálculos por parte del equipo que escucha a los distintos beacons podemos calcular la distancia 
             real a cada uno de ellos. En el caso de que se solapen y dos receptores escuchen el mismo beacon será necesario
             llevar a cabo el proceso de trilateración expuesto a continuación.
-            Para comprobar la fluctiación del parámetro del rssi se ha llevado a cabo la toma de este valor a los largo de un 
-            periodo de tiempo largo y estos son lo resultados a 2 metros y a 3 metros:
+            Para comprobar la fluctiación del parámetro del rssi se ha llevado a cabo la toma de este parámetro a los largo de un 
+            periodo de tiempo largo y los resultados a 2 metros y a 3 metros se encuentran en la figura 6 respectivamente. 
+            \paragraph{}
+            Podemos ver que hay pequeñas flucuaciones y es por ello por lo que será necesario implementar un sencillo filtro para
+            evitar el ruido electromagnético que hemos visto anteriormente.
             \begin{center}
                 \begin{figure}[ht]
                     \centering
@@ -346,8 +351,6 @@
                     \label{fig:mesh5}
                 \end{figure}
             \end{center}
-            Podemos ver que hay pequeñas fluctiaciones y es por ello por lo que será necesario implementar un sencillo filtro para
-            evitar el ruido electromagnético que hemos visto anteriormente.
             \paragraph{}
             Otra prueba llevada a cabo ha sido la de incrementar el número de iBeacons y situarlos a la misma distancia del 
             equipo que escucha, los resultados son los siguientes:
@@ -359,19 +362,19 @@
                     \label{fig:mesh6}
                 \end{figure}
             \end{center}
-            Podemos ver de nuevo que las diferencias son notables, esto de nuevo afianza la idea de implementar
+            Podemos ver de nuevo que las diferencias son notables, esto fianza la necesidad de implementar
             un filtro que no falsee las medidas y cree distancias incoherentes puntuales entre los equipos.
             \paragraph{}
             El filtro más habitual para este tipo de aplicaciones es el denominado Kalman Filter:
             \begin{equation}
                 RSSI_{suavizado} = \alpha * RSSI_{n} + (1-\alpha) * RSSI_{(n-1)}
             \end{equation}
-            Otra opción que experimentalmente me ha dado buenos resultados es la de coger lo 20 valores anteriores,
-            obtener la media y si se separa más de un 30\% el valor nuevo lo rechazo. Con esto consigo eliminar las 
+            Otra opción que experimentalmente ha dado buenos resultados es la de selecionar lo 20 valores anteriores,
+            obtener la media y si se separa más de un 40\% el valor nuevo lo rechazo. Con esto consigo eliminar las 
             fluctuaciones indesadas.
         \subsubsection{Trilateración y posicionamiento}
             Una vez obtenidas las distancias a los distintos equipos que receptores es necesario llevar a cabo el
-            posicionamiento exácto de los equipos, para ello se emplea la trilateración:
+            posicionamiento exácto de los mismos, para ello se emplea la trilateración:
             \begin{center}
                 \begin{figure}[h]
                     \centering
@@ -392,7 +395,16 @@
                     d_{C1}= \sqrt[2]{(x-x_C)^2+(y-y_C)^2}
                 \end{equation}
                 Llevando a cabo la simplificación obtenemos un sistema de ecuaciones que permite calcular la distancia
-                relativa a cada uno de los equipos que escuchan.
+                relativa a cada uno de los equipos que escuchan. En el anexo de software se muestran los resultados con mayor 
+                detalle, en la figura 9 podemos ver un adelanto del posicionamiento de carros de la compra en un supermercado.
+                \begin{center}
+                    \begin{figure}[h]
+                        \centering
+                        \includegraphics[width=0.7\textwidth]{agrupation_3.PNG}
+                        \caption{Posicionamiento de los beacons en carros de supermercado}
+                        \label{fig:mesh7}
+                    \end{figure}
+                \end{center}
                 \paragraph{}
                 % \url{https://journals.sagepub.com/doi/full/10.1155/2014/371350#:~:text=RSSI%3DPt%2DPL(d).&text=In%20this%20formula%2C%20Pt,%2DPL(d).}
     \subsection{Cálculo de consumos energéticos}

@@ -1,7 +1,7 @@
-PWD c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory
+PWD c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software
 INPUT C:\Users\Tecnica2\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.tex
-OUTPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.log
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.tex
+OUTPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.log
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo
@@ -84,23 +84,23 @@ INPUT C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\fancyhdr\fancyhdr.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdfmode.def
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\l3backend\l3backend-pdfmode.def
-INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.aux
-INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.aux
-OUTPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.aux
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.aux
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.aux
+OUTPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.aux
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\refcount\refcount.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\refcount\refcount.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\gettitlestring\gettitlestring.sty
 INPUT C:\Program Files\MiKTeX 2.9\tex\generic\gettitlestring\gettitlestring.sty
-INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.out
-INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.out
-INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.out
-INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.out
-OUTPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.pdf
-INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.out
-INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.out
-OUTPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.out
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.out
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.out
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.out
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.out
+OUTPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.pdf
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.out
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.out
+OUTPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.out
 INPUT C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Program Files\MiKTeX 2.9\tex\latex\epstopdf-pkg\epstopdf-base.sty
@@ -112,8 +112,8 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Users\Tecnica2\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
-INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.toc
-INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.toc
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.toc
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.toc
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr6.tfm
@@ -123,117 +123,65 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmmi6.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy8.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsy6.tfm
+OUTPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.toc
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.lof
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.lof
+OUTPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.lof
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmsl12.tfm
-OUTPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.toc
-INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.lof
-INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.lof
-OUTPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.lof
-INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.lot
-INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.lot
-OUTPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.lot
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
-INPUT images\WifiCounting.jpg
-INPUT .\images\WifiCounting.jpg
-INPUT .\images\WifiCounting.jpg
-INPUT .\images\WifiCounting.jpg
-INPUT .\images\WifiCounting.jpg
-INPUT images\tipos_beacon_ibeacon.PNG
-INPUT .\images\tipos_beacon_ibeacon.PNG
-INPUT .\images\tipos_beacon_ibeacon.PNG
-INPUT .\images\tipos_beacon_ibeacon.PNG
-INPUT .\images\tipos_beacon_ibeacon.PNG
-INPUT images\tipos_beacon_edison.PNG
-INPUT .\images\tipos_beacon_edison.PNG
-INPUT .\images\tipos_beacon_edison.PNG
-INPUT .\images\tipos_beacon_edison.PNG
-INPUT .\images\tipos_beacon_edison.PNG
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmti12.tfm
-INPUT images\espnow.PNG
-INPUT .\images\espnow.PNG
-INPUT .\images\espnow.PNG
-INPUT .\images\espnow.PNG
-INPUT .\images\espnow.PNG
-INPUT images\diagrama de gantt.PNG
-INPUT .\images\diagrama de gantt.PNG
-INPUT .\images\diagrama de gantt.PNG
-INPUT .\images\diagrama de gantt.PNG
-INPUT .\images\diagrama de gantt.PNG
-INPUT images\1_beacon_2_meters.PNG
-INPUT .\images\1_beacon_2_meters.PNG
-INPUT .\images\1_beacon_2_meters.PNG
-INPUT .\images\1_beacon_2_meters.PNG
-INPUT .\images\1_beacon_2_meters.PNG
-INPUT images\1_beacon_3_meters.PNG
-INPUT .\images\1_beacon_3_meters.PNG
-INPUT .\images\1_beacon_3_meters.PNG
-INPUT .\images\1_beacon_3_meters.PNG
-INPUT .\images\1_beacon_3_meters.PNG
-INPUT images\10min_2beacons_same_distance.PNG
-INPUT .\images\10min_2beacons_same_distance.PNG
-INPUT .\images\10min_2beacons_same_distance.PNG
-INPUT .\images\10min_2beacons_same_distance.PNG
-INPUT .\images\10min_2beacons_same_distance.PNG
-INPUT images\trilateration_circle.png
-INPUT .\images\trilateration_circle.png
-INPUT .\images\trilateration_circle.png
-INPUT .\images\trilateration_circle.png
-INPUT .\images\trilateration_circle.png
-INPUT images\agrupation_3.PNG
-INPUT .\images\agrupation_3.PNG
-INPUT .\images\agrupation_3.PNG
-INPUT .\images\agrupation_3.PNG
-INPUT .\images\agrupation_3.PNG
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\jknappen\ec\tcrm1200.tfm
-INPUT images\antenna_design.png
-INPUT .\images\antenna_design.png
-INPUT .\images\antenna_design.png
-INPUT .\images\antenna_design.png
-INPUT .\images\antenna_design.png
-INPUT images\antenna_design_monopole.png
-INPUT .\images\antenna_design_monopole.png
-INPUT .\images\antenna_design_monopole.png
-INPUT .\images\antenna_design_monopole.png
-INPUT .\images\antenna_design_monopole.png
-INPUT images\antenna_types.PNG
-INPUT .\images\antenna_types.PNG
-INPUT .\images\antenna_types.PNG
-INPUT .\images\antenna_types.PNG
-INPUT .\images\antenna_types.PNG
-INPUT images\antennas_variety.jpeg
-INPUT .\images\antennas_variety.jpeg
-INPUT .\images\antennas_variety.jpeg
-INPUT .\images\antennas_variety.jpeg
-INPUT .\images\antennas_variety.jpeg
-INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.aux
-INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.out
-INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.out
-INPUT C:\Users\Tecnica2\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
-INPUT C:\Users\Tecnica2\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
+INPUT ..\..\Memmory\images\road_1.PNG
+INPUT ..\..\Memmory\images\road_1.PNG
+INPUT ..\..\Memmory\images\road_1.PNG
+INPUT ..\..\Memmory\images\road_1.PNG
+INPUT ..\..\Memmory\images\road_1.PNG
+INPUT ..\..\Memmory\images\5min_beacon_rssi.PNG
+INPUT ..\..\Memmory\images\5min_beacon_rssi.PNG
+INPUT ..\..\Memmory\images\5min_beacon_rssi.PNG
+INPUT ..\..\Memmory\images\5min_beacon_rssi.PNG
+INPUT ..\..\Memmory\images\5min_beacon_rssi.PNG
+INPUT ..\..\Memmory\images\config_file_house.PNG
+INPUT ..\..\Memmory\images\config_file_house.PNG
+INPUT ..\..\Memmory\images\config_file_house.PNG
+INPUT ..\..\Memmory\images\config_file_house.PNG
+INPUT ..\..\Memmory\images\config_file_house.PNG
+INPUT ..\..\Memmory\images\house_simulation_1.PNG
+INPUT ..\..\Memmory\images\house_simulation_1.PNG
+INPUT ..\..\Memmory\images\house_simulation_1.PNG
+INPUT ..\..\Memmory\images\house_simulation_1.PNG
+INPUT ..\..\Memmory\images\house_simulation_1.PNG
+INPUT ..\..\Memmory\images\house_simulation_2.PNG
+INPUT ..\..\Memmory\images\house_simulation_2.PNG
+INPUT ..\..\Memmory\images\house_simulation_2.PNG
+INPUT ..\..\Memmory\images\house_simulation_2.PNG
+INPUT ..\..\Memmory\images\house_simulation_2.PNG
+INPUT ..\..\Memmory\images\house_simulation_3.PNG
+INPUT ..\..\Memmory\images\house_simulation_3.PNG
+INPUT ..\..\Memmory\images\house_simulation_3.PNG
+INPUT ..\..\Memmory\images\house_simulation_3.PNG
+INPUT ..\..\Memmory\images\house_simulation_3.PNG
+INPUT ..\..\Memmory\images\agrupation_3.PNG
+INPUT ..\..\Memmory\images\agrupation_3.PNG
+INPUT ..\..\Memmory\images\agrupation_3.PNG
+INPUT ..\..\Memmory\images\agrupation_3.PNG
+INPUT ..\..\Memmory\images\agrupation_3.PNG
+INPUT ..\..\Memmory\images\agrupation_2.PNG
+INPUT ..\..\Memmory\images\agrupation_2.PNG
+INPUT ..\..\Memmory\images\agrupation_2.PNG
+INPUT ..\..\Memmory\images\agrupation_2.PNG
+INPUT ..\..\Memmory\images\agrupation_2.PNG
+INPUT ..\..\Memmory\images\agrupation_1.PNG
+INPUT ..\..\Memmory\images\agrupation_1.PNG
+INPUT ..\..\Memmory\images\agrupation_1.PNG
+INPUT ..\..\Memmory\images\agrupation_1.PNG
+INPUT ..\..\Memmory\images\agrupation_1.PNG
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.aux
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.out
+INPUT c:\Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.out
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmex10.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi12.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi12.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi6.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi6.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi8.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmmi8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr17.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr17.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr6.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr6.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr8.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr8.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsl12.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsl12.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy6.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy6.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy8.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy8.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti12.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti12.pfb
