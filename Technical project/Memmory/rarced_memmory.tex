@@ -27,11 +27,11 @@
         \paragraph{}
         Se pretende conseguir los siguientes objetivos:
         \begin{enumerate}
-            \item Estudio sobre las distintas alternativas para llevar a cabo este tracking de objetos de una forma
-            sencilla y sin requerir de una inversión grande.
+            \item Estudio sobre las distintas alternativas para llevar a cabo el tracking de objetos de una forma
+            sencilla y sin requerir de una gran inversión.
             \item Análisis de las tecnologías existentes para la monitorización en interiores.
             \item Estudio del parámetro RSSI como medida de la potencia de una señal y cálculo de la distancia entre equipos.
-            \item Desarrollo de un sistema de visualización mediante un mapa sobre el que poder ver los equipos en movimiento.
+            \item Desarrollo de un sistema de visualización a través de un mapa sobre el que situar los equipos en movimiento.
             \item Diseño de hardware específico para la aplicación requerida.
             \item Programación tanto del equipo emisor como del receptor así como del algoritmo de visualización.
             \item Pruebas de campo y comprobación del rendimiento del equipo.
@@ -52,7 +52,7 @@
         arma de publicidad muy poderosa que demandan los grandes centros comerciales para llevar a cabo estudios de marketing
         y poder analizar el comportamiento de sus clietes.
         \paragraph{}
-        Además de esta aplicación el mayor nicho de mercado es aplicado a no tener que tocar objetos para interactuar con ellos, 
+        El mayor nicho de mercado es aplicado a no tener que interactuar tocando los objetos, 
         esto teniendo en cuenta los tiempos que corren es una necesidad de numerosas empresas privadas, ayuntamientos 
         y empresas estatales.
         \paragraph{}
@@ -62,7 +62,7 @@
             de las zonas con más afluencia de gente.
             \item Sanidad: Monitorización de pacientes en planta. 
             \item Seguridad: Únicamente los empleados con autorización y proximidad podrán llevar a cabo acciones,
-            esto tiene sentido a la hora de no tener que dar una llave a cada empleado que pueda copiarse.
+            esto tiene sentido a la hora de no tener que dar una llave a cada trabajador que pueda replicarse.
             \item Vandalismo: Conociendo la localización de los equipos dentro de un local cerrado en el momento 
             en el que se deja de situar un elemento en el mapa se puede dar la voz de alarma ante un robo.
             \item Propaganda y nueva forma de publicidad: Activar acciones en función de la localización en determinados
@@ -76,8 +76,8 @@
         última acción es esencial en el proceso, es lo realmente interesante desde el punto de vista del cliente final de esta tecnología.
         En lo que respecta a la obtención de datos de posición relativa de objetos o personas se presentan las siguientes opciones:
         \subsubsection {Wifi}
-            La posibilidad de llevar a cabo el tracking mediante la escucha de wifis es una posibilidad, para ello sería
-            necesario en primer lugar que se colocara un móvil en cada uno de los objetos a identificar. Esto es aceptable 
+            Llevar a cabo el tracking mediante la escucha de wifis es una posibilidad, para ello sería
+            necesario, en primer lugar, que se colocara un móvil en cada uno de los objetos a identificar. Esto es aceptable 
             en el caso de monitorización de personas pero inasumible para objetos.
             \paragraph{}
             El procedimiento consistiría en llevar a cabo un barrido de direcciones MACs que generan los móviles cuando tienen el wifi activado,
@@ -108,7 +108,7 @@
             Mantener un módulo GPS encendido y pretender llegar a una autonomía de años es a día de hoy
             imposible, es por ello por lo que o se emplea un teléfono móvil para llevarlo a cabo, cosa inviable si se pretende 
             monitorizar objetos  y no personas en movimiento, o el tiempo de refresco de los datos ha de ser muy lento, del orden de horas,
-            cosa de nuevo inviable para la aplicación que se presenta.
+            cosa de nuevo inasumible para la aplicación que se presenta.
             \paragraph{}
             Se ha de tener en cuenta también el aumento de precio que supondría un módulo GPS sumado a la antena que lleva consigo de 
             dimensiones nada despreciables. 
@@ -119,7 +119,7 @@
             punto a punto o como es nuestro caso llevar a cabo una red de equipos que emiten en modo broadcast.
             \paragraph{}
             La potencia de emisión va desde los -20 dBm (0.01 mW) hasta los +20 dBm (100 mW). Cuanta mayor potencia de emisión mayor consumo energético
-            del dispositivo pero también conseguiremos una mayor distancia.
+            del dispositivo pero también conseguiremos una mayor distancia de escaneo.
             \paragraph{}
             La forma de envío de datos que más encaja dentro de la tecnología BLE (Bluetooth Low Energy) es Beacon o baliza, un 
             dispositivo que transmite una señal de bluetooth cada cierto tiempo y es visible por cualquier otro equipo que escuche 
@@ -131,8 +131,8 @@
                 decir es un estandar cerrado. 
                 Los iBeacons disponen de los siguientes identificadores:
                 \begin{itemize}
-                    \item UUID: Se basan en enviar el indentificador único de dispositivo, una cadena de
-                    carácteres de 16 bytes que permite caracterizar a caba equipo.
+                    \item UUID: Indentificador único del dispositivo, una cadena de carácteres de 16 bytes
+                    que permite caracterizar a cada equipo.
                     \item Major: Número entero de 0 a 65535, se usa para identificar grupos, un ejemplo sería 
                     asignar un Major común para todos los beacons de una misma planta o habitación.
                     \item Minor: Es también un número entero de 0 a 65535 que se emplea para distinguir un beacon
@@ -149,7 +149,7 @@
                 \item Eddystone: Creado por Google es un protocolo de código abierto. A diferencia del protocolo anterior este 
                 permite transmitir:
                 \begin{itemize}
-                    \item URL: Un url propio de una web, de esta forma se evita la necedad de tener que contar con una app instalada.
+                    \item URL: Un url propio de una web, de esta forma se evita la necesidad de tener que contar con una app instalada.
                     \item UID: Similar al UUID del iBeacon, este parámetro identifica al beacon y permite llevar acciones individuales.
                     \item TML: Permite enviar información relativa al beacon como por ejemplo el porcentaje de batería o valores de sensores.
                 \end{itemize}
@@ -164,18 +164,18 @@
                 \item AltBeacon: Es un protocolo de código abierto que surge como resultado de las incompatibilidades de las dos 
                 tecnologías anteriores, la ventaja principal es que permite más flexibilidad de modificaciones así como compatibilidad 
                 entre sistemas operativos.
-    \subsection{Análisis de soluciones a la subida de datos}
+    \subsection{Análisis de opciones de subida de datos}
         Una vez exploradas las opciones de posicionamiento de los equipos se llevará a cabo el estudio de posibilidades de subida de estos datos
         a la nube, es por ello por lo que se contemplar varias opciones:
         \subsubsection {MQTT}
             MQTT es un protocolo estándar aplicado principalmente al IoT (Internet of Things). Está basado en publicación y 
-            suscripción con un servicio de mensajería push, los mensajes se publican el topics en los que los distintos 
+            suscripción con un servicio de mensajería push, los mensajes se publican en topics en sobre los cuales los distintos 
             dispositivos se encuentran escuchando.
             La base de la comunicación es el Broker, encargado de dar soporte a todos los topics, los clientes inician una 
             conexión TCP/IP con él que se mantiene abierta constantemente hasta que el cliente la finalize. Se emplean los puertos
             1883 o 8883 con seguridad TLS.
             Cada mensaje tiene un QoS (Quality of service), es el mecanismo de calidad del servicio, o lo que es lo mismo es la forma de
-            gestionar la robustez de los mensajes entre clientes ante los fallos de conectividad.
+            gestionar la robustez de los mensajes entre clientes  y ante los fallos de conectividad.
             \begin{itemize}
                 \item QoS 0: Envio una única vez
                 \item QoS 1: Mensaje enviado hasta que se garantiza que se entrega.
@@ -190,19 +190,20 @@
             la siguiente vez en la que se vuelvan a publicar datos. Otra ventaja es que mediante peticiones se pueden llevar a 
             cabo varias a distintos servidores, por el contrario con MQTT solo se puede enviar información a aquellos que estén
             suscritos al mismo tópic.
+            \paragraph{}
             El principal inconveniente es que está demostrado que en una red 3G una petición post es del orden de 93 veces
             más lenta que un mensaje MQTT, con el consiguiente consumo energético que esto conlleva. Otro inconveniente es el hecho 
             de que se requiera de un servidor con una API o endpoint constantemente escuchando a los distintos posts.
         \subsubsection {ESP Now}
-            Se plantea la opción de que no todos los equipos que escuchan a los beacons no tengan internet, es por ello por lo 
-            que se baraja llevar a cabo una red de elementos que escuchan y que envian a un único concentrador encargado de enviar
+            Se plantea la opción de que no todos los equipos que escuchan a los beacons dispongan de conexión a internet, es por ello
+            por lo que se baraja llevar a cabo una red de elementos que escuchan y que envian a un único concentrador encargado de enviar
             esta información a internet por cualquier otro método.
             Es decir, se contempla la posibilidad de establecer una red de elementos que escuchan, para ello se emplea 
             un protocolo de comunicación rápido denominado ESP-NOW, este tiene las siguientes características:
             \begin{itemize}
                 \item Encriptación de las comunicaciones.
                 \item Hasta 250 Bytes de payload o mensaje a enviar.
-                \item Rapidez de comunicación entre esps
+                \item Rapidez de comunicación entre microcontroladores.
             \end{itemize}
             \paragraph{}
             La idea sería la siguiente:
@@ -211,7 +212,7 @@
                 internet por wifi.
                 \item Si lo consigue publica los datos, en el caso de que falle enviará por ESP NOW la información
                 que no puede subir a internet a otro equipo en su misma red que si que pueda.
-                \item Este segundo hará lo mismo hasta que finalmente haya uno que si que pueda subir estos datos.
+                \item Este segundo hará lo mismo hasta que finalmente alcance con uno que sí que pueda subir estos datos.
             \end{enumerate}
             \begin{center}
                 \begin{figure}[ht]
@@ -275,7 +276,7 @@
         para que disponga de una IP pública estática y sea accesible desde cualquier parte del mundo.
     \subsection{Planificación}
         \paragraph{}
-        Para sintetizar el profceso de desarrollo del proyecto técnico se empleará un diagrama GANTT, en la
+        Para sintetizar el proceso de desarrollo del proyecto técnico se empleará un diagrama GANTT, en la
         figura 5 podemos ver la evolución del desarrollo del mismos así como la duración exacta de cada etapa. 
         \begin{center}
             \begin{figure}[ht]
@@ -352,8 +353,8 @@
                 \end{figure}
             \end{center}
             \paragraph{}
-            Otra prueba llevada a cabo ha sido la de incrementar el número de iBeacons y situarlos a la misma distancia del 
-            equipo que escucha, los resultados son los siguientes:
+            Se ha llevado a cabo la prueba de incrementar el número de iBeacons y situarlos a la misma distancia del 
+            equipo que escucha, los resultados se muestran en la figura 7.
             \begin{center}
                 \begin{figure}[ht]
                     \centering
@@ -362,7 +363,7 @@
                     \label{fig:mesh6}
                 \end{figure}
             \end{center}
-            Podemos ver de nuevo que las diferencias son notables, esto fianza la necesidad de implementar
+            Podemos ver de nuevo que las diferencias son notables, esto demuestra la necesidad de implementar
             un filtro que no falsee las medidas y cree distancias incoherentes puntuales entre los equipos.
             \paragraph{}
             El filtro más habitual para este tipo de aplicaciones es el denominado Kalman Filter:
@@ -371,7 +372,7 @@
             \end{equation}
             Otra opción que experimentalmente ha dado buenos resultados es la de selecionar lo 20 valores anteriores,
             obtener la media y si se separa más de un 40\% el valor nuevo lo rechazo. Con esto consigo eliminar las 
-            fluctuaciones indesadas.
+            fluctuaciones indesadas que se podían apreciar en la figura 7.
         \subsubsection{Trilateración y posicionamiento}
             Una vez obtenidas las distancias a los distintos equipos que receptores es necesario llevar a cabo el
             posicionamiento exácto de los mismos, para ello se emplea la trilateración:
@@ -383,16 +384,16 @@
                     \label{fig:mesh7}
                 \end{figure}
             \end{center}
-            Para ello hemos de resolver las siguientes ecuaciones básicas sobre la distancia entre recta y un punto en 
+                Hemos de resolver las siguientes ecuaciones básicas sobre la distancia entre recta y un punto en 
                 una circunferencia:
                 \begin{equation}
-                    d_{A1}= \sqrt[2]{(x-x_A)^2+(y-y_A)^2}
+                    d_{A1}= \sqrt[]{(x-x_A)^2+(y-y_A)^2}
                 \end{equation}
                 \begin{equation}
-                d_{B1}= \sqrt[2]{(x-x_B)^2+(y-y_B)^2}
+                d_{B1}= \sqrt[]{(x-x_B)^2+(y-y_B)^2}
                 \end{equation}
                 \begin{equation}
-                    d_{C1}= \sqrt[2]{(x-x_C)^2+(y-y_C)^2}
+                    d_{C1}= \sqrt[]{(x-x_C)^2+(y-y_C)^2}
                 \end{equation}
                 Llevando a cabo la simplificación obtenemos un sistema de ecuaciones que permite calcular la distancia
                 relativa a cada uno de los equipos que escuchan. En el anexo de software se muestran los resultados con mayor 
@@ -421,7 +422,7 @@
                 apagados. Las únicas parte nos apagadas son los RTC de los periféricos y de la CPU (incluyendo el ULP) y su
                 memoria interna. El chip consume en torno a los 0.15 mA si se mantien encendido el ULP y  10µA si no.
                 En el modo deep sleep todo se encuentra apagado por ello los datos de la memoria del rtc se pierden
-                puesto que se encuentra en reinicio el uP.
+                puesto que se encuentra en reinicio el uC.
                 \item Hibernation mode: A diferencia del modo deep sleep el oscilador de 8MHz y el ULP se encuentran apagados,
                 no es posible almacenar nada de información. Tan solo el RTC funcinando con el reloj de baja velocidad puede funcionar.
                 En este modo de funcionamiento el micro consume sobre los 2.5µA.
@@ -479,64 +480,9 @@
                 \hline
                 \end{tabular}
             \end{center}
-    \subsection{Saturación espectro de frecuencia}
-            Partiendo de la premisa inicial de que a menor frecuencia de señal emitida mayor distancia vamos a conseguir 
-            en las comunicaciones y de que, por el contrario, cuanto menor frecuencia menor volumen de datos es posible.
-            La tecnología bluetooth usa la frecuencia de 2.4GHz ISM (2400 to 2483.5 MHz), esta banda permite una buena relación
-            de compromiso entre distancia y volumen de datos a transmitir.
-            El espectro de frecuencia es amplio y cada banda tiene su aplicación, dentro de las telecomunicaciones
-            distinguimos las siguientes opciones:
-            \begin{itemize}
-                \item Banda ISM: Son las bandas de radio industriales, científicas y médicas, están reservadas a 
-                nivel internacional para estos usos y pueden usarse sin licencias por parte de gobiernos. El uso de esta
-                banda conlleva que todo equipo emisor ha de estar protegido frente a interferencias dentro de su mismo 
-                rango, es decir han de ser tolerantes a errores.
-    
-                Desde el microondas y el mando del garaje hasta el bluetooth, NFC y wifi son ejemplos de tecnologías
-                que emplean este rango que se encuentra comprendido desde 6.78 MHz hasta 244 GHz en distintos tramos,
-                un ejemplo de tramos serían los siguientes:
-                \begin{center}
-                    \addcontentsline{lot}{table}{Rangos de frecuencias por regiones del mundo}
-                    \begin{tabular}{||c | c | c| c ||} 
-                    \hline
-                    Rango  & Bandwidth & Center Frequency & Allocation\\ [0.5ex] 
-                      de frecuencia& MHz & MHz & \\ [0.5ex] 
-                    \hline
-                    \hline
-                        6.765 - 6.975 MHz &	0.03  &	6.78 	 & Locally \\ 
-                        13.553 - 13.567 MHz &	0.014  &	13.56 	 & Global\\ 
-                        26.957 - 27.283 MHz &	0.326  &	27.18 	 & Global\\ 
-                        40.66 - 40.7 MHz &	0.04  &	40.68 	 & Global\\ 
-                        433.05 - 434.79 MHz &	1.74  &	433.92  & EU\\ 
-                         &	& & RU, Africa\\ 
-                        902 - 928 MHz &	26 &	915  &	Americas\\   
-                        2400 - 2500 MHz &	100  &	2450  & Global\\ 
-                        5725 - 5875 MHz &	150  &	5800  & Global\\ 
-                        24 - 24.250 GHz &	250  &	24.125 GHz & 	Global\\ 
-                        61 - 61.5 GHz &	500 &	61.250 GHz & 	Locally \\ 
-                        122 - 123 GHz &	1000  &	122.5 GHz	 & Locally \\ 
-                        244 - 246 GHz &	2000  &	245 GHz & Locally \\ 
-                    \hline
-                    \end{tabular}
-                \end{center}
-                \item Banda no ISM: Para usos no licenciados: Son aquellas que no requieren permisos especiales de las 
-                autoridades para su uso. A nivel mundial el 2,4GHz está dentro de las frecuencias de libre utilización 
-                con ciertas limitaciones en algunos paises.
-
-                Es por ello por lo que al ser libres podemos tener emitiendo a nuestros equipos sin preocuparnos por
-                la legislación existente, la gran versatilidad para tranmitir también conlleva un mayor número de equipos 
-                en este ancho de banda y mayores dificultades.
-            \end{itemize}
-            La frecuencia de 2.4 GHz con su estándar 802.11 b/g/n ha llegado al límite de su capacidad, se han
-            detectado incluso caidas del 30\% en areas urbanas.  
-            La banda ISM de 2.4GHz es, sin lugar a dudas, la que soporta un uso más intensivo, ya que es utilizada en 
-            diferentes estándares de redes Wi-Fi (IEEE 802.11b/g/n) y Bluetooth, (IEEE 802.15.1), llegando en muchas 
-            ocasiones a su completa saturación.
-            \paragraph{}
-            Hemos de tener en cuenta que llevar a cabo una red de cientos de equipos que emitan en frecuencias similares puede
-            llegar a congestionar el sistema o incluso dejarlo inutilizado. A pesar de los riesgos y basándose en estudios que 
-            comprueban la saturación admisible se opta por continuar con el proceso debido al volumen de datos que se emite es 
-            absurdamente bajo.
+            Podemos ver por lo tanto como con una pila AA se podría llevar a conseguir sin problemas una autonomía de casi un 
+            año, es por esta razón y por el tamaño reducido por lo el que se va a optar por esta solución.
+            
     \subsection{Cálculo de ganancia de antenas}
             Una antena convierte la enegía electrica del transmisor en energía electromagnética y viceversa, las antenas pueden ser 
             para recibir, para transmitir o ambas. La localización de la antena, las dimensiones y el diseño pueden afectar drásticamente
@@ -547,14 +493,18 @@
             propagación en el espacio. Este parámetro es esencial a la hora de poder establecer una red de bluetooth de estas dimensiones.
             Las dimensiones de la antena se pueden llegar a obtener mediante:
             \begin{equation}
-                % f(Hz)=\frac{v(m/s)}{\lambda(m)}
+                f(Hz)=\frac{v(m/s)}{\lambda(m)}
+            \end{equation}
+            \begin{equation}
                 \lambda_0(m)=\frac{v_0(m/s)}{f(Hz)} = \frac{2,998*10^8}{2,4*10^9} = 12,49 cm
             \end{equation}
-            Para la aplicación que se plantéa existen dos tipos de antenas:
+            Para la aplicación que tenemos existen dos tipos de antenas:
             \begin{itemize}
                 \item  Antenas monopolo $\lambda$/4: Menor tamaño pero menor eficiencia. 
                 \item  Antenas dipolo $\lambda$ /2: Mayor tamaño pero mejores resultados.
             \end{itemize}
+            Teniendo en cuenta que esta antena estará en una caja más grande y a la vista el tamaño no será un limitante.
+            A modo de ejemplo en la figura 10 se muestra como es internamente cada una de las antenas.
             \begin{center}
                 \begin{figure}[h]
                     \centering
@@ -587,7 +537,7 @@
             \end{enumerate}
             \paragraph{}
             Se han llevado pruebas de campo con distintos modelos y distintas posiciones dentro de la caja, a continuación se muestran las 
-            antenas con las que se han llevado a cabo las pruebas reales.
+            antenas con las que se han llevado a cabo las pruebas reales en la figura 12.
             \begin{center}
                 \begin{figure}[ht]
                     \centering
@@ -598,12 +548,10 @@
             \end{center}
             Las conclusiones obtenidas son que las antenas pcb de $\lambda$ /2 obtiene más uniformidad en las medidas a igual distancia, las 
             antenas de cable son las que mayor rango ofrecen pero también son las menos discretas. En definitiva la antena es algo esencial y más 
-            allá del modelo elegido prioriza más el hecho de que todos los equipos de la red dispongan de exáctamente el mismo modelo.
-            
-
+            allá del modelo elegido prioriza más el hecho de que todos los equipos de la red dispongan de exáctamente el mismo diseño.
 \section{Planos}
     \subsection{Planos mecánicos}
-        Los planos catalogados como mecánicos son denominados así debido a que son la estructura de plástico
+        Los planos catalogados como mecánicos hacen referencia a la estructura de plástico
         que sostiene y protegen a la electrónica de las condiciones ambientales y de contacto directo con las 
         personas.
 
@@ -619,53 +567,52 @@
             \item Esquemático del emisor beacon y esquemático del receptor ESP32
             \item PCB circuito del emisor beacon y PCB circuito del receptor ESP32
         \end{itemize}
-        En el anexo de diseño eléctrico se explican con mayor detalle.
+        En el anexo de diseño eléctrico se explican con mayor detalle el estado del arte de estos diseños.
 \section{Pliego de condiciones}
     \subsection{Prescripciones ténicas generales}
-    \subsubsection{Normativa relativa a radiofrecuencia}
-        \begin{itemize}
-            \item Real Decreto 123/2017, de 24 de febrero, por el que se aprueba el Reglamento
-            sobre el uso del dominio público radioeléctrico.
-            \item Real Decreto 188/2016, de 6 de mayo, por el que se aprueba el Reglamento 
-            por el que se establecen los requisitos para la comercialización, puesta en servicio 
-            y uso de equipos radioeléctricos, y se regula el procedimiento para la evaluación de
-            la conformidad, la vigilancia del mercado y el régimen sancionador de los equipos de
-            telecomunicación.
-            \item Orden IET/614/2015, de 6 de abril, por la que se modifica la Orden IET/787/2013,
-            de 25 de abril, por la que se aprueba el cuadro nacional de atribución de frecuencias.
-            \item Esto viene recogido en la orden ERC/DEC/(01)07.
-            \item Ley 9/2014, de 9 de mayo, General de Telecomunicaciones.
-            \item Orden CTE/23/2002, de 11 de enero, por la que se establecen condiciones para la presentación de determinados
-            estudios y certificaciones por operadores de servicios de radiocomunicaciones. 
-          
-        \end{itemize}
-    \subsubsection{Normativa relativa a bluetooth y wifi}
-        Se ha de tener en cuenta que para poder emplear dispositivos bluetooth se ha de respetar los estándares
-        \begin{itemize}
-            \item IEEE 802.15.1 define Bluetooth 1.x, que puede alcanzar velocidades de 1 Mbps;
-            \item IEEE 802.15.2 recomienda prácticas para utilizar la banda de frecuencia de 2.4 GHz (en convivencia con el wifi)
-            \item IEEE 802.15.3 ofrece velocidades de banda ancha (20 Mbps) con Bluetooth;
-            \item IEEE 802.15.4 es un estándar que define el nivel físico y el de control de acceso al medio 
-            para redes de área personal con tasas bajas de datos (low-rate wireless personal area network, LR-WPAN).
-            Es el estandar más actual
-        \end{itemize}
-        Se ha de tener en cuenta también la clase del disposivo que queda recogida en la siguiente tabla:
-        \begin{center}
-            \addcontentsline{lot}{table}{Potencia y alcance BLE}
-            \begin{tabular}{||c | c |c ||} 
-            \hline
-            Clase & Potencia  & Alcance aproximado\\ [0.5ex] 
-            \hline\hline
-            Clase 1 & 100 mW / 20 dBm & 100 m \\ 
-            Clase 2 & 2,5 mW / 4 dBm & 5 - 10 m \\ 
-            Clase 3 & 1 mW / 0 dBm & 1 m \\ 
-            Clase 4 & 0,5 mW / -3 dBm & 0,5 m \\ 
-            \hline
-            \end{tabular}
-        \end{center}
-        En nuestro caso y teniendo en cuenta la aplicación se ha optado por emitir en los 20 dBm de tal forma
-        que no se aplica mucha normativa porque la potencia isotrópica radiada equivalente total será
-        inferior a 100 mW.
+        \subsubsection{Normativa relativa a radiofrecuencia}
+            \begin{itemize}
+                \item Real Decreto 123/2017, de 24 de febrero, por el que se aprueba el Reglamento
+                sobre el uso del dominio público radioeléctrico.
+                \item Real Decreto 188/2016, de 6 de mayo, por el que se aprueba el Reglamento 
+                por el que se establecen los requisitos para la comercialización, puesta en servicio 
+                y uso de equipos radioeléctricos, y se regula el procedimiento para la evaluación de
+                la conformidad, la vigilancia del mercado y el régimen sancionador de los equipos de
+                telecomunicación.
+                \item Orden IET/614/2015, de 6 de abril, por la que se modifica la Orden IET/787/2013,
+                de 25 de abril, por la que se aprueba el cuadro nacional de atribución de frecuencias.
+                \item Esto viene recogido en la orden ERC/DEC/(01)07.
+                \item Ley 9/2014, de 9 de mayo, General de Telecomunicaciones.
+                \item Orden CTE/23/2002, de 11 de enero, por la que se establecen condiciones para la presentación de determinados
+                estudios y certificaciones por operadores de servicios de radiocomunicaciones. 
+            \end{itemize}
+        \subsubsection{Normativa relativa a bluetooth y wifi}
+            Se ha de tener en cuenta que para poder emplear dispositivos bluetooth se ha de respetar los estándares
+            \begin{itemize}
+                \item IEEE 802.15.1 define Bluetooth 1.x, que puede alcanzar velocidades de 1 Mbps;
+                \item IEEE 802.15.2 recomienda prácticas para utilizar la banda de frecuencia de 2.4 GHz (en convivencia con el wifi)
+                \item IEEE 802.15.3 ofrece velocidades de banda ancha (20 Mbps) con Bluetooth;
+                \item IEEE 802.15.4 es un estándar que define el nivel físico y el de control de acceso al medio 
+                para redes de área personal con tasas bajas de datos (low-rate wireless personal area network, LR-WPAN).
+            \end{itemize}
+            La clase del disposivo que queda recogida en la siguiente tabla es también un dato a tener en cuenta puesto que no 
+            se les aplica la misma normativa.
+            \begin{center}
+                \addcontentsline{lot}{table}{Potencia y alcance BLE}
+                \begin{tabular}{||c | c |c ||} 
+                \hline
+                Clase & Potencia  & Alcance aproximado\\ [0.5ex] 
+                \hline\hline
+                Clase 1 & 100 mW / 20 dBm & 100 m \\ 
+                Clase 2 & 2,5 mW / 4 dBm & 5 - 10 m \\ 
+                Clase 3 & 1 mW / 0 dBm & 1 m \\ 
+                Clase 4 & 0,5 mW / -3 dBm & 0,5 m \\ 
+                \hline
+                \end{tabular}
+            \end{center}
+            En nuestro caso y teniendo en cuenta la aplicación se ha optado por emitir por debajo de los 20 dBm de tal forma
+            que no se aplica apenas normativa debido a que la potencia isotrópica radiada equivalente total será
+            inferior a 100 mW.
 \section{Presupuestos}
     \subsection{Precios unitarios}
         La tabla de precios se va a elaborar en distintas unidades que corresponden al precio por separado de cada
@@ -729,10 +676,9 @@
                 Componente & Cantidad  & Precio unitario  \\ [0.5ex] 
                  & (h) & € \\ [0.5ex] 
                 \hline\hline
-                Diseñador hardware placas circuito impreso   & 10  & 50 \\ 
-                Desarrollador  software sistema embebido     & 350 & 40 \\ 
-                Programador full stack web developer         & 100 & 50 \\ 
-                Instalador de equipos, oficial de 1ª         & 2   & 35 \\ 
+                    Diseñador hardware placas circuito impreso   & 10  & 50 \\ 
+                    Desarrollador  software sistema embebido     & 350 & 40 \\ 
+                    Programador full stack web developer         & 100 & 50 \\ 
                 \hline
                 \end{tabular}
             \end{center}
@@ -766,26 +712,28 @@
              - & Periodo 0 & Periodo 1& Periodo 2 & Periodo 3  \\ [0.5ex] 
             \hline
             \hline
-            Inversión/gastos & 1200€ & 4134€ & 4134€ &4134€ \\ 
-            Flujos de caja   & 1200€ & 4134€ & 4134€ &4134€ \\ 
+                Inversión/gastos &1.200,00 € 	& 4.523,60 € 	& 4.523,60 € 	& 4.523,60 € \\ 
+                Flujos de caja  &-1.200,00 € 	& 7.476,40 € 	& 3.476,40 € 	& 476,40 € \\ 
             \hline
             \end{tabular}
         \end{center}
         Se ha de tener en cuenta que esto es un proyecto real y que los gastos son reales y surgen de pago de
         las cuotas de autónomos, electricidad y gasolina que supone trabajar desde casa. Con todo esto y fijando una cuota
         de COK o coste de oportunidad de capital o mínima rentabilidad admisible para afrontar la realización del
-        proyecto. Se ha establecido de un 10\%.
+        proyecto. Se ha establecido de un 3\%.
     \subsubsection{TIR y VAN}
         El análisis de la tasa de interés de retorno y del valor actual neto son los recogidos en la tabla inferior:
         \begin{center}
             \addcontentsline{lot}{table}{Flujos de caja de la inversión, VAN y TIR}
             \begin{tabular}{||c | c ||} 
             \hline
-            TIR & 234,42 € \\ [0.5ex] 
-            VAN & 34 \%  \\ [0.5ex] 
+                TIR & 9.771,45 € \\ [0.5ex] 
+                VAN & 567  \\ [0.5ex] 
             \hline
             \end{tabular}
         \end{center}
+        Podemos ver como la inversión es rentable asumiento que se vendiera un proyecto al año de diferentes características.
+        El van muestra un valor positivo puesto que la inversión es rentable y asumible.
 \section{Bibliografía}
     \begin{itemize}
         \item \href{https://www.bluetooth.com/}{Web oficial del estándar Bluetooth}
