@@ -16,29 +16,58 @@ I have develop a simple esp32 board that can be powered via 220@VAC and every mi
 
 ### Images beacon ###
 In the following image we can see the pcb of the esp32 beacon device and the master esp32 pcb:
-<img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/emiter_1.PNG" alt="drawing"  height= "200" width="200"/>
-<img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/emiter_2.PNG" alt="drawing"  height= "200" width="200"/>
+
+
+<p align="center">
+    <img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/    Schematics/emiter_1.PNG" alt="drawing"  height= "200" width="200"/>
+    <img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/emiter_2.PNG" alt="drawing"  height= "200" width="200"/>
+</p>
+
+
 The real boards:
-<img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/3d_beacon_1.jpeg" alt="drawing"  height= "200" width="200"/>
-<img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/mechanical_beacon.PNG" alt="drawing"  height= "200" width="200"/>
+
+
+<p align="center">
+    <img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/3d_beacon_2.jpeg" alt="drawing"  height= "200" width="200"/>
+    <img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/mechanical_beacon.PNG" alt="drawing"  height= "200" width="200"/>
+</p>
+
+
 
 ### Images master listener ###
 Kicad files also included:
-<img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/receiver_2.PNG" alt="drawing"  height= "200"  width="200"/>
-<img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/receiver_1.PNG" alt="drawing"  height= "200"  width="200"/>
+
+<p align="center">
+    <img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/receiver_2.PNG" alt="drawing"  height= "200"  width="200"/>
+    <img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/receiver_1.PNG" alt="drawing"  height= "200"  width="200"/>
+</p>
+
+
 The real boards:
-<img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/3d_antenna.jpeg" alt="drawing"  height= "200"  width="200"/>
-<img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/real_master_pcb.jpeg" alt="drawing"  height= "200"  width="200"/>
-<img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/real_beacon_pcb.jpeg" alt="drawing"  height= "200"  width="200"/>
+<p align="center">
+    <img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/3d_antenna.jpeg" alt="drawing"  height= "200"  width="200"/>
+    <img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/real_master_pcb.jpeg" alt="drawing"  height= "200"  width="200"/>
+    <img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/    Schematics/real_beacon_pcb.jpeg" alt="drawing"  height= "200"  width="200"/>
+</p>
+
 
 ## Software ##
 ### Trilateration ###
 If two elements on a net are listened by two masters the algorithm will calculate the middle distance of both of them acording to the strengh of the signal received. Appling trilateration we can obtein the position between three masters and only one beacon sending data. I don't cosider more than 3 masters detected the same beacon.
-<img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Memmory/images/supermarket_3.PNG" alt="drawing"  height= "200"  width="200"/>
+
+
+<p align="center">
+    <img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Memmory/images/supermarket_3.PNG" alt="drawing"  height= "300"/>
+</p>
+
 
 ## 3D Printing ##
 The electronics need a case in order not to be touch by no people, thats why I have design a simple model in Freecad:
-<img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/model_master.PNG" alt="drawing"  height= "200"  width="200"/>
+
+
+<p align="center">
+    <img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/    Schematics/model_master.PNG" alt="drawing"  height= "300" />
+</p>
 
 ## Visualizer ##
 For making the fastest prototype of the visualization tool I have program a pygame console that is connected to mqtt and always listening to the master messages.
