@@ -19,7 +19,7 @@ In the following image we can see the pcb of the esp32 beacon device and the mas
 
 
 <p align="center">
-    <img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/    Schematics/emiter_1.PNG" alt="drawing"  height= "200" width="200"/>
+    <img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/emiter_1.PNG" alt="drawing"  height= "200" width="200"/>
     <img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/emiter_2.PNG" alt="drawing"  height= "200" width="200"/>
 </p>
 
@@ -47,7 +47,7 @@ The real boards:
 <p align="center">
     <img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/3d_antenna.jpeg" alt="drawing"  height= "200"  width="200"/>
     <img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/real_master_pcb.jpeg" alt="drawing"  height= "200"  width="200"/>
-    <img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/    Schematics/real_beacon_pcb.jpeg" alt="drawing"  height= "200"  width="200"/>
+    <img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/real_beacon_pcb.jpeg" alt="drawing"  height= "200"  width="200"/>
 </p>
 
 
@@ -66,7 +66,7 @@ The electronics need a case in order not to be touch by no people, thats why I h
 
 
 <p align="center">
-    <img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/    Schematics/model_master.PNG" alt="drawing"  height= "300" />
+    <img src="https://github.com/RarceD/TFM--Bluetooth-Beacon-Tracking-/blob/master/Technical%20project/Schematics/model_master.PNG" alt="drawing"  height= "300" />
 </p>
 
 ## Visualizer ##
