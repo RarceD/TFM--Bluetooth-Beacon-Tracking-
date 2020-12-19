@@ -12,7 +12,9 @@
 \usepackage{graphicx}
 \usepackage[spanish]{babel}
 \usepackage[hidelinks]{hyperref}
-% \usepackage{graphicx}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
 \usepackage{hyperref}
 \newcommand{\HRule}[1]{\rule{\linewidth}{#1}} 	% Horizontal rule
 
@@ -55,6 +57,9 @@
 \tableofcontents
 \listoffigures
 \cleardoublepage
+\pagestyle{fancy}
+\fancyfoot[R]{Rubén Arce}
+\fancyfoot[L]{BLE Tracking - 2020}
 
 \section{Introducción}
     Los diseños eléctricos y trazado de las pistas del circuito se han llevado a cabo con Kicad en 

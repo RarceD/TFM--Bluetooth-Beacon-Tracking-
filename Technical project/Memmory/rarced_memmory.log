@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  16 DEC 2020 10:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  19 DEC 2020 09:52
 entering extended mode
 **"c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Memmory/rarced_memmory.tex"
 ("c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Memmory/rarced_memmory.tex"
@@ -308,144 +308,144 @@ LaTeX Info: Redefining \% on input line 22.
 LaTeX Info: Redefining \. on input line 22.
 LaTeX Info: Redefining \% on input line 22.
  [3]
-LaTeX Info: Redefining \. on input line 54.
-LaTeX Info: Redefining \% on input line 54.
+LaTeX Info: Redefining \. on input line 56.
+LaTeX Info: Redefining \% on input line 56.
  [4
 
 ]
-LaTeX Info: Redefining \. on input line 78.
-LaTeX Info: Redefining \% on input line 78.
-LaTeX Info: Redefining \. on input line 78.
-LaTeX Info: Redefining \% on input line 78.
+LaTeX Info: Redefining \. on input line 80.
+LaTeX Info: Redefining \% on input line 80.
+LaTeX Info: Redefining \. on input line 80.
+LaTeX Info: Redefining \% on input line 80.
  [5]
 <./images/WifiCounting.jpg, id=276, 752.8125pt x 393.47pt>
 File: ./images/WifiCounting.jpg Graphic file (type jpg)
 <use ./images/WifiCounting.jpg>
-Package pdftex.def Info: ./images/WifiCounting.jpg  used on input line 92.
+Package pdftex.def Info: ./images/WifiCounting.jpg  used on input line 94.
 (pdftex.def)             Requested size: 155.99762pt x 81.53242pt.
-LaTeX Info: Redefining \. on input line 104.
-LaTeX Info: Redefining \% on input line 104.
-LaTeX Info: Redefining \. on input line 104.
-LaTeX Info: Redefining \% on input line 104.
+LaTeX Info: Redefining \. on input line 106.
+LaTeX Info: Redefining \% on input line 106.
+LaTeX Info: Redefining \. on input line 106.
+LaTeX Info: Redefining \% on input line 106.
  [6 <./images/WifiCounting.jpg>]
-LaTeX Info: Redefining \. on input line 133.
-LaTeX Info: Redefining \% on input line 133.
-LaTeX Info: Redefining \. on input line 133.
-LaTeX Info: Redefining \% on input line 133.
+LaTeX Info: Redefining \. on input line 135.
+LaTeX Info: Redefining \% on input line 135.
+LaTeX Info: Redefining \. on input line 135.
+LaTeX Info: Redefining \% on input line 135.
  [7]
 <./images/tipos_beacon_ibeacon.PNG, id=293, 608.2725pt x 243.91125pt>
 File: ./images/tipos_beacon_ibeacon.PNG Graphic file (type png)
 <use ./images/tipos_beacon_ibeacon.PNG>
-Package pdftex.def Info: ./images/tipos_beacon_ibeacon.PNG  used on input line 144.
+Package pdftex.def Info: ./images/tipos_beacon_ibeacon.PNG  used on input line 146.
 (pdftex.def)             Requested size: 234.00238pt x 93.82982pt.
 <./images/tipos_beacon_edison.PNG, id=295, 640.3925pt x 360.34625pt>
 File: ./images/tipos_beacon_edison.PNG Graphic file (type png)
 <use ./images/tipos_beacon_edison.PNG>
-Package pdftex.def Info: ./images/tipos_beacon_edison.PNG  used on input line 159.
+Package pdftex.def Info: ./images/tipos_beacon_edison.PNG  used on input line 161.
 (pdftex.def)             Requested size: 195.0pt x 109.72124pt.
-LaTeX Info: Redefining \. on input line 170.
-LaTeX Info: Redefining \% on input line 170.
-LaTeX Info: Redefining \. on input line 170.
-LaTeX Info: Redefining \% on input line 170.
+LaTeX Info: Redefining \. on input line 172.
+LaTeX Info: Redefining \% on input line 172.
+LaTeX Info: Redefining \. on input line 172.
+LaTeX Info: Redefining \% on input line 172.
  [8 <./images/tipos_beacon_ibeacon.PNG>]
-LaTeX Info: Redefining \. on input line 193.
-LaTeX Info: Redefining \% on input line 193.
-LaTeX Info: Redefining \. on input line 193.
-LaTeX Info: Redefining \% on input line 193.
+LaTeX Info: Redefining \. on input line 195.
+LaTeX Info: Redefining \% on input line 195.
+LaTeX Info: Redefining \. on input line 195.
+LaTeX Info: Redefining \% on input line 195.
  [9 <./images/tipos_beacon_edison.PNG>]
-LaTeX Info: Redefining \. on input line 216.
-LaTeX Info: Redefining \% on input line 216.
-LaTeX Info: Redefining \. on input line 216.
-LaTeX Info: Redefining \% on input line 216.
+LaTeX Info: Redefining \. on input line 218.
+LaTeX Info: Redefining \% on input line 218.
+LaTeX Info: Redefining \. on input line 218.
+LaTeX Info: Redefining \% on input line 218.
  [10]
 <./images/espnow.PNG, id=317, 508.90125pt x 291.33844pt>
 File: ./images/espnow.PNG Graphic file (type png)
 <use ./images/espnow.PNG>
-Package pdftex.def Info: ./images/espnow.PNG  used on input line 220.
+Package pdftex.def Info: ./images/espnow.PNG  used on input line 222.
 (pdftex.def)             Requested size: 155.99762pt x 89.30486pt.
-LaTeX Info: Redefining \. on input line 263.
-LaTeX Info: Redefining \% on input line 263.
-LaTeX Info: Redefining \. on input line 263.
-LaTeX Info: Redefining \% on input line 263.
+LaTeX Info: Redefining \. on input line 265.
+LaTeX Info: Redefining \% on input line 265.
+LaTeX Info: Redefining \. on input line 265.
+LaTeX Info: Redefining \% on input line 265.
  [11 <./images/espnow.PNG>]
 <./images/diagrama de gantt.PNG, id=325, 634.62094pt x 240.9pt>
 File: ./images/diagrama de gantt.PNG Graphic file (type png)
 <use ./images/diagrama de gantt.PNG>
-Package pdftex.def Info: ./images/diagrama de gantt.PNG  used on input line 284.
+Package pdftex.def Info: ./images/diagrama de gantt.PNG  used on input line 286.
 (pdftex.def)             Requested size: 390.0pt x 148.04785pt.
-LaTeX Info: Redefining \. on input line 302.
-LaTeX Info: Redefining \% on input line 302.
-LaTeX Info: Redefining \. on input line 302.
-LaTeX Info: Redefining \% on input line 302.
+LaTeX Info: Redefining \. on input line 304.
+LaTeX Info: Redefining \% on input line 304.
+LaTeX Info: Redefining \. on input line 304.
+LaTeX Info: Redefining \% on input line 304.
  [12]
-LaTeX Info: Redefining \. on input line 316.
-LaTeX Info: Redefining \% on input line 316.
-LaTeX Info: Redefining \. on input line 316.
-LaTeX Info: Redefining \% on input line 316.
+LaTeX Info: Redefining \. on input line 318.
+LaTeX Info: Redefining \% on input line 318.
+LaTeX Info: Redefining \. on input line 318.
+LaTeX Info: Redefining \% on input line 318.
  [13 <./images/diagrama de gantt.PNG>]
 <./images/1_beacon_2_meters.PNG, id=341, 939.51pt x 569.87906pt>
 File: ./images/1_beacon_2_meters.PNG Graphic file (type png)
 <use ./images/1_beacon_2_meters.PNG>
-Package pdftex.def Info: ./images/1_beacon_2_meters.PNG  used on input line 349.
+Package pdftex.def Info: ./images/1_beacon_2_meters.PNG  used on input line 351.
 (pdftex.def)             Requested size: 234.00238pt x 141.93896pt.
 <./images/1_beacon_3_meters.PNG, id=342, 956.82469pt x 526.21594pt>
 File: ./images/1_beacon_3_meters.PNG Graphic file (type png)
 <use ./images/1_beacon_3_meters.PNG>
-Package pdftex.def Info: ./images/1_beacon_3_meters.PNG  used on input line 350.
+Package pdftex.def Info: ./images/1_beacon_3_meters.PNG  used on input line 352.
 (pdftex.def)             Requested size: 214.50119pt x 117.96791pt.
 <./images/10min_2beacons_same_distance.PNG, id=343, 1561.33313pt x 642.90187pt>
 File: ./images/10min_2beacons_same_distance.PNG Graphic file (type png)
 <use ./images/10min_2beacons_same_distance.PNG>
-Package pdftex.def Info: ./images/10min_2beacons_same_distance.PNG  used on input line 361.
+Package pdftex.def Info: ./images/10min_2beacons_same_distance.PNG  used on input line 363.
 (pdftex.def)             Requested size: 234.00238pt x 96.35263pt.
-LaTeX Info: Redefining \. on input line 365.
-LaTeX Info: Redefining \% on input line 365.
-LaTeX Info: Redefining \. on input line 365.
-LaTeX Info: Redefining \% on input line 365.
+LaTeX Info: Redefining \. on input line 367.
+LaTeX Info: Redefining \% on input line 367.
+LaTeX Info: Redefining \. on input line 367.
+LaTeX Info: Redefining \% on input line 367.
  [14]
-LaTeX Info: Redefining \. on input line 379.
-LaTeX Info: Redefining \% on input line 379.
-LaTeX Info: Redefining \. on input line 379.
-LaTeX Info: Redefining \% on input line 379.
+LaTeX Info: Redefining \. on input line 381.
+LaTeX Info: Redefining \% on input line 381.
+LaTeX Info: Redefining \. on input line 381.
+LaTeX Info: Redefining \% on input line 381.
  [15 <./images/1_beacon_2_meters.PNG> <./images/1_beacon_3_meters.PNG>]
 <./images/trilateration_circle.png, id=373, 413.1435pt x 302.3295pt>
 File: ./images/trilateration_circle.png Graphic file (type png)
 <use ./images/trilateration_circle.png>
-Package pdftex.def Info: ./images/trilateration_circle.png  used on input line 382.
+Package pdftex.def Info: ./images/trilateration_circle.png  used on input line 384.
 (pdftex.def)             Requested size: 155.99762pt x 114.1529pt.
 <./images/agrupation_3.PNG, id=374, 673.76718pt x 438.13687pt>
 File: ./images/agrupation_3.PNG Graphic file (type png)
 <use ./images/agrupation_3.PNG>
-Package pdftex.def Info: ./images/agrupation_3.PNG  used on input line 404.
+Package pdftex.def Info: ./images/agrupation_3.PNG  used on input line 406.
 (pdftex.def)             Requested size: 272.99881pt x 177.52467pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \. on input line 411.
-LaTeX Info: Redefining \% on input line 411.
-LaTeX Info: Redefining \. on input line 411.
-LaTeX Info: Redefining \% on input line 411.
+LaTeX Info: Redefining \. on input line 413.
+LaTeX Info: Redefining \% on input line 413.
+LaTeX Info: Redefining \. on input line 413.
+LaTeX Info: Redefining \% on input line 413.
 [16 <./images/10min_2beacons_same_distance.PNG> <./images/trilateration_circle.png>]
-LaTeX Info: Redefining \. on input line 429.
-LaTeX Info: Redefining \% on input line 429.
-LaTeX Info: Redefining \. on input line 429.
-LaTeX Info: Redefining \% on input line 429.
+LaTeX Info: Redefining \. on input line 431.
+LaTeX Info: Redefining \% on input line 431.
+LaTeX Info: Redefining \. on input line 431.
+LaTeX Info: Redefining \% on input line 431.
  [17 <./images/agrupation_3.PNG>]
-LaTeX Info: Redefining \. on input line 486.
-LaTeX Info: Redefining \% on input line 486.
-LaTeX Info: Redefining \. on input line 486.
-LaTeX Info: Redefining \% on input line 486.
+LaTeX Info: Redefining \. on input line 488.
+LaTeX Info: Redefining \% on input line 488.
+LaTeX Info: Redefining \. on input line 488.
+LaTeX Info: Redefining \% on input line 488.
  [18]
 <./images/antenna_design.png, id=397, 477.28313pt x 565.36218pt>
 File: ./images/antenna_design.png Graphic file (type png)
 <use ./images/antenna_design.png>
-Package pdftex.def Info: ./images/antenna_design.png  used on input line 511.
+Package pdftex.def Info: ./images/antenna_design.png  used on input line 513.
 (pdftex.def)             Requested size: 155.99762pt x 184.78436pt.
 <./images/antenna_design_monopole.png, id=398, 397.485pt x 424.58624pt>
 File: ./images/antenna_design_monopole.png Graphic file (type png)
 <use ./images/antenna_design_monopole.png>
-Package pdftex.def Info: ./images/antenna_design_monopole.png  used on input line 512.
+Package pdftex.def Info: ./images/antenna_design_monopole.png  used on input line 514.
 (pdftex.def)             Requested size: 175.49881pt x 187.46638pt.
 
 
@@ -454,65 +454,65 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <./images/antenna_types.PNG, id=399, 414.04688pt x 228.855pt>
 File: ./images/antenna_types.PNG Graphic file (type png)
 <use ./images/antenna_types.PNG>
-Package pdftex.def Info: ./images/antenna_types.PNG  used on input line 527.
+Package pdftex.def Info: ./images/antenna_types.PNG  used on input line 529.
 (pdftex.def)             Requested size: 312.00119pt x 172.45447pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \. on input line 533.
-LaTeX Info: Redefining \% on input line 533.
-LaTeX Info: Redefining \. on input line 533.
-LaTeX Info: Redefining \% on input line 533.
+LaTeX Info: Redefining \. on input line 535.
+LaTeX Info: Redefining \% on input line 535.
+LaTeX Info: Redefining \. on input line 535.
+LaTeX Info: Redefining \% on input line 535.
 [19]
 <./images/antennas_variety.jpeg, id=407, 1517.67pt x 853.68938pt>
 File: ./images/antennas_variety.jpeg Graphic file (type jpg)
 <use ./images/antennas_variety.jpeg>
-Package pdftex.def Info: ./images/antennas_variety.jpeg  used on input line 544.
+Package pdftex.def Info: ./images/antennas_variety.jpeg  used on input line 546.
 (pdftex.def)             Requested size: 195.0pt x 109.6809pt.
-LaTeX Info: Redefining \. on input line 552.
-LaTeX Info: Redefining \% on input line 552.
-LaTeX Info: Redefining \. on input line 552.
-LaTeX Info: Redefining \% on input line 552.
+LaTeX Info: Redefining \. on input line 554.
+LaTeX Info: Redefining \% on input line 554.
+LaTeX Info: Redefining \. on input line 554.
+LaTeX Info: Redefining \% on input line 554.
  [20 <./images/antenna_design.png> <./images/antenna_design_monopole.png>]
-LaTeX Info: Redefining \. on input line 562.
-LaTeX Info: Redefining \% on input line 562.
+LaTeX Info: Redefining \. on input line 564.
+LaTeX Info: Redefining \% on input line 564.
  [21 <./images/antenna_types.PNG> <./images/antennas_variety.jpeg>]
-LaTeX Info: Redefining \. on input line 592.
-LaTeX Info: Redefining \% on input line 592.
-LaTeX Info: Redefining \. on input line 592.
-LaTeX Info: Redefining \% on input line 592.
+LaTeX Info: Redefining \. on input line 594.
+LaTeX Info: Redefining \% on input line 594.
+LaTeX Info: Redefining \. on input line 594.
+LaTeX Info: Redefining \% on input line 594.
  [22]
-LaTeX Info: Redefining \. on input line 643.
-LaTeX Info: Redefining \% on input line 643.
+LaTeX Info: Redefining \. on input line 645.
+LaTeX Info: Redefining \% on input line 645.
  [23]
-LaTeX Info: Redefining \. on input line 684.
-LaTeX Info: Redefining \% on input line 684.
-LaTeX Info: Redefining \. on input line 684.
-LaTeX Info: Redefining \% on input line 684.
+LaTeX Info: Redefining \. on input line 686.
+LaTeX Info: Redefining \% on input line 686.
+LaTeX Info: Redefining \. on input line 686.
+LaTeX Info: Redefining \% on input line 686.
  [24]
-LaTeX Info: Redefining \. on input line 734.
-LaTeX Info: Redefining \% on input line 734.
-LaTeX Info: Redefining \. on input line 734.
-LaTeX Info: Redefining \% on input line 734.
+LaTeX Info: Redefining \. on input line 736.
+LaTeX Info: Redefining \% on input line 736.
+LaTeX Info: Redefining \. on input line 736.
+LaTeX Info: Redefining \% on input line 736.
  [25]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 748.
-LaTeX Info: Redefining \. on input line 748.
-LaTeX Info: Redefining \% on input line 748.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 750.
+LaTeX Info: Redefining \. on input line 750.
+LaTeX Info: Redefining \% on input line 750.
  [26]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 748.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 750.
  ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.aux"
 LaTeX Info: Redefining \. on input line 24.
 LaTeX Info: Redefining \% on input line 24.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 748.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 748.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 750.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 750.
 Package rerunfilecheck Info: File `rarced_memmory.out' has not changed.
 (rerunfilecheck)             Checksum: 105FB3A18B287EF3AF8671A7B3346101;2773.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 748.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 750.
  ) 
 Here is how much of TeX's memory you used:
  7090 strings out of 480930
