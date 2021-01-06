@@ -164,7 +164,6 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmcsc10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
-INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmtt12.tfm
 INPUT C:\Users\Tecnica2\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmss10.tfm
 INPUT C:\Program Files\MiKTeX 2.9\fonts\tfm\public\cm\cmssbx10.tfm
@@ -277,5 +276,3 @@ INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsl10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsl10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmssbx10.pfb
 INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmssbx10.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt12.pfb
-INPUT C:\Program Files\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt12.pfb

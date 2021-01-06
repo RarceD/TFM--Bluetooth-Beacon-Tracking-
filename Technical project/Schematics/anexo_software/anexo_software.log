@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  19 DEC 2020 09:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  6 JAN 2021 11:40
 entering extended mode
 **"c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Schematics/anexo_software/anexo_software.tex"
 ("c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Schematics/anexo_software/anexo_software.tex"
@@ -415,22 +415,22 @@ LaTeX Info: Redefining \% on input line 26.
 )
 \openout1 = `anexo_software.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
 
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -465,14 +465,14 @@ LaTeX Font Info:    ... okay on input line 39.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 39.
+LaTeX Info: Redefining \microtypecontext on input line 40.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 39.
+LaTeX Info: Redefining \showhyphens on input line 40.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -495,10 +495,10 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 )
-LaTeX Info: Redefining \. on input line 39.
-LaTeX Info: Redefining \% on input line 39.
+LaTeX Info: Redefining \. on input line 40.
+LaTeX Info: Redefining \% on input line 40.
 \AtBeginShipoutBox=\box51
-Package hyperref Info: Link coloring OFF on input line 39.
+Package hyperref Info: Link coloring OFF on input line 40.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  ("C:\Program Files\MiKTeX 2.9\tex/latex/refcount\refcount.sty"
@@ -508,9 +508,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count284
 )
-LaTeX Info: Redefining \ref on input line 39.
-LaTeX Info: Redefining \pageref on input line 39.
-LaTeX Info: Redefining \nameref on input line 39.
+LaTeX Info: Redefining \ref on input line 40.
+LaTeX Info: Redefining \pageref on input line 40.
+LaTeX Info: Redefining \nameref on input line 40.
  ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.out") ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.out")
 \@outlinefile=\write3
 \openout3 = `anexo_software.out'.
@@ -522,7 +522,7 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           `bookmarkpackage=false' before \begin{document} and
 (scrartcl)           you can avoid this message adding:
 (scrartcl)             \usepackage{bookmark}
-(scrartcl)           before \begin{document} on input line 39.
+(scrartcl)           before \begin{document} on input line 40.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/bookmark\bookmark.sty"
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
  ("C:\Program Files\MiKTeX 2.9\tex/latex/bookmark\bkm-pdftex-2019-12-03.def"
@@ -530,12 +530,7 @@ File: bkm-pdftex.def 2019/12/03 v1.28 bookmark driver for pdfTeX (HO)
 Package auxhook Info: \AddLineBeginMainAux comes a little late,
 (auxhook)             because the main .aux file is already opened on input line 169.
 \BKM@id=\count285
-))
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmtt' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
- [1
+)) [1
 
 {C:/Users/Tecnica2/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
 
@@ -545,7 +540,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package tocbasic Info: character protrusion at toc deactivated on input line 46.
+Package tocbasic Info: character protrusion at toc deactivated on input line 47.
  ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.toc"
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -580,7 +575,7 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 16.
 \tf@toc=\write4
 \openout4 = `anexo_software.toc'.
 
-Package tocbasic Info: character protrusion at lof deactivated on input line 47.
+Package tocbasic Info: character protrusion at lof deactivated on input line 48.
  ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.lof"
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -603,166 +598,155 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 12.
 
 
 ]
-LaTeX Info: Redefining \. on input line 83.
-LaTeX Info: Redefining \% on input line 83.
+LaTeX Info: Redefining \. on input line 85.
+LaTeX Info: Redefining \% on input line 85.
  [5]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 89.
-
-<../../Memmory/images/AP_wifi_config.jpeg, id=91, 536.75531pt x 1047.16219pt>
+<../../Memmory/images/AP_wifi_config.jpeg, id=89, 536.75531pt x 1047.16219pt>
 File: ../../Memmory/images/AP_wifi_config.jpeg Graphic file (type jpg)
 <use ../../Memmory/images/AP_wifi_config.jpeg>
-Package pdftex.def Info: ../../Memmory/images/AP_wifi_config.jpeg  used on input line 91.
+Package pdftex.def Info: ../../Memmory/images/AP_wifi_config.jpeg  used on input line 93.
 (pdftex.def)             Requested size: 125.47737pt x 244.7889pt.
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 103.
 
-<../../Memmory/images/s_scanning_1.PNG, id=92, 271.76532pt x 146.79843pt>
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 105.
+
+<../../Memmory/images/s_scanning_1.PNG, id=90, 271.76532pt x 146.79843pt>
 File: ../../Memmory/images/s_scanning_1.PNG Graphic file (type png)
 <use ../../Memmory/images/s_scanning_1.PNG>
-Package pdftex.def Info: ../../Memmory/images/s_scanning_1.PNG  used on input line 105.
+Package pdftex.def Info: ../../Memmory/images/s_scanning_1.PNG  used on input line 107.
 (pdftex.def)             Requested size: 209.12683pt x 112.96793pt.
-<../../Memmory/images/s_scanning_2.PNG, id=94, 248.42813pt x 124.96687pt>
+<../../Memmory/images/s_scanning_2.PNG, id=92, 248.42813pt x 124.96687pt>
 File: ../../Memmory/images/s_scanning_2.PNG Graphic file (type png)
 <use ../../Memmory/images/s_scanning_2.PNG>
-Package pdftex.def Info: ../../Memmory/images/s_scanning_2.PNG  used on input line 106.
+Package pdftex.def Info: ../../Memmory/images/s_scanning_2.PNG  used on input line 108.
 (pdftex.def)             Requested size: 209.12683pt x 105.19836pt.
-LaTeX Info: Redefining \. on input line 115.
-LaTeX Info: Redefining \% on input line 115.
-LaTeX Info: Redefining \. on input line 115.
-LaTeX Info: Redefining \% on input line 115.
+LaTeX Info: Redefining \. on input line 117.
+LaTeX Info: Redefining \% on input line 117.
+LaTeX Info: Redefining \. on input line 117.
+LaTeX Info: Redefining \% on input line 117.
 [6 <../../Memmory/images/AP_wifi_config.jpeg>]
-LaTeX Info: Redefining \. on input line 130.
-LaTeX Info: Redefining \% on input line 130.
+LaTeX Info: Redefining \. on input line 129.
+LaTeX Info: Redefining \% on input line 129.
  [7 <../../Memmory/images/s_scanning_1.PNG> <../../Memmory/images/s_scanning_2.PNG>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 131.
+               Default added (so using `tbp') on input line 133.
 
-<../../Memmory/images/road_1.PNG, id=111, 540.51938pt x 399.74344pt>
+<../../Memmory/images/road_1.PNG, id=110, 540.51938pt x 399.74344pt>
 File: ../../Memmory/images/road_1.PNG Graphic file (type png)
 <use ../../Memmory/images/road_1.PNG>
-Package pdftex.def Info: ../../Memmory/images/road_1.PNG  used on input line 133.
+Package pdftex.def Info: ../../Memmory/images/road_1.PNG  used on input line 135.
 (pdftex.def)             Requested size: 292.77629pt x 216.52919pt.
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 146.
-
-<../../Memmory/images/5min_beacon_rssi.PNG, id=112, 1295.59032pt x 558.58687pt>
+<../../Memmory/images/5min_beacon_rssi.PNG, id=111, 1295.59032pt x 558.58687pt>
 File: ../../Memmory/images/5min_beacon_rssi.PNG Graphic file (type png)
 <use ../../Memmory/images/5min_beacon_rssi.PNG>
-Package pdftex.def Info: ../../Memmory/images/5min_beacon_rssi.PNG  used on input line 148.
+Package pdftex.def Info: ../../Memmory/images/5min_beacon_rssi.PNG  used on input line 150.
 (pdftex.def)             Requested size: 418.25368pt x 180.32826pt.
+LaTeX Info: Redefining \. on input line 160.
+LaTeX Info: Redefining \% on input line 160.
+LaTeX Info: Redefining \. on input line 160.
+LaTeX Info: Redefining \% on input line 160.
+[8 <../../Memmory/images/road_1.PNG>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 159.
+               Default added (so using `tbp') on input line 161.
 
-<../../Memmory/images/config_file_house.PNG, id=113, 390.70969pt x 502.87875pt>
+<../../Memmory/images/config_file_house.PNG, id=117, 390.70969pt x 502.87875pt>
 File: ../../Memmory/images/config_file_house.PNG Graphic file (type png)
 <use ../../Memmory/images/config_file_house.PNG>
-Package pdftex.def Info: ../../Memmory/images/config_file_house.PNG  used on input line 161.
+Package pdftex.def Info: ../../Memmory/images/config_file_house.PNG  used on input line 163.
 (pdftex.def)             Requested size: 209.12683pt x 269.16408pt.
-LaTeX Info: Redefining \. on input line 165.
-LaTeX Info: Redefining \% on input line 165.
-LaTeX Info: Redefining \. on input line 165.
-LaTeX Info: Redefining \% on input line 165.
-[8 <../../Memmory/images/road_1.PNG>]
-LaTeX Info: Redefining \. on input line 165.
-LaTeX Info: Redefining \% on input line 165.
-LaTeX Info: Redefining \. on input line 165.
-LaTeX Info: Redefining \% on input line 165.
- [9 <../../Memmory/images/5min_beacon_rssi.PNG> <../../Memmory/images/config_file_house.PNG>]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 177.
+               Default added (so using `tbp') on input line 179.
 
-<../../Memmory/images/house_simulation_1.PNG, id=125, 567.62062pt x 680.5425pt>
+<../../Memmory/images/house_simulation_1.PNG, id=118, 567.62062pt x 680.5425pt>
 File: ../../Memmory/images/house_simulation_1.PNG Graphic file (type png)
 <use ../../Memmory/images/house_simulation_1.PNG>
-Package pdftex.def Info: ../../Memmory/images/house_simulation_1.PNG  used on input line 179.
+Package pdftex.def Info: ../../Memmory/images/house_simulation_1.PNG  used on input line 181.
 (pdftex.def)             Requested size: 209.12683pt x 250.7272pt.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 185.
+               Default added (so using `tbp') on input line 187.
 
-<../../Memmory/images/house_simulation_2.PNG, id=126, 325.96782pt x 161.85469pt>
+<../../Memmory/images/house_simulation_2.PNG, id=119, 325.96782pt x 161.85469pt>
 File: ../../Memmory/images/house_simulation_2.PNG Graphic file (type png)
 <use ../../Memmory/images/house_simulation_2.PNG>
-Package pdftex.def Info: ../../Memmory/images/house_simulation_2.PNG  used on input line 187.
+Package pdftex.def Info: ../../Memmory/images/house_simulation_2.PNG  used on input line 189.
 (pdftex.def)             Requested size: 209.12683pt x 103.841pt.
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 193.
+               Default added (so using `tbp') on input line 195.
 
-<../../Memmory/images/house_simulation_3.PNG, id=127, 565.36218pt x 676.77844pt>
+<../../Memmory/images/house_simulation_3.PNG, id=120, 565.36218pt x 676.77844pt>
 File: ../../Memmory/images/house_simulation_3.PNG Graphic file (type png)
 <use ../../Memmory/images/house_simulation_3.PNG>
-Package pdftex.def Info: ../../Memmory/images/house_simulation_3.PNG  used on input line 195.
+Package pdftex.def Info: ../../Memmory/images/house_simulation_3.PNG  used on input line 197.
 (pdftex.def)             Requested size: 209.12683pt x 250.33182pt.
-LaTeX Info: Redefining \. on input line 207.
-LaTeX Info: Redefining \% on input line 207.
-LaTeX Info: Redefining \. on input line 207.
-LaTeX Info: Redefining \% on input line 207.
-[10 <../../Memmory/images/house_simulation_1.PNG>]
-LaTeX Info: Redefining \. on input line 207.
-LaTeX Info: Redefining \% on input line 207.
-LaTeX Info: Redefining \. on input line 207.
-LaTeX Info: Redefining \% on input line 207.
+LaTeX Info: Redefining \. on input line 206.
+LaTeX Info: Redefining \% on input line 206.
+LaTeX Info: Redefining \. on input line 206.
+LaTeX Info: Redefining \% on input line 206.
+[9 <../../Memmory/images/5min_beacon_rssi.PNG>]
+LaTeX Info: Redefining \. on input line 206.
+LaTeX Info: Redefining \% on input line 206.
+LaTeX Info: Redefining \. on input line 206.
+LaTeX Info: Redefining \% on input line 206.
+ [10 <../../Memmory/images/config_file_house.PNG> <../../Memmory/images/house_simulation_1.PNG>]
+LaTeX Info: Redefining \. on input line 206.
+LaTeX Info: Redefining \% on input line 206.
+LaTeX Info: Redefining \. on input line 206.
+LaTeX Info: Redefining \% on input line 206.
  [11 <../../Memmory/images/house_simulation_2.PNG> <../../Memmory/images/house_simulation_3.PNG>]
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 208.
-
-<../../Memmory/images/agrupation_3.PNG, id=143, 673.76718pt x 438.13687pt>
+<../../Memmory/images/agrupation_3.PNG, id=142, 673.76718pt x 438.13687pt>
 File: ../../Memmory/images/agrupation_3.PNG Graphic file (type png)
 <use ../../Memmory/images/agrupation_3.PNG>
-Package pdftex.def Info: ../../Memmory/images/agrupation_3.PNG  used on input line 210.
+Package pdftex.def Info: ../../Memmory/images/agrupation_3.PNG  used on input line 217.
 (pdftex.def)             Requested size: 292.77629pt x 190.38742pt.
-<../../Memmory/images/agrupation_2.PNG, id=144, 670.75594pt x 437.38406pt>
+<../../Memmory/images/agrupation_2.PNG, id=143, 670.75594pt x 437.38406pt>
 File: ../../Memmory/images/agrupation_2.PNG Graphic file (type png)
 <use ../../Memmory/images/agrupation_2.PNG>
-Package pdftex.def Info: ../../Memmory/images/agrupation_2.PNG  used on input line 212.
+Package pdftex.def Info: ../../Memmory/images/agrupation_2.PNG  used on input line 219.
 (pdftex.def)             Requested size: 292.77629pt x 190.9079pt.
-<../../Memmory/images/agrupation_1.PNG, id=145, 544.28343pt x 118.19156pt>
+<../../Memmory/images/agrupation_1.PNG, id=144, 544.28343pt x 118.19156pt>
 File: ../../Memmory/images/agrupation_1.PNG Graphic file (type png)
 <use ../../Memmory/images/agrupation_1.PNG>
-Package pdftex.def Info: ../../Memmory/images/agrupation_1.PNG  used on input line 214.
+Package pdftex.def Info: ../../Memmory/images/agrupation_1.PNG  used on input line 221.
 (pdftex.def)             Requested size: 209.12683pt x 45.41101pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 237.
-LaTeX Info: Redefining \. on input line 237.
-LaTeX Info: Redefining \% on input line 237.
-LaTeX Info: Redefining \. on input line 237.
-LaTeX Info: Redefining \% on input line 237.
-[12]
-LaTeX Info: Redefining \. on input line 237.
-LaTeX Info: Redefining \% on input line 237.
-LaTeX Info: Redefining \. on input line 237.
-LaTeX Info: Redefining \% on input line 237.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 241.
+LaTeX Info: Redefining \. on input line 241.
+LaTeX Info: Redefining \% on input line 241.
+LaTeX Info: Redefining \. on input line 241.
+LaTeX Info: Redefining \% on input line 241.
+ [12]
+LaTeX Info: Redefining \. on input line 241.
+LaTeX Info: Redefining \% on input line 241.
+LaTeX Info: Redefining \. on input line 241.
+LaTeX Info: Redefining \% on input line 241.
  [13 <../../Memmory/images/agrupation_3.PNG> <../../Memmory/images/agrupation_2.PNG> <../../Memmory/images/agrupation_1.PNG>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 237.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 241.
  ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.aux"
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 237.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 237.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 241.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 241.
 Package rerunfilecheck Info: File `anexo_software.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14081 strings out of 480930
- 241391 string characters out of 2909539
- 671273 words of memory out of 3000000
- 29567 multiletter control sequences out of 15000+200000
- 542458 words of font info for 98 fonts, out of 3000000 for 9000
+ 14082 strings out of 480930
+ 241351 string characters out of 2909539
+ 671277 words of memory out of 3000000
+ 29562 multiletter control sequences out of 15000+200000
+ 542493 words of font info for 101 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,12n,62p,10756b,643s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.pdf" (13 pages, 750638 bytes).
+ 68i,13n,62p,10756b,643s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
+Output written on "c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_software\anexo_software.pdf" (13 pages, 747156 bytes).
 PDF statistics:
- 241 PDF objects out of 1000 (max. 8388607)
+ 237 PDF objects out of 1000 (max. 8388607)
  57 named destinations out of 1000 (max. 500000)
- 25269 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 24757 words of extra memory for PDF output out of 24883 (max. 10000000)
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  4 JAN 2021 17:38
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  4 JAN 2021 18:01
 entering extended mode
 **"c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Memmory/rarced_memmory.tex"
 ("c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Memmory/rarced_memmory.tex"
@@ -841,25 +841,22 @@ LaTeX Info: Redefining \% on input line 566.
 <./images/antenna_types.PNG, id=304, 414.04688pt x 228.855pt>
 File: ./images/antenna_types.PNG Graphic file (type png)
 <use ./images/antenna_types.PNG>
-Package pdftex.def Info: ./images/antenna_types.PNG  used on input line 573.
+Package pdftex.def Info: ./images/antenna_types.PNG  used on input line 574.
 (pdftex.def)             Requested size: 334.60422pt x 184.94899pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \. on input line 587.
-LaTeX Info: Redefining \% on input line 587.
-LaTeX Info: Redefining \. on input line 587.
-LaTeX Info: Redefining \% on input line 587.
+LaTeX Info: Redefining \. on input line 584.
+LaTeX Info: Redefining \% on input line 584.
+LaTeX Info: Redefining \. on input line 584.
+LaTeX Info: Redefining \% on input line 584.
 [19 <./images/antenna_design.png> <./images/antenna_design_monopole.png>]
-<./images/antennas_variety.jpeg, id=315, 1517.67pt x 853.68938pt>
+<./images/antennas_variety.jpeg, id=314, 1517.67pt x 853.68938pt>
 File: ./images/antennas_variety.jpeg Graphic file (type jpg)
 <use ./images/antennas_variety.jpeg>
 Package pdftex.def Info: ./images/antennas_variety.jpeg  used on input line 590.
 (pdftex.def)             Requested size: 209.12683pt x 117.62689pt.
-
-Underfull \vbox (badness 5050) has occurred while \output is active []
-
 LaTeX Info: Redefining \. on input line 603.
 LaTeX Info: Redefining \% on input line 603.
 LaTeX Info: Redefining \. on input line 603.
@@ -870,15 +867,15 @@ LaTeX Info: Redefining \% on input line 638.
  [21]
 Underfull \vbox (badness 5563) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 689.
-LaTeX Info: Redefining \% on input line 689.
+LaTeX Info: Redefining \. on input line 688.
+LaTeX Info: Redefining \% on input line 688.
  [22]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 730.
-LaTeX Info: Redefining \% on input line 730.
-LaTeX Info: Redefining \. on input line 730.
-LaTeX Info: Redefining \% on input line 730.
+LaTeX Info: Redefining \. on input line 729.
+LaTeX Info: Redefining \% on input line 729.
+LaTeX Info: Redefining \. on input line 729.
+LaTeX Info: Redefining \% on input line 729.
  [23]
 LaTeX Info: Redefining \. on input line 783.
 LaTeX Info: Redefining \% on input line 783.
@@ -904,17 +901,17 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 14634 strings out of 480930
- 249816 string characters out of 2909539
+ 14630 strings out of 480930
+ 249770 string characters out of 2909539
  678924 words of memory out of 3000000
  29927 multiletter control sequences out of 15000+200000
- 585120 words of font info for 121 fonts, out of 3000000 for 9000
+ 585037 words of font info for 120 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,11n,62p,10755b,671s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmro10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
-Output written on "c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.pdf" (25 pages, 1732326 bytes).
+Output written on "c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.pdf" (25 pages, 1732152 bytes).
 PDF statistics:
- 559 PDF objects out of 1000 (max. 8388607)
- 169 named destinations out of 1000 (max. 500000)
+ 556 PDF objects out of 1000 (max. 8388607)
+ 167 named destinations out of 1000 (max. 500000)
  31087 words of extra memory for PDF output out of 35830 (max. 10000000)
 

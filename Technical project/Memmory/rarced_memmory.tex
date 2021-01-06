@@ -475,7 +475,7 @@
                 En este modo de funcionamiento el micro consume sobre los 2.5µA.
             \end{itemize}
             \begin{center}
-            \addcontentsline{lot}{table}{Consumos energéticos ESP32}
+            \addcontentsline{lot}{table}{Consumos energéticos ESP32.}
                 \begin{tabular}{||c || c ||} 
                 \hline
                 Modo del ESP32  & Consumo energético  \\ [0.5ex] 
@@ -499,7 +499,7 @@
             se puede ver un análisis en función del tiempo y en consecuencia la duración media de las baterías.
             Se ha puesto como ejemplo una frecuencia de envío de 10 minutos.
             \begin{center}
-                \addcontentsline{lot}{table}{Frecuencia de envío frente a consumo medio}
+                \addcontentsline{lot}{table}{Frecuencia de envío frente a consumo medio.}
                 \begin{tabular}{||c || c ||} 
                 \hline
                 Frecuencia de envío  & Consumo energético  \\ [0.5ex] 
@@ -513,7 +513,7 @@
                 \end{tabular}
             \end{center}
             \begin{center}
-                \addcontentsline{lot}{table}{Frecuencia de envío frente a consumo medio}
+                \addcontentsline{lot}{table}{Frecuencia de envío frente a consumo medio.}
                 \begin{tabular}{|c | c| c| c |} 
                 \hline
                     Tipo de batería & Capacidad  & Autonomía(días) & Autonomía(días)   \\ [0.5ex] 
@@ -556,53 +556,53 @@
                     \centering
                     \includegraphics[width=0.4\textwidth]{antenna_design.png}
                     \includegraphics[width=0.45\textwidth]{antenna_design_monopole.png}
-                    \caption{Diferencia entre antena de media o cuarto de $\lambda$}
+                    \caption{Diferencia entre antena de media o cuarto de $\lambda$.}
                     \label{fig:mesh8}
                 \end{figure}
             \end{center}
             Además se ha de tener en cuenta que las antenas atienden a su diagrama de radiación, es decir, al
-            espectro tridimensional de emisión, según la forma de radiación podemos distinguir:
+            espectro tridimensional de emisión, según la forma de radiación podemos distinguir.
             \begin{itemize}
                 \item  Antenas isotrópica: Emite con la misma densidad en todas las direcciones.
                 \item  Antenas omnidireccionales: Emite en torno a un solo plano isotrópico.
-                \item  Antena directiva: Concentra la energía radiada tan solo en una dirección del espacio.
+                \item  Antena directiva: Concentra la energía radiada en tan solo una dirección del espacio.
             \end{itemize}
+            En la figura 11 podemos ver los lóbulos de emisión y recepción de radiofrecuencia de las distintas antenas.
             \begin{center}
                 \begin{figure}[h]
                     \centering
                     \includegraphics[width=0.8\textwidth]{antenna_types.PNG}
-                    \caption{Tipos de antena en función del espectro de emisión}
+                    \caption{Tipos de antena en función del espectro de emisión.}
                     \label{fig:mesh10}
                 \end{figure}
             \end{center}
-            Dentro del mundo de las antenas existen numerosos modelos u opciones que se enumeran a continuación:
+            Dentro del mundo de las antenas existen numerosos modelos y opciones que se enumeran a continuación:
             \begin{enumerate}
-                \item Antenas de cable, son las más sencillas de todas y como su propio nombre indica es un simple cable soldado a la PCB de una dimensión determinada, esta logitud corresponde con la de una antena monopolo $\lambda$/4. El cable aporta el mayor rendimiento y rango de radiofrecuencia debido a sus dimensiones y a su caracter flexible, moldeable y orientable sin importar  la posición de la tarjeta.
-                \item Antena PCB, es una pista en el propio circuito impreso que puede tener numerosas formas, a diferencia de la de cable esta solo se encuentra en el espacio 2D. Tienen menos eficiciencia que las anteriores y requieren más espacio pero son incluso más baratas.
-                \item Antena de chip, este tipo de antena es una tarjeta o módulo que ocupa menos espacio que cualquiera de las anteriores y tiene un rendimiento intermedio entre ambas otras dos opciones.
+                \item Antenas de cable: son las más sencillas de todas y como su propio nombre indica es un simple cable soldado a la PCB de una dimensión determinada, la cual se corresponde con la de una antena monopolo $\lambda$/4. El cable aporta el mayor rendimiento y rango de radiofrecuencia debido a sus dimensiones y a su caracter flexible, moldeable y orientable sin importar  la posición de la tarjeta.
+                \item Antena PCB: es una pista en el propio circuito impreso que puede tener numerosas formas, a diferencia de la de cable esta solo se encuentra en el espacio 2D. Tiene menos eficiciencia que las anteriores y requiere más espacio pero son incluso más baratas.
+                \item Antena de chip: este tipo de antena es una tarjeta o módulo que ocupa menos espacio que cualquiera de las anteriores y tiene un rendimiento intermedio entre ambas otras dos opciones.
             \end{enumerate}
-            \paragraph{}
-            Se han llevado pruebas de campo con distintos modelos y distintas posiciones dentro de la caja, a continuación se muestran las 
-            antenas con las que se han llevado a cabo las pruebas reales en la figura 12.
+            Por otro lado, se han llevado pruebas de campo con distintos modelos y distintas posiciones dentro de la caja, a continuación se muestran las 
+            antenas con las que se han llevado a cabo las pruebas reales en la figura 12. 
             \begin{center}
                 \begin{figure}[ht]
                     \centering
                     \includegraphics[width=0.5\textwidth]{antennas_variety.jpeg}
-                    \caption{Tipos de antena durante las pruebas de campo}
+                    \caption{Tipos de antena durante las pruebas de campo.}
                     \label{fig:mesh11}
                 \end{figure}
             \end{center}
-            Las conclusiones obtenidas son que las antenas pcb de $\lambda$ /2 obtiene más uniformidad en las medidas a igual distancia, las 
-            antenas de cable son las que mayor rango ofrecen pero también son las menos discretas. En definitiva la antena es algo esencial y más 
+            Las conclusiones obtenidas son que las antenas pcb de $\lambda$ /2 obtienen más uniformidad en las medidas a igual distancia,
+            mientras que las antenas de cable ofrecen mayor rango pero son menos discretas. En definitiva, la antena es algo esencial y más 
             allá del modelo elegido prioriza más el hecho de que todos los equipos de la red dispongan de exactamente el mismo diseño.
 \section{Planos}
     \subsection{Planos mecánicos}
         Los planos catalogados como mecánicos hacen referencia a la estructura de plástico
-        que sostiene y protegen a la electrónica de las condiciones ambientales y de contacto directo con las 
+        que sostiene y protege a la electrónica de las condiciones ambientales y de contacto directo con las 
         personas.
 
         En el anexo de diseño mecánico se especifica con mayor detalle el procedimiento y el prototipado con impresora
-        3D. Se presentan dos planos:
+        3D. A este respecto se presentan dos planos:
         \begin{itemize}
             \item Chasis de receptor o gateway
             \item Chasis de emisor o Beacon
@@ -613,23 +613,23 @@
             \item Esquemático del emisor Beacon y esquemático del receptor ESP32
             \item PCB circuito del emisor Beacon y PCB circuito del receptor ESP32
         \end{itemize}
-        En el anexo de diseño eléctrico se explican con mayor detalle el estado del arte de estos diseños.
+        En en el anexo de diseño eléctrico se explican con mayor detalle.
 \section{Pliego de condiciones}
     \subsection{Prescripciones ténicas generales}
         \subsubsection{Normativa relativa a radiofrecuencia}
             \begin{itemize}
-                \item Real Decreto 123/2017, de 24 de febrero, por el que se aprueba el Reglamento
+                \item Real Decreto 123/2017: de 24 de febrero, por el que se aprueba el Reglamento
                 sobre el uso del dominio público radioeléctrico.
-                \item Real Decreto 188/2016, de 6 de mayo, por el que se aprueba el Reglamento 
+                \item Real Decreto 188/2016: de 6 de mayo, por el que se aprueba el Reglamento 
                 por el que se establecen los requisitos para la comercialización, puesta en servicio 
                 y uso de equipos radioeléctricos, y se regula el procedimiento para la evaluación de
                 la conformidad, la vigilancia del mercado y el régimen sancionador de los equipos de
                 telecomunicación.
-                \item Orden IET/614/2015, de 6 de abril, por la que se modifica la Orden IET/787/2013,
+                \item Orden IET/614/2015: de 6 de abril, por la que se modifica la Orden IET/787/2013,
                 de 25 de abril, por la que se aprueba el cuadro nacional de atribución de frecuencias.
                 \item Esto viene recogido en la orden ERC/DEC/(01)07.
-                \item Ley 9/2014, de 9 de mayo, General de Telecomunicaciones.
-                \item Orden CTE/23/2002, de 11 de enero, por la que se establecen condiciones para la presentación de determinados
+                \item Ley 9/2014: de 9 de mayo, General de Telecomunicaciones.
+                \item Orden CTE/23/2002: de 11 de enero, por la que se establecen condiciones para la presentación de determinados
                 estudios y certificaciones por operadores de servicios de radiocomunicaciones. 
             \end{itemize}
         \subsubsection{Normativa relativa a bluetooth y wifi}
@@ -644,7 +644,7 @@
             La clase del disposivo que queda recogida en la siguiente tabla es también un dato a tener en cuenta puesto que no 
             se les aplica la misma normativa.
             \begin{center}
-                \addcontentsline{lot}{table}{Potencia y alcance BLE}
+                \addcontentsline{lot}{table}{Potencia y alcance BLE.}
                 \begin{tabular}{||c | c |c ||} 
                 \hline
                 Clase & Potencia  & Alcance aproximado\\ [0.5ex] 
@@ -656,17 +656,17 @@
                 \hline
                 \end{tabular}
             \end{center}
-            En nuestro caso y teniendo en cuenta la aplicación se ha optado por emitir por debajo de los 20 dBm de tal forma
-            que no se aplica apenas normativa debido a que la potencia isotrópica radiada equivalente total será
+            En nuestro caso y teniendo en cuenta la aplicación, se ha optado por emitir por debajo de los 20 dBm de tal forma
+            que no se aplica apenas normativa, debido a que la potencia isotrópica radiada equivalente total será
             inferior a 100 mW.
 \section{Presupuestos}
     \subsection{Precios unitarios}
         La tabla de precios se va a elaborar en distintas unidades que corresponden al precio por separado de cada
-        una de las PCBs que se han elaborarado.
+        una de las PCBs que se han diseñado.
     \subsection{Presupuestos parciales}
             \subsubsection{Placa de circuito impreso emisor Beacon}
                 \begin{center}
-                    \addcontentsline{lot}{table}{Tabla de precios Emisor Beacon}
+                    \addcontentsline{lot}{table}{Tabla de precios Emisor Beacon.}
                     \begin{tabular}{||c | c |c ||} 
                     \hline
                     Componente & Cantidad & Precio unitario  \\ [0.5ex] 
@@ -683,13 +683,12 @@
                     Batería Litio Ion                    	&1&	 1,520 € \\ 
                     \hline
                     TOTAL                    	            &1&	 4,009 € \\ 
-
                 \hline
                     \end{tabular}
                 \end{center}
             \subsubsection{Placa de circuito impreso receptor o gateway}
                 \begin{center}
-                    \addcontentsline{lot}{table}{Tabla de precios receptor o gateway}
+                    \addcontentsline{lot}{table}{Tabla de precios receptor o gateway.}
                     \begin{tabular}{||c | c |c ||} 
                     \hline
                     Componente & Cantidad & Precio unitario  \\ [0.5ex] 
@@ -716,7 +715,7 @@
                 \end{center}
             \subsubsection{Desarrollo e instalación}
             \begin{center}
-                \addcontentsline{lot}{table}{Tabla de precios desarrollo e instalación}
+                \addcontentsline{lot}{table}{Tabla de precios desarrollo e instalación.}
                 \begin{tabular}{||c | c |c ||} 
                 \hline
                 Componente & Cantidad  & Precio unitario  \\ [0.5ex] 
@@ -731,7 +730,7 @@
     \subsection{Presupuestos total}
         El presupuesto total se compone de la suma de los presupuestos parciales:
         \begin{center}
-            \addcontentsline{lot}{table}{Presupuesto general}
+            \addcontentsline{lot}{table}{Presupuesto general.}
             \begin{tabular}{||c | c |c ||} 
             \hline
             Unidad & Cantidad & Precio  \\ [0.5ex] 
@@ -752,7 +751,7 @@
         Para llevar a cabo el estudio de viabilidad económica se ha confeccionado la siguiente tabla donde
         podemos ver los flujos de caja así como la inversión inicial del proyecto:
         \begin{center}
-            \addcontentsline{lot}{table}{Flujos de caja de la inversión, VAN y TIR}
+            \addcontentsline{lot}{table}{Flujos de caja de la inversión, VAN y TIR.}
             \begin{tabular}{||c | c |c |c |c ||} 
             \hline
              - & Periodo 0 & Periodo 1& Periodo 2 & Periodo 3  \\ [0.5ex] 
@@ -763,14 +762,14 @@
             \hline
             \end{tabular}
         \end{center}
-        Se ha de tener en cuenta que esto es un proyecto real y que los gastos son reales y surgen de pago de
+        Se ha de tener en cuenta que esto es un proyecto real y que los gastos son verídicos y surgen del pago de
         las cuotas de autónomos, electricidad y gasolina que supone trabajar desde casa. Con todo esto y fijando una cuota
         de COK o coste de oportunidad de capital o mínima rentabilidad admisible para afrontar la realización del
-        proyecto. Se ha establecido de un 3\%.
+        proyecto, se ha establecido de un 3\%.
     \subsubsection{TIR y VAN}
-        El análisis de la tasa de interés de retorno y del valor actual neto son los recogidos en la tabla inferior:
+        El análisis de la tasa de interés de retorno y del valor actual neto son los que se recogen en la siguiente tabla:
         \begin{center}
-            \addcontentsline{lot}{table}{Flujos de caja de la inversión, VAN y TIR}
+            \addcontentsline{lot}{table}{Flujos de caja de la inversión, VAN y TIR.}
             \begin{tabular}{||c | c ||} 
             \hline
                 TIR & 9.771,45 € \\ [0.5ex] 
@@ -778,8 +777,9 @@
             \hline
             \end{tabular}
         \end{center}
-        Podemos ver como la inversión es rentable asumiento que se vendiera un proyecto al año de diferentes características.
-        El van muestra un valor positivo puesto que la inversión es rentable y asumible.
+        Teniendo en consideración todos los aspectos menciones, se puede concluir que la inversión es rentable y asumible
+        si se presupone una venta anual de proyectos con diferentes características.
+
 \section{Bibliografía}
     \begin{itemize}
         \item \href{https://www.bluetooth.com/}{Web oficial del estándar Bluetooth}
