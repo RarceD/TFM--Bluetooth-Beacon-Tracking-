@@ -68,7 +68,7 @@
         Este proyecto surge como respuesta a la necesidad de poder localizar un número elevado de equipos en 
         constante movimiento con exactitud en un espacio cerrado.
         \paragraph{}
-       Los siguientes objetivos son los siguientes:
+       Los objetivos principales son los siguientes:
         \begin{enumerate}
             \item Estudiar las distintas alternativas para llevar a cabo el tracking de objetos de una forma
             sencilla y sin requerir de una gran inversión.
@@ -106,7 +106,7 @@
             de las zonas con más afluencia de gente.
             \item Sanidad: Monitorización de pacientes en planta. 
             \item Seguridad: Únicamente los empleados con autorización y proximidad podrán llevar a cabo acciones,
-            esto tiene sentido a la hora de no tener que dar una llave a cada trabajador que pueda replicarse.
+            esto tiene sentido a la hora de no tener que dar a cada trabajador una llave que pueda replicarse.
             \item Vandalismo: Conociendo la localización de los equipos dentro de un local cerrado, en el momento 
             en el que se deja de situar un elemento en el mapa, se puede dar la voz de alarma ante un robo.
             \item Propaganda y nueva forma de publicidad: Activar acciones en función de la localización en determinados
@@ -121,7 +121,7 @@
         En lo que respecta a la obtención de datos de posición relativa de objetos o personas se presentan las siguientes opciones:
         \subsubsection {Wifi}
             Llevar a cabo el tracking mediante la escucha de wifis es una posibilidad, para ello sería
-            necesario que , inicialmente, se colocara un móvil en cada uno de los objetos a identificar. Esto es aceptable 
+            necesario que, inicialmente, se colocara un móvil en cada uno de los objetos a identificar. Esto es aceptable 
             en el caso de monitorización de personas pero inasumible para objetos.
             \paragraph{}
             El procedimiento consistiría en llevar a cabo un barrido de direcciones MACs que generan los móviles cuando tienen el wifi activado,
@@ -150,8 +150,9 @@
             que presenta es el elevado consumo energético comparado con el wifi o el bluetooth.
             \paragraph{}
             Mantener un módulo GPS encendido y pretender llegar a una autonomía de años es a día de hoy
-            imposible, es por ello por lo que o se emplea un teléfono móvil para llevarlo a cabo, cosa inviable si se pretende 
-            monitorizar objetos  y no personas en movimiento, o el tiempo de refresco de los datos ha de ser muy lento, del orden de horas,
+            imposible, es por ello por lo que existen dos opciones.
+            O se emplea un teléfono móvil para llevarlo a cabo, cosa inviable si se pretende monitorizar objetos y no personas en
+            movimiento, o el tiempo de refresco de los datos ha de ser muy lento, del orden de horas,
             cosa de nuevo inasumible para la aplicación que se presenta.
             \paragraph{}
             Por otro lado, se ha de tener en cuenta también el aumento de precio que supondría un módulo GPS sumado a la antena que lleva consigo de 
@@ -221,12 +222,13 @@
             Cada mensaje tiene un QoS (Quality of service), es el mecanismo de calidad del servicio, o lo que es lo mismo es la forma de
             gestionar la robustez de los mensajes entre clientes y ante los fallos de conectividad.
             \begin{itemize}
-                \item QoS 0: envío una única vez
+                \item QoS 0: Envío una única vez
                 \item QoS 1: Mensaje enviado hasta que se garantiza que se entrega.
                 \item QoS 2: Garantizado que cada mensaje se entrega al suscriptor por una única vez.
             \end{itemize}
-            Esta es una opción para que los equipos que escuchan a los beacons y envían la información a un mismo
-            topic en el que el sistema de visualiación está escuchando.
+            Esta es una opción para conseguir que los equipos que escuchan a los beacons envíen a un mismo
+            topic la información obtenida por bluetooth. Será el sistema de visualiación el que esté escuchando también en 
+            el mismo topic.
         \subsubsection {HTTP Post}
             A través del protocolo de transferencia de hipertexto se puede llevar a cabo una petición post, la cual consiste en que
             un servidor acepte los datos recibidos por el microcontrolador.
@@ -307,9 +309,9 @@
             \end{tabular}
         \end{center}   
         La elección en este caso está mucho más ajustada, en el caso de que se pueda conectar a todos los equipos que 
-        escuchan a internet el ganador será la opción de MQTT, puesto que la forma más fácil de llevar a cabo el envío de datos.
+        escuchan a internet el ganador será la opción de MQTT, puesto que es la forma más fácil de llevar a cabo el envío de datos.
 
-        En el caso de que no llegue la señal wifi a todos los puntos en los que se decida llevar a cabo el tracking de objetos 
+        Si que no lleguara la señal wifi a todos los puntos en los que se decida llevar a cabo el tracking de objetos 
         surge un problema puesto que perderemos esos datos. La solución es hacer que este equipo, que no tiene conexión a internet,
         envíe los datos por ESP NOW a otro que si que sea capaz de subir tanto su información como la de su compañero al broker por MQTT.
 
@@ -322,7 +324,7 @@
     \subsection{Planificación}
         \paragraph{}
         Para sintetizar el proceso de desarrollo del proyecto técnico se empleará un diagrama GANTT. En la
-        figura 5 podemos ver la evolución del desarrollo del mismos así como la duración exacta de cada etapa. 
+        figura 5 podemos ver la evolución del desarrollo del mismo así como la duración exacta de cada etapa. 
         \begin{center}
             \begin{figure}[ht]
                 \centering
@@ -354,7 +356,7 @@
             también.
             \paragraph{}
             Los modelos de cálculo del Rssi se basan en la pérdida de señal en el espacio, como sabemos la potencia de la señal
-            disminuye con el cuadrado de la distancia. Esta ecuación de Friis para la transmisión libre en el espacio espacio es 
+            disminuye con el cuadrado de la distancia. Esta ecuación de Friis para la transmisión libre en el espacio es 
             una fórmula teórica, existen aproximaciones obtenidas por métodos empíricos:
             \begin{equation}
                 P_L(d) [dB] = P_L(d_0) [dB] + 10n * \log_{10} \frac{d_i}{d_0} 
@@ -493,7 +495,7 @@
             A la hora de llevar a cabo la decisión sobre cómo llevar a cabo el protocolo de comunicación se ha de tener en cuenta 
             el consumo de los equipos, en especial en lo que respecta a los beacons.
             \paragraph{}
-            Es por ello por lo que se ha optado por dormir al equipo durante 58 segundos, despertárlo,
+            Es por ello por lo que se ha optado por dormir al equipo durante 58 segundos, despertarlo,
             enviar su trama bluetooth y luego dormirlo hasta la siguiente vez que despierte.
             Con esto conseguimos un consumo que varía en función de la frecuencia de envío. En las siguiente tablas
             se puede ver un análisis en función del tiempo y en consecuencia la duración media de las baterías.
@@ -561,7 +563,7 @@
                 \end{figure}
             \end{center}
             Además se ha de tener en cuenta que las antenas atienden a su diagrama de radiación, es decir, al
-            espectro tridimensional de emisión, según la forma de radiación podemos distinguir.
+            espectro tridimensional de emisión. Según la forma de radiación podemos distinguir.
             \begin{itemize}
                 \item  Antenas isotrópica: Emite con la misma densidad en todas las direcciones.
                 \item  Antenas omnidireccionales: Emite en torno a un solo plano isotrópico.

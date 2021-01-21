@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  16 JAN 2021 09:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  21 JAN 2021 20:23
 entering extended mode
 **"c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Memmory/rarced_memmory.tex"
 ("c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Memmory/rarced_memmory.tex"
@@ -708,85 +708,85 @@ File: ./images/WifiCounting.jpg Graphic file (type jpg)
 <use ./images/WifiCounting.jpg>
 Package pdftex.def Info: ./images/WifiCounting.jpg  used on input line 136.
 (pdftex.def)             Requested size: 167.2989pt x 87.44022pt.
-LaTeX Info: Redefining \. on input line 164.
-LaTeX Info: Redefining \% on input line 164.
-LaTeX Info: Redefining \. on input line 164.
-LaTeX Info: Redefining \% on input line 164.
+LaTeX Info: Redefining \. on input line 165.
+LaTeX Info: Redefining \% on input line 165.
+LaTeX Info: Redefining \. on input line 165.
+LaTeX Info: Redefining \% on input line 165.
  [7 <./images/WifiCounting.jpg>]
 <./images/tipos_beacon_ibeacon.PNG, id=176, 608.2725pt x 243.91125pt>
 File: ./images/tipos_beacon_ibeacon.PNG Graphic file (type png)
 <use ./images/tipos_beacon_ibeacon.PNG>
-Package pdftex.def Info: ./images/tipos_beacon_ibeacon.PNG  used on input line 188.
+Package pdftex.def Info: ./images/tipos_beacon_ibeacon.PNG  used on input line 189.
 (pdftex.def)             Requested size: 250.95476pt x 100.62952pt.
-LaTeX Info: Redefining \. on input line 196.
-LaTeX Info: Redefining \% on input line 196.
-LaTeX Info: Redefining \. on input line 196.
-LaTeX Info: Redefining \% on input line 196.
+LaTeX Info: Redefining \. on input line 197.
+LaTeX Info: Redefining \% on input line 197.
+LaTeX Info: Redefining \. on input line 197.
+LaTeX Info: Redefining \% on input line 197.
  [8 <./images/tipos_beacon_ibeacon.PNG>]
 <./images/tipos_beacon_edison.PNG, id=188, 640.3925pt x 360.34625pt>
 File: ./images/tipos_beacon_edison.PNG Graphic file (type png)
 <use ./images/tipos_beacon_edison.PNG>
-Package pdftex.def Info: ./images/tipos_beacon_edison.PNG  used on input line 203.
+Package pdftex.def Info: ./images/tipos_beacon_edison.PNG  used on input line 204.
 (pdftex.def)             Requested size: 209.12683pt x 117.67198pt.
-LaTeX Info: Redefining \. on input line 223.
-LaTeX Info: Redefining \% on input line 223.
-LaTeX Info: Redefining \. on input line 223.
-LaTeX Info: Redefining \% on input line 223.
+LaTeX Info: Redefining \. on input line 224.
+LaTeX Info: Redefining \% on input line 224.
+LaTeX Info: Redefining \. on input line 224.
+LaTeX Info: Redefining \% on input line 224.
  [9 <./images/tipos_beacon_edison.PNG>]
-LaTeX Info: Redefining \. on input line 252.
-LaTeX Info: Redefining \% on input line 252.
-LaTeX Info: Redefining \. on input line 252.
-LaTeX Info: Redefining \% on input line 252.
+LaTeX Info: Redefining \. on input line 253.
+LaTeX Info: Redefining \% on input line 253.
+LaTeX Info: Redefining \. on input line 253.
+LaTeX Info: Redefining \% on input line 253.
  [10]
 <./images/espnow.PNG, id=203, 508.90125pt x 291.33844pt>
 File: ./images/espnow.PNG Graphic file (type png)
 <use ./images/espnow.PNG>
-Package pdftex.def Info: ./images/espnow.PNG  used on input line 265.
+Package pdftex.def Info: ./images/espnow.PNG  used on input line 267.
 (pdftex.def)             Requested size: 167.2989pt x 95.77745pt.
-LaTeX Info: Redefining \. on input line 297.
-LaTeX Info: Redefining \% on input line 297.
-LaTeX Info: Redefining \. on input line 297.
-LaTeX Info: Redefining \% on input line 297.
+LaTeX Info: Redefining \. on input line 296.
+LaTeX Info: Redefining \% on input line 296.
+LaTeX Info: Redefining \. on input line 296.
+LaTeX Info: Redefining \% on input line 296.
  [11 <./images/espnow.PNG>]
 <./images/diagrama de gantt.PNG, id=215, 894.34125pt x 294.34969pt>
 File: ./images/diagrama de gantt.PNG Graphic file (type png)
 <use ./images/diagrama de gantt.PNG>
-Package pdftex.def Info: ./images/diagrama de gantt.PNG  used on input line 329.
+Package pdftex.def Info: ./images/diagrama de gantt.PNG  used on input line 331.
 (pdftex.def)             Requested size: 418.25368pt x 137.65718pt.
-LaTeX Info: Redefining \. on input line 347.
-LaTeX Info: Redefining \% on input line 347.
-LaTeX Info: Redefining \. on input line 347.
-LaTeX Info: Redefining \% on input line 347.
+LaTeX Info: Redefining \. on input line 349.
+LaTeX Info: Redefining \% on input line 349.
+LaTeX Info: Redefining \. on input line 349.
+LaTeX Info: Redefining \% on input line 349.
  [12]
-LaTeX Info: Redefining \. on input line 370.
-LaTeX Info: Redefining \% on input line 370.
-LaTeX Info: Redefining \. on input line 370.
-LaTeX Info: Redefining \% on input line 370.
+LaTeX Info: Redefining \. on input line 372.
+LaTeX Info: Redefining \% on input line 372.
+LaTeX Info: Redefining \. on input line 372.
+LaTeX Info: Redefining \% on input line 372.
  [13 <./images/diagrama de gantt.PNG>]
 <./images/1_beacon_2_meters.PNG, id=247, 939.51pt x 569.87906pt>
 File: ./images/1_beacon_2_meters.PNG Graphic file (type png)
 <use ./images/1_beacon_2_meters.PNG>
-Package pdftex.def Info: ./images/1_beacon_2_meters.PNG  used on input line 408.
+Package pdftex.def Info: ./images/1_beacon_2_meters.PNG  used on input line 410.
 (pdftex.def)             Requested size: 250.95476pt x 152.21722pt.
 <./images/1_beacon_3_meters.PNG, id=248, 956.82469pt x 526.21594pt>
 File: ./images/1_beacon_3_meters.PNG Graphic file (type png)
 <use ./images/1_beacon_3_meters.PNG>
-Package pdftex.def Info: ./images/1_beacon_3_meters.PNG  used on input line 409.
+Package pdftex.def Info: ./images/1_beacon_3_meters.PNG  used on input line 411.
 (pdftex.def)             Requested size: 230.04079pt x 126.5112pt.
 <./images/10min_2beacons_same_distance.PNG, id=249, 1561.33313pt x 642.90187pt>
 File: ./images/10min_2beacons_same_distance.PNG Graphic file (type png)
 <use ./images/10min_2beacons_same_distance.PNG>
-Package pdftex.def Info: ./images/10min_2beacons_same_distance.PNG  used on input line 417.
+Package pdftex.def Info: ./images/10min_2beacons_same_distance.PNG  used on input line 419.
 (pdftex.def)             Requested size: 250.95476pt x 103.32745pt.
 <./images/trilateration_circle.png, id=250, 413.1435pt x 302.3295pt>
 File: ./images/trilateration_circle.png Graphic file (type png)
 <use ./images/trilateration_circle.png>
-Package pdftex.def Info: ./images/trilateration_circle.png  used on input line 429.
+Package pdftex.def Info: ./images/trilateration_circle.png  used on input line 431.
 (pdftex.def)             Requested size: 167.2989pt x 122.42432pt.
-LaTeX Info: Redefining \. on input line 432.
-LaTeX Info: Redefining \% on input line 432.
-LaTeX Info: Redefining \. on input line 432.
-LaTeX Info: Redefining \% on input line 432.
+LaTeX Info: Redefining \. on input line 434.
+LaTeX Info: Redefining \% on input line 434.
+LaTeX Info: Redefining \. on input line 434.
+LaTeX Info: Redefining \% on input line 434.
  [14]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -794,121 +794,121 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <./images/agrupation_3.PNG, id=269, 673.76718pt x 438.13687pt>
 File: ./images/agrupation_3.PNG Graphic file (type png)
 <use ./images/agrupation_3.PNG>
-Package pdftex.def Info: ./images/agrupation_3.PNG  used on input line 451.
+Package pdftex.def Info: ./images/agrupation_3.PNG  used on input line 453.
 (pdftex.def)             Requested size: 292.77629pt x 190.38742pt.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \. on input line 458.
-LaTeX Info: Redefining \% on input line 458.
-LaTeX Info: Redefining \. on input line 458.
-LaTeX Info: Redefining \% on input line 458.
+LaTeX Info: Redefining \. on input line 460.
+LaTeX Info: Redefining \% on input line 460.
+LaTeX Info: Redefining \. on input line 460.
+LaTeX Info: Redefining \% on input line 460.
 [15 <./images/1_beacon_2_meters.PNG> <./images/1_beacon_3_meters.PNG>]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 470.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 472.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/lm\ts1lmr.fd"
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Info: Redefining \. on input line 473.
-LaTeX Info: Redefining \% on input line 473.
-LaTeX Info: Redefining \. on input line 473.
-LaTeX Info: Redefining \% on input line 473.
+LaTeX Info: Redefining \. on input line 475.
+LaTeX Info: Redefining \% on input line 475.
+LaTeX Info: Redefining \. on input line 475.
+LaTeX Info: Redefining \% on input line 475.
  [16 <./images/10min_2beacons_same_distance.PNG> <./images/trilateration_circle.png>]
-LaTeX Info: Redefining \. on input line 514.
-LaTeX Info: Redefining \% on input line 514.
-LaTeX Info: Redefining \. on input line 514.
-LaTeX Info: Redefining \% on input line 514.
+LaTeX Info: Redefining \. on input line 516.
+LaTeX Info: Redefining \% on input line 516.
+LaTeX Info: Redefining \. on input line 516.
+LaTeX Info: Redefining \% on input line 516.
  [17 <./images/agrupation_3.PNG>]
 <./images/antenna_design.png, id=296, 477.28313pt x 565.36218pt>
 File: ./images/antenna_design.png Graphic file (type png)
 <use ./images/antenna_design.png>
-Package pdftex.def Info: ./images/antenna_design.png  used on input line 557.
+Package pdftex.def Info: ./images/antenna_design.png  used on input line 559.
 (pdftex.def)             Requested size: 167.2989pt x 198.1644pt.
 <./images/antenna_design_monopole.png, id=297, 397.485pt x 424.58624pt>
 File: ./images/antenna_design_monopole.png Graphic file (type png)
 <use ./images/antenna_design_monopole.png>
-Package pdftex.def Info: ./images/antenna_design_monopole.png  used on input line 558.
+Package pdftex.def Info: ./images/antenna_design_monopole.png  used on input line 560.
 (pdftex.def)             Requested size: 188.21288pt x 201.05212pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \. on input line 566.
-LaTeX Info: Redefining \% on input line 566.
-LaTeX Info: Redefining \. on input line 566.
-LaTeX Info: Redefining \% on input line 566.
+LaTeX Info: Redefining \. on input line 568.
+LaTeX Info: Redefining \% on input line 568.
+LaTeX Info: Redefining \. on input line 568.
+LaTeX Info: Redefining \% on input line 568.
 [18]
 <./images/antenna_types.PNG, id=304, 414.04688pt x 228.855pt>
 File: ./images/antenna_types.PNG Graphic file (type png)
 <use ./images/antenna_types.PNG>
-Package pdftex.def Info: ./images/antenna_types.PNG  used on input line 574.
+Package pdftex.def Info: ./images/antenna_types.PNG  used on input line 576.
 (pdftex.def)             Requested size: 334.60422pt x 184.94899pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \. on input line 584.
-LaTeX Info: Redefining \% on input line 584.
-LaTeX Info: Redefining \. on input line 584.
-LaTeX Info: Redefining \% on input line 584.
+LaTeX Info: Redefining \. on input line 586.
+LaTeX Info: Redefining \% on input line 586.
+LaTeX Info: Redefining \. on input line 586.
+LaTeX Info: Redefining \% on input line 586.
 [19 <./images/antenna_design.png> <./images/antenna_design_monopole.png>]
 <./images/antennas_variety.jpeg, id=314, 1517.67pt x 853.68938pt>
 File: ./images/antennas_variety.jpeg Graphic file (type jpg)
 <use ./images/antennas_variety.jpeg>
-Package pdftex.def Info: ./images/antennas_variety.jpeg  used on input line 590.
+Package pdftex.def Info: ./images/antennas_variety.jpeg  used on input line 592.
 (pdftex.def)             Requested size: 209.12683pt x 117.62689pt.
-LaTeX Info: Redefining \. on input line 603.
-LaTeX Info: Redefining \% on input line 603.
-LaTeX Info: Redefining \. on input line 603.
-LaTeX Info: Redefining \% on input line 603.
+LaTeX Info: Redefining \. on input line 605.
+LaTeX Info: Redefining \% on input line 605.
+LaTeX Info: Redefining \. on input line 605.
+LaTeX Info: Redefining \% on input line 605.
  [20 <./images/antenna_types.PNG> <./images/antennas_variety.jpeg>]
-LaTeX Info: Redefining \. on input line 638.
-LaTeX Info: Redefining \% on input line 638.
+LaTeX Info: Redefining \. on input line 640.
+LaTeX Info: Redefining \% on input line 640.
  [21]
 Underfull \vbox (badness 5563) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 688.
-LaTeX Info: Redefining \% on input line 688.
+LaTeX Info: Redefining \. on input line 690.
+LaTeX Info: Redefining \% on input line 690.
  [22]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 729.
-LaTeX Info: Redefining \% on input line 729.
-LaTeX Info: Redefining \. on input line 729.
-LaTeX Info: Redefining \% on input line 729.
+LaTeX Info: Redefining \. on input line 731.
+LaTeX Info: Redefining \% on input line 731.
+LaTeX Info: Redefining \. on input line 731.
+LaTeX Info: Redefining \% on input line 731.
  [23]
-LaTeX Info: Redefining \. on input line 783.
-LaTeX Info: Redefining \% on input line 783.
-LaTeX Info: Redefining \. on input line 783.
-LaTeX Info: Redefining \% on input line 783.
+LaTeX Info: Redefining \. on input line 785.
+LaTeX Info: Redefining \% on input line 785.
+LaTeX Info: Redefining \. on input line 785.
+LaTeX Info: Redefining \% on input line 785.
  [24]
-Overfull \hbox (3.00182pt too wide) in paragraph at lines 785--786
+Overfull \hbox (3.00182pt too wide) in paragraph at lines 787--788
 []\T1/lmr/m/n/10.95 (-20) Accent sys-tems. (s.f.). ac-cent sys-tems. https://accent-systems.com/es/producto/ibks-
  []
 
 
-Overfull \hbox (25.91222pt too wide) in paragraph at lines 795--797
+Overfull \hbox (25.91222pt too wide) in paragraph at lines 797--799
 \T1/lmr/m/n/10.95 (-20) de Te-le-co-mu-ni-ca-cio-nes. BOE-A-2014-4950. https://www.boe.es/buscar/act.php?id=BOE-
  []
 
 
-Overfull \hbox (12.58395pt too wide) in paragraph at lines 797--799
+Overfull \hbox (12.58395pt too wide) in paragraph at lines 799--801
 []\T1/lmr/m/n/10.95 (-20) Ministerio de Cien-cia y Tec-no-lo-gía de Es-pa-ña. (2002, 11 de enero). Or-den CTE/23/2002.
  []
 
-LaTeX Info: Redefining \. on input line 805.
-LaTeX Info: Redefining \% on input line 805.
+LaTeX Info: Redefining \. on input line 807.
+LaTeX Info: Redefining \% on input line 807.
 [25]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 813.
-LaTeX Info: Redefining \. on input line 813.
-LaTeX Info: Redefining \% on input line 813.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 815.
+LaTeX Info: Redefining \. on input line 815.
+LaTeX Info: Redefining \% on input line 815.
  [26]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 813.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 815.
  ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.aux"
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 813.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 813.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 815.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 815.
 Package rerunfilecheck Info: File `rarced_memmory.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -925,7 +925,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  68i,12n,62p,10755b,671s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmro10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
-Output written on "c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.pdf" (26 pages, 1740604 bytes).
+Output written on "c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Memmory\rarced_memmory.pdf" (26 pages, 1740638 bytes).
 PDF statistics:
  553 PDF objects out of 1000 (max. 8388607)
  168 named destinations out of 1000 (max. 500000)
