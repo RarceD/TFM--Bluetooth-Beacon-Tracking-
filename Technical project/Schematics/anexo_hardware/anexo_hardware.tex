@@ -94,12 +94,12 @@
     \subsection{PCB de control}
         \paragraph{}
         Una vez tenidas en cuenta estas especificaciones, en el esquema eléctrico se ha llevado a cabo el ruteo de la tarjeta.
-        Vemos que se han elaborado el trazado de pistas con planos de masa para prevenir interferencias electromagnéticas
+        Vemos que se ha elaborado el trazado de pistas con planos de masa para prevenir interferencias electromagnéticas
         y conseguir que no afecte demasiado a la electrónica. En las diguras 1 y 2 podemos ver imágenes de los renderizados y circuitos 
         eléctricos.
         
-        Dejando lo más despejada la zona de la antena para mejor la ganancia de la misma y en consecuencia el alcance, en el caso 
-        del Beacon se usarán las antenas que integran los microcontroladores.
+        Se ha dejado la zona de la antena despejada para mejor la ganancia de la misma y en consecuencia el alcance, en el caso 
+        del Beacon se usarán las antenas que integra el microcontrolador.
         \begin{center}
             \begin{figure}[ht]
                 \centering
@@ -131,7 +131,7 @@
 \section{Receptor Beacon o gateway}
     \subsection{Aspectos a considerar}
         \begin{enumerate}
-            \item Velocidad de procesamiento: el número máximo de equipos a localizar puede ser superior a 500, es por ello 
+            \item Velocidad de procesamiento: El número máximo de equipos a localizar puede ser superior a 500, es por ello 
             por lo que quedan descartados los microcontrodores de 8 bits y cristales de menos de 16MHz.
             \item Wifi/bluetooth: Ha de escuchar a los Beacons y subir los datos a internet, es por ello por lo que se hace 
             indispesable que cuente con hardware que permita las dos acciones.
@@ -150,8 +150,8 @@
                 \item 12 VDC.
                 \item 5 VDC, en el caso de que se disponga de un ordenador cerca se podría conectar por USB.
             \end{enumerate}
-            En la figura 4 podemos ver el circuito respondable, mediante un jumper, se facilita el cambio de alimentación para las distintas necesidades 
-            de lo clientes.
+            En la figura 4 podemos ver el circuito responsable, mediante un jumper. Se facilita el cambio de alimentación para las distintas necesidades 
+            de los clientes.
             \begin{center}
                 \begin{figure}[h]
                     \centering
@@ -163,8 +163,8 @@
     \subsection{PCB de control}
         Se ha optado por llevar a cabo el trazado de pistas de alimentación por la cara top y las de señal por la bottom, vemos que hay dos 
         conectores en los extremos de la tarjeta, uno con una UART para comunicarse con otros sistemas de la planta y otro conector para sensores
-        i2c, pensado para la lectura de humedad y temperatura, así como para el envío de estos datos a la web de control. En la figura 5 se puede 
-        ver con mayor detalle la PCB del master en un renderizado obtenido con Kicad.
+        i2c, pensado para la lectura de humedad y temperatura, así como para el envío de estos datos a la web de control. En la figura 5 se aprecia 
+        con mayor detalle la PCB del master en un renderizado obtenido con Kicad.
 
         En el apartado de planos se puede ver con mayor detalle el esquema eléctrico y dimensiones de la tarjeta. 
         \begin{center}

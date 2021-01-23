@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  6 JAN 2021 10:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  23 JAN 2021 07:25
 entering extended mode
 **"c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Schematics/anexo_mecanico/anexo_mecanico.tex"
 ("c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Schematics/anexo_mecanico/anexo_mecanico.tex"
@@ -660,12 +660,12 @@ Package pdftex.def Info: ../mechanical_master.PNG  used on input line 141.
 <../3d_master_1.jpeg, id=108, 851.43094pt x 759.58781pt>
 File: ../3d_master_1.jpeg Graphic file (type jpg)
 <use ../3d_master_1.jpeg>
-Package pdftex.def Info: ../3d_master_1.jpeg  used on input line 154.
+Package pdftex.def Info: ../3d_master_1.jpeg  used on input line 155.
 (pdftex.def)             Requested size: 125.47737pt x 111.93971pt.
 <../3d_master_2.jpeg, id=109, 848.4197pt x 756.57657pt>
 File: ../3d_master_2.jpeg Graphic file (type jpg)
 <use ../3d_master_2.jpeg>
-Package pdftex.def Info: ../3d_master_2.jpeg  used on input line 155.
+Package pdftex.def Info: ../3d_master_2.jpeg  used on input line 156.
 (pdftex.def)             Requested size: 125.47737pt x 111.88846pt.
 <../3d_master_2_box.jpeg, id=110, 1116.42094pt x 795.72281pt>
 File: ../3d_master_2_box.jpeg Graphic file (type jpg)
@@ -681,10 +681,10 @@ Package pdftex.def Info: ../3d_antenna.jpeg  used on input line 166.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Info: Redefining \. on input line 175.
-LaTeX Info: Redefining \% on input line 175.
-LaTeX Info: Redefining \. on input line 175.
-LaTeX Info: Redefining \% on input line 175.
+LaTeX Info: Redefining \. on input line 170.
+LaTeX Info: Redefining \% on input line 170.
+LaTeX Info: Redefining \. on input line 170.
+LaTeX Info: Redefining \% on input line 170.
 [8 <../mechanical_master.PNG> <../3d_master_1.jpeg> <../3d_master_2.jpeg>]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 183.
 LaTeX Info: Redefining \. on input line 183.
@@ -705,15 +705,15 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 14006 strings out of 480930
- 238927 string characters out of 2909539
+ 14010 strings out of 480930
+ 238957 string characters out of 2909539
  669801 words of memory out of 3000000
  29519 multiletter control sequences out of 15000+200000
- 541728 words of font info for 86 fonts, out of 3000000 for 9000
+ 541830 words of font info for 88 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,12n,62p,10756b,643s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb>
-Output written on "c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.pdf" (9 pages, 2382066 bytes).
+Output written on "c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_mecanico\anexo_mecanico.pdf" (9 pages, 2382102 bytes).
 PDF statistics:
  198 PDF objects out of 1000 (max. 8388607)
  56 named destinations out of 1000 (max. 500000)
