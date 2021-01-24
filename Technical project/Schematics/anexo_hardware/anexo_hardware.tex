@@ -17,6 +17,7 @@
 \usepackage{fancyhdr}
 \usepackage{hyperref}
 \newcommand{\HRule}[1]{\rule{\linewidth}{#1}} 	% Horizontal rule
+\usepackage{float}
 
 \makeatletter							% Title
 \def\printtitle{%						
@@ -68,7 +69,7 @@
     completamente gratuito y, en segundo lugar, debido a que puede funcionar en Linux. Además de que es capaz de llevar a cabo 
     cualquier diseño profesional sin problema de licencias o versiones incompatibles.
 
-    Por otro lado, todas las PCBs se han llevado a cabo en dos capas con un espesor estándar de 1,6mm y con acabado superficial
+    Por otro lado, todas las PCBs se han fabricado en dos capas con un espesor estándar de 1,6mm y con acabado superficial
     HASH plomo estaño en los primeros prototipos. En la versión final se empleará el acabado ENIG, o de oro 
     electrolítico, para mejorar las especificaciones y durabilidad de la misma.
 
@@ -97,11 +98,8 @@
         Vemos que se ha elaborado el trazado de pistas con planos de masa para prevenir interferencias electromagnéticas
         y conseguir que no afecte demasiado a la electrónica. En las diguras 1 y 2 podemos ver imágenes de los renderizados y circuitos 
         eléctricos.
-        
-        Se ha dejado la zona de la antena despejada para mejor la ganancia de la misma y en consecuencia el alcance, en el caso 
-        del Beacon se usarán las antenas que integra el microcontrolador.
         \begin{center}
-            \begin{figure}[ht]
+            \begin{figure}[H]
                 \centering
                 \includegraphics[width=0.4\textwidth]{../emiter_1.PNG}
                 \includegraphics[width=0.35\textwidth]{../emiter_2.PNG}
@@ -110,13 +108,15 @@
             \end{figure}    
         \end{center}
         \begin{center}
-            \begin{figure}[ht]
+            \begin{figure}[H]
                 \centering
                 \includegraphics[width=0.40\textwidth]{../emiter_PCB.PNG}
                 \caption{PCB del Beacon obtenida con Kicad.}
                 \label{fig:mesh9}
             \end{figure}    
         \end{center}
+        Se ha dejado la zona de la antena despejada para mejor la ganancia de la misma y en consecuencia el alcance, en el caso 
+        del Beacon se usarán las antenas que integra el microcontrolador.
     \subsection{Imágenes reales}
         \paragraph{}
         Tras llevar a cabo la fabricación de las tarjetas prototipo podemos ver los resultados en la figura 3.
@@ -124,7 +124,7 @@
             \begin{figure}[ht]
                 \centering
                 \includegraphics[width=0.5\textwidth]{../real_beacon_pcb.jpeg}
-                \caption{Renderizado de PCB del master o gateway.}
+                \caption{PCB real fabricada y soldada}
                 \label{fig:mesh3}
             \end{figure}    
         \end{center}       

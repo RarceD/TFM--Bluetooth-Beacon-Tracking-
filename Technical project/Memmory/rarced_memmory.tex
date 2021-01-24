@@ -14,7 +14,8 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \newcommand{\HRule}[1]{\rule{\linewidth}{#1}} 	% Horizontal rule
-
+\usepackage{float}
+% \usepackage{pdfpages}
 \graphicspath{ {./images/} }
 \makeatletter							% Title
 \def\printtitle{%						
@@ -151,7 +152,7 @@
             \paragraph{}
             Mantener un módulo GPS encendido y pretender llegar a una autonomía de años es a día de hoy
             imposible, es por ello por lo que existen dos opciones.
-            O se emplea un teléfono móvil para llevarlo a cabo, cosa inviable si se pretende monitorizar objetos y no personas en
+            O se emplea un teléfono móvil para llevarlo a cabo, cosa inviable si se intentan monitorizar objetos y no personas en
             movimiento, o el tiempo de refresco de los datos ha de ser muy lento, del orden de horas,
             cosa de nuevo inasumible para la aplicación que se presenta.
             \paragraph{}
@@ -245,7 +246,7 @@
             Se plantea la opción de que no todos los equipos que escuchan a los beacons dispongan de conexión a internet, es por ello
             por lo que se baraja la posibilidad de llevar a cabo una red de elementos que escuchan y que envían a un único concentrador encargado de enviar
             esta información a internet por cualquier otro método.
-            Es decir, se contempla la posibilidad de establecer una red de elementos que escuchan, para lo cual se emplea 
+            Es decir, se contempla la opción de establecer una red de elementos que escuchan, para lo cual se emplea 
             un protocolo de comunicación rápido denominado ESP-NOW, que tiene las siguientes características:
             \begin{itemize}
                 \item Encriptación de las comunicaciones.
@@ -311,7 +312,7 @@
         La elección en este caso está mucho más ajustada, en el caso de que se pueda conectar a todos los equipos que 
         escuchan a internet el ganador será la opción de MQTT, puesto que es la forma más fácil de llevar a cabo el envío de datos.
 
-        Si que no lleguara la señal wifi a todos los puntos en los que se decida llevar a cabo el tracking de objetos 
+        Si que no llegara la señal wifi a todos los puntos en los que se decida llevar a cabo el tracking de objetos 
         surge un problema puesto que perderemos esos datos. La solución es hacer que este equipo, que no tiene conexión a internet,
         envíe los datos por ESP NOW a otro que si que sea capaz de subir tanto su información como la de su compañero al broker por MQTT.
 
@@ -326,7 +327,7 @@
         Para sintetizar el proceso de desarrollo del proyecto técnico se empleará un diagrama GANTT. En la
         figura 5 podemos ver la evolución del desarrollo del mismo así como la duración exacta de cada etapa. 
         \begin{center}
-            \begin{figure}[ht]
+            \begin{figure}[H]
                 \centering
                 \includegraphics[width=1\textwidth]{diagrama de gantt.PNG}
                 \caption{Diagrama de GANTT del proyecto.}
@@ -385,7 +386,7 @@
             Llevados a cabo los cálculos por parte del equipo que escucha a los distintos beacons, podemos calcular la distancia 
             real a cada uno de ellos. En el caso de que se solapen y dos receptores escuchen el mismo Beacon será necesario
             llevar a cabo el proceso de trilateración expuesto a continuación.
-            Para comprobar la fluctiación del parámetro del Rssi se ha llevado a cabo la toma de este parámetro a los largo de un 
+            Para comprobar la fluctuación del parámetro del Rssi se ha llevado a cabo la toma de este parámetro a lo largo de un 
             periodo de tiempo largo y los resultados a 2 metros y a 3 metros se encuentran respectivamente en la figura 6. 
  
             Podemos ver que hay pequeñas flucuaciones y es por ello por lo que será necesario implementar un sencillo filtro para
@@ -616,6 +617,7 @@
             \item PCB circuito del emisor Beacon y PCB circuito del receptor ESP32
         \end{itemize}
         En en el anexo de diseño eléctrico se explican con mayor detalle.
+    % \includepdf[pages=-]{draws_linked.pdf}
 \section{Pliego de condiciones}
     \subsection{Prescripciones ténicas generales}
         \subsubsection{Normativa relativa a radiofrecuencia}

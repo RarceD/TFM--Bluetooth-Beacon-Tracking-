@@ -12,6 +12,7 @@
 \usepackage{xcolor}
 \usepackage{fancyhdr}
 \newcommand{\HRule}[1]{\rule{\linewidth}{#1}} 	% Horizontal rule
+\usepackage{float}
 
 \makeatletter							% Title
 \def\printtitle{%						
@@ -51,7 +52,7 @@
 \fancyfoot[R]{Rubén Arce}
 \fancyfoot[L]{BLE Tracking - 2020}
 \section{Introducción}
-    Para llevar a cabo el diseño mecánico de estas piezas concretas se ha optado por emplear Freecad, un
+    Para llevar a cabo el diseño mecánico de estas piezas concretas se ha decidido emplear Freecad, un
     programa de software libre que permite hacer modelos sencillos de forma gratuita.
     Se ha empleado la versión 12.0, corriendo el mismo en una Raspberry pi 4 de 4Gb de RAM. Este es el único
     programa de diseño 3D que corre en Linux y además consume pocos recursos.
@@ -63,7 +64,7 @@
     entre capas de 0,3mm. Para la versión del cliente se ha optado por un relleno del 40\% y una distancia entre capas de 0,12mm.
 \section{Emisor Beacon}
     \subsection{Aspectos a considerar en el diseño}
-        Antes de afrontar el apartado de diseño se ha optado por reunir las condiciones indispensables para 
+        Antes de afrontar el apartado de diseño se han reunido las condiciones indispensables para 
         conseguir un modelo acorde a las necesidades del cliente.
         \begin{enumerate}
             \item Estéticamente atractivo.
@@ -73,7 +74,7 @@
             \item Limitaciones en el tamaño de máximo 220x220x250 mm debido al volumen de impresión.
         \end{enumerate}
     \subsection{Planos y dimensiones}
-        Una vez llevado a cabo el diseño se han obtenido los planos y se ha llevado a hecho la impresión 3D de los mismos. En la figura 1 
+        Una vez llevado a cabo el diseño se han obtenido los planos y se ha procedido a la impresión 3D de los mismos. En la figura 1 
         se pueden ver las dimensiones del Beacon.
         \begin{center}
             \begin{figure}[h]
@@ -97,7 +98,7 @@
         Tras verificar el diseño en el ordenador se carga el filamento 3D y se procede a llevar a cabo la impresión, un par de horas más tarde
         se obtuvo la figura 3.
         \begin{center}
-            \begin{figure}[ht]
+            \begin{figure}[H]
                 \centering
                 \includegraphics[width=0.36\textwidth]{../3d_beacon_1.jpeg}
                 \includegraphics[width=0.4\textwidth]{../3d_beacon_2.jpeg}

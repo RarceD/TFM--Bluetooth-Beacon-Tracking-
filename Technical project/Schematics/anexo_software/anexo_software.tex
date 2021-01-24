@@ -12,6 +12,8 @@
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{fancyhdr}
+\usepackage{float}
+
 \newcommand{\HRule}[1]{\rule{\linewidth}{#1}} 	% Horizontal rule
 \makeatletter							% Title
 \def\printtitle{%						
@@ -145,7 +147,7 @@
             Como podemos ver en la figura 4 las diferencias entre equipos estáticos son acusadas, es por ello por lo que queda demostrada la necesidad de
             desarrollar un filtro que anule este ruido radioeléctrico.
             \begin{center}
-                \begin{figure}[!t]
+                \begin{figure}[]
                     \centering
                     \includegraphics[width=1\textwidth]{../../Memmory/images/5min_beacon_rssi.PNG}
                     \caption{Toma de datos durante dos horas}
@@ -204,7 +206,7 @@
         se instalaron únicamente dos masters y seis Beacons en carros en movimiento.
         
         Como suele ocurrir, la prueba real no se asemejaba tanto a las pruebas anteriores y podemos comprobar como 
-        el algoritmo se complica más en asuncia de numerosos masters escuchando Beacons. En este caso como solo se disponían
+        el algoritmo se complica más en ausencia de numerosos masters escuchando Beacons. En este caso como solo se disponían
         de dos, los cálculos no siempre eran tan precisos y el filtro implementado en el caso de un desplazamiento rápido de un 
         equipo de punta a punta del supermercado no era el más óptimo.
         
@@ -230,12 +232,12 @@
         situarlos de una forma acertada dentro de una habitación.
         
         Se han de tener en cuenta las limitaciones físicas que esto conlleva puesto
-        que los equipos presentan fluctuaciones en su percepción de Rssi, así como de la influencia de medio en el que se coloquen.
+        que los equipos presentan fluctuaciones en su percepción de rssi, así como de la influencia de medio en el que se coloquen.
 
         Aún con todo esto estamos ante un sistema perfectamente válido para la aplicación que tenemos entre manos, siempre y cuando no se requiera de una
         exactitud o precisión elevada. 
 
-        El mayor punto a favor de este sistema es su relación calidad precio, por un pequeño y bajo coste se puede colocar un dispositivos emisor y posicionarlo 
+        El mayor punto a favor de este equipo es su relación calidad precio, por un pequeño y bajo coste se puede colocar un dispositivos emisor y posicionarlo 
         sin miedo a que se pierda puesto que un sustituto sería asequible.
 
 \end{document} 

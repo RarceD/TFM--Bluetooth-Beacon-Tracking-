@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  23 JAN 2021 07:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.9)  24 JAN 2021 16:13
 entering extended mode
 **"c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Schematics/anexo_hardware/anexo_hardware.tex"
 ("c:/Users/Tecnica2/Desktop/work/TFM--Bluetooth-Beacon-Tracking-/Technical project/Schematics/anexo_hardware/anexo_hardware.tex"
@@ -409,28 +409,35 @@ Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footers
 \f@nch@O@erf=\skip77
 \f@nch@O@olf=\skip78
 \f@nch@O@orf=\skip79
+) ("C:\Program Files\MiKTeX 2.9\tex/latex/float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count278
+\float@exts=\toks30
+\float@box=\box50
+\@float@everytoks=\toks31
+\@floatcapt=\box51
 ) ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_hardware\anexo_hardware.aux"
 LaTeX Info: Redefining \. on input line 26.
 LaTeX Info: Redefining \% on input line 26.
 )
 \openout1 = `anexo_hardware.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
 
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -465,14 +472,14 @@ LaTeX Font Info:    ... okay on input line 45.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 45.
+LaTeX Info: Redefining \microtypecontext on input line 46.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 45.
+LaTeX Info: Redefining \showhyphens on input line 46.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -480,25 +487,25 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 ) ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count278
+\scratchcounter=\count279
 \scratchdimen=\dimen160
-\scratchbox=\box50
-\nofMPsegments=\count279
-\nofMParguments=\count280
-\everyMPshowfont=\toks30
-\MPscratchCnt=\count281
+\scratchbox=\box52
+\nofMPsegments=\count280
+\nofMParguments=\count281
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count282
 \MPscratchDim=\dimen161
-\MPnumerator=\count282
-\makeMPintoPDFobject=\count283
-\everyMPtoPDFconversion=\toks31
+\MPnumerator=\count283
+\makeMPintoPDFobject=\count284
+\everyMPtoPDFconversion=\toks33
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty"
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 )
-LaTeX Info: Redefining \. on input line 45.
-LaTeX Info: Redefining \% on input line 45.
-\AtBeginShipoutBox=\box51
-Package hyperref Info: Link coloring OFF on input line 45.
+LaTeX Info: Redefining \. on input line 46.
+LaTeX Info: Redefining \% on input line 46.
+\AtBeginShipoutBox=\box53
+Package hyperref Info: Link coloring OFF on input line 46.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  ("C:\Program Files\MiKTeX 2.9\tex/latex/refcount\refcount.sty"
@@ -506,11 +513,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) ("C:\Program Files\MiKTeX 2.9\tex/generic/gettitlestring\gettitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count284
+\c@section@level=\count285
 )
-LaTeX Info: Redefining \ref on input line 45.
-LaTeX Info: Redefining \pageref on input line 45.
-LaTeX Info: Redefining \nameref on input line 45.
+LaTeX Info: Redefining \ref on input line 46.
+LaTeX Info: Redefining \pageref on input line 46.
+LaTeX Info: Redefining \nameref on input line 46.
  ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_hardware\anexo_hardware.out") ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_hardware\anexo_hardware.out")
 \@outlinefile=\write3
 \openout3 = `anexo_hardware.out'.
@@ -522,14 +529,14 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           `bookmarkpackage=false' before \begin{document} and
 (scrartcl)           you can avoid this message adding:
 (scrartcl)             \usepackage{bookmark}
-(scrartcl)           before \begin{document} on input line 45.
+(scrartcl)           before \begin{document} on input line 46.
  ("C:\Program Files\MiKTeX 2.9\tex/latex/bookmark\bookmark.sty"
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
  ("C:\Program Files\MiKTeX 2.9\tex/latex/bookmark\bkm-pdftex-2019-12-03.def"
 File: bkm-pdftex.def 2019/12/03 v1.28 bookmark driver for pdfTeX (HO)
 Package auxhook Info: \AddLineBeginMainAux comes a little late,
 (auxhook)             because the main .aux file is already opened on input line 169.
-\BKM@id=\count285
+\BKM@id=\count286
 )) [1
 
 {C:/Users/Tecnica2/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2
@@ -540,7 +547,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package tocbasic Info: character protrusion at toc deactivated on input line 58.
+Package tocbasic Info: character protrusion at toc deactivated on input line 59.
  ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_hardware\anexo_hardware.toc"
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -576,7 +583,7 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 17.
 \tf@toc=\write4
 \openout4 = `anexo_hardware.toc'.
 
-Package tocbasic Info: character protrusion at lof deactivated on input line 59.
+Package tocbasic Info: character protrusion at lof deactivated on input line 60.
  ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_hardware\anexo_hardware.lof"
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -599,68 +606,84 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Info: Redefining \. on input line 100.
-LaTeX Info: Redefining \% on input line 100.
+LaTeX Info: Redefining \. on input line 101.
+LaTeX Info: Redefining \% on input line 101.
  [5]
 <../emiter_1.PNG, id=84, 493.845pt x 499.11469pt>
 File: ../emiter_1.PNG Graphic file (type png)
 <use ../emiter_1.PNG>
-Package pdftex.def Info: ../emiter_1.PNG  used on input line 106.
+Package pdftex.def Info: ../emiter_1.PNG  used on input line 104.
 (pdftex.def)             Requested size: 167.2989pt x 169.07985pt.
 <../emiter_2.PNG, id=86, 506.6428pt x 605.26125pt>
 File: ../emiter_2.PNG Graphic file (type png)
 <use ../emiter_2.PNG>
-Package pdftex.def Info: ../emiter_2.PNG  used on input line 107.
+Package pdftex.def Info: ../emiter_2.PNG  used on input line 105.
 (pdftex.def)             Requested size: 146.39133pt x 174.884pt.
 <../emiter_PCB.PNG, id=87, 452.28975pt x 534.19576pt>
 File: ../emiter_PCB.PNG Graphic file (type png)
 <use ../emiter_PCB.PNG>
-Package pdftex.def Info: ../emiter_PCB.PNG  used on input line 115.
+Package pdftex.def Info: ../emiter_PCB.PNG  used on input line 113.
 (pdftex.def)             Requested size: 167.2989pt x 197.59227pt.
-<../real_beacon_pcb.jpeg, id=88, 852.93657pt x 624.08156pt>
+LaTeX Info: Redefining \. on input line 117.
+LaTeX Info: Redefining \% on input line 117.
+LaTeX Info: Redefining \. on input line 117.
+LaTeX Info: Redefining \% on input line 117.
+ [6pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.117         \end{center}
+                          pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.117         \end{center}
+                           <../emiter_1.PNG> <../emiter_2.PNG> <../emiter_PCB.PNG>]
+<../real_beacon_pcb.jpeg, id=97, 852.93657pt x 624.08156pt>
 File: ../real_beacon_pcb.jpeg Graphic file (type jpg)
 <use ../real_beacon_pcb.jpeg>
 Package pdftex.def Info: ../real_beacon_pcb.jpeg  used on input line 126.
 (pdftex.def)             Requested size: 209.12683pt x 153.01082pt.
-LaTeX Info: Redefining \. on input line 138.
-LaTeX Info: Redefining \% on input line 138.
-LaTeX Info: Redefining \. on input line 138.
-LaTeX Info: Redefining \% on input line 138.
- [6 <../emiter_1.PNG> <../emiter_2.PNG>]
-<../receiver_main_power.PNG, id=100, 580.569pt x 306.54526pt>
+LaTeX Info: Redefining \. on input line 145.
+LaTeX Info: Redefining \% on input line 145.
+LaTeX Info: Redefining \. on input line 145.
+LaTeX Info: Redefining \% on input line 145.
+ [7pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.145         \subsubsection
+                            {Alimentación} <../real_beacon_pcb.jpeg>]
+<../receiver_main_power.PNG, id=107, 580.569pt x 306.54526pt>
 File: ../receiver_main_power.PNG Graphic file (type png)
 <use ../receiver_main_power.PNG>
 Package pdftex.def Info: ../receiver_main_power.PNG  used on input line 158.
 (pdftex.def)             Requested size: 334.60422pt x 176.67377pt.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-LaTeX Info: Redefining \. on input line 168.
-LaTeX Info: Redefining \% on input line 168.
-LaTeX Info: Redefining \. on input line 168.
-LaTeX Info: Redefining \% on input line 168.
-[7 <../emiter_PCB.PNG>]
-<../receiver_1.PNG, id=111, 710.655pt x 608.2725pt>
+<../receiver_1.PNG, id=108, 710.655pt x 608.2725pt>
 File: ../receiver_1.PNG Graphic file (type png)
 <use ../receiver_1.PNG>
 Package pdftex.def Info: ../receiver_1.PNG  used on input line 173.
 (pdftex.def)             Requested size: 167.2989pt x 143.19466pt.
-<../receiver_2.PNG, id=112, 686.565pt x 609.02531pt>
+<../receiver_2.PNG, id=109, 686.565pt x 609.02531pt>
 File: ../receiver_2.PNG Graphic file (type png)
 <use ../receiver_2.PNG>
 Package pdftex.def Info: ../receiver_2.PNG  used on input line 174.
 (pdftex.def)             Requested size: 167.2989pt x 148.39937pt.
-<../receiver_PCB.PNG, id=113, 486.618pt x 466.74374pt>
+LaTeX Info: Redefining \. on input line 178.
+LaTeX Info: Redefining \% on input line 178.
+LaTeX Info: Redefining \. on input line 178.
+LaTeX Info: Redefining \% on input line 178.
+ [8pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.178         \end{center}
+                           <../receiver_main_power.PNG>]
+<../receiver_PCB.PNG, id=118, 486.618pt x 466.74374pt>
 File: ../receiver_PCB.PNG Graphic file (type png)
 <use ../receiver_PCB.PNG>
 Package pdftex.def Info: ../receiver_PCB.PNG  used on input line 182.
 (pdftex.def)             Requested size: 209.12683pt x 200.58194pt.
-LaTeX Info: Redefining \. on input line 189.
-LaTeX Info: Redefining \% on input line 189.
-LaTeX Info: Redefining \. on input line 189.
-LaTeX Info: Redefining \% on input line 189.
- [8 <../real_beacon_pcb.jpeg> <../receiver_main_power.PNG>]
 <../3d_antenna.jpeg, id=119, 852.93657pt x 893.58844pt>
 File: ../3d_antenna.jpeg Graphic file (type jpg)
 <use ../3d_antenna.jpeg>
@@ -676,12 +699,27 @@ LaTeX Info: Redefining \. on input line 204.
 LaTeX Info: Redefining \% on input line 204.
 LaTeX Info: Redefining \. on input line 204.
 LaTeX Info: Redefining \% on input line 204.
- [9 <../receiver_1.PNG> <../receiver_2.PNG>]
+ [9pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.204 \end{document}
+                    pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.204 \end{document}
+                     <../receiver_1.PNG> <../receiver_2.PNG> <../receiver_PCB.PNG>]
 LaTeX Info: Redefining \. on input line 204.
 LaTeX Info: Redefining \% on input line 204.
 LaTeX Info: Redefining \. on input line 204.
 LaTeX Info: Redefining \% on input line 204.
- [10 <../receiver_PCB.PNG> <../3d_antenna.jpeg> <../real_master_pcb.jpeg>]
+ [10pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.204 \end{document}
+                     <../3d_antenna.jpeg> <../real_master_pcb.jpeg>]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 204.
  ("c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_hardware\anexo_hardware.aux"
 LaTeX Info: Redefining \. on input line 26.
@@ -693,15 +731,15 @@ Package rerunfilecheck Info: File `anexo_hardware.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 14038 strings out of 480930
- 239570 string characters out of 2909539
- 670115 words of memory out of 3000000
- 29546 multiletter control sequences out of 15000+200000
- 542151 words of font info for 92 fonts, out of 3000000 for 9000
+ 14096 strings out of 480930
+ 240327 string characters out of 2909539
+ 671421 words of memory out of 3000000
+ 29596 multiletter control sequences out of 15000+200000
+ 542253 words of font info for 94 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  68i,12n,62p,10718b,643s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on "c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_hardware\anexo_hardware.pdf" (10 pages, 1405147 bytes).
+Output written on "c:/Users\Tecnica2\Desktop\work\TFM--Bluetooth-Beacon-Tracking-\Technical project\Schematics\anexo_hardware\anexo_hardware.pdf" (10 pages, 1405011 bytes).
 PDF statistics:
  217 PDF objects out of 1000 (max. 8388607)
  49 named destinations out of 1000 (max. 500000)
