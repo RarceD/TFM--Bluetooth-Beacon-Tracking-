@@ -59,7 +59,7 @@
 \cleardoublepage
 \pagestyle{fancy}
 \fancyfoot[R]{Rubén Arce}
-\fancyfoot[L]{BLE Tracking - 2020}
+\fancyfoot[L]{BLE Tracking - 2021}
 
 
 
@@ -404,7 +404,7 @@
             \end{equation}
             Otra opción que experimentalmente ha dado buenos resultados es la de selecionar los 20 valores anteriores,
             obtener la media y si se separa más de un 40\% el valor nuevo lo rechazo. Con esto consigo eliminar las 
-            fluctuaciones indesadas que se podían apreciar en la figura 7.
+            fluctuaciones indesadas que se podían apreciar en la figura 6.
             \begin{center}
                 \begin{figure}[ht]
                     \centering
@@ -427,7 +427,7 @@
             Una vez obtenidas las distancias a los distintos equipos de receptores es necesario llevar a cabo el
             posicionamiento exacto de los mismos, para ello se emplea la trilateración:
             \begin{center}
-                \begin{figure}[h]
+                \begin{figure}[H]
                     \centering
                     \includegraphics[width=0.4\textwidth]{trilateration_circle.png}
                     \caption{Trilataración con tres equipos escuchando al mismo Beacon.}
@@ -435,7 +435,7 @@
                 \end{figure}
             \end{center}
                 Hemos de resolver las siguientes ecuaciones básicas sobre la distancia entre recta y un punto en 
-                una circunferencia:
+                una circunferencia, en la figura 8 podemos verlo gráficamente.
                 \begin{equation}
                     d_{A1}= \sqrt[]{(x-x_A)^2+(y-y_A)^2}
                 \end{equation}
@@ -715,6 +715,7 @@
                     Jumper connector	                    &1&	 0,017 € \\ 
                     \hline
                     TOTAL                    	            &&	 7,763 € \\ 
+                    \hline
                     \end{tabular}
                 \end{center}
             \subsubsection{Desarrollo e instalación}
@@ -739,14 +740,14 @@
             \hline
             Unidad & Cantidad & Precio  \\ [0.5ex] 
             \hline\hline
-            Placa de circuito impreso Beacon o emisor & 1 & 40 \\ 
-            Placa de circuito impreso receptor o gateway & 1 & 50 \\ 
+            Placa de circuito impreso Beacon o emisor & 10 & 40 \\ 
+            Placa de circuito impreso receptor o gateway & 4 & 50 \\ 
             Desarrollo e instalación & 1 & 35 \\ 
             \hline
             \hline
-            Total &  & 1234€ \\ 
-             & IVA 21\%& 6534€ \\ 
-             & & 6534€ \\ 
+            Total &  & 635€ \\ 
+             & IVA 21\%& 133,35 € \\ 
+             & & 768,35€ \\ 
             \hline
             \end{tabular}
         \end{center}
@@ -783,7 +784,8 @@
         \end{center}
         Teniendo en consideración todos los aspectos menciones, se puede concluir que la inversión es rentable y asumible
         si se presupone una venta anual de proyectos con diferentes características.
-
+        Es importante mencionar que este escenario no es real al 100\% debido a que no solo se venderá este producto, igualmente al ser 
+        ventas puntuales no se requiere un posterior tratamiento con el cliente y esto hace que sea más rentable.
 \section{Bibliografía}
     \begin{itemize}
         \item Accent systems. (s.f.). accent systems. https://accent-systems.com/es/producto/ibks-105/ 
@@ -800,7 +802,6 @@
         Telecomunicaciones. BOE-A-2014-4950. https://www.boe.es/buscar/act.php?id=BOE-A-2014-4950 
         \item Ministerio de Ciencia y Tecnología de España. (2002, 11 de enero). Orden CTE/23/2002. Por la que se establecen condiciones para la presentación de determinados estudios y certificaciones por
         operadores de servicios de radiocomunicaciones.  \href{https://www.boe.es/diario_boe/txt.php?id=BOE-A-2002-694}{BOE-A-2002-694.}
-        
         \item Nordic Semiconductor. (2017). nRF52832 Product Specification v1.4.
         \item Pattnayak, T. y Thanikachalam, G. (2018). Antenna Design and RF Layout Guidelines [application notes]. Cypress. http://www.cypress.com/go/AN91445 
         \item Shang, F., Su, W., Wang, Q., Gao, H. y Fu, Q. (2014). A Location Estimation Algorithm Based on RSSI Vector Similarity Degree. International Journal of Distributed Sensor Networks. http://dx.doi.org/10.1155/2014/371350 
